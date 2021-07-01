@@ -1,0 +1,237 @@
+,Administrator,מנהל
+,Menadžer administratora satnica,מנהל זמן מנהל
+,Nadređeni,סופריור
+,Zaposlenik,עובד
+,Odaberi...,בחר ...
+,Nema dostupnih jezika.,אין שפות זמינות.
+,Nema unesenih država.,לא הוזנו ארצות.
+,Nema unesenih statusa.,לא הוזן סטטוס.
+,Januar,ינואר
+,Februar,פברואר
+,Mart,מרץ
+,April,אפריל
+,Maj,מאי
+,Juni,יוני
+,Juli,יולי
+,Avgust,אוגוסט
+,Septembar,ספטמבר
+,Oktobar,אוקטובר
+,Novembar,נובמבר
+,Decembar,דצמבר
+,Moj profil,הפרופיל שלי
+,Moji Zadaci/Ciljevi,המטלות שלי / מטרות
+,Moji Zahtjevi,הבקשות שלי
+,Uredi profil,ערוך פרופיל
+,Zadaci/Ciljevi,משימות / מטרות
+,Zahtjevi,בקשות
+,Korisnici,משתמשים
+,Podešavanja,הגדרות
+,Države,מדינות
+,Informacije su uspješno sapšene!,המידע נלכד בהצלחה!
+,Izmjene su uspješno sapšene!,השינויים נתפסו בהצלחה!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,שם המשתמש תפוס. נסה מישהו אחר.
+,Greška!,שגיאה!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","הזן את שם המשתמש ו / או הסיסמה הלא נכונים, נסה שוב."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,החשבון שלך הושבת. לקבלת מידע נוסף פנה אלינו.
+,Uspješno!,בהצלחה!
+,Uspješno ste se odjavili.,יצאת בהצלחה.
+,Neuspješno!,נכשל!
+,Vaš korisnički nalog je deaktiviran.,החשבון שלך מושבת.
+,Korisničko ime,שם משתמש
+,Lozinka,סיסמה
+,Prijava!,כניסה!
+,Zaboravili ste lozinku?,שכחת את הסיסמה שלך?
+,Vaša e-mail adresa,כתובת הדואר האלקטרוני שלך
+,Poništi lozinku,איפוס סיסמה
+,Nazad na stranicu za prijavu,חזרה לדף ההתחברות
+,"Poštovani,","שלום,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","ביקשת סיסמת איפוס, חדשה מצורפת."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"דואר אלקטרוני עם הוראות שנשלחו, בדוק את ההודעות בדוא""ל שסיפקת בבקשת איפוס הסיסמה."
+,Unesena e-ail adresa nije pronađena u bazi.,כתובת הדואר האלקטרוני שהוזנה לא נמצאה במסד הנתונים.
+,Ažuriranje!,מעדכן!
+,Spasi!,שמור אותו!
+,Osnovni podaci,מידע בסיסי
+,Osnovni Podaci,נתונים בסיסיים
+,Ime,שם
+,Prezime,שם משפחה
+,Fotografija,תמונה
+,Odaberi,בחר
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,פורמטים JPG / PNG / GIF מותרים. מידות מומלצות 480x640 פיקסלים (לאורך).
+,Kontakt Podaci,נתוני קשר
+,Država,ארץ
+,Grad,עיר
+,PTT,PTT
+,Adresa,כתובת
+,Telefon,טלפון
+,E-mail,דואר אלקטרוני
+,Ostali Podaci,נתונים אחרים
+,Jezik aplikacije,שפת יישום
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","מזהה דף שגוי, פנה למנהל המערכת."
+,Prikaži,הצג
+,Sakrij,הסתר
+,Generiši,צור
+,Moje satnice,לוח הזמנים שלי
+,Novi unos,רשומה חדשה
+,Dali ste sigurni da želite brisati?,האם אתה בטוח שברצונך למחוק?
+,Još nije bilo unosa za:,עדיין לא היתה כניסה ל:
+,Ukupno,סך הכל
+,Iskorišteno,משמש
+,Ostalo,אחר
+,Spašeno,ניצלה
+,Odobreno,אושרה
+,Odbijeno,נדחה
+,Dan,דן
+,Broj sati,מספר השעות
+,Status,סטטוס
+,Pregled,סקירה כללית
+,ODOBRENO,אושר
+,ODBIJENO,ODBIJENO
+,Obradio:,מעובד על ידי:
+,Komentar:,הערה:
+,Period od-do:,תקופת מ-עד:
+,do,post
+,Pregled/obrada zadatka,סקירה כללית / עיבוד משימות
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","המשימה עדיין לא התקבלה על ידך, ולכן לא ניתן לעבד את פריטי המשימות."
+,Prihvati zadatak,קבל את המשימה
+,Zaduženi:,אחראי:
+,Izvršiti do:,בצע ל:
+,Kreirao:,נוצר על ידי:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","המשימה / יעד מסומנת כהשלמה, ולכן לא ניתן לשנות את הסטטוס של המשימה. אתה יכול לעקוב אחר cometers כאן להעריך את המשימה כאן."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,הפריטים הושלמו. עכשיו אתה יכול לסמן את המשימה הושלמה.
+,Završi zadatak,סיים את המשימה
+,Komentari,הערות
+,Ostavite komentar,השאירו תגובה
+,Dodaj komentar!,הוסף תגובה!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","המשימה הושלמה והערכה, ועם זאת היו תגובות סגורות."
+,Ocjena:,דירוג:
+,Pozicija,מיקום
+,Sektor,מגזר
+,Nadređeni korisnik,משתמש מעולה
+,Datum registracije,תאריך הרישום
+,Datum reaktivacije,תאריך הפעלה מחדש
+,Satnice,לוח זמנים
+,Dodaj godinu,הוסף שנה
+,Dodaj mjesec,הוסף חודש
+,Još niste počeli unositi satnice,עדיין לא התחלת להיכנס ללוח הזמנים
+,Aktivni,פעיל
+,Arhiva,ארכיון
+,Zahtjev za G.O.,בקשה ל- G.O
+,Od:,מ:
+,Do:,אל:
+,Na čekanju...,ממתין ...
+,Zahtjev kreiran:,הבקשה נוצרה:
+,Zahtjev odobren:,הבקשה אושרה:
+,Zahtjev odbijen:,הבקשה נדחתה:
+,Dali ste sigurni da želite poništiti zahtjev?,האם אתה בטוח שברצונך לבטל את הבקשה?
+,Dali ste sigurni da želite arhivirati zahtjev?,האם אתה בטוח שברצונך לאחסן בארכיון את הבקשה?
+,Nema spašenih zahtjeva prema odabranim parametrima.,אין בקשות שנשמרו עבור הפרמטרים שנבחרו.
+,Na čekanju,מחכה
+,Prihvaćen,התקבל
+,Završen,הושלם
+,Dali ste sigurni da želite arhivirati zadatak?,האם אתה בטוח שברצונך לשמור בארכיון את המשימה?
+,Nema spašenih zadataka prema odabranim parametrima.,אין משימות שנשמרו עבור הפרמטרים שנבחרו.
+,Neovlašten pristup,גישה לא מורשית
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","אין לך את הסמכות לגשת לחלק זה של היישום. אם אירעה שגיאה, פנה למנהל המערכת."
+,Nazad na moj profil,חזרה לפרופיל שלי
+,Zahtjevi za G.O.,בקשות עבור G.O.
+,Obrada zahtjeva!,מעבד את הבקשה!
+,Status zahtjeva:,סטטוס הבקשה:
+,Komentar,תגובה
+,Gradovi,ערים
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","רשימת הערים שהוזנו, אשר נדרשות ליצור יעדים והזמנות."
+,Naziv,שם
+,Dali ste sigurni da želite brisati:,האם אתה בטוח שברצונך למחוק:
+,Još nije bilo unosa,עדיין לא היתה כניסה
+,Općenito,כללי
+,Naslov aplikacije,כותרת היישום
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,פורמטים JPG / PNG / GIF מותרים. מידות מומלצות 400x200 פיקסלים.
+,Boje aplikacije,צבעי יישום
+,Pozadina aplikacije,רקע של היישום
+,Boja teksta aplikacije,צבע טקסט של יישום
+,Pozadina gornje trake - HEADER,סרגל רקע - HEADER
+,Boja teksta gornje trake - HEADER,צבע טקסט של הסרט העליון - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),צבע טקסט של הסרט העליון - HEADER (: רחף: פעיל)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","צבע כותרת (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,רקע - לחצנים
+,Tekst i ikona - BUTTONS,טקסט וסמל - לחצנים
+,SMTP parametri,פרמטרים של SMTP
+,SMTP status,מצב SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","אם SMTP אינו פעיל או שהפרמטרים אינם זמינים, המערכת תשתמש בפונקציה Standard MAIL ()."
+,SMTP host,מארח SMTP
+,SMTP korisnik,משתמש SMTP
+,SMTP lozinka,סיסמת SMTP
+,SMTP port,יציאת SMTP
+,SMTP sigurnost,אבטחה SMTP
+,Jezici aplikacije,שפות יישום
+,Kod,קוד
+,Statusi satnice,מעמד לפי שעה
+,Direkcija teksta,כיוון הטקסט
+,Dali ste sigurni da želite poništiti zadatak?,האם אתה בטוח שברצונך לבטל את המשימה?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,המשימה עדיין לא התקבלה על ידי korinki7 חוב.
+,Ocjeni!,דרג!
+,u obradi...,בעיבוד ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","המשימה מסומנת כהשלמה. , ואתה יכול עכשיו לעזוב את הציון ולסמן אותו כמשימה מלאה. אם ברצונך להשאיר תגובה, הוסף אותה לפני הדירוג."
+,Kompletiraj!,השלם!
+,Zadatak/Cilj za korinika:,משימה / יעד עבור פינת:
+,Zadatak/Cilj:,משימה / יעד:
+,Naziv Zadatka/Cilja,כותרת אובייקטיבית / אובייקטיבית
+,Dodaj polje,הוסף שדה
+,Omogući vremensko ogranićenje zadatka/cilja,אפשר הגבלת זמן / יעד
+,Traži...,חפש ...
+,Svi,כולם
+,Rezultati pretrage za:,תוצאות חיפוש עבור:
+,Deaktivirani korisnici,משתמשים מושבתים
+,ID,מזהה
+,Korinik,קורין
+,Nivo administracije,רמת ניהול
+,Info,מידע
+,deaktiviran:,מושבת:
+,registracija:,רישום:
+,Dali ste sigurni da želite deaktivirati korisnika:,האם אתה בטוח שברצונך להשבית את המשתמש:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,האם אתה בטוח שברצונך להפעיל מחדש את המשתמש:
+,Obrada satnice!,מעבד את לוח הזמנים!
+,Još nije bilo unosa satnica,עדיין לא היו רשומות
+,Pozdrav!,שלום!
+,Odjava!,צא!
+,Godina,שנה
+,Mjesec,ירח
+,MBO ciljevi,מטרות MBO
+,Zahtjevi za trening,דרישות הכשרה
+,Zahtjevi za službena putovanja,בקשות לנסיעות עסקים
+,Zaposlenici,עובדים
+,Korekcije satnica,זמני תיקון
+,Upravljanje satnicama,ניהול זמן
+,Upravljanje korekcijama satnica,ניהול תיקוני זמן לפי שעה
+,Godišnji/Odsustva,שנתי / היעדרות
+,Programi obuke,תוכניות הדרכה
+,Zadužnice/Razdužnice,חשבונות / גיליונות אלקטרוניים
+,Organizaciona šema,סכימה ארגונית
+,Moj MBO,MBO שלי
+,Moja službena putovanja,הנסיעות העסקיות שלי
+,Moji treninzi,האימונים שלי
+,Uredi profil,ערוך פרופיל
+,Moje satnice,לוח הזמנים שלי
+,Verifikacija satnica,אימות לוחות זמנים
+,Verifikacija korekcija,תיקוני אימות
+,Zadužnice,הצעות חוק
+,Razdužnice,תרסיסים
+,Pristupi,גישה
+,Korekcije,תיקונים
+,Bosna i Hercegovina,בוסניה והרצגובינה
+,Sarajevo,סרייבו
+,Godišnji odmor predhodna godina,חופשת השנה הקודמת
+,Godišnji odmor tekuća godina,חופשה שנתית של השנה הנוכחית
+,Plaćeni vjerski praznici,חגים דתיים
+,Neplaćeni vjerski praznici,חופשות דתיות שלא שולמו
+,Plaćeno odsustvo,חופשה בתשלום
+,Smrtni slučaj,מוות
+,Darivanje krvi,תרומת דם
+,Redovni rad,עבודה סדירה
+,Godišnji odmor tekuca godina,חופשה שנתית של השנה הנוכחית
+,Ponedjeljak,יום שני
+,Utorak,יום שלישי
+,Srijeda,יום רביעי
+,Četvrtak,יום חמישי
+,Petak,יום שישי
+,Subota,יום שבת
+,Nedjelja,יום ראשון

@@ -1,0 +1,257 @@
+,Administrator,管理者
+,Menadžer administratora satnica,時間管理者
+,Nadređeni,スーペリア
+,Zaposlenik,従業員
+,Odaberi...,選択...
+,Nema dostupnih jezika.,利用可能な言語はありません。
+,Dodaj službeno putovanje,出張を追加する
+,Nema unesenih država.,国が入力されていません。
+,Nema unesenih statusa.,ステータスは入力されません。
+,Januar,1月
+,Februar,2月
+,Mart,3月
+,April,4月
+,Maj,5月
+,Juni,6月
+,Juli,7月
+,Avgust,8月
+,Septembar,9月
+,Oktobar,10月
+,Novembar,11月
+,Decembar,12月
+,Moj profil,私のプロフィール
+,Moji Zadaci/Ciljevi,私の仕事/目標
+,Moji Zahtjevi,私のリクエスト
+,Uredi profil,プロフィールを編集
+,Zadaci/Ciljevi,タスク/ゴール
+,Zahtjevi,リクエスト
+,Korisnici,ユーザー
+,Podešavanja,設定
+,Države,国
+,Informacije su uspješno sapšene!,情報が正常に取得されました！
+,Izmjene su uspješno sapšene!,変更は成功裏に奪取されました！
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,ユーザー名はビジーです。他の人にお試しください。
+,Greška!,エラー！
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.",間違ったユーザー名やパスワードを入力してください。もう一度お試しください。
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,あなたのアカウントは無効になっています。詳細はお問い合わせください。
+,Uspješno!,成功しました！
+,Uspješno ste se odjavili.,あなたは正常にログアウトしました。
+,Neuspješno!,失敗！
+,Vaš korisnički nalog je deaktiviran.,あなたのアカウントは無効になっています。
+,Korisničko ime,ユーザー名
+,Lozinka,パスワード
+,Prijava!,ログイン！
+,Zaboravili ste lozinku?,パスワードを忘れましたか？
+,Vaša e-mail adresa,あなたの電子メールアドレス
+,Poništi lozinku,パスワードをリセットする
+,Nazad na stranicu za prijavu,ログインページに戻る
+,"Poštovani,",こんにちは、
+,"Zatražili ste reset lozinke, nova je u prilogu.",あなたはリセットパスワードを要求しました、新しいが添付されています。
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,指示が送信された電子メールは、パスワードリセット要求で指定した電子メールのメッセージを確認してください。
+,Unesena e-ail adresa nije pronađena u bazi.,入力した電子メールアドレスがデータベースに見つかりませんでした。
+,Ažuriranje!,更新中！
+,Spasi!,それを保存してください！
+,Osnovni podaci,基本情報
+,Osnovni Podaci,基本データ
+,Ime,名前
+,Prezime,姓
+,Fotografija,写真
+,Odaberi,選択する
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,許可されたJPG / PNG / GIF形式。推奨サイズは480x640ピクセル（ポートレート）です。
+,Kontakt Podaci,連絡先データ
+,Država,国
+,Grad,都市
+,PTT,PTT
+,Adresa,住所
+,Telefon,電話番号
+,E-mail,Eメール
+,Ostali Podaci,その他のデータ
+,Jezik aplikacije,アプリケーション言語
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.",間違ったページID、管理者に連絡してください。
+,Prikaži,ショー
+,Sakrij,隠す
+,Generiši,生成する
+,Moje satnice,私のスケジュール
+,Novi unos,新しいエントリ
+,Dali ste sigurni da želite brisati?,削除してもよろしいですか？
+,Još nije bilo unosa za:,次のエントリがまだありませんでした：
+,Ukupno,合計
+,Iskorišteno,中古
+,Ostalo,その他
+,Spašeno,救出された
+,Odobreno,承認済み
+,Odbijeno,拒否された
+,Dan,ダン
+,Broj sati,時間数
+,Status,ステータス
+,Pregled,概要
+,ODOBRENO,承認済み
+,ODBIJENO,ODBIJENO
+,Obradio:,処理者：
+,Komentar:,コメント：
+,Period od-do:,期間from：
+,do,〜へ
+,Pregled/obrada zadatka,概要/タスク処理
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",タスクはまだあなたに受け入れられていないため、タスク項目を処理することはできません。
+,Prihvati zadatak,タスクを受け入れる
+,Zaduženi:,責任：
+,Izvršiti do:,実行先：
+,Kreirao:,作成者：
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",タスク/目標は完了とマークされているため、タスクのステータスを変更することはできません。あなたはここでコメットをたどり、ここでその仕事を評価することができます。
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,項目が完了しました。完了したタスクをマークすることができます。
+,Završi zadatak,タスクを完了する
+,Komentari,コメント
+,Ostavite komentar,コメントを残す
+,Dodaj komentar!,コメントを追加！
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",タスクが完了し、評価され、これによりコメントがクローズされました。
+,Ocjena:,評価：
+,Pozicija,ポジション
+,Sektor,セクター
+,Nadređeni korisnik,優れたユーザー
+,Datum registracije,登録日
+,Datum reaktivacije,再活性化の日付
+,Satnice,スケジュール
+,Dodaj godinu,年を追加
+,Dodaj mjesec,月を追加
+,Još niste počeli unositi satnice,あなたはまだスケジュールを入力し始めていません
+,Aktivni,アクティブ
+,Arhiva,アーカイブ
+,Zahtjev za G.O.,G.O.
+,Od:,投稿者：
+,Do:,To：
+,Na čekanju...,待っている...
+,Zahtjev kreiran:,作成されたリクエスト：
+,Zahtjev odobren:,承認されたリクエスト：
+,Zahtjev odbijen:,要求が拒否されました：
+,Dali ste sigurni da želite poništiti zahtjev?,リクエストをキャンセルしてもよろしいですか？
+,Dali ste sigurni da želite arhivirati zahtjev?,リクエストをアーカイブしてもよろしいですか？
+,Nema spašenih zahtjeva prema odabranim parametrima.,選択されたパラメータに対する保存された要求はありません。
+,Na čekanju,待っている
+,Prihvaćen,受け入れられた
+,Završen,完了しました
+,Dali ste sigurni da želite arhivirati zadatak?,タスクをアーカイブしてもよろしいですか？
+,Nema spašenih zadataka prema odabranim parametrima.,選択したパラメータには保存されたタスクはありません。
+,Neovlašten pristup,不正アクセス
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.",アプリケーションのこの部分にアクセスする権限がありません。エラーが発生した場合は、管理者に連絡してください。
+,Nazad na moj profil,私のプロフィールに戻る
+,Zahtjevi za G.O.,G.O.
+,Obrada zahtjeva!,リクエストの処理中です！
+,Status zahtjeva:,リクエストステータス：
+,Komentar,コメント
+,Gradovi,都市
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",入力された都市リスト。目的地と予約を作成するために必要です。
+,Naziv,名前
+,Dali ste sigurni da želite brisati:,削除してもよろしいですか？
+,Još nije bilo unosa,まだエントリがありませんでした
+,Općenito,一般
+,Naslov aplikacije,アプリのタイトル
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,許可されたJPG / PNG / GIF形式。推奨サイズは400x200ピクセルです。
+,Boje aplikacije,アプリケーションの色
+,Pozadina aplikacije,アプリケーションの背景
+,Boja teksta aplikacije,アプリケーションのテキストの色
+,Pozadina gornje trake - HEADER,背景バー - HEADER
+,Boja teksta gornje trake - HEADER,上のテープのテキストの色 - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),上のリボンのテキストの色 - HEADER（：ホバー：アクティブ）
+,"Boja naslova (H1,H2,H3,H4,H5,H6)",タイトル色（H1、H2、H3、H4、H5、H6）
+,Pozadina - BUTTONS,背景 - ボタン
+,Tekst i ikona - BUTTONS,テキストとアイコン - ボタン
+,SMTP parametri,SMTPパラメータ
+,SMTP status,SMTPステータス
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.",SMTPが非アクティブであるか、パラメータが利用できない場合、システムは標準のPHP MAIL（）関数を使用します。
+,SMTP host,SMTPホスト
+,SMTP korisnik,SMTPユーザー
+,SMTP lozinka,SMTPパスワード
+,SMTP port,SMTPポート
+,SMTP sigurnost,SMTPセキュリティ
+,Jezici aplikacije,アプリケーション言語
+,Kod,コード
+,Statusi satnice,時間別ステータス
+,Direkcija teksta,テキストの方向
+,Dali ste sigurni da želite poništiti zadatak?,タスクをキャンセルしてもよろしいですか？
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,タスクは、まだ負債のkorinki7によって受け入れられていません。
+,Ocjeni!,レート！
+,u obradi...,処理中...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.",タスクは完了としてマークされます。今度は学年を離れ、完全な課題としてマークすることができます。コメントを残す場合は、評価の前にコメントを追加します。
+,Kompletiraj!,完了！
+,Zadatak/Cilj za korinika:,コーナーのタスク/ターゲット：
+,Zadatak/Cilj:,タスク/目標：
+,Naziv Zadatka/Cilja,目的/目的のタイトル
+,Dodaj polje,フィールドを追加する
+,Omogući vremensko ogranićenje zadatka/cilja,タイミング/目標時間制限を有効にする
+,Traži...,検索...
+,Svi,みんな
+,Rezultati pretrage za:,次の検索結果：
+,Deaktivirani korisnici,非アクティブ化されたユーザー
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,投与のレベル
+,Info,情報
+,deaktiviran:,非アクティブ化：
+,registracija:,登録：
+,Dali ste sigurni da želite deaktivirati korisnika:,ユーザーを非アクティブにしてもよろしいですか？
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,ユーザーを再度アクティブにしてもよろしいですか？
+,Obrada satnice!,スケジュールを処理しています！
+,Još nije bilo unosa satnica,まだエントリはありませんでした
+,Pozdrav!,こんにちは！
+,Odjava!,サインアウト！
+,Godina,年
+,Mjesec,月
+,MBO ciljevi,MBOの目標
+,Zahtjevi za trening,トレーニングの要件
+,Zahtjevi za službena putovanja,出張依頼
+,Zaposlenici,従業員
+,Korekcije satnica,訂正時間
+,Upravljanje satnicama,時間管理
+,Upravljanje korekcijama satnica,時間単位の時間補正を管理する
+,Godišnji/Odsustva,年次/欠席
+,Programi obuke,トレーニングプログラム
+,Zadužnice/Razdužnice,請求書/スプレッドシート
+,Organizaciona šema,組織図
+,Moj MBO,私のMBO
+,Moja službena putovanja,私の出張
+,Moji treninzi,私のトレーニング
+,Uredi profil,プロフィールを編集
+,Moje satnice,私のスケジュール
+,Verifikacija satnica,タイムテーブルの検証
+,Verifikacija korekcija,確認の修正
+,Zadužnice,法案
+,Razdužnice,スプレー
+,Pristupi,アプローチ
+,Korekcije,訂正
+,Bosna i Hercegovina,ボスニア・ヘルツェゴビナ
+,Sarajevo,サラエボ
+,Godišnji odmor predhodna godina,前年の休暇
+,Godišnji odmor tekuća godina,今年の年次休暇
+,Plaćeni vjerski praznici,有給休暇
+,Neplaćeni vjerski praznici,未払いの宗教祝日
+,Plaćeno odsustvo,有給休暇
+,Smrtni slučaj,死
+,Darivanje krvi,献血
+,Redovni rad,定期的な仕事
+,Godišnji odmor tekuca godina,今年の年次休暇
+,Ponedjeljak,月曜日
+,Utorak,火曜日
+,Srijeda,水曜日
+,Četvrtak,木曜日
+,Petak,金曜日
+,Subota,土曜日
+,Nedjelja,日曜日
+,Dodaj trening,トレーニングを追加する
+,Zahtjevi za službeno putovanje,公式旅行のリクエスト
+,Pretraga zaposlenih,従業員を検索する
+,Орг. јединица,Org。 ユニット
+,Ime i prezime:,名前と姓：
+,Prikaži kalendar,カレンダーを表示する
+,Odustani!,キャンセル！
+,Izaberi!,選択してください！
+,B-1 sa regijama,B-1
+,Naziv org. jed.,組織の名前。 ジェダイ。
+,Općenito,一般
+,Naslov aplikacije,アプリのタイトル
+,Logo aplikacije,ロゴアプリケーション
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,許可されたJPG / PNG / GIF形式。 推奨サイズは400x200ピクセルです。
+,Boje aplikacije,アプリケーションの色
+,Skriveni Tabovi,非表示のタブ
+,Nazivi tabova,タブ名
+,Role,役割
+,Spasi!,それを保存してください！

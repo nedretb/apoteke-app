@@ -1,0 +1,257 @@
+,Administrator,प्रशासक
+,Menadžer administratora satnica,टाइम व्यवस्थापक मैनेजर
+,Nadređeni,एक बेहतर
+,Zaposlenik,कर्मचारी
+,Odaberi...,चुनें ...
+,Nema dostupnih jezika.,कोई उपलब्ध भाषाओं नहीं हैं
+,Dodaj službeno putovanje,एक व्यावसायिक यात्रा जोड़ें
+,Nema unesenih država.,कोई भी देश दर्ज नहीं है
+,Nema unesenih statusa.,कोई स्थिति दर्ज नहीं की गई
+,Januar,जनवरी
+,Februar,फरवरी
+,Mart,मार्च
+,April,अप्रैल
+,Maj,मई
+,Juni,जून
+,Juli,जुलाई
+,Avgust,अगस्त
+,Septembar,सितंबर
+,Oktobar,अक्टूबर
+,Novembar,नवंबर
+,Decembar,दिसंबर
+,Moj profil,मेरी प्रोफ़ाइल
+,Moji Zadaci/Ciljevi,मेरे कार्य / लक्ष्य
+,Moji Zahtjevi,मेरे अनुरोध
+,Uredi profil,प्रोफ़ाइल संपादित करें
+,Zadaci/Ciljevi,कार्य / लक्ष्य
+,Zahtjevi,आवश्यकताओं
+,Korisnici,उपयोगकर्ताओं
+,Podešavanja,सेटिंग
+,Države,राज्य
+,Informacije su uspješno sapšene!,जानकारी को सफलतापूर्वक कब्जा कर लिया गया है!
+,Izmjene su uspješno sapšene!,परिवर्तन सफलतापूर्वक जब्त किए गए!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,उपयोगकर्ता नाम व्यस्त है कृपया किसी और की कोशिश करो
+,Greška!,त्रुटि!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","कृपया गलत उपयोगकर्ता नाम और / या पासवर्ड दर्ज करें, कृपया पुनः प्रयास करें।"
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,आपका खाता निष्क्रिय कर दिया गया है अधिक जानकारी के लिए हमसे संपर्क करें
+,Uspješno!,सफल!
+,Uspješno ste se odjavili.,आपने सफलतापूर्वक साइन आउट किया है
+,Neuspješno!,विफल!
+,Vaš korisnički nalog je deaktiviran.,आपका खाता निष्क्रिय है
+,Korisničko ime,यूज़र नेम
+,Lozinka,पासवर्ड
+,Prijava!,साइन अप करें!
+,Zaboravili ste lozinku?,अपना पासवर्ड भूल गए?
+,Vaša e-mail adresa,आपका ई-मेल पता
+,Poništi lozinku,पासवर्ड रीसेट करें
+,Nazad na stranicu za prijavu,लॉगिन पृष्ठ पर वापस जाएं
+,"Poštovani,","प्रिय महोदय,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","आपने रीसेट पासवर्ड का अनुरोध किया है, नया जुड़ा हुआ है।"
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"भेजे गए निर्देशों के साथ ई-मेल, कृपया पासवर्ड रिसेट अनुरोध में दिए गए ईमेल पर संदेशों की जांच करें।"
+,Unesena e-ail adresa nije pronađena u bazi.,दर्ज ई-मेल पता डेटाबेस में नहीं मिला था।
+,Ažuriranje!,अपडेट करें!
+,Spasi!,इसे बचाओ!
+,Osnovni podaci,बुनियादी जानकारी
+,Osnovni Podaci,मूल डेटा
+,Ime,नाम
+,Prezime,उपनाम
+,Fotografija,फोटोग्राफी
+,Odaberi,चुनना
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,अनुमोदित JPG / PNG / GIF प्रारूप। अनुशंसित आयाम 480x640 px (चित्र)
+,Kontakt Podaci,संपर्क डेटा
+,Država,देश
+,Grad,शहर
+,PTT,पीटीटी
+,Adresa,पता
+,Telefon,फ़ोन
+,E-mail,ई-मेल
+,Ostali Podaci,अन्य डेटा
+,Jezik aplikacije,एप्लिकेशन भाषा
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","गलत पृष्ठ आईडी, कृपया व्यवस्थापक से संपर्क करें।"
+,Prikaži,प्रदर्शन
+,Sakrij,छिपाना
+,Generiši,उत्पन्न
+,Moje satnice,मेरा शेड्यूल
+,Novi unos,नई प्रविष्टि
+,Dali ste sigurni da želite brisati?,क्या आप वाकई हटाना चाहते हैं?
+,Još nije bilo unosa za:,इसके लिए अभी तक एक प्रविष्टि नहीं थी:
+,Ukupno,संपूर्ण
+,Iskorišteno,उपयोग किया
+,Ostalo,अन्य
+,Spašeno,बचाया
+,Odobreno,दी
+,Odbijeno,अस्वीकृत
+,Dan,दिन
+,Broj sati,घंटे की संख्या
+,Status,स्थिति
+,Pregled,सिंहावलोकन
+,ODOBRENO,अनुमोदित
+,ODBIJENO,अस्वीकार
+,Obradio:,द्वारा संसाधित किया गया:
+,Komentar:,टिप्पणी:
+,Period od-do:,समय-समय पर:
+,do,को
+,Pregled/obrada zadatka,अवलोकन / कार्य प्रसंस्करण
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","कार्य अभी तक आपके द्वारा स्वीकार नहीं किया गया है, और इसलिए कार्य वस्तुओं को संसाधित करना संभव नहीं है।"
+,Prihvati zadatak,कार्य स्वीकार करें
+,Zaduženi:,आरोप:
+,Izvršiti do:,इसे निष्पादित करें:
+,Kreirao:,द्वारा बनाया गया:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","कार्य / लक्ष्य को पूर्ण रूप से चिह्नित किया गया है, और इसलिए आप कार्य की स्थिति नहीं बदल सकते। आप यहां cometers का पालन कर सकते हैं और यहां कार्य का मूल्यांकन कर सकते हैं।"
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,आइटम पूरी हो गए हैं आप अब पूर्ण कार्य को चिह्नित कर सकते हैं।
+,Završi zadatak,कार्य समाप्त करें
+,Komentari,टिप्पणियाँ
+,Ostavite komentar,एक टिप्पणी छोड़ दो
+,Dodaj komentar!,एक टिप्पणी जोड़ें!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","कार्य पूरा और मूल्यांकन किया गया था, और इसके साथ ही टिप्पणियाँ बंद हो गई थीं।"
+,Ocjena:,रेटिंग:
+,Pozicija,स्थिति
+,Sektor,क्षेत्र
+,Nadređeni korisnik,सुपीरियर उपयोगकर्ता
+,Datum registracije,पंजीकरण की तिथि
+,Datum reaktivacije,रिएक्टिवेशन डेट
+,Satnice,कप्तान
+,Dodaj godinu,वर्ष जोड़ें
+,Dodaj mjesec,महीने जोड़ें
+,Još niste počeli unositi satnice,आपने अभी तक शेड्यूल में प्रवेश नहीं किया है
+,Aktivni,सक्रिय
+,Arhiva,अभिलेखागार
+,Zahtjev za G.O.,जीओ के लिए अनुरोध
+,Od:,से:
+,Do:,करने के लिए:
+,Na čekanju...,प्रतीक्षारत ...
+,Zahtjev kreiran:,अनुरोध बनाया गया:
+,Zahtjev odobren:,अनुरोध स्वीकृत:
+,Zahtjev odbijen:,अनुरोध अस्वीकृत:
+,Dali ste sigurni da želite poništiti zahtjev?,क्या आप वाकई अनुरोध रद्द करना चाहते हैं?
+,Dali ste sigurni da želite arhivirati zahtjev?,क्या आप वाकई अनुरोध को संग्रहित करना चाहते हैं?
+,Nema spašenih zahtjeva prema odabranim parametrima.,चयनित पैरामीटर के लिए कोई सहेजे गए अनुरोध नहीं हैं
+,Na čekanju,अपूर्ण
+,Prihvaćen,स्वीकार किया
+,Završen,समाप्त
+,Dali ste sigurni da želite arhivirati zadatak?,क्या आप निश्चित रूप से कार्य को संग्रहित करना चाहते हैं?
+,Nema spašenih zadataka prema odabranim parametrima.,चयनित पैरामीटर के लिए कोई सहेजे गए कार्यों नहीं हैं।
+,Neovlašten pristup,अनधिकृत पहुंच
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","आपके पास आवेदन के इस हिस्से को एक्सेस करने का कोई अधिकार नहीं है। यदि कोई त्रुटि हुई है, तो व्यवस्थापक से संपर्क करें।"
+,Nazad na moj profil,मेरे प्रोफाइल पर वापस जाएं
+,Zahtjevi za G.O.,जीओ के लिए अनुरोध
+,Obrada zahtjeva!,अनुरोध प्रसंस्करण!
+,Status zahtjeva:,अनुरोध स्थिति:
+,Komentar,टिप्पणी
+,Gradovi,शहरों
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","दर्ज किए गए शहरों की सूची, जिन्हें गंतव्य और आरक्षण बनाने की आवश्यकता होती है"
+,Naziv,नाम
+,Dali ste sigurni da želite brisati:,क्या आप वाकई हटाना चाहते हैं:
+,Još nije bilo unosa,अभी तक एक प्रविष्टि नहीं थी
+,Općenito,अवलोकन
+,Naslov aplikacije,ऐप शीर्षक
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,अनुमोदित JPG / PNG / GIF प्रारूप। अनुशंसित आयाम 400x200 px
+,Boje aplikacije,आवेदन रंग
+,Pozadina aplikacije,आवेदन की पृष्ठभूमि
+,Boja teksta aplikacije,एप्लिकेशन टेक्स्ट का रंग
+,Pozadina gornje trake - HEADER,पृष्ठभूमि बार - HEADER
+,Boja teksta gornje trake - HEADER,ऊपरी टेप का पाठ रंग - हेडर
+,Boja teksta gornje trake - HEADER (:hover :active),शीर्ष रिबन का पाठ रंग - हेडर (: मंडराना: सक्रिय)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","शीर्षक रंग (एच 1, एच 2, एच 3, एच 4, एच 5, एच 6)"
+,Pozadina - BUTTONS,पृष्ठभूमि - बटन
+,Tekst i ikona - BUTTONS,पाठ और आइकन - बटन
+,SMTP parametri,एसएमटीपी पैरामीटर
+,SMTP status,एसएमटीपी स्थिति
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","यदि SMTP निष्क्रिय है या पैरामीटर उपलब्ध नहीं हैं, तो सिस्टम मानक PHP मैल () फ़ंक्शन का उपयोग करेगा।"
+,SMTP host,एसएमटीपी होस्ट
+,SMTP korisnik,एसएमटीपी उपयोगकर्ता
+,SMTP lozinka,एसएमटीपी पासवर्ड
+,SMTP port,एसएमटीपी पोर्ट
+,SMTP sigurnost,एसएमटीपी सुरक्षा
+,Jezici aplikacije,एप्लिकेशन भाषाएं
+,Kod,पर
+,Statusi satnice,प्रति घंटा की स्थिति
+,Direkcija teksta,पाठ की दिशा
+,Dali ste sigurni da želite poništiti zadatak?,क्या आप निश्चित रूप से कार्य रद्द करना चाहते हैं?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,इस ऋणी को अभी तक कर्इन्कि 7 द्वारा इस कार्य को स्वीकार नहीं किया गया है।
+,Ocjeni!,दर!
+,u obradi...,प्रसंस्करण में ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","कार्य पूर्ण के रूप में चिह्नित किया गया है। , और अब आप ग्रेड छोड़ सकते हैं और इसे एक पूर्ण कार्य के रूप में चिह्नित कर सकते हैं। यदि आप कोई टिप्पणी छोड़ना चाहते हैं, तो उसे रेटिंग से पहले जोड़ें।"
+,Kompletiraj!,पूरा हुआ!
+,Zadatak/Cilj za korinika:,कॉर्नर के लिए कार्य / लक्ष्य:
+,Zadatak/Cilj:,कार्य / लक्ष्य:
+,Naziv Zadatka/Cilja,उद्देश्य / उद्देश्य का शीर्षक
+,Dodaj polje,फ़ील्ड जोड़ें
+,Omogući vremensko ogranićenje zadatka/cilja,समय / लक्ष्य समय सीमा को सक्षम करें
+,Traži...,खोज ...
+,Svi,सब
+,Rezultati pretrage za:,के लिए खोज परिणाम:
+,Deaktivirani korisnici,निष्क्रिय उपयोगकर्ता
+,ID,आईडी
+,Korinik,उपयोगकर्ता
+,Nivo administracije,प्रशासन का स्तर
+,Info,जानकारी
+,deaktiviran:,निष्क्रिय:
+,registracija:,पंजीकरण:
+,Dali ste sigurni da želite deaktivirati korisnika:,क्या आप वाकई उपयोगकर्ता निष्क्रिय करना चाहते हैं:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,क्या आप वाकई उपयोगकर्ता को पुन: सक्रिय करना चाहते हैं:
+,Obrada satnice!,शेड्यूल प्रसंस्करण!
+,Još nije bilo unosa satnica,अभी तक कोई प्रविष्टियां नहीं थीं
+,Pozdrav!,नमस्ते!
+,Odjava!,साइन आउट करें!
+,Godina,वर्ष
+,Mjesec,माह
+,MBO ciljevi,एमबीओ के लक्ष्य
+,Zahtjevi za trening,प्रशिक्षण के लिए आवश्यकताएँ
+,Zahtjevi za službena putovanja,व्यवसाय यात्राएं के लिए अनुरोध
+,Zaposlenici,कर्मचारियों
+,Korekcije satnica,सुधार का समय
+,Upravljanje satnicama,समय प्रबंधन
+,Upravljanje korekcijama satnica,प्रति घंटा समय सुधार प्रबंधित करें
+,Godišnji/Odsustva,वार्षिक / अनुपस्थिति
+,Programi obuke,प्रशिक्षण कार्यक्रम
+,Zadužnice/Razdužnice,बिल / स्प्रेडशीट्स
+,Organizaciona šema,संगठनात्मक योजना
+,Moj MBO,मेरी एमबीओ
+,Moja službena putovanja,मेरा व्यवसाय यात्राएं
+,Moji treninzi,मेरी ट्रेनिंग
+,Uredi profil,प्रोफ़ाइल संपादित करें
+,Moje satnice,मेरा शेड्यूल
+,Verifikacija satnica,समय-सारिणी का सत्यापन
+,Verifikacija korekcija,सत्यापन सुधार
+,Zadužnice,डिबेंचर
+,Razdužnice,Razdužnice
+,Pristupi,दृष्टिकोण
+,Korekcije,सुधार
+,Bosna i Hercegovina,बोस्निया और हर्जेगोविना
+,Sarajevo,साराजेवो
+,Godišnji odmor predhodna godina,पिछले साल की छुट्टी
+,Godišnji odmor tekuća godina,चालू वर्ष की वार्षिक अवकाश
+,Plaćeni vjerski praznici,अदा किए गए धार्मिक छुट्टियां
+,Neplaćeni vjerski praznici,अवैतनिक धार्मिक छुट्टियां
+,Plaćeno odsustvo,भुगतान किया छुट्टी
+,Smrtni slučaj,मौत
+,Darivanje krvi,रक्तदान
+,Redovni rad,नियमित काम
+,Godišnji odmor tekuca godina,चालू वर्ष की वार्षिक अवकाश
+,Ponedjeljak,सोमवार
+,Utorak,मंगलवार
+,Srijeda,बुधवार
+,Četvrtak,बृहस्पतिवार
+,Petak,शुक्रवार
+,Subota,शनिवार
+,Nedjelja,रविवार
+,Dodaj trening,प्रशिक्षण जोड़ें
+,Zahtjevi za službeno putovanje,आधिकारिक यात्रा के लिए अनुरोध
+,Pretraga zaposlenih,कर्मचारियों के लिए खोजें
+,Орг. јединица,संगठन। इकाई
+,Ime i prezime:,नाम और उपनाम:
+,Prikaži kalendar,कैलेंडर दिखाएं
+,Odustani!,यह हार!
+,Izaberi!,का चयन करें!
+,B-1 sa regijama,क्षेत्रों के साथ बी -1
+,Naziv org. jed.,संगठन का नाम पकवान।
+,Općenito,अवलोकन
+,Naslov aplikacije,ऐप शीर्षक
+,Logo aplikacije,लोगो आवेदन
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,अनुमोदित JPG / PNG / GIF प्रारूप। अनुशंसित आयाम 400x200 px
+,Boje aplikacije,आवेदन रंग
+,Skriveni Tabovi,छिपे हुए टैब
+,Nazivi tabova,टैब नाम
+,Role,भूमिका
+,Spasi!,इसे बचाओ!

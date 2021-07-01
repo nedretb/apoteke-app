@@ -1,0 +1,257 @@
+,Administrator,Administrators
+,Menadžer administratora satnica,Laika administratora vadītājs
+,Nadređeni,Superior
+,Zaposlenik,Darbinieks
+,Odaberi...,Izvēlies ...
+,Nema dostupnih jezika.,Nav pieejama valodu.
+,Dodaj službeno putovanje,Pievienojiet komandējumus
+,Nema unesenih država.,Netika iekļauta neviena valsts.
+,Nema unesenih statusa.,Nav ievadīts statuss.
+,Januar,Janvāris
+,Februar,Februāris
+,Mart,Marts
+,April,Aprīlis
+,Maj,Maijs
+,Juni,Jūnijs
+,Juli,Jūlijs
+,Avgust,Augusts
+,Septembar,Septembris
+,Oktobar,Oktobris
+,Novembar,Novembris
+,Decembar,Decembris
+,Moj profil,Mans profils
+,Moji Zadaci/Ciljevi,Mani uzdevumi / mērķi
+,Moji Zahtjevi,Mani lūgumi
+,Uredi profil,Rediģēt profilu
+,Zadaci/Ciljevi,Uzdevumi / mērķi
+,Zahtjevi,Pieprasījumi
+,Korisnici,Lietotāji
+,Podešavanja,Iestatījumi
+,Države,Valstis
+,Informacije su uspješno sapšene!,Informācija ir sekmīgi uzņemta!
+,Izmjene su uspješno sapšene!,Izmaiņas tika veiksmīgi izmantotas!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,"Lietotāja vārds ir aizņemts. Lūdzu, mēģiniet kādu citu."
+,Greška!,Kļūda!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Lūdzu, ievadiet nepareizu lietotājvārdu un / vai paroli, lūdzu, mēģiniet vēlreiz."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,"Jūsu konts ir deaktivizēts. Lai iegūtu vairāk informācijas, sazinieties ar mums."
+,Uspješno!,Veiksmīgi!
+,Uspješno ste se odjavili.,Jūs esat veiksmīgi izrakstījies.
+,Neuspješno!,Neveiksmīgs!
+,Vaš korisnički nalog je deaktiviran.,Jūsu konts ir deaktivizēts.
+,Korisničko ime,Lietotājvārds
+,Lozinka,Parole
+,Prijava!,Ieiet!
+,Zaboravili ste lozinku?,Aizmirsāt paroli?
+,Vaša e-mail adresa,Jūsu e-pasta adrese
+,Poništi lozinku,Atiestatīt paroli
+,Nazad na stranicu za prijavu,Atpakaļ uz pieteikšanās lapu
+,"Poštovani,",Labdien!
+,"Zatražili ste reset lozinke, nova je u prilogu.","Jūs esat pieprasījis atiestatīšanas paroli, jauna ir pievienota."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-pasts ar norādījumiem, kas nosūtīti, lūdzu, pārbaudiet e-pasta ziņojumus, kurus norādījāt paroles atiestatīšanas pieprasījumā."
+,Unesena e-ail adresa nije pronađena u bazi.,Ievadītā e-pasta adrese nav atrasta datu bāzē.
+,Ažuriranje!,Atjaunināšana!
+,Spasi!,Saglabājiet to!
+,Osnovni podaci,Pamatinformācija
+,Osnovni Podaci,Pamatdati
+,Ime,Nosaukums
+,Prezime,Uzvārds
+,Fotografija,Foto
+,Odaberi,Izvēlies
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Atļauts JPG / PNG / GIF formāts. Ieteicamie izmēri 480x640 pikseļi (portrets).
+,Kontakt Podaci,Sazinieties ar datiem
+,Država,Valsts
+,Grad,Pilsēta
+,PTT,Rt
+,Adresa,Adrese
+,Telefon,Tālrunis
+,E-mail,E-pasts
+,Ostali Podaci,Citi dati
+,Jezik aplikacije,Pieteikuma valoda
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Nepareizs lapas ID, lūdzu, sazinieties ar administratoru."
+,Prikaži,Parādīt
+,Sakrij,Paslēpt
+,Generiši,Izveidot
+,Moje satnice,Mans grafiks
+,Novi unos,Jauns ieraksts
+,Dali ste sigurni da želite brisati?,Vai tiešām vēlaties dzēst?
+,Još nije bilo unosa za:,Nebija vēl ierakstu par:
+,Ukupno,Kopā
+,Iskorišteno,Izmantots
+,Ostalo,Cits
+,Spašeno,Izglāba
+,Odobreno,Apstiprināts
+,Odbijeno,Noraidīts
+,Dan,Dan
+,Broj sati,Stundu skaits
+,Status,Statuss
+,Pregled,Pārskats
+,ODOBRENO,APSTIPRINĀTS
+,ODBIJENO,ODBIJENO
+,Obradio:,Pārstrādā:
+,Komentar:,Komentārs:
+,Period od-do:,Periods no-līdz:
+,do,uz
+,Pregled/obrada zadatka,Pārskats / uzdevumu apstrāde
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Jūsu uzdevums vēl nav pieņemts, un tāpēc uzdevumu posteņus nav iespējams apstrādāt."
+,Prihvati zadatak,Pieņemt uzdevumu
+,Zaduženi:,Atbildīgais:
+,Izvršiti do:,Izpildīt:
+,Kreirao:,Izveidoja:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Uzdevums / Mērķis ir atzīmēts kā pabeigts, tādēļ jūs nevarat mainīt uzdevuma statusu. Jūs varat sekot cometers šeit un novērtēt uzdevumu šeit."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Posteņi ir pabeigti. tagad varat atzīmēt pabeigto uzdevumu.
+,Završi zadatak,Pabeigt uzdevumu
+,Komentari,Komentāri
+,Ostavite komentar,Atstājiet komentāru
+,Dodaj komentar!,Pievienot komentāru!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Uzdevums tika pabeigts un novērtēts, un līdz ar to komentāri tika slēgti."
+,Ocjena:,Reitings:
+,Pozicija,Amats
+,Sektor,Nozare
+,Nadređeni korisnik,Labāks lietotājs
+,Datum registracije,Reģistrācijas datums
+,Datum reaktivacije,Reaktivizācijas datums
+,Satnice,Grafiks
+,Dodaj godinu,Pievienot gadu
+,Dodaj mjesec,Pievienot mēnesi
+,Još niste počeli unositi satnice,Jūs vēl neesat sācis ievadīt grafiku
+,Aktivni,Aktīvs
+,Arhiva,Arhīvs
+,Zahtjev za G.O.,Pieprasījums G.O.
+,Od:,No:
+,Do:,Uz:
+,Na čekanju...,Gaida ...
+,Zahtjev kreiran:,Pieprasījums izveidots:
+,Zahtjev odobren:,Pieprasījums ir apstiprināts:
+,Zahtjev odbijen:,Pieprasījums tika noraidīts:
+,Dali ste sigurni da želite poništiti zahtjev?,Vai tiešām vēlaties atcelt pieprasījumu?
+,Dali ste sigurni da želite arhivirati zahtjev?,Vai tiešām vēlaties arhivēt pieprasījumu?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Izvēlētajiem parametriem nav saglabātu pieprasījumu.
+,Na čekanju,Gaida
+,Prihvaćen,Pieņemts
+,Završen,Pabeigts
+,Dali ste sigurni da želite arhivirati zadatak?,Vai tiešām vēlaties arhivēt uzdevumu?
+,Nema spašenih zadataka prema odabranim parametrima.,Izvēlētajiem parametriem nav saglabātu uzdevumu.
+,Neovlašten pristup,Neatļauta piekļuve
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Jums nav tiesību piekļūt šai pieteikuma daļai. Ja radusies kļūda, sazinieties ar administratoru."
+,Nazad na moj profil,Atpakaļ uz manu profilu
+,Zahtjevi za G.O.,Pieteikumi G.O.
+,Obrada zahtjeva!,Pieprasījuma apstrāde!
+,Status zahtjeva:,Pieprasīt statusu:
+,Komentar,Komentārs
+,Gradovi,Pilsētas
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Ievadīto pilsētu saraksts, kas vajadzīgi, lai izveidotu galamērķus un rezervācijas."
+,Naziv,Nosaukums
+,Dali ste sigurni da želite brisati:,Vai tiešām vēlaties dzēst:
+,Još nije bilo unosa,Vēl nebija ieraksta
+,Općenito,Ģenerālis
+,Naslov aplikacije,Programmas nosaukums
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Atļauts JPG / PNG / GIF formāts. Ieteicamie izmēri 400x200 pikseļi.
+,Boje aplikacije,Pieteikuma krāsas
+,Pozadina aplikacije,Pieteikuma pamatojums
+,Boja teksta aplikacije,Lietojuma teksta krāsa
+,Pozadina gornje trake - HEADER,Fona bārs - HEADER
+,Boja teksta gornje trake - HEADER,Augšējā lentes teksta krāsa - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Augšējās lentes teksta krāsa - HEADER (: hover: aktīvs)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Nosaukuma krāsa (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Fona - pogas
+,Tekst i ikona - BUTTONS,Teksts un ikona - pogas
+,SMTP parametri,SMTP parametri
+,SMTP status,SMTP statuss
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Ja SMTP ir neaktīvs vai parametri nav pieejami, sistēma izmantos standarta PHP MAIL () funkciju."
+,SMTP host,SMTP resursdators
+,SMTP korisnik,SMTP lietotājs
+,SMTP lozinka,SMTP parole
+,SMTP port,SMTP ports
+,SMTP sigurnost,SMTP drošība
+,Jezici aplikacije,Pieteikuma valodas
+,Kod,Kods
+,Statusi satnice,Stundu statuss
+,Direkcija teksta,Teksta virziens
+,Dali ste sigurni da želite poništiti zadatak?,Vai tiešām vēlaties atcelt uzdevumu?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Uzdevums vēl nav pieņemts parādi korinki7.
+,Ocjeni!,Rate!
+,u obradi...,pārstrādē ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Uzdevums ir atzīmēts kā pabeigts. , un tagad jūs varat atstāt atzīmi un atzīmēt to kā pilnīgu uzdevumu. Ja vēlaties atstāt komentāru, pievienojiet to pirms vērtējuma."
+,Kompletiraj!,Pabeigt!
+,Zadatak/Cilj za korinika:,Uzdevums / mērķis:
+,Zadatak/Cilj:,Uzdevums / mērķis:
+,Naziv Zadatka/Cilja,Mērķa / mērķa nosaukums
+,Dodaj polje,Pievienot lauku
+,Omogući vremensko ogranićenje zadatka/cilja,Iespējot laika / mērķa laika ierobežojumu
+,Traži...,Meklēt ...
+,Svi,Visi
+,Rezultati pretrage za:,Meklēšanas rezultāti:
+,Deaktivirani korisnici,Deaktivizētie lietotāji
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Administrācijas līmenis
+,Info,Info
+,deaktiviran:,deaktivizēts:
+,registracija:,reģistrācija:
+,Dali ste sigurni da želite deaktivirati korisnika:,Vai tiešām vēlaties deaktivizēt lietotāju:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Vai tiešām vēlaties atkārtoti aktivizēt lietotāju:
+,Obrada satnice!,Apstrādājiet grafiku!
+,Još nije bilo unosa satnica,Vēl nav neviena ieraksta
+,Pozdrav!,Sveiki!
+,Odjava!,Izrakstīties!
+,Godina,Gads
+,Mjesec,Mēness
+,MBO ciljevi,MBO mērķi
+,Zahtjevi za trening,Prasības apmācībai
+,Zahtjevi za službena putovanja,Komandējumu komandējumi
+,Zaposlenici,Darbinieki
+,Korekcije satnica,Korekcijas laiki
+,Upravljanje satnicama,Laika vadība
+,Upravljanje korekcijama satnica,Pārvalda stundas laika labojumus
+,Godišnji/Odsustva,Gada / neierašanās
+,Programi obuke,Apmācības programmas
+,Zadužnice/Razdužnice,Rēķini / izklājlapas
+,Organizaciona šema,Organizatoriskā shēma
+,Moj MBO,Mans MBO
+,Moja službena putovanja,Mani darījumu braucieni
+,Moji treninzi,Manas mācības
+,Uredi profil,Rediģēt profilu
+,Moje satnice,Mans grafiks
+,Verifikacija satnica,Grafiku pārbaude
+,Verifikacija korekcija,Verifikācijas labojumi
+,Zadužnice,Rēķini
+,Razdužnice,Smidzinātāji
+,Pristupi,Pieeja
+,Korekcije,Labojumi
+,Bosna i Hercegovina,Bosnija un Hercegovina
+,Sarajevo,Sarajeva
+,Godišnji odmor predhodna godina,Iepriekšējā gada brīvdienas
+,Godišnji odmor tekuća godina,Kārtējā gada atvaļinājums
+,Plaćeni vjerski praznici,Apmaksātas reliģiskās brīvdienas
+,Neplaćeni vjerski praznici,Neapmaksātas reliģiskās brīvdienas
+,Plaćeno odsustvo,Apmaksāts atvaļinājums
+,Smrtni slučaj,Nāve
+,Darivanje krvi,Asins ziedojums
+,Redovni rad,Regulārs darbs
+,Godišnji odmor tekuca godina,Kārtējā gada atvaļinājums
+,Ponedjeljak,Pirmdiena
+,Utorak,Otrdiena
+,Srijeda,Trešdiena
+,Četvrtak,Ceturtdiena
+,Petak,Piektdiena
+,Subota,Sestdiena
+,Nedjelja,Svētdiena
+,Dodaj trening,Pievienojiet apmācību
+,Zahtjevi za službeno putovanje,Oficiāla ceļojuma pieprasījumi
+,Pretraga zaposlenih,Meklēt darbiniekus
+,Орг. јединица,Org. vienība
+,Ime i prezime:,Vārds un uzvārds:
+,Prikaži kalendar,Parādīt kalendāru
+,Odustani!,Atcelt!
+,Izaberi!,Izvēlies!
+,B-1 sa regijama,B-1 ar reģioniem
+,Naziv org. jed.,Org nosaukums jed
+,Općenito,Ģenerālis
+,Naslov aplikacije,Programmas nosaukums
+,Logo aplikacije,Logo pieteikums
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Atļauts JPG / PNG / GIF formāts. Ieteicamie izmēri 400x200 pikseļi.
+,Boje aplikacije,Pieteikuma krāsas
+,Skriveni Tabovi,Slēptās cilnes
+,Nazivi tabova,Tab nosaukumi
+,Role,Loma
+,Spasi!,Saglabājiet to!

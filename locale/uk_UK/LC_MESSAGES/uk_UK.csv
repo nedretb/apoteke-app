@@ -1,0 +1,257 @@
+,Administrator,Адміністратор
+,Menadžer administratora satnica,Часовий адміністратор
+,Nadređeni,Начальник
+,Zaposlenik,Працівник
+,Odaberi...,Виберіть ...
+,Nema dostupnih jezika.,Немає доступних мов.
+,Dodaj službeno putovanje,Додайте відрядження
+,Nema unesenih država.,Країни не ввійшли.
+,Nema unesenih statusa.,Не введено статусу.
+,Januar,Січень
+,Februar,Лютий
+,Mart,Березень
+,April,Квітень
+,Maj,Травень
+,Juni,Червень
+,Juli,Липень
+,Avgust,Серпень
+,Septembar,Вересень
+,Oktobar,Жовтень
+,Novembar,Листопад
+,Decembar,Грудень
+,Moj profil,Мій профіль
+,Moji Zadaci/Ciljevi,Мої завдання / цілі
+,Moji Zahtjevi,Мої запити
+,Uredi profil,Редагувати профіль
+,Zadaci/Ciljevi,Завдання / Цілі
+,Zahtjevi,Запити
+,Korisnici,Користувачі
+,Podešavanja,Налаштування
+,Države,Країни
+,Informacije su uspješno sapšene!,Інформація була успішно захоплена!
+,Izmjene su uspješno sapšene!,Зміни були успішно схоплені!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,"Ім'я користувача зайнято. Будь ласка, спробуйте когось іншого."
+,Greška!,Помилка!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Будь ласка, введіть неправильне ім'я користувача та / або пароль, будь ласка, повторіть спробу."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Ваш обліковий запис деактивовано. Для отримання додаткової інформації зв'яжіться з нами.
+,Uspješno!,Успішно!
+,Uspješno ste se odjavili.,Ви успішно вийшли із системи.
+,Neuspješno!,Невдало!
+,Vaš korisnički nalog je deaktiviran.,Ваш обліковий запис деактивовано.
+,Korisničko ime,Ім'я користувача
+,Lozinka,Пароль
+,Prijava!,Увійти!
+,Zaboravili ste lozinku?,Забули свій пароль?
+,Vaša e-mail adresa,Ваша електронна адреса
+,Poništi lozinku,Скидання пароля
+,Nazad na stranicu za prijavu,Повернутися на сторінку входу
+,"Poštovani,",Привіт
+,"Zatražili ste reset lozinke, nova je u prilogu.","Ви запросили пароль для скидання, додається новий."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"Електронна пошта з інструкціями була відправлена, будь ласка, перевірте повідомлення на пошті в тому, що ви вказали в запиті, щоб скинути пароль."
+,Unesena e-ail adresa nije pronađena u bazi.,Введену адресу електронної пошти не знайдено в базі даних.
+,Ažuriranje!,Оновлення!
+,Spasi!,Збережіть це!
+,Osnovni podaci,Основна інформація
+,Osnovni Podaci,Основні дані
+,Ime,Ім'я
+,Prezime,Прізвище
+,Fotografija,Фотографія
+,Odaberi,Виберіть
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Дозволені формати JPG / PNG / GIF. Рекомендовані розміри 480x640 пікс. (Портрет).
+,Kontakt Podaci,Контактні дані
+,Država,Країна
+,Grad,Місто
+,PTT,PTT
+,Adresa,Адреса
+,Telefon,Телефон
+,E-mail,Електронна пошта
+,Ostali Podaci,Інші дані
+,Jezik aplikacije,Мова програми
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Невірний ідентифікатор сторінки, будь ласка, зв'яжіться з адміністратором."
+,Prikaži,Шоу
+,Sakrij,Сховати
+,Generiši,Генерувати
+,Moje satnice,Мій графік
+,Novi unos,Новий запис
+,Dali ste sigurni da želite brisati?,"Ви впевнені, що хочете видалити?"
+,Još nije bilo unosa za:,Там ще не було запис для:
+,Ukupno,Всього
+,Iskorišteno,Використовується
+,Ostalo,Інше
+,Spašeno,Врятований
+,Odobreno,Затверджено
+,Odbijeno,Відхилено
+,Dan,Дан
+,Broj sati,Кількість годин
+,Status,Статус
+,Pregled,Огляд
+,ODOBRENO,ЗАТВЕРДЖЕНО
+,ODBIJENO,ODBIJENO
+,Obradio:,Оброблено:
+,Komentar:,Коментар:
+,Period od-do:,Період від до:
+,do,до
+,Pregled/obrada zadatka,Огляд / обробка завдань
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Ви ще не прийняли завдання, і тому неможливо обробити елементи завдання."
+,Prihvati zadatak,Прийміть завдання
+,Zaduženi:,Відповідальний:
+,Izvršiti do:,Виконати до:
+,Kreirao:,Створено:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Завдання / ціль позначено як завершений, і тому ви не можете змінити статус завдання. Ви можете слідкувати за кометниками тут і оцінити завдання тут."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Елементи завершені. тепер ви можете позначити завдання завершено.
+,Završi zadatak,Завершити завдання
+,Komentari,Коментарі
+,Ostavite komentar,Залишити коментар
+,Dodaj komentar!,Додати коментар!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Завдання було завершено та оцінено, і при цьому коментарі були закриті."
+,Ocjena:,Рейтинг:
+,Pozicija,Позиція
+,Sektor,Сектор
+,Nadređeni korisnik,Вищий користувач
+,Datum registracije,Дата реєстрації
+,Datum reaktivacije,Дата повторної активації
+,Satnice,Розклад
+,Dodaj godinu,Додати рік
+,Dodaj mjesec,Додати місяць
+,Još niste počeli unositi satnice,Ви ще не почали вводити графік
+,Aktivni,Активний
+,Arhiva,Архівувати
+,Zahtjev za G.O.,Запит на Г.О.
+,Od:,Від:
+,Do:,Щоб:
+,Na čekanju...,Очікування ...
+,Zahtjev kreiran:,Запит створено:
+,Zahtjev odobren:,Запит підтверджено:
+,Zahtjev odbijen:,Запит відхилено:
+,Dali ste sigurni da želite poništiti zahtjev?,"Ви впевнені, що хочете скасувати запит?"
+,Dali ste sigurni da želite arhivirati zahtjev?,"Ви впевнені, що хочете архівувати запит?"
+,Nema spašenih zahtjeva prema odabranim parametrima.,Немає збережених запитів щодо вибраних параметрів.
+,Na čekanju,Очікування
+,Prihvaćen,Прийнято
+,Završen,Завершено
+,Dali ste sigurni da želite arhivirati zadatak?,"Ви впевнені, що хочете архівувати завдання?"
+,Nema spašenih zadataka prema odabranim parametrima.,Для вибраних параметрів немає збережених завдань.
+,Neovlašten pristup,Несанкціонований доступ
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Ви не маєте права доступу до цієї частини програми. Якщо сталася помилка, зверніться до адміністратора."
+,Nazad na moj profil,Повернутися до мого профілю
+,Zahtjevi za G.O.,Запити на Г.О.
+,Obrada zahtjeva!,Обробка запиту!
+,Status zahtjeva:,Статус запиту:
+,Komentar,Коментар
+,Gradovi,Міста
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Список введених міст, необхідних для створення місць призначення та бронювання."
+,Naziv,Ім'я
+,Dali ste sigurni da želite brisati:,"Ви впевнені, що хочете видалити:"
+,Još nije bilo unosa,Там ще не було запису
+,Općenito,Генерал
+,Naslov aplikacije,Назва програми
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Дозволені формати JPG / PNG / GIF. Рекомендовані розміри 400x200 пікс.
+,Boje aplikacije,Кольори додатків
+,Pozadina aplikacije,Передумови застосування
+,Boja teksta aplikacije,Колір тексту програми
+,Pozadina gornje trake - HEADER,Фонова панель - HEADER
+,Boja teksta gornje trake - HEADER,Колір тексту верхньої стрічки - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Колір тексту верхньої стрічки - HEADER (: наведення: активний)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Колір назви (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Довідкова інформація - КНОПКИ
+,Tekst i ikona - BUTTONS,Текст та іконка - КНОПКИ
+,SMTP parametri,Параметри SMTP
+,SMTP status,Стан SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Якщо неактивні або SMTP параметри повністю завершені, система буде використовувати функцію стандартної PHP пошти ()."
+,SMTP host,Хост SMTP
+,SMTP korisnik,Користувач SMTP
+,SMTP lozinka,Пароль SMTP
+,SMTP port,SMTP-порт
+,SMTP sigurnost,SMTP безпека
+,Jezici aplikacije,Мови додатків
+,Kod,Код
+,Statusi satnice,Погодинний статус
+,Direkcija teksta,Напрямок тексту
+,Dali ste sigurni da želite poništiti zadatak?,"Ви впевнені, що хочете скасувати завдання?"
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Завдання ще не прийнято боржними корінками7.
+,Ocjeni!,Оцініть!
+,u obradi...,в обробці ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Завдання позначено як завершений. , і тепер ви можете залишити оцінку і позначити його як повне завдання. Якщо ви хочете залишити коментар, додайте його до рейтингу."
+,Kompletiraj!,Завершіть!
+,Zadatak/Cilj za korinika:,Завдання / ціль для кута:
+,Zadatak/Cilj:,Завдання / ціль:
+,Naziv Zadatka/Cilja,Назва цілі / завдання
+,Dodaj polje,Додати поле
+,Omogući vremensko ogranićenje zadatka/cilja,Увімкнути термін виконання / цільове обмеження
+,Traži...,Пошук ...
+,Svi,Кожен
+,Rezultati pretrage za:,Результати пошуку для:
+,Deaktivirani korisnici,Деактивовані користувачі
+,ID,Ідентифікатор
+,Korinik,Коринне
+,Nivo administracije,Рівень адміністрування
+,Info,Інформація
+,deaktiviran:,деактивовано:
+,registracija:,реєстрація:
+,Dali ste sigurni da želite deaktivirati korisnika:,"Ви впевнені, що хочете вимкнути користувача:"
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,"Ви впевнені, що хочете повторно активувати користувача:"
+,Obrada satnice!,Обробка графіку!
+,Još nije bilo unosa satnica,Записів ще не було
+,Pozdrav!,Привіт!
+,Odjava!,Вийдіть!
+,Godina,Рік
+,Mjesec,Місяць
+,MBO ciljevi,Цілі MBO
+,Zahtjevi za trening,Вимоги до навчання
+,Zahtjevi za službena putovanja,Заявки на відрядження
+,Zaposlenici,Працівники
+,Korekcije satnica,Час корекції
+,Upravljanje satnicama,Управління часом
+,Upravljanje korekcijama satnica,Керування часовими виправленнями часу
+,Godišnji/Odsustva,Щорічна / Відсутність
+,Programi obuke,Навчальні програми
+,Zadužnice/Razdužnice,Векселі / електронні таблиці
+,Organizaciona šema,Організаційна схема
+,Moj MBO,Мій MBO
+,Moja službena putovanja,Мої ділові поїздки
+,Moji treninzi,Мої тренування
+,Uredi profil,Редагувати профіль
+,Moje satnice,Мій графік
+,Verifikacija satnica,Перевірка графіків
+,Verifikacija korekcija,Верифікаційні виправлення
+,Zadužnice,Законопроекти
+,Razdužnice,Розпилювачі
+,Pristupi,Підхід
+,Korekcije,Виправлення
+,Bosna i Hercegovina,Боснія і Герцеговина
+,Sarajevo,Сараєво
+,Godišnji odmor predhodna godina,Відпустка минулого року
+,Godišnji odmor tekuća godina,Щорічний відпочинок поточного року
+,Plaćeni vjerski praznici,Платні релігійні свята
+,Neplaćeni vjerski praznici,Неоплачувані релігійні свята
+,Plaćeno odsustvo,Оплачуваний відпустку
+,Smrtni slučaj,Смерть
+,Darivanje krvi,Пожертвування крові
+,Redovni rad,Регулярна робота
+,Godišnji odmor tekuca godina,Щорічний відпочинок поточного року
+,Ponedjeljak,Понеділок
+,Utorak,Вівторок
+,Srijeda,Середа
+,Četvrtak,Четвер
+,Petak,П'ятниця
+,Subota,Субота
+,Nedjelja,Неділя
+,Dodaj trening,Додати тренування
+,Zahtjevi za službeno putovanje,Запити на офіційні поїздки
+,Pretraga zaposlenih,Пошук співробітників
+,Орг. јединица,Орг. одиниця
+,Ime i prezime:,Ім'я та прізвище:
+,Prikaži kalendar,Показати календар
+,Odustani!,Скасувати!
+,Izaberi!,Вибрати!
+,B-1 sa regijama,Б-1 з регіонами
+,Naziv org. jed.,Назва організації джед
+,Općenito,Генерал
+,Naslov aplikacije,Назва програми
+,Logo aplikacije,Програма логотипу
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Дозволені формати JPG / PNG / GIF. Рекомендовані розміри 400x200 пікс.
+,Boje aplikacije,Кольори додатків
+,Skriveni Tabovi,Приховані вкладки
+,Nazivi tabova,Імена табуляції
+,Role,Роль
+,Spasi!,Збережіть це!

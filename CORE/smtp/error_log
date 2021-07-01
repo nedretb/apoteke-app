@@ -1,0 +1,6 @@
+[21-May-2016 11:11:50 UTC] PHP Warning:  Module 'zip' already loaded in Unknown on line 0
+[21-May-2016 11:11:50 UTC] PHP Fatal error:  require_once(): Failed opening required '' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/hatfieldswimming/public_html/dev/app/include/smtp/phpmailerTest.php on line 16
+[21-May-2016 11:12:05 UTC] PHP Warning:  Module 'zip' already loaded in Unknown on line 0
+[21-May-2016 11:12:05 UTC] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/hatfieldswimming/public_html/dev/app/include/smtp/phpmailerTest.php on line 23
+[21-May-2016 11:12:06 UTC] PHP Warning:  Module 'zip' already loaded in Unknown on line 0
+[21-May-2016 11:12:06 UTC] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/hatfieldswimming/public_html/dev/app/include/smtp/phpmailerTest.php on line 23

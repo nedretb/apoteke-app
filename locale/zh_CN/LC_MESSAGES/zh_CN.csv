@@ -1,0 +1,237 @@
+,Administrator,管理員
+,Menadžer administratora satnica,時間管理員經理
+,Nadređeni,卓越
+,Zaposlenik,僱員
+,Odaberi...,選擇...
+,Nema dostupnih jezika.,沒有可用的語言。
+,Nema unesenih država.,沒有國家進入。
+,Nema unesenih statusa.,沒有進入狀態。
+,Januar,一月
+,Februar,二月
+,Mart,三月
+,April,四月
+,Maj,五月
+,Juni,六月
+,Juli,七月
+,Avgust,八月
+,Septembar,九月
+,Oktobar,十月
+,Novembar,十一月
+,Decembar,十二月
+,Moj profil,我的個人資料
+,Moji Zadaci/Ciljevi,我的任務/目標
+,Moji Zahtjevi,我的要求
+,Uredi profil,編輯個人資料
+,Zadaci/Ciljevi,任務/目標
+,Zahtjevi,要求
+,Korisnici,用戶
+,Podešavanja,設置
+,Države,狀態
+,Informacije su uspješno sapšene!,信息已被成功捕獲！
+,Izmjene su uspješno sapšene!,變化被抓住了！
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,用戶名正忙。請嘗試別人。
+,Greška!,錯誤！
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.",請輸入錯誤的用戶名和/或密碼，請重試。
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,您的帳戶已被停用。欲了解更多信息聯繫我們。
+,Uspješno!,成功了！
+,Uspješno ste se odjavili.,您已成功註銷。
+,Neuspješno!,失敗！
+,Vaš korisnički nalog je deaktiviran.,您的帳戶已停用。
+,Korisničko ime,用戶名
+,Lozinka,密碼
+,Prijava!,註冊！
+,Zaboravili ste lozinku?,忘記密碼？
+,Vaša e-mail adresa,您的電子郵件地址
+,Poništi lozinku,重置密碼
+,Nazad na stranicu za prijavu,返回登錄頁面
+,"Poštovani,",親愛的先生們，
+,"Zatražili ste reset lozinke, nova je u prilogu.",你已經要求重置密碼，新的連接。
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,發送指示的電子郵件，請檢查您在密碼重置請求中提供的電子郵件上的消息。
+,Unesena e-ail adresa nije pronađena u bazi.,在數據庫中找不到輸入的電子郵件地址。
+,Ažuriranje!,更新！
+,Spasi!,保存吧！
+,Osnovni podaci,基本信息
+,Osnovni Podaci,基本數據
+,Ime,名
+,Prezime,姓
+,Fotografija,攝影
+,Odaberi,選擇
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,允許使用JPG / PNG / GIF格式。建議尺寸480x640像素（肖像）。
+,Kontakt Podaci,聯繫人數據
+,Država,國家
+,Grad,城市
+,PTT,PTT
+,Adresa,地址
+,Telefon,電話
+,E-mail,電子郵件
+,Ostali Podaci,其他數據
+,Jezik aplikacije,應用語言
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.",頁面ID不正確，請聯繫管理員。
+,Prikaži,節目
+,Sakrij,隱藏
+,Generiši,產生
+,Moje satnice,我的時間表
+,Novi unos,新條目
+,Dali ste sigurni da želite brisati?,你確定要刪除嗎？
+,Još nije bilo unosa za:,還沒有一個條目：
+,Ukupno,總
+,Iskorišteno,利用
+,Ostalo,其他
+,Spašeno,保存
+,Odobreno,理所當然
+,Odbijeno,被拒絕
+,Dan,天
+,Broj sati,小時數
+,Status,狀態
+,Pregled,概觀
+,ODOBRENO,批准
+,ODBIJENO,遭到拒絕
+,Obradio:,處理方式：
+,Komentar:,發表評論：
+,Period od-do:,期間從：到：
+,do,至
+,Pregled/obrada zadatka,概述/任務處理
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",任務尚未被您接受，因此無法處理任務項目。
+,Prihvati zadatak,接受任務
+,Zaduženi:,負責人：
+,Izvršiti do:,執行到：
+,Kreirao:,創建者：
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",任務/目標被標記為已完成，因此您不能更改任務的狀態。您可以在這裡跟隨訪問者，並在這裡評估任務。
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,項目已完成。你現在可以標記任務完成。
+,Završi zadatak,完成任務
+,Komentari,評論
+,Ostavite komentar,留下評論
+,Dodaj komentar!,添加評論！
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",任務完成並評估，並由此結束評論。
+,Ocjena:,評分：
+,Pozicija,位置
+,Sektor,扇形
+,Nadređeni korisnik,優越的用戶
+,Datum registracije,註冊日期
+,Datum reaktivacije,重新激活日期
+,Satnice,隊長
+,Dodaj godinu,添加年份
+,Dodaj mjesec,添加月份
+,Još niste počeli unositi satnice,你還沒有開始輸入時間表
+,Aktivni,活性
+,Arhiva,檔案
+,Zahtjev za G.O.,請求G.O.
+,Od:,來自：
+,Do:,於：
+,Na čekanju...,等待...
+,Zahtjev kreiran:,創建的請求：
+,Zahtjev odobren:,請求批准：
+,Zahtjev odbijen:,請求被拒絕：
+,Dali ste sigurni da želite poništiti zahtjev?,你確定要取消這個請求嗎？
+,Dali ste sigurni da želite arhivirati zahtjev?,你確定要存檔請求嗎？
+,Nema spašenih zahtjeva prema odabranim parametrima.,沒有保存的所選參數的請求。
+,Na čekanju,有待
+,Prihvaćen,公認
+,Završen,完
+,Dali ste sigurni da želite arhivirati zadatak?,你確定要存檔任務嗎？
+,Nema spašenih zadataka prema odabranim parametrima.,沒有為選定的參數保存的任務。
+,Neovlašten pristup,未經授權的訪問
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.",您無權訪問這部分應用程序。如果發生錯誤，請聯繫管理員。
+,Nazad na moj profil,回到我的個人資料
+,Zahtjevi za G.O.,請求G.O.
+,Obrada zahtjeva!,處理請求！
+,Status zahtjeva:,請求狀態：
+,Komentar,評論
+,Gradovi,城市
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",輸入的城市列表，這是創建目的地和預訂所需的。
+,Naziv,名
+,Dali ste sigurni da želite brisati:,您確定要刪除：
+,Još nije bilo unosa,還沒有一個入口
+,Općenito,概觀
+,Naslov aplikacije,應用標題
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,允許使用JPG / PNG / GIF格式。建議尺寸400x200像素。
+,Boje aplikacije,應用顏色
+,Pozadina aplikacije,應用程序的背景
+,Boja teksta aplikacije,應用文字顏色
+,Pozadina gornje trake - HEADER,背景欄 - HEADER
+,Boja teksta gornje trake - HEADER,上部膠帶的文字顏色 - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),頂部功能區的文本顏色 - HEADER（：hover：active）
+,"Boja naslova (H1,H2,H3,H4,H5,H6)",標題顏色（H1，H2，H3，H4，H5，H6）
+,Pozadina - BUTTONS,背景 - 按鈕
+,Tekst i ikona - BUTTONS,文本和圖標 - 按鈕
+,SMTP parametri,SMTP參數
+,SMTP status,SMTP狀態
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.",如果SMTP不活動或參數不可用，系統將使用標準的PHP MAIL（）函數。
+,SMTP host,SMTP主機
+,SMTP korisnik,SMTP用戶
+,SMTP lozinka,SMTP密碼
+,SMTP port,SMTP端口
+,SMTP sigurnost,SMTP安全
+,Jezici aplikacije,應用程序語言
+,Kod,在
+,Statusi satnice,每小時狀態
+,Direkcija teksta,文本的方向
+,Dali ste sigurni da želite poništiti zadatak?,你確定要取消這個任務嗎？
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,這個任務還沒有被負債的korinki7所接受。
+,Ocjeni!,速度！
+,u obradi...,正在處理...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.",該任務被標記為已完成。 ，你現在可以離開成績並將其標記為一個完整的任務。如果您想留下評論，請在評級前添加評論。
+,Kompletiraj!,完成！
+,Zadatak/Cilj za korinika:,角落的任務/目標：
+,Zadatak/Cilj:,任務/目標：
+,Naziv Zadatka/Cilja,目標/目標的標題
+,Dodaj polje,添加一個字段
+,Omogući vremensko ogranićenje zadatka/cilja,啟用計時/目標時間限制
+,Traži...,搜索...
+,Svi,所有
+,Rezultati pretrage za:,搜索結果：
+,Deaktivirani korisnici,取消激活的用戶
+,ID,ID
+,Korinik,用戶
+,Nivo administracije,行政級別
+,Info,信息
+,deaktiviran:,無效：
+,registracija:,註冊：
+,Dali ste sigurni da želite deaktivirati korisnika:,您確定要停用用戶：
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,您確定要重新激活用戶：
+,Obrada satnice!,處理日程！
+,Još nije bilo unosa satnica,目前還沒有參賽作品
+,Pozdrav!,您好！
+,Odjava!,退出！
+,Godina,歲月
+,Mjesec,月
+,MBO ciljevi,MBO目標
+,Zahtjevi za trening,培訓要求
+,Zahtjevi za službena putovanja,請求出差
+,Zaposlenici,員工
+,Korekcije satnica,更正時間
+,Upravljanje satnicama,時間管理
+,Upravljanje korekcijama satnica,管理每小時時間更正
+,Godišnji/Odsustva,年度/缺席
+,Programi obuke,培訓計劃
+,Zadužnice/Razdužnice,賬單/電子表格
+,Organizaciona šema,組織方案
+,Moj MBO,我的MBO
+,Moja službena putovanja,我的商務旅行
+,Moji treninzi,我的訓練
+,Uredi profil,編輯個人資料
+,Moje satnice,我的時間表
+,Verifikacija satnica,時間表的驗證
+,Verifikacija korekcija,驗證更正
+,Zadužnice,債券
+,Razdužnice,Razdužnice
+,Pristupi,方法
+,Korekcije,更正
+,Bosna i Hercegovina,波斯尼亞和黑塞哥維那
+,Sarajevo,薩拉熱窩
+,Godišnji odmor predhodna godina,去年的假期
+,Godišnji odmor tekuća godina,今年的年假
+,Plaćeni vjerski praznici,有償的宗教節日
+,Neplaćeni vjerski praznici,無償的宗教節日
+,Plaćeno odsustvo,帶薪休假
+,Smrtni slučaj,死亡
+,Darivanje krvi,獻血
+,Redovni rad,定期工作
+,Godišnji odmor tekuca godina,今年的年假
+,Ponedjeljak,星期一
+,Utorak,星期二
+,Srijeda,星期三
+,Četvrtak,星期四
+,Petak,星期五
+,Subota,星期六
+,Nedjelja,星期天

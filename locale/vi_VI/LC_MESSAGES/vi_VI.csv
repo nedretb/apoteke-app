@@ -1,0 +1,257 @@
+,Administrator,Quản trị viên
+,Menadžer administratora satnica,Quản trị viên quản lý thời gian
+,Nadređeni,Cao cấp
+,Zaposlenik,Nhân viên
+,Odaberi...,Chọn ...
+,Nema dostupnih jezika.,Không có ngôn ngữ nào.
+,Dodaj službeno putovanje,Thêm chuyến đi công tác
+,Nema unesenih država.,Không có quốc gia nào bước vào.
+,Nema unesenih statusa.,Không có trạng thái nào được nhập.
+,Januar,Tháng Giêng
+,Februar,Tháng hai
+,Mart,Tháng ba
+,April,Tháng 4
+,Maj,Tháng năm
+,Juni,Tháng sáu
+,Juli,Tháng bảy
+,Avgust,Tháng tám
+,Septembar,Tháng chín
+,Oktobar,Tháng 10
+,Novembar,Tháng mười một
+,Decembar,Tháng mười hai
+,Moj profil,Hồ sơ của tôi
+,Moji Zadaci/Ciljevi,Nhiệm vụ / Mục tiêu của tôi
+,Moji Zahtjevi,Yêu cầu của tôi
+,Uredi profil,Chỉnh sửa tiểu sử
+,Zadaci/Ciljevi,Nhiệm vụ / Mục tiêu
+,Zahtjevi,Yêu cầu
+,Korisnici,Người sử dụng
+,Podešavanja,Cài đặt
+,Države,Quốc gia
+,Informacije su uspješno sapšene!,Thông tin đã được chụp thành công!
+,Izmjene su uspješno sapšene!,Những thay đổi đã được nắm bắt thành công!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Tên đăng nhập đang bận. Hãy thử một người khác.
+,Greška!,Lỗi!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Vui lòng nhập sai tên người dùng và / hoặc mật khẩu, hãy thử lại."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,"Tài khoản của bạn đã bị hủy kích hoạt. Để biết thêm thông tin, hãy liên hệ với chúng tôi."
+,Uspješno!,Thành công!
+,Uspješno ste se odjavili.,Bạn đã đăng xuất thành công.
+,Neuspješno!,Không thành công!
+,Vaš korisnički nalog je deaktiviran.,Tài khoản của bạn đã bị hủy kích hoạt.
+,Korisničko ime,Tên đăng nhập
+,Lozinka,Mật mã
+,Prijava!,Đăng nhập!
+,Zaboravili ste lozinku?,Quên mật khẩu?
+,Vaša e-mail adresa,Địa chỉ e-mail của bạn
+,Poništi lozinku,Đặt lại mật khẩu
+,Nazad na stranicu za prijavu,Quay lại trang đăng nhập
+,"Poštovani,","Xin chào,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Bạn đã yêu cầu đặt lại mật khẩu, mới được đính kèm."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mail với hướng dẫn được gửi, vui lòng kiểm tra các thư trên email mà bạn cung cấp trong yêu cầu đặt lại mật khẩu."
+,Unesena e-ail adresa nije pronađena u bazi.,Không tìm thấy địa chỉ e-mail đã nhập trong cơ sở dữ liệu.
+,Ažuriranje!,Đang cập nhật!
+,Spasi!,Lưu nó!
+,Osnovni podaci,Thông tin cơ bản
+,Osnovni Podaci,Dữ liệu cơ bản
+,Ime,Tên
+,Prezime,Họ
+,Fotografija,Ảnh
+,Odaberi,Chọn
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Cho phép định dạng JPG / PNG / GIF. Kích thước đề xuất 480x640 px (chân dung).
+,Kontakt Podaci,Dữ liệu Liên hệ
+,Država,Quốc gia
+,Grad,Thành phố
+,PTT,PTT
+,Adresa,Địa chỉ
+,Telefon,Điện thoại
+,E-mail,E-mail
+,Ostali Podaci,Dữ liệu Khác
+,Jezik aplikacije,Ngôn ngữ ứng dụng
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","ID trang không chính xác, vui lòng liên hệ với quản trị viên."
+,Prikaži,Hiển thị
+,Sakrij,Ẩn
+,Generiši,Tạo ra
+,Moje satnice,Lịch trình của tôi
+,Novi unos,Mục nhập mới
+,Dali ste sigurni da želite brisati?,Bạn có chắc chắn muốn xóa không?
+,Još nije bilo unosa za:,Chưa có mục nhập nào cho:
+,Ukupno,Tổng cộng
+,Iskorišteno,Sử dụng
+,Ostalo,Khác
+,Spašeno,Giải cứu
+,Odobreno,Được phê duyệt
+,Odbijeno,Bị từ chối
+,Dan,Dan
+,Broj sati,Số giờ
+,Status,Trạng thái
+,Pregled,Tổng quan
+,ODOBRENO,PHÊ DUYỆT
+,ODBIJENO,ODBIJENO
+,Obradio:,Được xử lý bởi:
+,Komentar:,Nhận xét:
+,Period od-do:,Giai đoạn từ-đến:
+,do,để
+,Pregled/obrada zadatka,Tổng quan / xử lý tác vụ
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Nhiệm vụ này chưa được chấp nhận bởi bạn, do đó bạn không thể xử lý các mục công việc."
+,Prihvati zadatak,Chấp nhận nhiệm vụ
+,Zaduženi:,Chịu trách nhiệm:
+,Izvršiti do:,Thực hiện:
+,Kreirao:,Tạo bởi:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",Nhiệm vụ / Mục tiêu được đánh dấu là đã hoàn thành và do đó bạn không thể thay đổi trạng thái của nhiệm vụ. Bạn có thể làm theo cometers ở đây và đánh giá các nhiệm vụ ở đây.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Các mục đã hoàn tất. bây giờ bạn có thể đánh dấu công việc đã hoàn thành.
+,Završi zadatak,Hoàn thành nhiệm vụ
+,Komentari,Nhận xét
+,Ostavite komentar,Để lại một bình luận
+,Dodaj komentar!,Thêm nhận xét!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Nhiệm vụ đã được hoàn thành và đánh giá, và với những ý kiến ​​này đã được đóng lại."
+,Ocjena:,Đánh giá:
+,Pozicija,Vị trí
+,Sektor,Ngành
+,Nadređeni korisnik,Người dùng cao cấp
+,Datum registracije,Ngày đăng ký
+,Datum reaktivacije,Ngày kích hoạt lại
+,Satnice,Lịch trình
+,Dodaj godinu,Thêm Năm
+,Dodaj mjesec,Thêm tháng
+,Još niste počeli unositi satnice,Bạn chưa bắt đầu thực hiện lịch trình
+,Aktivni,Hoạt động
+,Arhiva,Lưu trữ
+,Zahtjev za G.O.,Yêu cầu G.O.
+,Od:,Từ:
+,Do:,Để:
+,Na čekanju...,Đang đợi ...
+,Zahtjev kreiran:,Đã tạo yêu cầu:
+,Zahtjev odobren:,Yêu cầu được chấp thuận:
+,Zahtjev odbijen:,Yêu cầu bị từ chối:
+,Dali ste sigurni da želite poništiti zahtjev?,Bạn có chắc chắn muốn hủy yêu cầu không?
+,Dali ste sigurni da želite arhivirati zahtjev?,Bạn có chắc chắn muốn lưu trữ yêu cầu không?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Không có yêu cầu lưu cho các tham số đã chọn.
+,Na čekanju,Đang đợi
+,Prihvaćen,Được chấp nhận
+,Završen,Đã hoàn thành
+,Dali ste sigurni da želite arhivirati zadatak?,Bạn có chắc chắn muốn lưu trữ công việc?
+,Nema spašenih zadataka prema odabranim parametrima.,Không có nhiệm vụ lưu cho các tham số đã chọn.
+,Neovlašten pristup,Truy cập trái phép
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Bạn không có quyền truy cập vào phần này của ứng dụng. Nếu xảy ra lỗi, hãy liên hệ với quản trị viên."
+,Nazad na moj profil,Quay lại tiểu sử của tôi
+,Zahtjevi za G.O.,Yêu cầu G.O.
+,Obrada zahtjeva!,Xử lý yêu cầu!
+,Status zahtjeva:,Trạng thái yêu cầu:
+,Komentar,Nhận xét
+,Gradovi,Thành phố
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Danh sách các thành phố được nhập, được yêu cầu để tạo điểm đến và đặt chỗ."
+,Naziv,Tên
+,Dali ste sigurni da želite brisati:,Bạn có chắc chắn muốn xóa:
+,Još nije bilo unosa,Chưa có mục nhập
+,Općenito,Tổng quát
+,Naslov aplikacije,Tiêu đề ứng dụng
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Cho phép định dạng JPG / PNG / GIF. Kích thước đề xuất 400x200 px.
+,Boje aplikacije,Màu ứng dụng
+,Pozadina aplikacije,Bối cảnh của đơn
+,Boja teksta aplikacije,Màu văn bản của ứng dụng
+,Pozadina gornje trake - HEADER,Thanh nền - HEADER
+,Boja teksta gornje trake - HEADER,Màu văn bản của băng trên - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Màu văn bản của dải trên cùng - HEADER (: di chuột: hoạt động)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Màu tiêu đề (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Bối cảnh - BUTTONS
+,Tekst i ikona - BUTTONS,Văn bản và biểu tượng - BUTTONS
+,SMTP parametri,Thông số SMTP
+,SMTP status,Trạng thái SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Nếu SMTP không hoạt động hoặc các tham số không có sẵn, hệ thống sẽ sử dụng chức năng PHP MAIL chuẩn ()."
+,SMTP host,Máy chủ lưu trữ SMTP
+,SMTP korisnik,Người dùng SMTP
+,SMTP lozinka,Mật khẩu SMTP
+,SMTP port,Cổng SMTP
+,SMTP sigurnost,Bảo mật SMTP
+,Jezici aplikacije,Ngôn ngữ ứng dụng
+,Kod,Mã
+,Statusi satnice,Trạng thái hàng giờ
+,Direkcija teksta,Hướng của văn bản
+,Dali ste sigurni da želite poništiti zadatak?,Bạn có chắc chắn muốn hủy nhiệm vụ không?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Nhiệm vụ này chưa được chấp nhận bởi các koronek7 nợ nần7.
+,Ocjeni!,Đánh giá!
+,u obradi...,trong chế biến ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Nhiệm vụ được đánh dấu là đã hoàn thành. , và bây giờ bạn có thể rời khỏi lớp và đánh dấu nó như là một công việc hoàn thành. Nếu bạn muốn để lại một bình luận, thêm nó trước khi đánh giá."
+,Kompletiraj!,Hoàn thành!
+,Zadatak/Cilj za korinika:,Nhiệm vụ / Mục tiêu cho Góc:
+,Zadatak/Cilj:,Nhiệm vụ / Mục tiêu:
+,Naziv Zadatka/Cilja,Tiêu đề Mục tiêu / Mục tiêu
+,Dodaj polje,Thêm một trường
+,Omogući vremensko ogranićenje zadatka/cilja,Bật Thời hạn / Giới hạn thời gian mục tiêu
+,Traži...,Tìm kiếm ...
+,Svi,Mọi người
+,Rezultati pretrage za:,Kết quả tìm kiếm cho:
+,Deaktivirani korisnici,Người dùng đã hủy kích hoạt
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Mức độ quản lý
+,Info,Thông tin
+,deaktiviran:,không hoạt động:
+,registracija:,đăng ký:
+,Dali ste sigurni da želite deaktivirati korisnika:,Bạn có chắc chắn muốn hủy kích hoạt người dùng không:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Bạn có chắc chắn muốn kích hoạt lại người dùng:
+,Obrada satnice!,Xử lý tiến độ!
+,Još nije bilo unosa satnica,Chưa có mục nhập nào
+,Pozdrav!,Xin chào!
+,Odjava!,Đăng xuất!
+,Godina,Năm
+,Mjesec,Mặt trăng
+,MBO ciljevi,Mục tiêu của MBO
+,Zahtjevi za trening,Yêu cầu đào tạo
+,Zahtjevi za službena putovanja,Yêu cầu các chuyến công tác
+,Zaposlenici,Nhân viên
+,Korekcije satnica,Lần chỉnh sửa
+,Upravljanje satnicama,Quản lý thời gian
+,Upravljanje korekcijama satnica,Quản lý Chỉnh sửa Thời gian Hàng giờ
+,Godišnji/Odsustva,Hàng năm / Vắng mặt
+,Programi obuke,Chương trình đào tạo
+,Zadužnice/Razdužnice,Bills / Spreadsheets
+,Organizaciona šema,Kế hoạch tổ chức
+,Moj MBO,MBO của tôi
+,Moja službena putovanja,Chuyến công tác của tôi
+,Moji treninzi,Đào tạo của tôi
+,Uredi profil,Chỉnh sửa tiểu sử
+,Moje satnice,Lịch trình của tôi
+,Verifikacija satnica,Xác minh các thời khóa biểu
+,Verifikacija korekcija,Sửa chữa xác minh
+,Zadužnice,Hóa đơn
+,Razdužnice,Bình xịt
+,Pristupi,Tiếp cận
+,Korekcije,Sửa đổi
+,Bosna i Hercegovina,Bosnia và Herzegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Kỳ nghỉ năm trước
+,Godišnji odmor tekuća godina,Kỳ nghỉ hàng năm của năm hiện tại
+,Plaćeni vjerski praznici,Ngày lễ tôn giáo có trả
+,Neplaćeni vjerski praznici,Ngày lễ tôn giáo chưa thanh toán
+,Plaćeno odsustvo,Nghỉ phép
+,Smrtni slučaj,Chết
+,Darivanje krvi,Hiến máu
+,Redovni rad,Công việc thường xuyên
+,Godišnji odmor tekuca godina,Kỳ nghỉ hàng năm của năm hiện tại
+,Ponedjeljak,Thứ hai
+,Utorak,Thứ ba
+,Srijeda,Thứ tư
+,Četvrtak,Thứ năm
+,Petak,Thứ sáu
+,Subota,Thứ bảy
+,Nedjelja,Chủ nhật
+,Dodaj trening,Thêm đào tạo
+,Zahtjevi za službeno putovanje,Yêu cầu về chuyến đi chính thức
+,Pretraga zaposlenih,Tìm kiếm nhân viên
+,Орг. јединица,Org. đơn vị
+,Ime i prezime:,Tên và Họ:
+,Prikaži kalendar,Hiển thị lịch
+,Odustani!,Hủy!
+,Izaberi!,Chọn!
+,B-1 sa regijama,B-1 với các vùng
+,Naziv org. jed.,Tên của tổ chức jed.
+,Općenito,Tổng quát
+,Naslov aplikacije,Tiêu đề ứng dụng
+,Logo aplikacije,Ứng dụng Logo
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Cho phép định dạng JPG / PNG / GIF. Kích thước đề xuất 400x200 px.
+,Boje aplikacije,Màu ứng dụng
+,Skriveni Tabovi,Tab ẩn
+,Nazivi tabova,Tên tab
+,Role,Vai trò
+,Spasi!,Lưu nó!

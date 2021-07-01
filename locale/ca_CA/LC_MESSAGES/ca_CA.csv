@@ -1,0 +1,257 @@
+,Administrator,Administrador
+,Menadžer administratora satnica,Administrador d'administrador de temps
+,Nadređeni,Superior
+,Zaposlenik,Empleat
+,Odaberi...,Tria ...
+,Nema dostupnih jezika.,No hi ha idiomes disponibles.
+,Dodaj službeno putovanje,Afegiu un viatge de negocis
+,Nema unesenih država.,No s'ha ingressat cap país.
+,Nema unesenih statusa.,No s'ha introduït cap estat.
+,Januar,Gener
+,Februar,Febrer
+,Mart,Març
+,April,Abril
+,Maj,Maig
+,Juni,Juny
+,Juli,Juliol
+,Avgust,Agost
+,Septembar,Setembre
+,Oktobar,Octubre
+,Novembar,Novembre
+,Decembar,Desembre
+,Moj profil,El meu perfil
+,Moji Zadaci/Ciljevi,Les meves tasques / objectius
+,Moji Zahtjevi,Les meves sol·licituds
+,Uredi profil,Edita el perfil
+,Zadaci/Ciljevi,Tasques / objectius
+,Zahtjevi,Sol·licituds
+,Korisnici,Usuaris
+,Podešavanja,Configuració
+,Države,Països
+,Informacije su uspješno sapšene!,La informació s'ha capturat amb èxit.
+,Izmjene su uspješno sapšene!,Els canvis s'han captat amb èxit.
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,El nom d'usuari està ocupat. Proveu amb una altra persona.
+,Greška!,Error!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Introduïu el nom d'usuari o la contrasenya incorrectes, torneu-ho a provar."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,El teu compte s'ha desactivat. Per a més informació contacteu amb nosaltres.
+,Uspješno!,Amb èxit!
+,Uspješno ste se odjavili.,Heu tancat la sessió correctament.
+,Neuspješno!,Sense èxit!
+,Vaš korisnički nalog je deaktiviran.,El teu compte està desactivat.
+,Korisničko ime,Nom d'usuari
+,Lozinka,Contrasenya
+,Prijava!,Inicia sessió!
+,Zaboravili ste lozinku?,Has oblidat la teva contrasenya?
+,Vaša e-mail adresa,La vostra adreça de correu electrònic
+,Poništi lozinku,Restablir la contrasenya
+,Nazad na stranicu za prijavu,Torna a la pàgina d'inici de sessió
+,"Poštovani,","Hola,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Heu sol·licitat la contrasenya de restabliment, el nou està adjuntat."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"Correu electrònic amb les instruccions enviades, comproveu els missatges del correu electrònic que heu proporcionat a la sol·licitud de restabliment de la contrasenya."
+,Unesena e-ail adresa nije pronađena u bazi.,L'adreça de correu electrònic introduïda no s'ha trobat a la base de dades.
+,Ažuriranje!,Actualització!
+,Spasi!,Desa-ho
+,Osnovni podaci,Informació bàsica
+,Osnovni Podaci,Dades bàsiques
+,Ime,Nom
+,Prezime,Cognom
+,Fotografija,Foto
+,Odaberi,Trieu
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Es permeten formats JPG / PNG / GIF. Dimensions recomanades 480x640 px (retrat).
+,Kontakt Podaci,Dades de contacte
+,Država,País
+,Grad,Ciutat
+,PTT,PTT
+,Adresa,Adreça
+,Telefon,Telèfon
+,E-mail,Correu electrònic
+,Ostali Podaci,Altres dades
+,Jezik aplikacije,Llenguatge d'aplicació
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Identificador de pàgina incorrecte, poseu-vos en contacte amb l'administrador."
+,Prikaži,Mostra
+,Sakrij,Amaga
+,Generiši,Genera
+,Moje satnice,El meu horari
+,Novi unos,Nova entrada
+,Dali ste sigurni da želite brisati?,Esteu segur que voleu suprimir?
+,Još nije bilo unosa za:,Encara no hi havia una entrada per a:
+,Ukupno,Total
+,Iskorišteno,S'utilitza
+,Ostalo,Un altre
+,Spašeno,Rescatat
+,Odobreno,Aprovat
+,Odbijeno,Rebutjat
+,Dan,Dan
+,Broj sati,Nombre d'hores
+,Status,Estat
+,Pregled,Visió general
+,ODOBRENO,APROVATS
+,ODBIJENO,ODBIJENO
+,Obradio:,Processat per:
+,Komentar:,Comentari:
+,Period od-do:,Període de-a:
+,do,a
+,Pregled/obrada zadatka,Visió general / processament de tasques
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","La tasca encara no és acceptada per vostè i, per tant, no és possible processar els elements de la tasca."
+,Prihvati zadatak,Accepta la tasca
+,Zaduženi:,Responsable:
+,Izvršiti do:,Executa a:
+,Kreirao:,Creat per:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Tasca / Objectiu es marca com a completat i, per tant, no podeu canviar l'estat de la tasca. Podeu seguir els cometes aquí i avaluar la tasca aquí."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,S'han completat els elements. ara podeu marcar la tasca finalitzada.
+,Završi zadatak,Acabar la tasca
+,Komentari,Comentaris
+,Ostavite komentar,Deixa un comentari
+,Dodaj komentar!,Afegir un comentari
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","La tasca s'ha completat i avaluat, i amb això es van tancar els comentaris."
+,Ocjena:,Puntuació:
+,Pozicija,Posició
+,Sektor,Sector
+,Nadređeni korisnik,Usuari superior
+,Datum registracije,Data d'inscripció
+,Datum reaktivacije,Data de reactivació
+,Satnice,Horari
+,Dodaj godinu,Afegeix un any
+,Dodaj mjesec,Afegeix mes
+,Još niste počeli unositi satnice,Encara no heu començat a introduir la programació
+,Aktivni,Actiu
+,Arhiva,Arxiu
+,Zahtjev za G.O.,Sol·licitud de G.O.
+,Od:,Des de:
+,Do:,Per:
+,Na čekanju...,Esperant ...
+,Zahtjev kreiran:,Sol·licitud creada:
+,Zahtjev odobren:,Sol·licitud aprovada:
+,Zahtjev odbijen:,Sol·licitud denegada:
+,Dali ste sigurni da želite poništiti zahtjev?,Estàs segur que vols cancel·lar la sol·licitud?
+,Dali ste sigurni da želite arhivirati zahtjev?,Esteu segur que voleu arxivar la sol·licitud?
+,Nema spašenih zahtjeva prema odabranim parametrima.,No hi ha cap sol·licitud desada dels paràmetres seleccionats.
+,Na čekanju,Esperant
+,Prihvaćen,Acceptat
+,Završen,Finalitzat
+,Dali ste sigurni da želite arhivirati zadatak?,Esteu segur que voleu arxivar la tasca?
+,Nema spašenih zadataka prema odabranim parametrima.,No hi ha tasques desades per als paràmetres seleccionats.
+,Neovlašten pristup,Accés no autoritzat
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","No teniu autorització per accedir a aquesta part de l'aplicació. Si s'ha produït un error, poseu-vos en contacte amb l'administrador."
+,Nazad na moj profil,Torna al meu perfil
+,Zahtjevi za G.O.,Sol·licituds de G.O.
+,Obrada zahtjeva!,S'està processant la sol·licitud!
+,Status zahtjeva:,Estat de sol·licitud:
+,Komentar,Comentari
+,Gradovi,Ciutats
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Llista de ciutats introduïdes, que són necessàries per crear destinacions i reserves."
+,Naziv,Nom
+,Dali ste sigurni da želite brisati:,Esteu segur que voleu suprimir:
+,Još nije bilo unosa,Encara no hi havia una entrada
+,Općenito,General
+,Naslov aplikacije,Títol de l'aplicació
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Es permeten formats JPG / PNG / GIF. Dimensions recomanades 400x200 px.
+,Boje aplikacije,Colors d'aplicació
+,Pozadina aplikacije,Antecedents de la sol·licitud
+,Boja teksta aplikacije,Color del text de la sol·licitud
+,Pozadina gornje trake - HEADER,Barra de fons: HEADER
+,Boja teksta gornje trake - HEADER,Color del text de la cinta superior - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Color del text de la cinta superior - HEADER (: passapartat: actiu)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Color del títol (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Antecedents - BUTTONS
+,Tekst i ikona - BUTTONS,Text i icona - BUTTONS
+,SMTP parametri,Paràmetres SMTP
+,SMTP status,Estat SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Si SMTP està inactiu o els paràmetres no estan disponibles, el sistema utilitzarà la funció PHP MAIL () estàndard."
+,SMTP host,Servidor SMTP
+,SMTP korisnik,Usuari SMTP
+,SMTP lozinka,Contrasenya SMTP
+,SMTP port,Port SMTP
+,SMTP sigurnost,Seguretat SMTP
+,Jezici aplikacije,Llenguatges d'aplicació
+,Kod,Codi
+,Statusi satnice,Estatus horari
+,Direkcija teksta,Direcció del text
+,Dali ste sigurni da želite poništiti zadatak?,Esteu segur que voleu cancel·lar la tasca?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,La tasca encara no ha estat acceptada pel corredor endeutat7.
+,Ocjeni!,Votació!
+,u obradi...,en el processament ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","La tasca està marcada com a completada. , i ara podeu deixar la nota i marcar-la com una tasca completa. Si voleu deixar un comentari, afegiu-lo abans de la qualificació."
+,Kompletiraj!,Completa!
+,Zadatak/Cilj za korinika:,Tasca / objectiu del racó:
+,Zadatak/Cilj:,Tasca / objectiu:
+,Naziv Zadatka/Cilja,Títol de l'objectiu / objectiu
+,Dodaj polje,Afegeix un camp
+,Omogući vremensko ogranićenje zadatka/cilja,Habilita el límit de temporització / objectiu
+,Traži...,Cerca ...
+,Svi,Tothom
+,Rezultati pretrage za:,Resultats de la cerca per a:
+,Deaktivirani korisnici,Usuaris desactivats
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Nivell d'administració
+,Info,Info
+,deaktiviran:,desactivat:
+,registracija:,registre:
+,Dali ste sigurni da želite deaktivirati korisnika:,Estàs segur que vols desactivar l'usuari:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Estàs segur que vols reactivar l'usuari:
+,Obrada satnice!,S'està processant el calendari.
+,Još nije bilo unosa satnica,No hi ha cap entrada encara
+,Pozdrav!,Hola!
+,Odjava!,Tanqueu la sessió!
+,Godina,Any
+,Mjesec,Lluna
+,MBO ciljevi,Objectius MBO
+,Zahtjevi za trening,Requisits per a la formació
+,Zahtjevi za službena putovanja,Sol·licituds de viatges de negocis
+,Zaposlenici,Empleats
+,Korekcije satnica,Temps de correcció
+,Upravljanje satnicama,Gestió del temps
+,Upravljanje korekcijama satnica,Gestiona les correccions horàries
+,Godišnji/Odsustva,Anual / Absència
+,Programi obuke,Programes de formació
+,Zadužnice/Razdužnice,Fullets / fulls de càlcul
+,Organizaciona šema,Règim organitzatiu
+,Moj MBO,El meu MBO
+,Moja službena putovanja,Els meus viatges de negocis
+,Moji treninzi,Els meus entrenaments
+,Uredi profil,Edita el perfil
+,Moje satnice,El meu horari
+,Verifikacija satnica,Verificació dels horaris
+,Verifikacija korekcija,Correcció de verificació
+,Zadužnice,Factures
+,Razdužnice,Sprays
+,Pristupi,Enfocament
+,Korekcije,Correccions
+,Bosna i Hercegovina,Bòsnia i Hercegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Vacances de l'any anterior
+,Godišnji odmor tekuća godina,Vacances anuals de l'any en curs
+,Plaćeni vjerski praznici,Festes religioses pagades
+,Neplaćeni vjerski praznici,Festes religioses no remunerades
+,Plaćeno odsustvo,Lliure de pagament
+,Smrtni slučaj,Mort
+,Darivanje krvi,Donació de sang
+,Redovni rad,Treball regular
+,Godišnji odmor tekuca godina,Vacances anuals de l'any en curs
+,Ponedjeljak,Dilluns
+,Utorak,Dimarts
+,Srijeda,Dimecres
+,Četvrtak,Dijous
+,Petak,Divendres
+,Subota,Dissabte
+,Nedjelja,Diumenge
+,Dodaj trening,Afegiu entrenament
+,Zahtjevi za službeno putovanje,Sol·licituds de viatges oficials
+,Pretraga zaposlenih,Cerca d'empleats
+,Орг. јединица,Org. unitat
+,Ime i prezime:,Nom i cognoms:
+,Prikaži kalendar,Mostra el calendari
+,Odustani!,Cancel·la
+,Izaberi!,Tria!
+,B-1 sa regijama,B-1 amb regions
+,Naziv org. jed.,Nom de l'org. jed
+,Općenito,General
+,Naslov aplikacije,Títol de l'aplicació
+,Logo aplikacije,Aplicació de logotip
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Es permeten formats JPG / PNG / GIF. Dimensions recomanades 400x200 px.
+,Boje aplikacije,Colors d'aplicació
+,Skriveni Tabovi,Pestanyes amagades
+,Nazivi tabova,Noms de la pestanya
+,Role,Paper
+,Spasi!,Desa-ho

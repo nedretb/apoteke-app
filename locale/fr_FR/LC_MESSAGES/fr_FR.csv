@@ -1,0 +1,237 @@
+,Administrator,Administrateur
+,Menadžer administratora satnica,Gestionnaire d'administrateur de temps
+,Nadređeni,Supérieur
+,Zaposlenik,Employé
+,Odaberi...,Choisissez ...
+,Nema dostupnih jezika.,Il n'y a pas de langues disponibles.
+,Nema unesenih država.,Aucun pays entré.
+,Nema unesenih statusa.,Aucun statut entré.
+,Januar,Janvier
+,Februar,Février
+,Mart,Mars
+,April,Avril
+,Maj,Mai
+,Juni,Juin
+,Juli,Juillet
+,Avgust,Août
+,Septembar,Septembre
+,Oktobar,Octobre
+,Novembar,Novembre
+,Decembar,Décembre
+,Moj profil,Mon profil
+,Moji Zadaci/Ciljevi,Mes tâches / objectifs
+,Moji Zahtjevi,Mes demandes
+,Uredi profil,Modifier le profil
+,Zadaci/Ciljevi,Tâches / Objectifs
+,Zahtjevi,Requêtes
+,Korisnici,Utilisateurs
+,Podešavanja,Paramètres
+,Države,Pays
+,Informacije su uspješno sapšene!,L'information a été capturée avec succès!
+,Izmjene su uspješno sapšene!,Les changements ont été saisis avec succès!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Le nom d'utilisateur est occupé. S'il vous plaît essayez quelqu'un d'autre.
+,Greška!,Erreur!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Veuillez entrer le mauvais nom d'utilisateur et / ou mot de passe, veuillez réessayer."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Votre compte a été désactivé. Pour plus d'informations contactez-nous.
+,Uspješno!,Avec succès!
+,Uspješno ste se odjavili.,Vous vous êtes déconnecté avec succès.
+,Neuspješno!,Échec!
+,Vaš korisnički nalog je deaktiviran.,Votre compte est désactivé
+,Korisničko ime,Nom d'utilisateur
+,Lozinka,Password
+,Prijava!,Connectez-vous!
+,Zaboravili ste lozinku?,Mot de passe oublié?
+,Vaša e-mail adresa,Votre adresse e-mail
+,Poništi lozinku,Réinitialiser
+,Nazad na stranicu za prijavu,Retour à la page de connexion
+,"Poštovani,","Bonjour,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Vous avez demandé de réinitialiser le mot de passe, le nouveau est joint."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mail avec les instructions envoyées, s'il vous plaît vérifier les messages sur l'e-mail que vous avez fourni dans la demande de réinitialisation du mot de passe."
+,Unesena e-ail adresa nije pronađena u bazi.,L'adresse e-mail saisie n'a pas été trouvée dans la base de données.
+,Ažuriranje!,Mise à jour!
+,Spasi!,Enregistrez-le!
+,Osnovni podaci,Informations de base
+,Osnovni Podaci,Données de base
+,Ime,Nom
+,Prezime,Nom
+,Fotografija,Photo
+,Odaberi,Choisissez
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Formats JPG / PNG / GIF autorisés. Dimensions recommandées 480x640 px (portrait).
+,Kontakt Podaci,Données de contact
+,Država,Pays
+,Grad,Ville
+,PTT,PTT
+,Adresa,Adresse
+,Telefon,Téléphone
+,E-mail,E-mail
+,Ostali Podaci,D'autres données
+,Jezik aplikacije,Langage d'application
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","ID de page incorrect, veuillez contacter l'administrateur."
+,Prikaži,Montrer
+,Sakrij,Masquer
+,Generiši,Générer
+,Moje satnice,Mon horaire
+,Novi unos,Nouvelle entrée
+,Dali ste sigurni da želite brisati?,Êtes-vous sûr de vouloir supprimer?
+,Još nije bilo unosa za:,Il n'y avait pas encore d'entrée pour:
+,Ukupno,Total
+,Iskorišteno,Utilisé
+,Ostalo,Autre
+,Spašeno,Sauvé
+,Odobreno,Approuvé
+,Odbijeno,Rejeté
+,Dan,Dan
+,Broj sati,Nombre d'heures
+,Status,Statut
+,Pregled,Aperçu
+,ODOBRENO,APPROUVÉ
+,ODBIJENO,ODBIJENO
+,Obradio:,Traité par:
+,Komentar:,Commentaire:
+,Period od-do:,Période de à:
+,do,à
+,Pregled/obrada zadatka,Vue d'ensemble / traitement des tâches
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",La tâche n'est pas encore acceptée par vous et il n'est donc pas possible de traiter les éléments de la tâche.
+,Prihvati zadatak,Accepter la tâche
+,Zaduženi:,Responsable:
+,Izvršiti do:,Exécuter à:
+,Kreirao:,Créé par:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",Tâche / Objectif est marqué comme terminé et vous ne pouvez donc pas modifier le statut de la tâche. Vous pouvez suivre les paramètres ici et évaluer la tâche ici.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Les articles sont terminés. vous pouvez maintenant marquer la tâche terminée.
+,Završi zadatak,Terminer la tâche
+,Komentari,Commentaires
+,Ostavite komentar,Laissez un commentaire
+,Dodaj komentar!,Ajoutez un commentaire!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","La tâche a été achevée et évaluée, et les commentaires ont été fermés."
+,Ocjena:,Note:
+,Pozicija,Position
+,Sektor,Secteur
+,Nadređeni korisnik,Utilisateur supérieur
+,Datum registracije,Date d'inscription
+,Datum reaktivacije,Date de réactivation
+,Satnice,Horaire
+,Dodaj godinu,Ajouter une année
+,Dodaj mjesec,Ajouter un mois
+,Još niste počeli unositi satnice,Vous n'avez pas encore commencé à entrer l'horaire
+,Aktivni,Actif
+,Arhiva,Archives
+,Zahtjev za G.O.,Demande de G.O.
+,Od:,De:
+,Do:,Pour:
+,Na čekanju...,En attente ...
+,Zahtjev kreiran:,Demande créée:
+,Zahtjev odobren:,Demande approuvée:
+,Zahtjev odbijen:,Demande refusée:
+,Dali ste sigurni da želite poništiti zahtjev?,Êtes-vous sûr de vouloir annuler la demande?
+,Dali ste sigurni da želite arhivirati zahtjev?,Êtes-vous sûr de vouloir archiver la demande?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Il n'y a pas de demandes enregistrées pour les paramètres sélectionnés.
+,Na čekanju,En attente
+,Prihvaćen,Accepté
+,Završen,Terminé
+,Dali ste sigurni da želite arhivirati zadatak?,Êtes-vous sûr de vouloir archiver la tâche?
+,Nema spašenih zadataka prema odabranim parametrima.,Il n'y a pas de tâches sauvegardées pour les paramètres sélectionnés.
+,Neovlašten pristup,Accès non autorisé
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Vous n'êtes pas autorisé à accéder à cette partie de l'application. Si une erreur s'est produite, contactez l'administrateur."
+,Nazad na moj profil,Retour à mon profil
+,Zahtjevi za G.O.,Demandes pour G.O.
+,Obrada zahtjeva!,Traitement de la demande!
+,Status zahtjeva:,Statut de la demande:
+,Komentar,Commentaire
+,Gradovi,Villes
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Liste des villes entrées, nécessaires pour créer des destinations et des réservations."
+,Naziv,Nom
+,Dali ste sigurni da želite brisati:,Êtes-vous sûr de vouloir supprimer:
+,Još nije bilo unosa,Il n'y avait pas encore d'entrée
+,Općenito,Général
+,Naslov aplikacije,Titre de l'application
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Formats JPG / PNG / GIF autorisés. Dimensions recommandées 400x200 px.
+,Boje aplikacije,Couleurs d'application
+,Pozadina aplikacije,Contexte de l'application
+,Boja teksta aplikacije,Couleur du texte de l'application
+,Pozadina gornje trake - HEADER,Barre de fond - EN-TÊTE
+,Boja teksta gornje trake - HEADER,Couleur du texte de la bande supérieure - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Couleur du texte du ruban supérieur - HEADER (: hover: active)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Couleur du titre (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Arrière-plan - BOUTONS
+,Tekst i ikona - BUTTONS,Texte et icône - BOUTONS
+,SMTP parametri,Paramètres SMTP
+,SMTP status,Statut SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Si SMTP est inactif ou si les paramètres ne sont pas disponibles, le système utilisera la fonction PHP MAIL () standard."
+,SMTP host,Hôte SMTP
+,SMTP korisnik,Utilisateur SMTP
+,SMTP lozinka,Mot de passe SMTP
+,SMTP port,Port SMTP
+,SMTP sigurnost,Sécurité SMTP
+,Jezici aplikacije,Langues d'application
+,Kod,Code
+,Statusi satnice,Statut horaire
+,Direkcija teksta,Direction du texte
+,Dali ste sigurni da želite poništiti zadatak?,Êtes-vous sûr de vouloir annuler la tâche?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,La tâche n'a pas encore été acceptée par le korinki7 endetté.
+,Ocjeni!,Taux!
+,u obradi...,en cours de traitement ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","La tâche est marquée comme terminée. , et vous pouvez maintenant laisser la note et la marquer comme une tâche complète. Si vous voulez laisser un commentaire, ajoutez-le avant l'évaluation."
+,Kompletiraj!,Complet!
+,Zadatak/Cilj za korinika:,Tâche / cible pour le coin:
+,Zadatak/Cilj:,Tâche / objectif:
+,Naziv Zadatka/Cilja,Titre de l'objectif / objectif
+,Dodaj polje,Ajouter un champ
+,Omogući vremensko ogranićenje zadatka/cilja,Activer la limite de temps / objectif
+,Traži...,Rechercher ...
+,Svi,Chacun
+,Rezultati pretrage za:,Résultats de recherche pour:
+,Deaktivirani korisnici,Utilisateurs désactivés
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Niveau d'administration
+,Info,Info
+,deaktiviran:,désactivé:
+,registracija:,inscription:
+,Dali ste sigurni da želite deaktivirati korisnika:,Êtes-vous sûr de vouloir désactiver l'utilisateur:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Êtes-vous sûr de vouloir réactiver l'utilisateur:
+,Obrada satnice!,Traitement du calendrier
+,Još nije bilo unosa satnica,Il n'y avait pas encore d'entrées
+,Pozdrav!,Bonjour!
+,Odjava!,Déconnectez-vous!
+,Godina,Année
+,Mjesec,Lune
+,MBO ciljevi,Buts MBO
+,Zahtjevi za trening,Exigences pour la formation
+,Zahtjevi za službena putovanja,Demandes de voyages d'affaires
+,Zaposlenici,Employés
+,Korekcije satnica,Temps de correction
+,Upravljanje satnicama,Gestion du temps
+,Upravljanje korekcijama satnica,Gérer les corrections horaires
+,Godišnji/Odsustva,Annuel / Absence
+,Programi obuke,Programmes de formation
+,Zadužnice/Razdužnice,Bills / Spreadsheets
+,Organizaciona šema,Schéma d'organisation
+,Moj MBO,Mon MBO
+,Moja službena putovanja,Mes voyages d'affaires
+,Moji treninzi,Mes formations
+,Uredi profil,Modifier le profil
+,Moje satnice,Mon horaire
+,Verifikacija satnica,Vérification des horaires
+,Verifikacija korekcija,Corrections de vérification
+,Zadužnice,Factures
+,Razdužnice,Sprays
+,Pristupi,Approche
+,Korekcije,Corrections
+,Bosna i Hercegovina,Bosnie-Herzégovine
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Les vacances de l'année précédente
+,Godišnji odmor tekuća godina,Congés annuels de l'année en cours
+,Plaćeni vjerski praznici,Congés religieux payés
+,Neplaćeni vjerski praznici,Vacances religieuses non rémunérées
+,Plaćeno odsustvo,Congés payés
+,Smrtni slučaj,Mort
+,Darivanje krvi,Don de sang
+,Redovni rad,Travail régulier
+,Godišnji odmor tekuca godina,Congés annuels de l'année en cours
+,Ponedjeljak,Lundi
+,Utorak,Mardi
+,Srijeda,Mercredi
+,Četvrtak,Jeudi
+,Petak,Vendredi
+,Subota,Samedi
+,Nedjelja,Dimanche

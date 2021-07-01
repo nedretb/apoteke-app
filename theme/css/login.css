@@ -1,0 +1,31 @@
+.login-page{
+    position: absolute; left:0px; top:0px; width: 100%; height: 100%; display: flex;
+    align-items: center; justify-content: center; background: rgba(0,0,0,0.1);
+}
+
+.login-page .login-element{
+    position: relative; width: 400px; min-height: 500px; background:#fff; border-radius: 3px;
+
+    box-shadow: 1px 1px 14px 10px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 1px 14px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 14px 10px rgba(0,0,0,0.2);
+}
+
+.login-page .login-element .image-part{
+    position: relative; left:0px; top:0px; width: 100%; height: auto; text-align: center;
+}
+
+.login-page .login-element .image-part img{
+    position: relative; left:0px; top:0px; width: 30%; margin-top:50px;
+}
+.login-page .login-element .image-part h4{
+    font-size:16px; margin-top:20px;
+}
+
+.login-page .login-element .form-element{
+    position: relative; left:20px; top:0px; width: calc(100% - 40px); min-height: 200px; margin-top:30px;
+}
+.form-control{height: 32px;}
+.my-lgn-btn{
+    width: 100%; height: 32px; padding-top:4px; background: #002395; color:#fff; margin-bottom: 30px;
+}

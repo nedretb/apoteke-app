@@ -1,0 +1,257 @@
+,Administrator,administrator
+,Menadžer administratora satnica,Denbora administratzailearen kudeatzailea
+,Nadređeni,superior A
+,Zaposlenik,langilea
+,Odaberi...,Aukeratu ...
+,Nema dostupnih jezika.,Ez dago hizkuntza erabilgarririk.
+,Dodaj službeno putovanje,Gehitu negozio bidaia
+,Nema unesenih država.,Ez da herrialde sartu.
+,Nema unesenih statusa.,Ez da egoera sartu.
+,Januar,Urtarrila
+,Februar,Otsaila
+,Mart,Martxoa
+,April,April
+,Maj,Maiatza
+,Juni,June
+,Juli,uztailean
+,Avgust,Abuztua
+,Septembar,Urtarrilaren
+,Oktobar,urriaren
+,Novembar,Azaroa
+,Decembar,abendua
+,Moj profil,Nire profila
+,Moji Zadaci/Ciljevi,Nire zereginak / Helburuak
+,Moji Zahtjevi,Nire eskaerak
+,Uredi profil,Editatu profila
+,Zadaci/Ciljevi,Zereginak / Helburuak
+,Zahtjevi,baldintzak
+,Korisnici,erabiltzaileek
+,Podešavanja,ezarpenak
+,Države,egoera
+,Informacije su uspješno sapšene!,Informazio hori arrakastaz harrapatu da!
+,Izmjene su uspješno sapšene!,Aldaketak arrakastaz jabetu dira!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Erabiltzaile-izena lanpetuta dago. Saiatu beste norbaitek.
+,Greška!,Akatsa!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Idatzi okerreko erabiltzaile-izena eta / edo pasahitza, saiatu berriro."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Zure kontua desaktibatu da. Informazio gehiago nahi izanez gero jarri gurekin harremanetan.
+,Uspješno!,Arrakastatsua!
+,Uspješno ste se odjavili.,Saio ongi egin duzu.
+,Neuspješno!,Huts egin!
+,Vaš korisnički nalog je deaktiviran.,Zure kontua desaktibatuta dago.
+,Korisničko ime,erabiltzaile-izena
+,Lozinka,pasahitza
+,Prijava!,Elkarrizketa
+,Zaboravili ste lozinku?,Zure pasahitza ahaztu duzu?
+,Vaša e-mail adresa,Zure helbide elektronikoa
+,Poništi lozinku,Berrezarri pasahitza
+,Nazad na stranicu za prijavu,Itzuli hasierara orrira
+,"Poštovani,","Dear jator,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Berrezarri pasahitza eskatu duzu, berria erantsita dago."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,Bidalitako argibideak bidalitako mezu elektronikoak egiaztatu pasahitzaren berrezartzeko eskaera emandako mezu elektronikoan.
+,Unesena e-ail adresa nije pronađena u bazi.,Idatzitako helbide elektronikoa ez da datu-basean aurkitu.
+,Ažuriranje!,Egunera!
+,Spasi!,Gorde ezazu!
+,Osnovni podaci,Oinarrizko informazioa
+,Osnovni Podaci,Oinarrizko datuak
+,Ime,izen
+,Prezime,abizenak
+,Fotografija,argazkilaritza
+,Odaberi,Aukeratu
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Baimendutako JPG / PNG / GIF formatuak. Gomendatutako dimentsioak 480x640 px (erretratua).
+,Kontakt Podaci,Harremanetarako datuak
+,Država,country
+,Grad,city
+,PTT,PTT
+,Adresa,helbidea
+,Telefon,telefono
+,E-mail,E-mail
+,Ostali Podaci,Beste datu batzuk
+,Jezik aplikacije,Aplikazioaren hizkuntza
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Orriaren ID okerra, jarri harremanetan administratzailearekin."
+,Prikaži,Show
+,Sakrij,Ezkutatu
+,Generiši,Sortu
+,Moje satnice,Nire ordutegia
+,Novi unos,Sarrera berria
+,Dali ste sigurni da želite brisati?,Ziur al zaude ezabatu nahi duzula?
+,Još nije bilo unosa za:,Oraindik ez zegoen sarrera bat:
+,Ukupno,guztira
+,Iskorišteno,erabilitako
+,Ostalo,Beste
+,Spašeno,gordeko
+,Odobreno,emandako
+,Odbijeno,Baztertuta
+,Dan,egun
+,Broj sati,Ordu kopurua
+,Status,status
+,Pregled,ikuspegi orokorra
+,ODOBRENO,ONARTU
+,ODBIJENO,UKATUTA
+,Obradio:,Prozesatuak:
+,Komentar:,komentatzeko:
+,Period od-do:,Aldatu-tik:
+,do,to
+,Pregled/obrada zadatka,Orokorra / ataza prozesatzea
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Zeregina oraindik ez duzu onartuko, eta, beraz, ezin da ataza-elementuak prozesatu."
+,Prihvati zadatak,Onartu zeregina
+,Zaduženi:,arduraduna:
+,Izvršiti do:,Exekutatu honetara:
+,Kreirao:,Sortuta:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Ataza / Helburua bukatuta dago, eta, beraz, ezin duzu zereginaren egoera aldatu. Hemen kometers jarrai dezakezu eta zeregin hau ebaluatu."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Elementuak amaituta daude. Orain markatu dezakezu zeregin hori.
+,Završi zadatak,Amaitu lana
+,Komentari,Oharrak
+,Ostavite komentar,Utzi iruzkin bat
+,Dodaj komentar!,Gehitu iruzkin bat!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Zeregina osatu eta ebaluatu zen, eta horrekin batera iruzkinak itxi egin ziren."
+,Ocjena:,Puntuazioa:
+,Pozicija,posizio
+,Sektor,sektorea
+,Nadređeni korisnik,Goi erabiltzaile
+,Datum registracije,Izena emateko eguna
+,Datum reaktivacije,Erreaktibazio data
+,Satnice,kapitaina
+,Dodaj godinu,Gehitu urtea
+,Dodaj mjesec,Gehitu hilabetea
+,Još niste počeli unositi satnice,Oraindik ez duzu ordutegia hasi
+,Aktivni,Jaione
+,Arhiva,artxiboak
+,Zahtjev za G.O.,G.O. eskaera
+,Od:,from:
+,Do:,honetara:
+,Na čekanju...,Itxaroten ...
+,Zahtjev kreiran:,Sortutako eskaera:
+,Zahtjev odobren:,Eskaera onartua:
+,Zahtjev odbijen:,Eskaera ukatua:
+,Dali ste sigurni da želite poništiti zahtjev?,Ziur al zaude eskaera bertan behera utzi nahi duzula?
+,Dali ste sigurni da želite arhivirati zahtjev?,Ziur al zaude eskaera artxibatu nahi duzula?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Ez da gordetako eskaera hautatutako parametroentzat.
+,Na čekanju,zain
+,Prihvaćen,onartu
+,Završen,amaitutako
+,Dali ste sigurni da želite arhivirati zadatak?,Ziur zeregina artxibatu nahi duzula?
+,Nema spašenih zadataka prema odabranim parametrima.,Hautatutako parametroek ez dute gordetako zereginik.
+,Neovlašten pristup,Baimenik gabeko sarbidea
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Ez duzu autoritaterik eskaera honen zati honetara sartzeko. Errore bat gertatu bada, jarri harremanetan administratzailearekin."
+,Nazad na moj profil,Itzuli nire profilean
+,Zahtjevi za G.O.,G.O.ren eskaerak
+,Obrada zahtjeva!,Eskaera prozesatu!
+,Status zahtjeva:,Eskaeraren egoera:
+,Komentar,iruzkin
+,Gradovi,hiri
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",Helmugak eta erreserbak sortzeko beharrezkoak diren hirien zerrenda.
+,Naziv,izen
+,Dali ste sigurni da želite brisati:,Ziur zaude ezabatu nahi duzula:
+,Još nije bilo unosa,Ez zen oraindik sarrera bat
+,Općenito,Orokorra
+,Naslov aplikacije,Aplikazioaren izenburua
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Baimendutako JPG / PNG / GIF formatuak. 400x200 px neurri gomendatua.
+,Boje aplikacije,Aplikazioen koloreak
+,Pozadina aplikacije,Aplikazioaren atzeko planoa
+,Boja teksta aplikacije,Aplikazioaren testu kolorea
+,Pozadina gornje trake - HEADER,Aurrekaldeko barra - HEADER
+,Boja teksta gornje trake - HEADER,Testuaren goiko zinta kolorea - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Testuaren goiko zinta kolorea - HEADER (: hover: aktiboa)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Izenburua kolorea (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Aurrekariak - BUTTONS
+,Tekst i ikona - BUTTONS,Testua eta ikonoa - BUTTONS
+,SMTP parametri,SMTP parametroak
+,SMTP status,SMTP egoera
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","SMTP ez bada aktibo dago edo parametroak ez daude erabilgarri, sistema PHP MAIL () funtzio estandarra erabiliko du."
+,SMTP host,SMTP ostalaria
+,SMTP korisnik,SMTP erabiltzailea
+,SMTP lozinka,SMTP pasahitza
+,SMTP port,SMTP ataka
+,SMTP sigurnost,SMTP segurtasuna
+,Jezici aplikacije,Aplikazioen hizkuntzak
+,Kod,tan
+,Statusi satnice,Ordu-egoera
+,Direkcija teksta,Testuaren zuzendaritza
+,Dali ste sigurni da želite poništiti zadatak?,Ziur al zaude zeregina bertan behera utzi nahi duzula?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Zeregin hori oraindik ez da inor onartu korinki7rekin.
+,Ocjeni!,Tarifa!
+,u obradi...,prozesatzean ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Zeregina bukatuta dago. , eta orain utzi dezakezu kalifikazioa eta bete ezazu zeregin oso bat bezala. Iruzkin bat utzi nahi baduzu, gehitu balorazioa aurretik."
+,Kompletiraj!,Osoa!
+,Zadatak/Cilj za korinika:,Zeregina / Helburua errekan:
+,Zadatak/Cilj:,Ataza / Helburua:
+,Naziv Zadatka/Cilja,Objektu / Helburu Titulua
+,Dodaj polje,Eremu bat gehitu
+,Omogući vremensko ogranićenje zadatka/cilja,Gaitu denbora / Helburuko muga
+,Traži...,Bilatu ...
+,Svi,guztiak
+,Rezultati pretrage za:,Bilatu emaitzak for:
+,Deaktivirani korisnici,Erabiltzaileak desaktibatuta
+,ID,NAN
+,Korinik,Erabiltzaileak
+,Nivo administracije,Administrazio maila
+,Info,info
+,deaktiviran:,desaktibatzen:
+,registracija:,izen-ematea:
+,Dali ste sigurni da želite deaktivirati korisnika:,Ziur erabiltzaileak desaktibatu nahi dituzula:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Ziur erabiltzaileak berrabiarazi nahi dituzula:
+,Obrada satnice!,Ordutegia prozesatzea!
+,Još nije bilo unosa satnica,Oraindik ez dago sarrerarik
+,Pozdrav!,Agurra!
+,Odjava!,Amaitu saioa!
+,Godina,urte
+,Mjesec,Hileko
+,MBO ciljevi,MBO helburuak
+,Zahtjevi za trening,Prestakuntza baldintzak
+,Zahtjevi za službena putovanja,Enpresa bidaien eskaera
+,Zaposlenici,langileei
+,Korekcije satnica,Zuzentzeko orduak
+,Upravljanje satnicama,Denbora kudeaketa
+,Upravljanje korekcijama satnica,Kudeatu ordu-orduen zuzenketak
+,Godišnji/Odsustva,Urteroko / Eza
+,Programi obuke,Prestakuntza programak
+,Zadužnice/Razdužnice,Bills / Spreadsheets
+,Organizaciona šema,Antolakuntza eskema
+,Moj MBO,Nire MBO
+,Moja službena putovanja,Nire negozio bidaiak
+,Moji treninzi,Nire entrenamenduak
+,Uredi profil,Editatu profila
+,Moje satnice,Nire ordutegia
+,Verifikacija satnica,Ordutegien egiaztapena
+,Verifikacija korekcija,Egiaztapen zuzentzeak
+,Zadužnice,obligazio
+,Razdužnice,Razdužnice
+,Pristupi,planteamendu
+,Korekcije,zuzenketak
+,Bosna i Hercegovina,Bosnia eta Herzegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Aurreko urteko oporrak
+,Godišnji odmor tekuća godina,Urteroko urteko oporrak
+,Plaćeni vjerski praznici,Jaiegun erlijiosoak ordaindu
+,Neplaćeni vjerski praznici,Jaiegun erlijiosoak ordaindu gabeak
+,Plaćeno odsustvo,Ordaindutako baja
+,Smrtni slučaj,Heriotza
+,Darivanje krvi,Odolaren dohaintza
+,Redovni rad,Lan erregularra
+,Godišnji odmor tekuca godina,Urteroko urteko oporrak
+,Ponedjeljak,Astelehena
+,Utorak,Asteartea
+,Srijeda,Asteazkena
+,Četvrtak,Osteguna
+,Petak,Ostirala
+,Subota,Larunbata
+,Nedjelja,Igandea
+,Dodaj trening,Gehitu prestakuntza
+,Zahtjevi za službeno putovanje,Bidai ofizialak eskatzeko
+,Pretraga zaposlenih,Langileen bilaketa
+,Орг. јединица,Org. unitate
+,Ime i prezime:,Izena eta abizena:
+,Prikaži kalendar,Erakutsi egutegia
+,Odustani!,Eman ezazu!
+,Izaberi!,Aukeratu!
+,B-1 sa regijama,B-1 eskualdeekin
+,Naziv org. jed.,Izena org. platera.
+,Općenito,Orokorra
+,Naslov aplikacije,Aplikazioaren izenburua
+,Logo aplikacije,Logo aplikazioa
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Baimendutako JPG / PNG / GIF formatuak. 400x200 px neurri gomendatua.
+,Boje aplikacije,Aplikazioen koloreak
+,Skriveni Tabovi,Ezkutuko fitxak
+,Nazivi tabova,Fitxen izenak
+,Role,Role
+,Spasi!,Gorde ezazu!

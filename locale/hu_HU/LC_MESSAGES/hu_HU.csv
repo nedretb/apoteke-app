@@ -1,0 +1,257 @@
+,Administrator,adminisztrátor
+,Menadžer administratora satnica,Idő adminisztrátor menedzser
+,Nadređeni,A kiváló
+,Zaposlenik,munkavállaló
+,Odaberi...,Válasszon ...
+,Nema dostupnih jezika.,Nincsenek elérhető nyelvek.
+,Dodaj službeno putovanje,Add hozzá üzleti útra
+,Nema unesenih država.,Nem lépett be országok.
+,Nema unesenih statusa.,Nincs megadva állapot.
+,Januar,január
+,Februar,február
+,Mart,március
+,April,április
+,Maj,május
+,Juni,június
+,Juli,július
+,Avgust,augusztus
+,Septembar,szeptember
+,Oktobar,október
+,Novembar,november
+,Decembar,december
+,Moj profil,A profilom
+,Moji Zadaci/Ciljevi,Saját feladatok / célok
+,Moji Zahtjevi,Kérelmem
+,Uredi profil,Profil szerkesztése
+,Zadaci/Ciljevi,Feladatok / célok
+,Zahtjevi,követelmények
+,Korisnici,a felhasználók
+,Podešavanja,Beállítások
+,Države,állami
+,Informacije su uspješno sapšene!,Az információkat sikeresen rögzítették!
+,Izmjene su uspješno sapšene!,A változtatásokat sikeresen lefoglalták!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,A felhasználónév elfoglalt. Próbálkozz valakivel.
+,Greška!,Hiba!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Kérjük, adja meg a rossz felhasználónevet és / vagy jelszót, próbálkozzon újra."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,A fiókját deaktiváltuk. További információért forduljon hozzánk.
+,Uspješno!,Sikeres!
+,Uspješno ste se odjavili.,Sikeresen jelentkezett ki.
+,Neuspješno!,Nem sikerült!
+,Vaš korisnički nalog je deaktiviran.,Fiókja ki van kapcsolva.
+,Korisničko ime,felhasználónév
+,Lozinka,jelszó
+,Prijava!,Regisztráció!
+,Zaboravili ste lozinku?,Elfelejtette jelszavát?
+,Vaša e-mail adresa,Az e-mail címed
+,Poništi lozinku,Jelszó visszaállítása
+,Nazad na stranicu za prijavu,Vissza a bejelentkezéshez
+,"Poštovani,","Tisztelt Uraim,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Kért reset jelszót, az új csatolva van."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mailben küldött utasításokkal, kérjük, ellenőrizze a jelszó-visszaállítási kérelemben megadott e-mail üzeneteket."
+,Unesena e-ail adresa nije pronađena u bazi.,A megadott e-mail cím nem található az adatbázisban.
+,Ažuriranje!,Frissítse!
+,Spasi!,Mentse el!
+,Osnovni podaci,Alapvető információk
+,Osnovni Podaci,Alapadatok
+,Ime,név
+,Prezime,vezetéknév
+,Fotografija,fényképezés
+,Odaberi,választ
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Engedélyezett JPG / PNG / GIF formátumok. Javasolt méretek 480x640 px (portré).
+,Kontakt Podaci,Kapcsolatfelvételi adatok
+,Država,ország
+,Grad,város
+,PTT,PTT
+,Adresa,cím
+,Telefon,telefon
+,E-mail,E-mail
+,Ostali Podaci,Egyéb adatok
+,Jezik aplikacije,Alkalmazási nyelv
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Helytelen oldalazonosító, kérjük, lépjen kapcsolatba a rendszergazdával."
+,Prikaži,mutat
+,Sakrij,elrejt
+,Generiši,generálása
+,Moje satnice,Az én menetrendem
+,Novi unos,Új bejegyzés
+,Dali ste sigurni da želite brisati?,Biztosan törölni akarja?
+,Još nije bilo unosa za:,Még nincs bejegyzés a következőhöz:
+,Ukupno,teljes
+,Iskorišteno,hasznosított
+,Ostalo,más
+,Spašeno,mentett
+,Odobreno,megadott
+,Odbijeno,Elutasítva
+,Dan,nap
+,Broj sati,Órák száma
+,Status,állapot
+,Pregled,áttekintés
+,ODOBRENO,hitelesített
+,ODBIJENO,ELUTASÍTOTT
+,Obradio:,Feldolgozta:
+,Komentar:,megjegyzés:
+,Period od-do:,Időszak-tól:
+,do,hogy
+,Pregled/obrada zadatka,Áttekintés / feladatfeldolgozás
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","A feladatot még nem fogadta el, ezért a feladatelemeket nem lehet feldolgozni."
+,Prihvati zadatak,Fogadja el a feladatot
+,Zaduženi:,díj:
+,Izvršiti do:,Végrehajtandó:
+,Kreirao:,Készítette:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","A feladat / cél megjelölése befejeződött, ezért nem módosíthatja a feladat állapotát. Itt követheti a cometert, és itt értékelheti a feladatot."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Az elemek elkészültek. most már megjelölheti a feladatot.
+,Završi zadatak,A feladat befejezése
+,Komentari,Comments
+,Ostavite komentar,Hagy egy megjegyzést
+,Dodaj komentar!,Hozzászólás!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","A feladat befejeződött és kiértékelésre került, így a megjegyzéseket lezárták."
+,Ocjena:,Értékelés:
+,Pozicija,pozíció
+,Sektor,ágazat
+,Nadređeni korisnik,Kiváló felhasználó
+,Datum registracije,A regisztráció időpontja
+,Datum reaktivacije,Újraaktiválási dátum
+,Satnice,kapitány
+,Dodaj godinu,Add év
+,Dodaj mjesec,Hónap hozzáadása
+,Još niste počeli unositi satnice,Még nem kezdte meg az ütemterv beírását
+,Aktivni,aktív
+,Arhiva,levéltár
+,Zahtjev za G.O.,Kérelem a G.O.
+,Od:,re:
+,Do:,hogy:
+,Na čekanju...,Várakozás ...
+,Zahtjev kreiran:,A létrehozott kérelem:
+,Zahtjev odobren:,Jóváhagyott kérelem:
+,Zahtjev odbijen:,Kérés megtagadva:
+,Dali ste sigurni da želite poništiti zahtjev?,Biztosan törölni szeretné a kérést?
+,Dali ste sigurni da želite arhivirati zahtjev?,Biztosan archiválja a kérést?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Nincsenek mentett kérelmek a kiválasztott paraméterekre.
+,Na čekanju,függőben levő
+,Prihvaćen,elfogadott
+,Završen,befejezett
+,Dali ste sigurni da želite arhivirati zadatak?,Biztosan archiválja a feladatot?
+,Nema spašenih zadataka prema odabranim parametrima.,Nincsenek mentett feladatok a kiválasztott paraméterekhez.
+,Neovlašten pristup,Jogosulatlan hozzáférés
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Ön nem rendelkezik jogosultsággal az alkalmazás e része eléréséhez. Ha hiba történt, lépjen kapcsolatba a rendszergazdával."
+,Nazad na moj profil,Vissza a profilomhoz
+,Zahtjevi za G.O.,A G.O.
+,Obrada zahtjeva!,A kérés feldolgozása!
+,Status zahtjeva:,Kérelem státusza:
+,Komentar,megjegyzés
+,Gradovi,városok
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","A beírt városok listája, amelyek célállomások és fenntartások létrehozásához szükségesek."
+,Naziv,név
+,Dali ste sigurni da želite brisati:,Biztosan törölni szeretné:
+,Još nije bilo unosa,Még nem volt bejegyzés
+,Općenito,áttekintés
+,Naslov aplikacije,Alkalmazás címe
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Engedélyezett JPG / PNG / GIF formátumok. Javasolt méretek: 400x200 px.
+,Boje aplikacije,Alkalmazási színek
+,Pozadina aplikacije,A pályázat háttere
+,Boja teksta aplikacije,Alkalmazási szöveg színe
+,Pozadina gornje trake - HEADER,Hátsó sáv - HEADER
+,Boja teksta gornje trake - HEADER,A felső szalag színe - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),A felső szalag színének szövege - HEADER (: lebeg: aktív)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Cím színe (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Háttér - GOMBOK
+,Tekst i ikona - BUTTONS,Szöveg és ikon - GOMBOK
+,SMTP parametri,SMTP paraméterek
+,SMTP status,SMTP állapot
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Ha az SMTP inaktív vagy a paraméterek nem állnak rendelkezésre, a rendszer a standard PHP MAIL () függvényt használja."
+,SMTP host,SMTP-fogadó
+,SMTP korisnik,SMTP felhasználó
+,SMTP lozinka,SMTP jelszó
+,SMTP port,SMTP port
+,SMTP sigurnost,SMTP biztonság
+,Jezici aplikacije,Alkalmazási nyelvek
+,Kod,a
+,Statusi satnice,Óránkénti állapot
+,Direkcija teksta,A szöveg irányítása
+,Dali ste sigurni da želite poništiti zadatak?,Biztosan törölni szeretné a feladatot?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,A feladatot még nem fogadta el az eladósodott korinki7.
+,Ocjeni!,Rate!
+,u obradi...,a feldolgozás ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","A feladat befejeződött. , és most elhagyhatja a fokozatot, és teljes feladatként kijelölheti. Ha meg szeretné hagyni a megjegyzést, add hozzá a minősítés előtt."
+,Kompletiraj!,Kész!
+,Zadatak/Cilj za korinika:,A sarok feladata / célpontja:
+,Zadatak/Cilj:,Feladat / cél:
+,Naziv Zadatka/Cilja,Cél / célkitűzés címe
+,Dodaj polje,Tegyen egy mezőt
+,Omogući vremensko ogranićenje zadatka/cilja,Időzítés / célidő korlátozása
+,Traži...,Keresés ...
+,Svi,minden
+,Rezultati pretrage za:,Keresési eredmények ehhez ::
+,Deaktivirani korisnici,Deaktivált felhasználók
+,ID,ID
+,Korinik,a Felhasználó
+,Nivo administracije,Az alkalmazás szintje
+,Info,info
+,deaktiviran:,kikapcsolva:
+,registracija:,regisztráció:
+,Dali ste sigurni da želite deaktivirati korisnika:,Biztosan el szeretné kapcsolni a felhasználót:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,"Biztos benne, hogy újraaktiválja a felhasználót:"
+,Obrada satnice!,A menetrend feldolgozása!
+,Još nije bilo unosa satnica,Még nem volt bejegyzés
+,Pozdrav!,Üdvözlet!
+,Odjava!,Kijelentkezés!
+,Godina,év
+,Mjesec,hónap
+,MBO ciljevi,MBO célok
+,Zahtjevi za trening,A képzésre vonatkozó követelmények
+,Zahtjevi za službena putovanja,Üzleti utakra vonatkozó kérelmek
+,Zaposlenici,alkalmazottak
+,Korekcije satnica,Korrekciós idők
+,Upravljanje satnicama,Időkezelés
+,Upravljanje korekcijama satnica,Óránkénti időjavítások kezelése
+,Godišnji/Odsustva,Éves / hiányzó
+,Programi obuke,Képzési programok
+,Zadužnice/Razdužnice,Számlák / táblázatok
+,Organizaciona šema,Szervezeti rendszer
+,Moj MBO,Az én MBO
+,Moja službena putovanja,Üzleti útjaim
+,Moji treninzi,A tréningem
+,Uredi profil,Profil szerkesztése
+,Moje satnice,Az én menetrendem
+,Verifikacija satnica,A menetrendek ellenőrzése
+,Verifikacija korekcija,Ellenőrző korrekciók
+,Zadužnice,záloglevelek
+,Razdužnice,Razdužnice
+,Pristupi,megközelítések
+,Korekcije,korrekciók
+,Bosna i Hercegovina,Bosznia és Hercegovina
+,Sarajevo,Szarajevó
+,Godišnji odmor predhodna godina,Az előző évi vakáció
+,Godišnji odmor tekuća godina,Az évenkénti éves szabadság
+,Plaćeni vjerski praznici,Fizetett vallási ünnepek
+,Neplaćeni vjerski praznici,Nem fizetett vallási ünnepek
+,Plaćeno odsustvo,Fizetett szabadság
+,Smrtni slučaj,halál
+,Darivanje krvi,Véradományozás
+,Redovni rad,Rendszeres munka
+,Godišnji odmor tekuca godina,Az évenkénti éves szabadság
+,Ponedjeljak,hétfő
+,Utorak,kedd
+,Srijeda,szerda
+,Četvrtak,csütörtök
+,Petak,péntek
+,Subota,szombat
+,Nedjelja,vasárnap
+,Dodaj trening,Képzés hozzáadása
+,Zahtjevi za službeno putovanje,Hivatalos utazás iránti kérelmek
+,Pretraga zaposlenih,Alkalmazottak keresése
+,Орг. јединица,Org. egység
+,Ime i prezime:,Név és vezetéknév:
+,Prikaži kalendar,Naptár megjelenítése
+,Odustani!,Add fel!
+,Izaberi!,Válasszon!
+,B-1 sa regijama,B-1 régiókkal
+,Naziv org. jed.,A szervezet neve. étel.
+,Općenito,áttekintés
+,Naslov aplikacije,Alkalmazás címe
+,Logo aplikacije,Logo alkalmazás
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Engedélyezett JPG / PNG / GIF formátumok. Javasolt méretek: 400x200 px.
+,Boje aplikacije,Alkalmazási színek
+,Skriveni Tabovi,Rejtett lapok
+,Nazivi tabova,Tab neve
+,Role,szerep
+,Spasi!,Mentse el!

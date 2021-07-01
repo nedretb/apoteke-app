@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <DohvatiPodatkePismena xmlns="http://www.infodom.hr/egov">
+      <userName>VM\egop10service</userName>
+      <jop>93</jop>
+    </DohvatiPodatkePismena>
+  </soap:Body>
+</soap:Envelope>
+
+ $data = Soap::getData('http://10.0.8.41/EAI_MKT/ServicePismeno.asmx?WSDL', 'DohvatiPodatkePismena', ['userName' => 'VM\egop10service', 'jop' => '93']);
+
+
+
+ <?xml version="1.0" encoding="utf-8"?>
+ <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+     <KreirajPredmet xmlns="http://www.infodom.hr/egov">
+       <userName>VM\egop10service</userName>
+       <upisnaKnjiga>?</upisnaKnjiga>
+       <vrstaPredmeta>589</vrstaPredmeta>
+       <nadleznaOrgJedinica>3</nadleznaOrgJedinica>
+       <rjesavatelj>Z39239</rjesavatelj>
+       <subjektOznaka>2</subjektOznaka>
+       <subjektOIB>AE</subjektOIB>
+       <subjektMBJmbg>0305994112460</subjektMBJmbg>
+       <nazivPredmeta>Ovo je predmet</nazivPredmeta>
+       <datumOtvaranja>2018-06-01 00:00:00.000</datumOtvaranja>
+       <idstupnjaTajnosti>12</idstupnjaTajnosti>
+     </KreirajPredmet>
+   </soap:Body>
+ </soap:Envelope>

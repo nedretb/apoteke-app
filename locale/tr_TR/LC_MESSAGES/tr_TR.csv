@@ -1,0 +1,257 @@
+,Administrator,yönetici
+,Menadžer administratora satnica,Zaman yöneticisi yöneticisi
+,Nadređeni,üstün
+,Zaposlenik,işçi
+,Odaberi...,Seç ...
+,Nema dostupnih jezika.,Mevcut dil yok.
+,Dodaj službeno putovanje,Bir iş gezisi ekleyin
+,Nema unesenih država.,Hiçbir ülke girilmedi.
+,Nema unesenih statusa.,Durum girilmedi.
+,Januar,Ocak
+,Februar,Şubat
+,Mart,Mart
+,April,Nisan
+,Maj,Mayıs
+,Juni,Haziran
+,Juli,Temmuz
+,Avgust,Ağustos
+,Septembar,Eylül
+,Oktobar,Ekim
+,Novembar,Kasım
+,Decembar,Aralık
+,Moj profil,Profilim
+,Moji Zadaci/Ciljevi,Görevlerim / Hedeflerim
+,Moji Zahtjevi,İsteklerim
+,Uredi profil,Profili düzenle
+,Zadaci/Ciljevi,Görevler / Hedefler
+,Zahtjevi,Gereksinim
+,Korisnici,kullanıcılar
+,Podešavanja,Ayarlar
+,Države,devlet
+,Informacije su uspješno sapšene!,Bilgiler başarıyla ele geçirildi!
+,Izmjene su uspješno sapšene!,Değişiklikler başarıyla ele geçirildi!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Kullanıcı adı meşgul. Lütfen başka birini deneyin.
+,Greška!,Hata!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Lütfen yanlış kullanıcı adını ve / veya şifresini girin, lütfen tekrar deneyin."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Hesabınız devre dışı bırakıldı. Daha fazla bilgi için bize ulaşın.
+,Uspješno!,Başarılı!
+,Uspješno ste se odjavili.,Başarıyla imzalandınız.
+,Neuspješno!,Başarısız!
+,Vaš korisnički nalog je deaktiviran.,Hesabınız devre dışı bırakıldı.
+,Korisničko ime,kullanıcı adı
+,Lozinka,şifre
+,Prijava!,Kaydolun!
+,Zaboravili ste lozinku?,Şifrenizi mi unuttunuz?
+,Vaša e-mail adresa,E-posta adresiniz
+,Poništi lozinku,Şifreyi sıfırla
+,Nazad na stranicu za prijavu,Giriş sayfasına geri dön
+,"Poštovani,","Sayın Baylar,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Şifre sıfırlamanızı talep ettiniz, yeni takıldı."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"Talimatların gönderildiği e-posta, lütfen şifre sıfırlama isteğinde verdiğiniz e-postadaki iletileri kontrol edin."
+,Unesena e-ail adresa nije pronađena u bazi.,Girilen e-posta adresi veritabanında bulunamadı.
+,Ažuriranje!,Güncelleme!
+,Spasi!,Kurtarın!
+,Osnovni podaci,Temel bilgiler
+,Osnovni Podaci,Temel Veriler
+,Ime,isim
+,Prezime,soyadı
+,Fotografija,fotoğrafçılık
+,Odaberi,seçmek
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,JPG / PNG / GIF formatlarına izin verildi. Önerilen boyutlar 480x640 px (portre).
+,Kontakt Podaci,İletişim Verileri
+,Država,ülke
+,Grad,şehir
+,PTT,PTT
+,Adresa,adres
+,Telefon,telefon
+,E-mail,E-mail
+,Ostali Podaci,Diğer Veriler
+,Jezik aplikacije,Uygulama dili
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Yanlış sayfa kimliği, lütfen yöneticiyle iletişime geçin."
+,Prikaži,gösteri
+,Sakrij,gizlemek
+,Generiši,üretmek
+,Moje satnice,Programım
+,Novi unos,Yeni giriş
+,Dali ste sigurni da želite brisati?,Silmek istediğinizden emin misiniz?
+,Još nije bilo unosa za:,Henüz bir giriş yoktu:
+,Ukupno,toplam
+,Iskorišteno,kullanılan
+,Ostalo,diğer
+,Spašeno,kaydedilmiş
+,Odobreno,verilmiş
+,Odbijeno,Reddedilen
+,Dan,gün
+,Broj sati,Saat sayısı
+,Status,durum
+,Pregled,genel bakış
+,ODOBRENO,ONAYLANDI
+,ODBIJENO,REDDEDİLDİ
+,Obradio:,Tarafından işlenen:
+,Komentar:,yorum:
+,Period od-do:,Dönemi arası:
+,do,için
+,Pregled/obrada zadatka,Genel bakış / görev işleme
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",Görev henüz sizin tarafınızdan kabul edilmediğinden görev kalemlerini işlemek mümkün değildir.
+,Prihvati zadatak,Görevi kabul et
+,Zaduženi:,ücret:
+,Izvršiti do:,Şunları yapmak için:
+,Kreirao:,Oluşturan:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",Görev / Hedef tamamlandı olarak işaretlenmiştir ve bu nedenle görevin durumunu değiştiremezsiniz. Komedyenleri takip edebilir ve burada görevi değerlendirebilirsiniz.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Öğeler tamamlandı. şimdi görevi tamamlandı olarak işaretleyebilirsiniz.
+,Završi zadatak,Görevi tamamla
+,Komentari,Yorumlar
+,Ostavite komentar,Yorum bırak
+,Dodaj komentar!,Yorum ekle!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",Görev tamamlanıp değerlendirildi ve yorumlarla kapatıldı.
+,Ocjena:,Değerlendirme:
+,Pozicija,pozisyon
+,Sektor,sektör
+,Nadređeni korisnik,Üstün kullanıcı
+,Datum registracije,Kayıt tarihi
+,Datum reaktivacije,Yeniden aktifleştirme tarihi
+,Satnice,kaptan
+,Dodaj godinu,Yıl Ekle
+,Dodaj mjesec,Ay ekle
+,Još niste počeli unositi satnice,Programa henüz giriş yapmaya başlamadınız.
+,Aktivni,aktive
+,Arhiva,arşiv
+,Zahtjev za G.O.,G.O'yu istemek
+,Od:,dan:
+,Do:,için:
+,Na čekanju...,Bekliyor ...
+,Zahtjev kreiran:,Oluşturulan istek:
+,Zahtjev odobren:,İstek onaylandı:
+,Zahtjev odbijen:,İstek reddedildi:
+,Dali ste sigurni da želite poništiti zahtjev?,İsteği iptal etmek istediğinizden emin misiniz?
+,Dali ste sigurni da želite arhivirati zahtjev?,İsteği arşivlemek istediğinizden emin misiniz?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Seçilen parametreler için kayıtlı istek yok.
+,Na čekanju,kadar
+,Prihvaćen,kabul edilen
+,Završen,bitmiş
+,Dali ste sigurni da želite arhivirati zadatak?,Görevi arşivlemek istediğinizden emin misiniz?
+,Nema spašenih zadataka prema odabranim parametrima.,Seçilen parametreler için kaydedilmiş görevler yok.
+,Neovlašten pristup,Yetkisiz erişim
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Başvurunun bu bölümüne erişme yetkiniz yok. Bir hata oluşursa, yöneticiye başvurun."
+,Nazad na moj profil,Profilime geri dön
+,Zahtjevi za G.O.,G.O.'ya talepler
+,Obrada zahtjeva!,İsteği işleme!
+,Status zahtjeva:,İstek Durumu:
+,Komentar,açıklama
+,Gradovi,şehirler
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Girilen şehirler listesi, varış yerleri ve rezervasyonlar oluşturmak için gereklidir."
+,Naziv,isim
+,Dali ste sigurni da želite brisati:,Silmek istediğinizden emin misiniz?
+,Još nije bilo unosa,Henüz bir giriş yoktu
+,Općenito,genel bakış
+,Naslov aplikacije,Uygulama başlığı
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,JPG / PNG / GIF formatlarına izin verildi. Önerilen boyutlar 400x200 px.
+,Boje aplikacije,Uygulama renkleri
+,Pozadina aplikacije,Uygulamanın arka planı
+,Boja teksta aplikacije,Uygulama metni rengi
+,Pozadina gornje trake - HEADER,Arka plan çubuğu - HEADER
+,Boja teksta gornje trake - HEADER,Üst bandın metin rengi - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Üst şeritten metin rengi - HEADER (: fareyle üzerine gelin: etkin)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Başlık rengi (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Arka plan - DÜĞMELER
+,Tekst i ikona - BUTTONS,Metin ve simge - DÜĞMELER
+,SMTP parametri,SMTP parametreleri
+,SMTP status,SMTP durumu
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","SMTP etkin değilse veya parametreler mevcut değilse, sistem standart PHP MAIL () işlevini kullanacaktır."
+,SMTP host,SMTP ana bilgisayarı
+,SMTP korisnik,SMTP kullanıcısı
+,SMTP lozinka,SMTP şifresi
+,SMTP port,SMTP bağlantı noktası
+,SMTP sigurnost,SMTP güvenliği
+,Jezici aplikacije,Uygulama dilleri
+,Kod,en
+,Statusi satnice,Saatlik durum
+,Direkcija teksta,Metnin Yönü
+,Dali ste sigurni da želite poništiti zadatak?,Görevi iptal etmek istediğinizden emin misiniz?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Görev borçlu korinki7 tarafından henüz kabul edilmedi.
+,Ocjeni!,Hızı!
+,u obradi...,işleme aşamasında ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.",Görev tamamlandı olarak işaretlenmiştir. ve şimdi nottan ayrılıp eksiksiz bir görev olarak işaretleyebilirsiniz. Yorum bırakmak isterseniz oy öncesi ekleyin.
+,Kompletiraj!,Tamamlandı!
+,Zadatak/Cilj za korinika:,Köşe Görevi / Hedefi:
+,Zadatak/Cilj:,Görev / Amaç:
+,Naziv Zadatka/Cilja,Amaç / Hedef
+,Dodaj polje,Alan ekle
+,Omogući vremensko ogranićenje zadatka/cilja,Zamanlamayı / Hedef Zaman Sınırını Etkinleştir
+,Traži...,Ara ...
+,Svi,tüm
+,Rezultati pretrage za:,Için arama sonuçları:
+,Deaktivirani korisnici,Devre dışı bırakılmış kullanıcılar
+,ID,kimlik
+,Korinik,Kullanıcı
+,Nivo administracije,İdare düzeyi
+,Info,bilgi
+,deaktiviran:,devreden:
+,registracija:,kayıt:
+,Dali ste sigurni da želite deaktivirati korisnika:,Kullanıcıyı devre dışı bırakmak istediğinizden emin misiniz?
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Kullanıcıyı yeniden etkinleştirmek istediğinize emin misiniz?
+,Obrada satnice!,Takvimi işleme!
+,Još nije bilo unosa satnica,Henüz bir kayıt yok.
+,Pozdrav!,Selamlar!
+,Odjava!,Oturumu kapat!
+,Godina,yıl
+,Mjesec,ay
+,MBO ciljevi,MBO hedefleri
+,Zahtjevi za trening,Eğitim için şartlar
+,Zahtjevi za službena putovanja,İş gezileri için istekler
+,Zaposlenici,çalışanlar
+,Korekcije satnica,Düzeltme zamanları
+,Upravljanje satnicama,Zaman yönetimi
+,Upravljanje korekcijama satnica,Saatlik Saat Düzeltmelerini Yönetin
+,Godišnji/Odsustva,Yıllık / Yokluk
+,Programi obuke,Eğitim programları
+,Zadužnice/Razdužnice,Bono / E-Tablolar
+,Organizaciona šema,Organizasyon şeması
+,Moj MBO,Benim MBO
+,Moja službena putovanja,Iş gezilerim
+,Moji treninzi,Eğitimlerim
+,Uredi profil,Profili düzenle
+,Moje satnice,Programım
+,Verifikacija satnica,Zaman çizelgelerinin doğrulanması
+,Verifikacija korekcija,Doğrulama düzeltmeleri
+,Zadužnice,tahviller
+,Razdužnice,Razdužnice
+,Pristupi,yaklaşımlar
+,Korekcije,düzeltmeler
+,Bosna i Hercegovina,Bosna-Hersek
+,Sarajevo,Saraybosna
+,Godišnji odmor predhodna godina,Bir önceki yılın tatili
+,Godišnji odmor tekuća godina,Yılın yıllık tatil
+,Plaćeni vjerski praznici,Ödenen dini bayramlar
+,Neplaćeni vjerski praznici,Ücretsiz dini tatiller
+,Plaćeno odsustvo,Ücretli izin
+,Smrtni slučaj,ölüm
+,Darivanje krvi,Kan bağışı
+,Redovni rad,Düzenli çalışma
+,Godišnji odmor tekuca godina,Yılın yıllık tatil
+,Ponedjeljak,Pazartesi
+,Utorak,Salı
+,Srijeda,Çarşamba
+,Četvrtak,Perşembe
+,Petak,Cuma
+,Subota,Cumartesi
+,Nedjelja,Pazar
+,Dodaj trening,Eğitim ekle
+,Zahtjevi za službeno putovanje,Resmi seyahat talepleri
+,Pretraga zaposlenih,Çalışanları ara
+,Орг. јединица,Org. birim
+,Ime i prezime:,Adı ve soyadı:
+,Prikaži kalendar,Takvimi göster
+,Odustani!,Pes!
+,Izaberi!,Seçin!
+,B-1 sa regijama,B-1 bölgeleri ile
+,Naziv org. jed.,Kuruluşun adı. çanak.
+,Općenito,genel bakış
+,Naslov aplikacije,Uygulama başlığı
+,Logo aplikacije,Logo uygulaması
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,JPG / PNG / GIF formatlarına izin verildi. Önerilen boyutlar 400x200 px.
+,Boje aplikacije,Uygulama renkleri
+,Skriveni Tabovi,Gizli Sekmeler
+,Nazivi tabova,Sekme isimleri
+,Role,rol
+,Spasi!,Kurtarın!

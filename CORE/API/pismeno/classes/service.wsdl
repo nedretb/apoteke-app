@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.infodom.hr/egov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.infodom.hr/egov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www.infodom.hr/egov">
+            <s:element name="PromjeniStatusPismena">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="promjeniStatus" type="tns:PodaciPismenaEGOPa" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="PodaciPismenaEGOPa">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="jop" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="jor" nillable="true" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="rbrPredmeta" nillable="true" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="uredskaGodina" nillable="true" type="s:short" />
+                    <s:element minOccurs="0" maxOccurs="1" name="UI" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="statusPismena" type="s:int" />
+                    <s:element minOccurs="0" maxOccurs="1" name="nazivStatusaPismena" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumPotpisa" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumZadnjegUrucenja" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumNastanka" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumZaprimanja" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumZadnjeOtpreme" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumPromjeneStatusa" type="s:dateTime" />
+                    <s:element minOccurs="0" maxOccurs="1" name="napomena" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="postojiEDokument" type="s:boolean" />
+                    <s:element minOccurs="1" maxOccurs="1" name="brojPrilogaPismena" type="s:int" />
+                    <s:element minOccurs="0" maxOccurs="1" name="otpremePismena" type="tns:ArrayOfOtpremaPismenaPrimatelji" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfOtpremaPismenaPrimatelji">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="OtpremaPismenaPrimatelji" nillable="true" type="tns:OtpremaPismenaPrimatelji" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="OtpremaPismenaPrimatelji">
+                <s:sequence>
+                    <s:element minOccurs="1" maxOccurs="1" name="idStavkeOtpremnice" nillable="true" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="uredskaGodina" nillable="true" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="oznakaOtpremnice" nillable="true" type="s:int" />
+                    <s:element minOccurs="1" maxOccurs="1" name="DatumOtpreme" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="subjektOznaka" type="s:int" />
+                    <s:element minOccurs="0" maxOccurs="1" name="subjektOIB" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="subjektmbJmbg" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="PrimateljNaziv" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="postanskiUred" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="vrstaOtpreme" type="s:int" />
+                    <s:element minOccurs="0" maxOccurs="1" name="nazivVrsteOtpreme" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="ishod" type="s:string" />
+                    <s:element minOccurs="1" maxOccurs="1" name="datumUrucenja" nillable="true" type="s:dateTime" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="PromjeniStatusPismenaResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="PromjeniStatusPismenaResult" type="tns:BaseInfo" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="BaseInfo">
+                <s:sequence>
+                    <s:element minOccurs="1" maxOccurs="1" name="OperationSucceeded" type="s:boolean" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfErrorStatus" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfErrorStatus">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorStatus" nillable="true" type="tns:ErrorStatus" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ErrorStatus">
+                <s:sequence>
+                    <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+                    <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="PromjeniStatusPismenaSoapIn">
+        <wsdl:part name="parameters" element="tns:PromjeniStatusPismena" />
+    </wsdl:message>
+    <wsdl:message name="PromjeniStatusPismenaSoapOut">
+        <wsdl:part name="parameters" element="tns:PromjeniStatusPismenaResponse" />
+    </wsdl:message>
+    <wsdl:portType name="ServiceEGOPSoap">
+        <wsdl:operation name="PromjeniStatusPismena">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obavijest o promjenama nad pismenom</wsdl:documentation>
+            <wsdl:input message="tns:PromjeniStatusPismenaSoapIn" />
+            <wsdl:output message="tns:PromjeniStatusPismenaSoapOut" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ServiceEGOPSoap" type="tns:ServiceEGOPSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="PromjeniStatusPismena">
+            <soap:operation soapAction="http://www.infodom.hr/egov/PromjeniStatusPismena" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ServiceEGOPSoap12" type="tns:ServiceEGOPSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="PromjeniStatusPismena">
+            <soap12:operation soapAction="http://www.infodom.hr/egov/PromjeniStatusPismena" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ServiceEGOP">
+        <wsdl:port name="ServiceEGOPSoap" binding="tns:ServiceEGOPSoap">
+            <soap:address location="http://localhost/Idom.eGOP.EAI/ServiceEGOP.asmx" />
+        </wsdl:port>
+        <wsdl:port name="ServiceEGOPSoap12" binding="tns:ServiceEGOPSoap12">
+            <soap12:address location="http://localhost/Idom.eGOP.EAI/ServiceEGOP.asmx" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

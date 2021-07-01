@@ -1,0 +1,257 @@
+,Administrator,Administrátor
+,Menadžer administratora satnica,Správce správce času
+,Nadređeni,Vynikající
+,Zaposlenik,Zaměstnanec
+,Odaberi...,Vyberte si ...
+,Nema dostupnih jezika.,Nejsou k dispozici žádné jazyky.
+,Dodaj službeno putovanje,Přidejte služební cestu
+,Nema unesenih država.,Nevstupovaly žádné země.
+,Nema unesenih statusa.,Žádný stav nebyl zadán.
+,Januar,Leden
+,Februar,Únor
+,Mart,Března
+,April,Duben
+,Maj,Květen
+,Juni,Červen
+,Juli,Červenec
+,Avgust,Srpen
+,Septembar,Září
+,Oktobar,Říjen
+,Novembar,Listopad
+,Decembar,Prosinec
+,Moj profil,Můj profil
+,Moji Zadaci/Ciljevi,Moje úkoly / cíle
+,Moji Zahtjevi,Moje žádosti
+,Uredi profil,Upravit profil
+,Zadaci/Ciljevi,Úkoly / cíle
+,Zahtjevi,Žádosti
+,Korisnici,Uživatelé
+,Podešavanja,Nastavení
+,Države,Země
+,Informacije su uspješno sapšene!,Informace byly úspěšně zachyceny!
+,Izmjene su uspješno sapšene!,Změny byly úspěšně zabaveny!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Uživatelské jméno je obsazeno. Zkuste někdo jiný.
+,Greška!,Chyba!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Zadejte prosím nesprávné uživatelské jméno nebo heslo, zkuste to prosím znovu."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Váš účet byl deaktivován. Pro více informací kontaktujte nás.
+,Uspješno!,Úspěšně!
+,Uspješno ste se odjavili.,Úspěšně jste se odhlásili.
+,Neuspješno!,Neúspěšný!
+,Vaš korisnički nalog je deaktiviran.,Váš účet je deaktivován.
+,Korisničko ime,Uživatelské jméno
+,Lozinka,Heslo
+,Prijava!,Přihlásit se!
+,Zaboravili ste lozinku?,Zapomněli jste heslo?
+,Vaša e-mail adresa,Vaše e-mailová adresa
+,Poništi lozinku,Resetovat heslo
+,Nazad na stranicu za prijavu,Zpět na přihlašovací stránku
+,"Poštovani,","Dobrý den,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Požádali jste o obnovení hesla, nové je připojeno."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mail s pokyny, které jste odeslali, naleznete v e-mailu, který jste zadali v žádosti o obnovení hesla."
+,Unesena e-ail adresa nije pronađena u bazi.,Zadaná e-mailová adresa nebyla v databázi nalezena.
+,Ažuriranje!,Aktualizace!
+,Spasi!,Uložit to!
+,Osnovni podaci,Základní informace
+,Osnovni Podaci,Základní údaje
+,Ime,Jméno
+,Prezime,Příjmení
+,Fotografija,Foto
+,Odaberi,Vyberte si
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Povolené formáty JPG / PNG / GIF. Doporučené rozměry 480x640 px (na výšku).
+,Kontakt Podaci,Kontaktní údaje
+,Država,Země
+,Grad,Město
+,PTT,PTT
+,Adresa,Adresa
+,Telefon,Telefon
+,E-mail,E-mail
+,Ostali Podaci,Jiné údaje
+,Jezik aplikacije,Jazyk aplikace
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Nesprávné ID stránky, kontaktujte správce."
+,Prikaži,Zobrazit
+,Sakrij,Skrýt
+,Generiši,Generovat
+,Moje satnice,Můj plán
+,Novi unos,Nový záznam
+,Dali ste sigurni da želite brisati?,Opravdu chcete smazat?
+,Još nije bilo unosa za:,Záznam nebyl dosud k dispozici:
+,Ukupno,Celkem
+,Iskorišteno,Použité
+,Ostalo,Ostatní
+,Spašeno,Zachránil
+,Odobreno,Schváleno
+,Odbijeno,Odmítnuto
+,Dan,Dan
+,Broj sati,Počet hodin
+,Status,Stav
+,Pregled,Přehled
+,ODOBRENO,SCHVÁLENO
+,ODBIJENO,ODBIJENO
+,Obradio:,Zpracoval:
+,Komentar:,Komentář:
+,Period od-do:,Doba od-do:
+,do,na
+,Pregled/obrada zadatka,Přehled / zpracování úloh
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Úkol ještě nepřijímáte, a proto není možné zpracovat položky úlohy."
+,Prihvati zadatak,Přijměte úkol
+,Zaduženi:,Odpovídá:
+,Izvršiti do:,Proveďte:
+,Kreirao:,Vytvořil:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Úkol / cíl je označen jako dokončený, a proto nemůžete změnit stav úkolu. Zde můžete sledovat příchozí a zhodnotit úlohu zde."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Položky jsou dokončeny. můžete nyní označit úkol dokončen.
+,Završi zadatak,Dokončete úkol
+,Komentari,Komentáře
+,Ostavite komentar,Zanechat komentář
+,Dodaj komentar!,Přidat komentář!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",Úloha byla dokončena a vyhodnocena a závěry byly uzavřeny.
+,Ocjena:,Hodnocení:
+,Pozicija,Poloha
+,Sektor,Sektor
+,Nadređeni korisnik,Vynikající uživatel
+,Datum registracije,Datum registrace
+,Datum reaktivacije,Datum opětovné aktivace
+,Satnice,Plán
+,Dodaj godinu,Přidat rok
+,Dodaj mjesec,Přidat měsíc
+,Još niste počeli unositi satnice,Zatím jste nezačali zadávat plán
+,Aktivni,Aktivní
+,Arhiva,Archiv
+,Zahtjev za G.O.,Žádost o G.O.
+,Od:,Od:
+,Do:,Chcete-li:
+,Na čekanju...,Čekání ...
+,Zahtjev kreiran:,Vytvořená žádost:
+,Zahtjev odobren:,Žádost schválena:
+,Zahtjev odbijen:,Žádost byla odepřena:
+,Dali ste sigurni da želite poništiti zahtjev?,Opravdu chcete žádost zrušit?
+,Dali ste sigurni da želite arhivirati zahtjev?,Opravdu chcete archivovat požadavek?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Pro vybrané parametry nejsou uloženy žádosti.
+,Na čekanju,Čekání
+,Prihvaćen,Přijato
+,Završen,Dokončeno
+,Dali ste sigurni da želite arhivirati zadatak?,Opravdu chcete archivovat úkol?
+,Nema spašenih zadataka prema odabranim parametrima.,Pro vybrané parametry nejsou uloženy žádné úlohy.
+,Neovlašten pristup,Neoprávněný přístup
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Nemáte oprávnění k přístupu k této části aplikace. Pokud k chybě došlo, obraťte se na správce."
+,Nazad na moj profil,Zpět na můj profil
+,Zahtjevi za G.O.,Žádosti o G.O.
+,Obrada zahtjeva!,Zpracování žádosti!
+,Status zahtjeva:,Stav žádosti:
+,Komentar,Komentář
+,Gradovi,Města
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Seznam zadaných měst, které jsou nutné pro vytvoření destinací a rezervací."
+,Naziv,Jméno
+,Dali ste sigurni da želite brisati:,Opravdu chcete smazat:
+,Još nije bilo unosa,Záznam ještě nebyl
+,Općenito,Obecně
+,Naslov aplikacije,Název aplikace
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Povolené formáty JPG / PNG / GIF. Doporučené rozměry 400x200 px.
+,Boje aplikacije,Barvy aplikací
+,Pozadina aplikacije,Souvislosti aplikace
+,Boja teksta aplikacije,Barva textu aplikace
+,Pozadina gornje trake - HEADER,Pozadí - HEADER
+,Boja teksta gornje trake - HEADER,Barva textu horní pásky - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Barva textu horní pásky - HEADER (: pohyblivý: aktivní)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Barva titulu (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Pozadí - TLAČÍTKA
+,Tekst i ikona - BUTTONS,Text a ikona - TLAČÍTKA
+,SMTP parametri,Parametry SMTP
+,SMTP status,Stav SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Pokud je protokol SMTP neaktivní nebo parametry nejsou k dispozici, bude systém používat standardní funkci PHP MAIL ()."
+,SMTP host,Hostitel SMTP
+,SMTP korisnik,Uživatel SMTP
+,SMTP lozinka,Heslo SMTP
+,SMTP port,Port SMTP
+,SMTP sigurnost,Zabezpečení SMTP
+,Jezici aplikacije,Jazyky aplikací
+,Kod,Kód
+,Statusi satnice,Hodinový stav
+,Direkcija teksta,Směr textu
+,Dali ste sigurni da želite poništiti zadatak?,Opravdu chcete zrušit úkol?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Úloha nebyla dlužným korinkem7 přijata.
+,Ocjeni!,Hodnoťte!
+,u obradi...,při zpracování ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Úloha je označena jako dokončená. , a nyní můžete zanechat hodnocení a označit ji za úplný úkol. Pokud chcete zanechat komentář, přidejte ji před hodnocením."
+,Kompletiraj!,Kompletní!
+,Zadatak/Cilj za korinika:,Úloha / Cíl pro roh:
+,Zadatak/Cilj:,Úkol / cíl:
+,Naziv Zadatka/Cilja,Název cíle / cíl
+,Dodaj polje,Přidat pole
+,Omogući vremensko ogranićenje zadatka/cilja,Aktivovat časový limit / cílový čas
+,Traži...,Hledání ...
+,Svi,Všichni
+,Rezultati pretrage za:,Výsledky hledání pro:
+,Deaktivirani korisnici,Deaktivovaní uživatelé
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Úroveň administrace
+,Info,Informace
+,deaktiviran:,deaktivováno:
+,registracija:,registrace:
+,Dali ste sigurni da želite deaktivirati korisnika:,Opravdu chcete deaktivovat uživatele:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Opravdu chcete uživatele znovu aktivovat:
+,Obrada satnice!,Zpracování plánu!
+,Još nije bilo unosa satnica,Zatím žádné záznamy nebyly
+,Pozdrav!,Dobrý den!
+,Odjava!,Odhlásit se!
+,Godina,Rok
+,Mjesec,Měsíc
+,MBO ciljevi,Cíle MBO
+,Zahtjevi za trening,Požadavky na školení
+,Zahtjevi za službena putovanja,Žádosti o služební cesty
+,Zaposlenici,Zaměstnanci
+,Korekcije satnica,Opravné časy
+,Upravljanje satnicama,Řízení času
+,Upravljanje korekcijama satnica,Spravujte opravy hodinových hodin
+,Godišnji/Odsustva,Roční / nepřítomnost
+,Programi obuke,Tréninkové programy
+,Zadužnice/Razdužnice,Účty / tabulky
+,Organizaciona šema,Organizační schéma
+,Moj MBO,Moje MBO
+,Moja službena putovanja,Moje pracovní cesty
+,Moji treninzi,Moje tréninky
+,Uredi profil,Upravit profil
+,Moje satnice,Můj plán
+,Verifikacija satnica,Ověření jízdních řádů
+,Verifikacija korekcija,Opravy ověření
+,Zadužnice,Účty
+,Razdužnice,Spreje
+,Pristupi,Přístup
+,Korekcije,Opravy
+,Bosna i Hercegovina,Bosna a Hercegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Předchozí letní dovolená
+,Godišnji odmor tekuća godina,Roční dovolená v běžném roce
+,Plaćeni vjerski praznici,Placené náboženské svátky
+,Neplaćeni vjerski praznici,Neplacené náboženské svátky
+,Plaćeno odsustvo,Placená dovolená
+,Smrtni slučaj,Smrt
+,Darivanje krvi,Dárcovství krve
+,Redovni rad,Pravidelná práce
+,Godišnji odmor tekuca godina,Roční dovolená v běžném roce
+,Ponedjeljak,Pondělí
+,Utorak,Úterý
+,Srijeda,Středa
+,Četvrtak,Čtvrtek
+,Petak,Pátek
+,Subota,Sobota
+,Nedjelja,Neděle
+,Dodaj trening,Přidat školení
+,Zahtjevi za službeno putovanje,Žádosti o oficiální cestování
+,Pretraga zaposlenih,Vyhledat zaměstnance
+,Орг. јединица,Org. jednotky
+,Ime i prezime:,Jméno a příjmení:
+,Prikaži kalendar,Zobrazit kalendář
+,Odustani!,Zrušit!
+,Izaberi!,Vyberte si!
+,B-1 sa regijama,B-1 s oblastmi
+,Naziv org. jed.,Název org. jed.
+,Općenito,Obecně
+,Naslov aplikacije,Název aplikace
+,Logo aplikacije,Aplikace Logo
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Povolené formáty JPG / PNG / GIF. Doporučené rozměry 400x200 px.
+,Boje aplikacije,Barvy aplikací
+,Skriveni Tabovi,Skryté karty
+,Nazivi tabova,Názvy tabulek
+,Role,Role
+,Spasi!,Uložit to!

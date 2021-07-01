@@ -1,0 +1,257 @@
+,Administrator,Administratorius
+,Menadžer administratora satnica,Laiko administratoriaus valdytojas
+,Nadređeni,"""Superior"""
+,Zaposlenik,Darbuotojas
+,Odaberi...,Pasirinkite ...
+,Nema dostupnih jezika.,Kalbos nėra.
+,Dodaj službeno putovanje,Pridėti verslo kelionę
+,Nema unesenih država.,Nebuvo įvestų šalių.
+,Nema unesenih statusa.,Įrašas nebuvo įrašytas.
+,Januar,Sausis
+,Februar,Vasaris
+,Mart,Kovo mėn
+,April,Balandžio mėn
+,Maj,Gegužės mėn
+,Juni,Birželio mėn
+,Juli,Liepos mėn
+,Avgust,Rugpjūtis
+,Septembar,Rugsėjis
+,Oktobar,Spalis
+,Novembar,Lapkričio mėn
+,Decembar,Gruodžio mėn
+,Moj profil,Mano profilis
+,Moji Zadaci/Ciljevi,Mano užduotys / tikslai
+,Moji Zahtjevi,Mano prašymai
+,Uredi profil,Redaguoti profilį
+,Zadaci/Ciljevi,Užduotys / tikslai
+,Zahtjevi,Prašymai
+,Korisnici,Vartotojai
+,Podešavanja,Nustatymai
+,Države,Šalys
+,Informacije su uspješno sapšene!,Informacija sėkmingai užfiksuota!
+,Izmjene su uspješno sapšene!,Pakeitimai buvo sėkmingai panaudoti!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Vartotojo vardas užimtas. Prašau pabandykite kito asmens.
+,Greška!,Klaida!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Įveskite neteisingą vardą ir / arba slaptažodį, bandykite dar kartą."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,"Jūsų sąskaita buvo išjungta. Norėdami gauti daugiau informacijos, susisiekite su mumis."
+,Uspješno!,Sėkmingai!
+,Uspješno ste se odjavili.,Jūs sėkmingai atsijungėte.
+,Neuspješno!,Nesėkmingas!
+,Vaš korisnički nalog je deaktiviran.,Jūsų paskyra išjungta.
+,Korisničko ime,Vartotojo vardas
+,Lozinka,Slaptažodis
+,Prijava!,Prisijungti!
+,Zaboravili ste lozinku?,Pamiršote slaptažodį?
+,Vaša e-mail adresa,Jūsų el. Pašto adresas
+,Poništi lozinku,Iš naujo nustatyti slaptažodį
+,Nazad na stranicu za prijavu,Atgal į prisijungimo puslapį
+,"Poštovani,",Labas
+,"Zatražili ste reset lozinke, nova je u prilogu.","Jūs prašėte atstatyti slaptažodį, pridedamas naujas."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"El.paštas su instrukcijomis buvo išsiųstas, prašome patikrinti pranešimus paštu-in, kad jūs nurodytą prašymą iš naujo nustatyti slaptažodį."
+,Unesena e-ail adresa nije pronađena u bazi.,Įveskite el. Pašto adresą nerasta duomenų bazėje.
+,Ažuriranje!,Atnaujinama!
+,Spasi!,Išsaugokite!
+,Osnovni podaci,Pagrindinė informacija
+,Osnovni Podaci,Pagrindiniai duomenys
+,Ime,Vardas
+,Prezime,Pavarde
+,Fotografija,Nuotrauka
+,Odaberi,Pasirinkite
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Leidžiami JPG / PNG / GIF formatai. Rekomenduojami dydžiai 480x640 px (portretas).
+,Kontakt Podaci,Kontaktiniai duomenys
+,Država,Šalis
+,Grad,Miestas
+,PTT,PTT
+,Adresa,Adresas
+,Telefon,Telefonas
+,E-mail,El. Paštas
+,Ostali Podaci,Kiti duomenys
+,Jezik aplikacije,Paraiškų kalba
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Neteisingas puslapio ID, prašome susisiekti su administratoriumi."
+,Prikaži,Rodyti
+,Sakrij,Paslėpti
+,Generiši,Generuoti
+,Moje satnice,Mano tvarkaraštis
+,Novi unos,Naujas įrašas
+,Dali ste sigurni da želite brisati?,Ar tikrai norite ištrinti?
+,Još nije bilo unosa za:,Dar nebuvo įrašo:
+,Ukupno,Iš viso
+,Iskorišteno,Naudojamas
+,Ostalo,Kita
+,Spašeno,Išsigelbėta
+,Odobreno,Patvirtinta
+,Odbijeno,Atmestas
+,Dan,Danas
+,Broj sati,Valandų skaičius
+,Status,Statusas
+,Pregled,Apžvalga
+,ODOBRENO,PATVIRTINTA
+,ODBIJENO,ODBIJENO
+,Obradio:,Apdorojama:
+,Komentar:,Komentaras:
+,Period od-do:,Laikotarpis nuo-iki:
+,do,į
+,Pregled/obrada zadatka,Apžvalga / užduoties apdorojimas
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Ši užduotis dar nepriimta, taigi neįmanoma apdoroti užduoties elementų."
+,Prihvati zadatak,Priimti užduotį
+,Zaduženi:,Atsakingas:
+,Izvršiti do:,Vykdyti iki:
+,Kreirao:,Sukūrė:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Užduotis / tikslas pažymėtas kaip baigtas, todėl jūs negalite pakeisti užduoties būsenos. Čia galite sekti cometers ir įvertinti užduotį čia."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Elementai yra baigti. Dabar galite pažymėti užduoties atlikimą.
+,Završi zadatak,Baigti užduotį
+,Komentari,Komentarai
+,Ostavite komentar,Palikite komentarą
+,Dodaj komentar!,Pridėti komentarą!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Užduotis buvo baigta ir įvertinta, todėl pastabos buvo uždarytos."
+,Ocjena:,Reitingas:
+,Pozicija,Pozicija
+,Sektor,Sektorius
+,Nadređeni korisnik,Geresnis naudotojas
+,Datum registracije,Registracijos data
+,Datum reaktivacije,Atnaujinimo data
+,Satnice,Tvarkaraštis
+,Dodaj godinu,Pridėti metus
+,Dodaj mjesec,Pridėti mėnesį
+,Još niste počeli unositi satnice,Jūs dar nepradėjote įeiti į tvarkaraštį
+,Aktivni,Aktyvus
+,Arhiva,Archyvas
+,Zahtjev za G.O.,Prašymas G.O.
+,Od:,Nuo:
+,Do:,:
+,Na čekanju...,Laukiama ...
+,Zahtjev kreiran:,Užklausa sukurta:
+,Zahtjev odobren:,Prašymas patvirtintas:
+,Zahtjev odbijen:,Užklausa atmesta:
+,Dali ste sigurni da želite poništiti zahtjev?,Ar tikrai norite atšaukti užklausą?
+,Dali ste sigurni da želite arhivirati zahtjev?,Ar tikrai norite archyvuoti užklausą?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Nėra pasirinktų parametrų išsaugotų užklausų.
+,Na čekanju,Laukiama
+,Prihvaćen,Priimta
+,Završen,Baigtas
+,Dali ste sigurni da želite arhivirati zadatak?,Ar tikrai norite archyvuoti užduotį?
+,Nema spašenih zadataka prema odabranim parametrima.,Pasirinktiems parametrams nėra išsaugotų užduočių.
+,Neovlašten pristup,Neleistina prieiga
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Jūs neturite teisės naudotis šia programos dalimi. Jei įvyko klaida, kreipkitės į administratorių."
+,Nazad na moj profil,Grįžti į mano profilį
+,Zahtjevi za G.O.,Prašymai G.O.
+,Obrada zahtjeva!,Prašymo apdorojimas!
+,Status zahtjeva:,Prašymo būsena:
+,Komentar,Komentaras
+,Gradovi,Miestai
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Įvestų miestų sąrašas, reikalingas norint sukurti vietas ir rezervacijas."
+,Naziv,Vardas
+,Dali ste sigurni da želite brisati:,Ar tikrai norite ištrinti:
+,Još nije bilo unosa,Dar nebuvo įrašo
+,Općenito,Generalinis direktorius
+,Naslov aplikacije,Programos pavadinimas
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Leidžiami JPG / PNG / GIF formatai. Rekomenduojami matmenys 400x200 px.
+,Boje aplikacije,Taikomųjų spalvų
+,Pozadina aplikacije,Paraiškos aplinkybės
+,Boja teksta aplikacije,Taikomosios programos teksto spalva
+,Pozadina gornje trake - HEADER,"""Background bar"" - ""HEADER"""
+,Boja teksta gornje trake - HEADER,Viršutinės juostos teksto spalva - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Viršutinės juostos teksto spalva - HEADER (: hover: aktyvus)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Pavadinimo spalva (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Fonas - mygtukai
+,Tekst i ikona - BUTTONS,Tekstas ir piktograma - MYGTUKAI
+,SMTP parametri,SMTP parametrai
+,SMTP status,SMTP statusas
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Jei SMTP neaktyvūs arba parametrai yra visiškai baigtas, sistema naudosis standartas PHP mail () funkcija."
+,SMTP host,SMTP priegloba
+,SMTP korisnik,SMTP vartotojas
+,SMTP lozinka,SMTP slaptažodis
+,SMTP port,SMTP prievadas
+,SMTP sigurnost,SMTP saugumas
+,Jezici aplikacije,Programų kalbos
+,Kod,Kodas
+,Statusi satnice,Valandos būklė
+,Direkcija teksta,Teksto kryptis
+,Dali ste sigurni da želite poništiti zadatak?,Ar tikrai norite atšaukti užduotį?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Užduotis dar nepatvirtino įsiskolinusių korinkų7.
+,Ocjeni!,Reitingas!
+,u obradi...,perdirbant ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Užduotis pažymėta kaip baigta. , ir dabar jūs galite palikti klasę ir pažymėti ją kaip pilną užduotį. Jei norite palikti komentarą, pridėkite jį prieš įvertinimą."
+,Kompletiraj!,Baigti!
+,Zadatak/Cilj za korinika:,Užduotis / Tikslas kampui:
+,Zadatak/Cilj:,Užduotis / tikslas:
+,Naziv Zadatka/Cilja,Tikslo / tikslo pavadinimas
+,Dodaj polje,Pridėti lauką
+,Omogući vremensko ogranićenje zadatka/cilja,Įgalinti laiko nustatymą / tikslo terminą
+,Traži...,Ieškoti ...
+,Svi,Visi
+,Rezultati pretrage za:,Paieškos rezultatai:
+,Deaktivirani korisnici,Deaktyvuoti vartotojai
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Administravimo lygis
+,Info,Informacija
+,deaktiviran:,išjungtas:
+,registracija:,registracija:
+,Dali ste sigurni da želite deaktivirati korisnika:,Ar tikrai norite išjungti naudotoją?
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Ar tikrai norite pakartotinai suaktyvinti naudotoją:
+,Obrada satnice!,Tvarkyti tvarkaraštį!
+,Još nije bilo unosa satnica,Dar nebuvo įrašų
+,Pozdrav!,Sveiki!
+,Odjava!,Atsijungti!
+,Godina,Metai
+,Mjesec,Mėnulis
+,MBO ciljevi,MBO tikslai
+,Zahtjevi za trening,Reikalavimai mokymui
+,Zahtjevi za službena putovanja,Prašymai į komandiruotes
+,Zaposlenici,Darbuotojai
+,Korekcije satnica,Koregavimo laikas
+,Upravljanje satnicama,Laiko valdymas
+,Upravljanje korekcijama satnica,Valdykite valandinio laiko pataisa
+,Godišnji/Odsustva,Metinis / nebuvimas
+,Programi obuke,Mokymo programos
+,Zadužnice/Razdužnice,Sąskaitos / skaičiuoklės
+,Organizaciona šema,Organizacinė schema
+,Moj MBO,Mano MBO
+,Moja službena putovanja,Mano verslo keliones
+,Moji treninzi,Mano mokymai
+,Uredi profil,Redaguoti profilį
+,Moje satnice,Mano tvarkaraštis
+,Verifikacija satnica,Tvarkaraščių tikrinimas
+,Verifikacija korekcija,Patikros pataisymai
+,Zadužnice,Vekseliai
+,Razdužnice,Purškikliai
+,Pristupi,Požiūris
+,Korekcije,Pataisymai
+,Bosna i Hercegovina,Bosnija ir Hercegovina
+,Sarajevo,Sarajevas
+,Godišnji odmor predhodna godina,Praėjusių metų atostogos
+,Godišnji odmor tekuća godina,Metinis atostogas einamuosius metus
+,Plaćeni vjerski praznici,Mokamos religinės šventės
+,Neplaćeni vjerski praznici,Neapmokamos religinės šventės
+,Plaćeno odsustvo,Apmokamos atostogos
+,Smrtni slučaj,Mirtis
+,Darivanje krvi,Kraujo donorystė
+,Redovni rad,Reguliarus darbas
+,Godišnji odmor tekuca godina,Metinis atostogas einamuosius metus
+,Ponedjeljak,Pirmadienis
+,Utorak,Antradienis
+,Srijeda,Trečiadienis
+,Četvrtak,Ketvirtadienis
+,Petak,Penktadienis
+,Subota,Šeštadienis
+,Nedjelja,Sekmadienis
+,Dodaj trening,Pridėti mokymą
+,Zahtjevi za službeno putovanje,Prašymai oficialiai keliauti
+,Pretraga zaposlenih,Ieškoti darbuotojų
+,Орг. јединица,Org. vienetas
+,Ime i prezime:,Vardas ir pavardė:
+,Prikaži kalendar,Rodyti kalendorių
+,Odustani!,Atšaukti!
+,Izaberi!,Pasirinkite!
+,B-1 sa regijama,B-1 su regionais
+,Naziv org. jed.,Org pavadinimas Jed
+,Općenito,Generalinis direktorius
+,Naslov aplikacije,Programos pavadinimas
+,Logo aplikacije,Logotipo paraiška
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Leidžiami JPG / PNG / GIF formatai. Rekomenduojami matmenys 400x200 px.
+,Boje aplikacije,Taikomųjų spalvų
+,Skriveni Tabovi,Paslėpti skirtukai
+,Nazivi tabova,Tab pavadinimai
+,Role,Vaidmuo
+,Spasi!,Išsaugokite!

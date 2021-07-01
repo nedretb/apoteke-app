@@ -1,0 +1,237 @@
+,Administrator,Administrator
+,Menadžer administratora satnica,Time administrator manager
+,Nadređeni,En overlegen
+,Zaposlenik,medarbejder
+,Odaberi...,Vælg ...
+,Nema dostupnih jezika.,Der er ingen tilgængelige sprog.
+,Nema unesenih država.,Ingen lande er kommet ind.
+,Nema unesenih statusa.,Ingen status indtastet.
+,Januar,januar
+,Februar,februar
+,Mart,marts
+,April,april
+,Maj,maj
+,Juni,juni
+,Juli,juli
+,Avgust,august
+,Septembar,september
+,Oktobar,oktober
+,Novembar,november
+,Decembar,december
+,Moj profil,Min profil
+,Moji Zadaci/Ciljevi,Mine opgaver / mål
+,Moji Zahtjevi,Mine anmodninger
+,Uredi profil,Rediger profil
+,Zadaci/Ciljevi,Opgaver / mål
+,Zahtjevi,krav
+,Korisnici,brugerne
+,Podešavanja,Indstillinger
+,Države,stat
+,Informacije su uspješno sapšene!,Oplysningerne er blevet taget med succes!
+,Izmjene su uspješno sapšene!,Ændringerne blev med held beslaglagt!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Brugernavn er optaget. Prøv venligst en anden.
+,Greška!,Fejl!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Indtast venligst forkert brugernavn og / eller kodeord, prøv igen."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Din konto er blevet deaktiveret. For mere information kontakt os.
+,Uspješno!,Vellykket!
+,Uspješno ste se odjavili.,Du er med succes udmeldt.
+,Neuspješno!,Mislykket!
+,Vaš korisnički nalog je deaktiviran.,Din konto er deaktiveret.
+,Korisničko ime,brugernavn
+,Lozinka,adgangskode
+,Prijava!,Tilmeld dig!
+,Zaboravili ste lozinku?,Glemt din adgangskode?
+,Vaša e-mail adresa,Din e-mail-adresse
+,Poništi lozinku,Nulstil adgangskode
+,Nazad na stranicu za prijavu,Tilbage til login side
+,"Poštovani,","Kære Herrer,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Du har bedt om nulstilling af adgangskode, nyt er vedlagt."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mail med instruktioner sendt, skal du kontrollere meddelelserne på den email, du har angivet i anmodningen om nulstilling af adgangskode."
+,Unesena e-ail adresa nije pronađena u bazi.,Den indtastede e-mail-adresse blev ikke fundet i databasen.
+,Ažuriranje!,Opdater!
+,Spasi!,Gem det!
+,Osnovni podaci,Grundlæggende oplysninger
+,Osnovni Podaci,Grundlæggende data
+,Ime,navn
+,Prezime,efternavn
+,Fotografija,fotografering
+,Odaberi,Vælg
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Tilladte JPG / PNG / GIF-formater. Anbefalede dimensioner 480x640 px (portræt).
+,Kontakt Podaci,Kontaktdata
+,Država,land
+,Grad,by
+,PTT,PTT
+,Adresa,adresse
+,Telefon,telefon
+,E-mail,E-mail
+,Ostali Podaci,Andre data
+,Jezik aplikacije,Ansøgningssprog
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Forkert side id, kontakt venligst administrator."
+,Prikaži,Vis
+,Sakrij,Skjul
+,Generiši,Generer
+,Moje satnice,Min tidsplan
+,Novi unos,Ny post
+,Dali ste sigurni da želite brisati?,"Er du sikker på, at du vil slette?"
+,Još nije bilo unosa za:,Der var endnu ikke en post til:
+,Ukupno,samlede
+,Iskorišteno,udnyttet
+,Ostalo,andre
+,Spašeno,gemt
+,Odobreno,bevilget
+,Odbijeno,afvist
+,Dan,dag
+,Broj sati,Antal timer
+,Status,status
+,Pregled,oversigt
+,ODOBRENO,GODKENDT
+,ODBIJENO,AFVIST
+,Obradio:,Behandles af:
+,Komentar:,kommentere:
+,Period od-do:,Periode fra-til:
+,do,til
+,Pregled/obrada zadatka,Oversigt / opgavebehandling
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Opgaven er endnu ikke accepteret af dig, og det er derfor ikke muligt at behandle opgaveelementerne."
+,Prihvati zadatak,Accepter opgaven
+,Zaduženi:,opladning:
+,Izvršiti do:,Udfør til:
+,Kreirao:,Oprettet af:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Opgave / Mål er markeret som afsluttet, og derfor kan du ikke ændre status for opgaven. Du kan følge cometers her og evaluere opgaven her."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Elementerne er afsluttet. Du kan nu markere den udførte opgave.
+,Završi zadatak,Afslut opgaven
+,Komentari,Kommentarer
+,Ostavite komentar,Efterlad en kommentar
+,Dodaj komentar!,Tilføj en kommentar!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Opgaven blev gennemført og evalueret, og dermed blev kommentarerne lukket."
+,Ocjena:,bedømmelse:
+,Pozicija,position
+,Sektor,sektor
+,Nadređeni korisnik,Overlegen bruger
+,Datum registracije,Dato for registrering
+,Datum reaktivacije,Genaktiveringsdato
+,Satnice,kaptajn
+,Dodaj godinu,Tilføj år
+,Dodaj mjesec,Tilføj måned
+,Još niste počeli unositi satnice,Du er endnu ikke begyndt at indtaste tidsplanen
+,Aktivni,aktiveret
+,Arhiva,arkiver
+,Zahtjev za G.O.,Anmodning om G.O.
+,Od:,fra:
+,Do:,til:
+,Na čekanju...,Venter ...
+,Zahtjev kreiran:,Forespørgsel oprettet:
+,Zahtjev odobren:,Forespørgsel godkendt:
+,Zahtjev odbijen:,Forespørgsel nægtet:
+,Dali ste sigurni da želite poništiti zahtjev?,"Er du sikker på, at du vil annullere anmodningen?"
+,Dali ste sigurni da želite arhivirati zahtjev?,"Er du sikker på, at du vil arkivere anmodningen?"
+,Nema spašenih zahtjeva prema odabranim parametrima.,Der er ingen gemte forespørgsler for de valgte parametre.
+,Na čekanju,afventning
+,Prihvaćen,accepteret
+,Završen,færdig
+,Dali ste sigurni da želite arhivirati zadatak?,"Er du sikker på, at du vil arkivere opgaven?"
+,Nema spašenih zadataka prema odabranim parametrima.,Der er ingen gemte opgaver for de valgte parametre.
+,Neovlašten pristup,Uautoriseret adgang
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Du har ingen myndighed til at få adgang til denne del af programmet. Hvis der er opstået en fejl, skal du kontakte administratoren."
+,Nazad na moj profil,Tilbage til min profil
+,Zahtjevi za G.O.,Anmodninger om G.O.
+,Obrada zahtjeva!,Behandling af anmodningen!
+,Status zahtjeva:,Forespørgselsstatus:
+,Komentar,kommentar
+,Gradovi,byer
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Liste over de indtastede byer, som er nødvendige for at oprette destinationer og reservationer."
+,Naziv,navn
+,Dali ste sigurni da želite brisati:,"Er du sikker på, at du vil slette:"
+,Još nije bilo unosa,Der var endnu ikke en post
+,Općenito,oversigt
+,Naslov aplikacije,App titel
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Tilladte JPG / PNG / GIF-formater. Anbefalede dimensioner 400x200 px.
+,Boje aplikacije,Anvendelsesfarver
+,Pozadina aplikacije,Baggrund for ansøgningen
+,Boja teksta aplikacije,Anvendelse tekst farve
+,Pozadina gornje trake - HEADER,Baggrundsbjælke - HEADER
+,Boja teksta gornje trake - HEADER,Tekstfarve på det øverste bånd - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Tekstfarve på det øverste bånd - HEADER (: hover: aktiv)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Titelfarve (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Baggrund - KNAPPER
+,Tekst i ikona - BUTTONS,Tekst og ikon - KNAPPER
+,SMTP parametri,SMTP parametre
+,SMTP status,SMTP status
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Hvis SMTP er inaktiv eller parametrene ikke er tilgængelige, bruger systemet standard PHP MAIL () funktionen."
+,SMTP host,SMTP vært
+,SMTP korisnik,SMTP-bruger
+,SMTP lozinka,SMTP-adgangskode
+,SMTP port,SMTP port
+,SMTP sigurnost,SMTP-sikkerhed
+,Jezici aplikacije,Ansøgningssprog
+,Kod,ved
+,Statusi satnice,Timestatus
+,Direkcija teksta,Retning af teksten
+,Dali ste sigurni da želite poništiti zadatak?,"Er du sikker på, at du vil annullere opgaven?"
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Opgaven er endnu ikke accepteret af den gældsbestemte korinki7.
+,Ocjeni!,Bedøm!
+,u obradi...,i behandling ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Opgaven er markeret som afsluttet. , og du kan nu forlade karakteren og markere den som en komplet opgave. Hvis du vil efterlade en kommentar, skal du tilføje den før bedømmelsen."
+,Kompletiraj!,Komplet!
+,Zadatak/Cilj za korinika:,Opgave / Mål for hjørnet:
+,Zadatak/Cilj:,Opgave / mål:
+,Naziv Zadatka/Cilja,Mål / Målsætning
+,Dodaj polje,Tilføj et felt
+,Omogući vremensko ogranićenje zadatka/cilja,Aktivér Timing / Goal Time Limit
+,Traži...,Søg ...
+,Svi,alle
+,Rezultati pretrage za:,Søgeresultat for:
+,Deaktivirani korisnici,Deaktiverede brugere
+,ID,ID
+,Korinik,Brugeren
+,Nivo administracije,Administrationsniveau
+,Info,info
+,deaktiviran:,deaktiveret:
+,registracija:,registrering:
+,Dali ste sigurni da želite deaktivirati korisnika:,"Er du sikker på, at du vil deaktivere brugeren:"
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,"Er du sikker på, at du vil genaktivere brugeren:"
+,Obrada satnice!,Behandling af tidsplanen!
+,Još nije bilo unosa satnica,Der var ingen indlæg endnu
+,Pozdrav!,Hilsner!
+,Odjava!,Log ud!
+,Godina,år
+,Mjesec,måned
+,MBO ciljevi,MBO mål
+,Zahtjevi za trening,Krav til uddannelse
+,Zahtjevi za službena putovanja,Anmodninger om forretningsrejser
+,Zaposlenici,medarbejdere
+,Korekcije satnica,Korrektionstider
+,Upravljanje satnicama,Tidsstyring
+,Upravljanje korekcijama satnica,Administrer timetids korrektioner
+,Godišnji/Odsustva,Årlig / Fravær
+,Programi obuke,Uddannelsesprogrammer
+,Zadužnice/Razdužnice,Regninger / regneark
+,Organizaciona šema,Organisationsordning
+,Moj MBO,Min MBO
+,Moja službena putovanja,Mine forretningsrejser
+,Moji treninzi,Mine træninger
+,Uredi profil,Rediger profil
+,Moje satnice,Min tidsplan
+,Verifikacija satnica,Verifikation af fartplaner
+,Verifikacija korekcija,Verifikationskorrektioner
+,Zadužnice,obligationer
+,Razdužnice,Razdužnice
+,Pristupi,tilgange
+,Korekcije,rettelser
+,Bosna i Hercegovina,Bosnien-Hercegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Det foregående års ferie
+,Godišnji odmor tekuća godina,Årlig ferie i indeværende år
+,Plaćeni vjerski praznici,Betalt religiøse helligdage
+,Neplaćeni vjerski praznici,Ubetalte religiøse helligdage
+,Plaćeno odsustvo,Betalt ferie
+,Smrtni slučaj,Døden
+,Darivanje krvi,Bloddonation
+,Redovni rad,Regelmæssigt arbejde
+,Godišnji odmor tekuca godina,Årlig ferie i indeværende år
+,Ponedjeljak,mandag
+,Utorak,tirsdag
+,Srijeda,onsdag
+,Četvrtak,torsdag
+,Petak,fredag
+,Subota,lørdag
+,Nedjelja,søndag

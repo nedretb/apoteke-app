@@ -1,0 +1,257 @@
+,Administrator,Hallintomies
+,Menadžer administratora satnica,Aika-pääkäyttäjän hallinta
+,Nadređeni,Ylivertainen
+,Zaposlenik,työntekijä
+,Odaberi...,Valitse ...
+,Nema dostupnih jezika.,Ei käytettävissä olevia kieliä.
+,Dodaj službeno putovanje,Lisää liikematka
+,Nema unesenih država.,Kukaan maata ei tullut.
+,Nema unesenih statusa.,Ei tilaa.
+,Januar,tammikuu
+,Februar,helmikuu
+,Mart,maaliskuu
+,April,huhtikuu
+,Maj,toukokuu
+,Juni,kesäkuu
+,Juli,heinäkuu
+,Avgust,elokuu
+,Septembar,syyskuu
+,Oktobar,lokakuu
+,Novembar,marraskuu
+,Decembar,joulukuu
+,Moj profil,Oma profiili
+,Moji Zadaci/Ciljevi,Omat tehtävät / tavoitteet
+,Moji Zahtjevi,Pyyntöni
+,Uredi profil,Muokkaa profiilia
+,Zadaci/Ciljevi,Tehtävät / tavoitteet
+,Zahtjevi,vaatimuksista
+,Korisnici,käyttäjät
+,Podešavanja,asetukset
+,Države,tila
+,Informacije su uspješno sapšene!,Tiedot on tallennettu onnistuneesti!
+,Izmjene su uspješno sapšene!,Muutokset onnistuneesti takavarikoitiin!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Käyttäjätunnus on varattu. Yritä joku muu.
+,Greška!,Virhe!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.",Anna väärät käyttäjätunnukset ja / tai salasanat. Yritä uudelleen.
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Tilisi on poistettu käytöstä. Lisätietoja saat meiltä.
+,Uspješno!,Onnistunut!
+,Uspješno ste se odjavili.,Olet kirjautunut ulos.
+,Neuspješno!,Epäonnistui!
+,Vaš korisnički nalog je deaktiviran.,Tilisi on poistettu käytöstä.
+,Korisničko ime,käyttäjätunnus
+,Lozinka,salasana
+,Prijava!,Rekisteröidy!
+,Zaboravili ste lozinku?,Unohditko salasanasi?
+,Vaša e-mail adresa,Sähköpostiosoitteesi
+,Poništi lozinku,Nollaa salasana
+,Nazad na stranicu za prijavu,Takaisin sisäänkirjautumissivulle
+,"Poštovani,","Arvoisa vastaanottaja,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Olet pyytänyt nollattavan salasanan, uusi on liitetty."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"Sähköpostitse lähetetyt ohjeet, tarkista salasanan nollauspyyntöön antamasi sähköpostiviestit."
+,Unesena e-ail adresa nije pronađena u bazi.,Annettua sähköpostiosoitetta ei löytynyt tietokannasta.
+,Ažuriranje!,Päivitä!
+,Spasi!,Tallenna se!
+,Osnovni podaci,Perustiedot
+,Osnovni Podaci,Perustiedot
+,Ime,nimi
+,Prezime,sukunimi
+,Fotografija,valokuvaus
+,Odaberi,valita
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Sallitut JPG / PNG / GIF-muodot. Suositeltavat mitat 480x640 px (muotokuva).
+,Kontakt Podaci,Yhteystiedot
+,Država,maa
+,Grad,kaupunki
+,PTT,PTT
+,Adresa,osoite
+,Telefon,puhelin
+,E-mail,Sähköposti
+,Ostali Podaci,Muut tiedot
+,Jezik aplikacije,Sovelluskieli
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Virheellinen sivun tunnus, ota yhteyttä järjestelmänvalvojaan."
+,Prikaži,show
+,Sakrij,piilottaa
+,Generiši,tuottaa
+,Moje satnice,Oma aikataulu
+,Novi unos,Uusi merkintä
+,Dali ste sigurni da želite brisati?,Haluatko varmasti poistaa?
+,Još nije bilo unosa za:,Ei vielä ollut merkintää:
+,Ukupno,kokonais-
+,Iskorišteno,hyödynnetään
+,Ostalo,muut
+,Spašeno,tallennettu
+,Odobreno,myönnetty
+,Odbijeno,hylätty
+,Dan,päivä
+,Broj sati,Tuntimäärä
+,Status,tila
+,Pregled,yleiskatsaus
+,ODOBRENO,HYVÄKSYTTY
+,ODBIJENO,HYLÄTTY
+,Obradio:,Jalostanut:
+,Komentar:,kommentti:
+,Period od-do:,Ajanjakso:
+,do,että
+,Pregled/obrada zadatka,Yleiskatsaus / tehtäväprosessointi
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Tehtävää ei ole vielä hyväksytty, joten työtehtäviä ei ole mahdollista käsitellä."
+,Prihvati zadatak,Hyväksy tehtävä
+,Zaduženi:,lataus:
+,Izvršiti do:,Suorita:
+,Kreirao:,Luotu:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Tehtävä / tavoite on merkitty valmiiksi, joten et voi muuttaa tehtävän tilaa. Voit seurata cometereja täällä ja arvioida tehtävä täällä."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Tuotteet ovat valmiit. voit nyt merkitä tehtävän valmiiksi.
+,Završi zadatak,Lopeta tehtävä
+,Komentari,Kommentit
+,Ostavite komentar,Jätä kommentti
+,Dodaj komentar!,Lisää kommentti!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Tehtävä valmistui ja arvioitiin, ja tämän jälkeen kommentit suljettiin."
+,Ocjena:,Arvostelu:
+,Pozicija,asento
+,Sektor,sektori
+,Nadređeni korisnik,Erinomainen käyttäjä
+,Datum registracije,Rekisteröintipäivämäärä
+,Datum reaktivacije,Uudelleenaktivointipäivä
+,Satnice,kapteeni
+,Dodaj godinu,Lisää vuosi
+,Dodaj mjesec,Lisää kuukausi
+,Još niste počeli unositi satnice,Et ole vielä alkanut kirjoittaa aikataulua
+,Aktivni,aktivoitu
+,Arhiva,arkisto
+,Zahtjev za G.O.,Pyyntö G.O.
+,Od:,alkaen:
+,Do:,että:
+,Na čekanju...,Odotetaan ...
+,Zahtjev kreiran:,Pyyntö luotu:
+,Zahtjev odobren:,Pyyntö hyväksytty:
+,Zahtjev odbijen:,Pyyntö hylättiin:
+,Dali ste sigurni da želite poništiti zahtjev?,Haluatko varmasti peruuttaa pyynnön?
+,Dali ste sigurni da želite arhivirati zahtjev?,Haluatko varmasti arkistoida pyynnön?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Valitut parametrit eivät ole tallennettuja pyyntöjä.
+,Na čekanju,odotettaessa
+,Prihvaćen,Hyväksytyt
+,Završen,päättynyt
+,Dali ste sigurni da želite arhivirati zadatak?,Haluatko varmasti arkistoida tehtävän?
+,Nema spašenih zadataka prema odabranim parametrima.,Valittaville parametreille ei ole tallennettuja tehtäviä.
+,Neovlašten pristup,Luvaton käyttöoikeus
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Sinulla ei ole valtuuksia käyttää tätä osaa sovelluksesta. Jos virhe on ilmennyt, ota yhteyttä järjestelmänvalvojaan."
+,Nazad na moj profil,Takaisin profiiliini
+,Zahtjevi za G.O.,Pyynnöt G.O.
+,Obrada zahtjeva!,Pyynnön käsittely!
+,Status zahtjeva:,Pyynnön tila:
+,Komentar,kommentti
+,Gradovi,kaupungit
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Luettelo syötetyistä kaupungeista, joita tarvitaan määränpäiden ja varausten luomiseen."
+,Naziv,nimi
+,Dali ste sigurni da želite brisati:,Haluatko varmasti poistaa:
+,Još nije bilo unosa,Ei vielä merkintää
+,Općenito,yleiskatsaus
+,Naslov aplikacije,App otsikko
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Sallitut JPG / PNG / GIF-muodot. Suositeltavat mitat 400x200 px.
+,Boje aplikacije,Sovellusvärit
+,Pozadina aplikacije,Hakemuksen tausta
+,Boja teksta aplikacije,Sovelluksen tekstin väri
+,Pozadina gornje trake - HEADER,Taustapalkki - HEADER
+,Boja teksta gornje trake - HEADER,Tekstin väri ylemmän nauhan - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Top-nauhan tekstin väri - HEADER (: hover: aktiivinen)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Otsikkoväri (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Tausta - PAINIKKEET
+,Tekst i ikona - BUTTONS,Teksti ja kuvake - PAINIKE
+,SMTP parametri,SMTP-parametrit
+,SMTP status,SMTP-tila
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Jos SMTP ei ole aktiivinen tai parametrit eivät ole käytettävissä, järjestelmä käyttää tavallista PHP MAIL () -toimintoa."
+,SMTP host,SMTP-isäntä
+,SMTP korisnik,SMTP-käyttäjä
+,SMTP lozinka,SMTP-salasana
+,SMTP port,SMTP-portti
+,SMTP sigurnost,SMTP-suojaus
+,Jezici aplikacije,Sovelluskielet
+,Kod,at
+,Statusi satnice,Tunneittainen tila
+,Direkcija teksta,Tekstin suunta
+,Dali ste sigurni da želite poništiti zadatak?,Haluatko varmasti peruuttaa tehtävän?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Velkaantunut korinki7 ei ole vielä hyväksynyt tehtävää.
+,Ocjeni!,Arvostele!
+,u obradi...,käsittelyssä ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Tehtävä on merkitty valmiiksi. , ja voit nyt jättää arvosanan ja merkitä sen täydelliseksi tehtäväksi. Jos haluat jättää kommentin, lisää se ennen luokitusta."
+,Kompletiraj!,Täydellinen!
+,Zadatak/Cilj za korinika:,Tehtävän / tavoitteen kulma:
+,Zadatak/Cilj:,Tehtävä / tavoite:
+,Naziv Zadatka/Cilja,Tavoite / tavoite
+,Dodaj polje,Lisää kenttä
+,Omogući vremensko ogranićenje zadatka/cilja,Ota ajoitus / tavoitteen aikarajoitus käyttöön
+,Traži...,Etsi ...
+,Svi,kaikki
+,Rezultati pretrage za:,Hakutulokset:
+,Deaktivirani korisnici,Deaktivoidut käyttäjät
+,ID,ID
+,Korinik,Käyttäjä
+,Nivo administracije,Antotaso
+,Info,tiedot
+,deaktiviran:,deaktivoitu:
+,registracija:,ilmoittautuminen:
+,Dali ste sigurni da želite deaktivirati korisnika:,Haluatko varmasti poistaa käyttäjän käytöstä:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Haluatko varmasti aktivoida käyttäjän uudelleen:
+,Obrada satnice!,Aikataulun käsittely!
+,Još nije bilo unosa satnica,Ei vielä merkintöjä
+,Pozdrav!,Tervehdys!
+,Odjava!,Kirjaudu ulos!
+,Godina,vuotta
+,Mjesec,kuukausi
+,MBO ciljevi,MBO: n tavoitteet
+,Zahtjevi za trening,Koulutusvaatimukset
+,Zahtjevi za službena putovanja,Työmatkapyynnöt
+,Zaposlenici,työntekijää
+,Korekcije satnica,Korjausajat
+,Upravljanje satnicama,Ajanhallinta
+,Upravljanje korekcijama satnica,Hallitse tunnin aikakorjauksia
+,Godišnji/Odsustva,Vuotuinen / poissaolo
+,Programi obuke,Koulutusohjelmat
+,Zadužnice/Razdužnice,Laskut / laskentataulukot
+,Organizaciona šema,Organisatorinen järjestelmä
+,Moj MBO,Oma MBO
+,Moja službena putovanja,Liikematkat
+,Moji treninzi,Koulutukseni
+,Uredi profil,Muokkaa profiilia
+,Moje satnice,Oma aikataulu
+,Verifikacija satnica,Aikataulujen tarkistaminen
+,Verifikacija korekcija,Vahvistuskorjaukset
+,Zadužnice,obligaatioita
+,Razdužnice,Razdužnice
+,Pristupi,lähestymistavat
+,Korekcije,korjaukset
+,Bosna i Hercegovina,Bosnia ja Hertsegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Edellisen vuoden loma
+,Godišnji odmor tekuća godina,Nykyisen vuoden vuotuinen loma
+,Plaćeni vjerski praznici,Maksettu uskonnollinen loma
+,Neplaćeni vjerski praznici,Palkaton uskonnollinen vapaapäivä
+,Plaćeno odsustvo,Maksettu loma
+,Smrtni slučaj,kuolema
+,Darivanje krvi,Verenluovutus
+,Redovni rad,Säännöllinen työ
+,Godišnji odmor tekuca godina,Nykyisen vuoden vuotuinen loma
+,Ponedjeljak,maanantai
+,Utorak,tiistai
+,Srijeda,keskiviikko
+,Četvrtak,torstai
+,Petak,perjantai
+,Subota,lauantai
+,Nedjelja,sunnuntai
+,Dodaj trening,Lisää koulutusta
+,Zahtjevi za službeno putovanje,Virallisten matkojen hakeminen
+,Pretraga zaposlenih,Etsi työntekijöitä
+,Орг. јединица,Org. yksikkö
+,Ime i prezime:,Nimi ja sukunimi:
+,Prikaži kalendar,Näytä kalenteri
+,Odustani!,Luopua siitä!
+,Izaberi!,Valitse!
+,B-1 sa regijama,B-1 alueilla
+,Naziv org. jed.,Organisaation nimi lautasen.
+,Općenito,yleiskatsaus
+,Naslov aplikacije,App otsikko
+,Logo aplikacije,Logo-sovellus
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Sallitut JPG / PNG / GIF-muodot. Suositeltavat mitat 400x200 px.
+,Boje aplikacije,Sovellusvärit
+,Skriveni Tabovi,Piilotetut välilehdet
+,Nazivi tabova,Tab nimet
+,Role,rooli
+,Spasi!,Tallenna se!

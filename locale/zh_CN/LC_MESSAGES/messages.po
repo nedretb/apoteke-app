@@ -1,0 +1,1059 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: App\n"
+"POT-Creation-Date: 2016-10-22 09:21+0100\n"
+"PO-Revision-Date: 2017-11-13 12:36+0100\n"
+"Last-Translator: \n"
+"Language-Team: REA STUDIO <support@rea-studio.net>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /home/code7/Desktop/PROJECTS/APP_intranet/app\n"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:34
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:232
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:79
+#, fuzzy
+msgid "Administrator"
+msgstr "Administration"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:35
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:234
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:78
+msgid "Nadređeni"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:36
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:236
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:77
+msgid "Zaposlenik"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:39
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:59
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:88
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:130
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:159
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:507
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:525
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:539
+msgid "Odaberi..."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:75
+msgid "Nema dostupnih jezika."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:146
+msgid "Nema unesenih država."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:175
+msgid "Nema unesenih statusa."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:490
+msgid "Januar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:491
+msgid "Februar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:492
+msgid "Mart"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:493
+msgid "April"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:494
+msgid "Maj"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:495
+msgid "Juni"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:496
+msgid "Juli"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:497
+msgid "Avgust"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:498
+msgid "Septembar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:499
+msgid "Oktobar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:500
+msgid "Novembar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/functions.main.php:501
+msgid "Decembar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:9
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:30
+msgid "Moj profil"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:15
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:15
+msgid "Moji Zadaci/Ciljevi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:19
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_requests_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:15
+msgid "Moji Zahtjevi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:23
+msgid "Uredi profil"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:29
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:15
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:7
+msgid "Zadaci/Ciljevi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:36
+msgid "Zahtjevi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:43
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:15
+#, fuzzy
+msgid "Korisnici"
+msgstr "Username"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:50
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:18
+msgid "Podešavanja"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/CORE/menu.php:56
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:15
+msgid "Države"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:41
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:62
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:84
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:109
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:288
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:453
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/ajax.php:33
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/ajax.php:33
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/ajax.php:76
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:46
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:110
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/ajax.php:79
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/ajax.php:83
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/ajax.php:64
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/ajax.php:151
+msgid "Informacije su uspješno sapšene!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:134
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/ajax.php:58
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/ajax.php:97
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/ajax.php:183
+msgid "Izmjene su uspješno sapšene!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/ajax.php:458
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/ajax.php:21
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/ajax.php:156
+msgid "Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:97
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:101
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:180
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:82
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:68
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:238
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:94
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:61
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_country_edit.php:55
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_edit.php:55
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:287
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:90
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:68
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:187
+msgid "Greška!"
+msgstr "Error!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:97
+msgid "Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo."
+msgstr "Wrong username and/or password, please try again."
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:101
+msgid "Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas."
+msgstr "Your account is deactivated. Please contact us for more information."
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:105
+msgid "Uspješno!"
+msgstr "Success!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:105
+msgid "Uspješno ste se odjavili."
+msgstr "You have successfully logged out!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:109
+#, fuzzy
+msgid "Neuspješno!"
+msgstr "Success!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:109
+msgid "Vaš korisnički nalog je deaktiviran."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:115
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:88
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:119
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:133
+msgid "Korisničko ime"
+msgstr "Username"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:122
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:135
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:91
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:122
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:136
+msgid "Lozinka"
+msgstr "Password"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:126
+msgid "Prijava!"
+msgstr "Loginn!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/login.php:129
+msgid "Zaboravili ste lozinku?"
+msgstr "Forgot your password?"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:72
+msgid "Vaša e-mail adresa"
+msgstr "Your e-mail address"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:76
+msgid "Poništi lozinku"
+msgstr "Reset password!"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:79
+msgid "Nazad na stranicu za prijavu"
+msgstr "Back to login page"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:134
+msgid "Poštovani,"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:134
+msgid "Zatražili ste reset lozinke, nova je u prilogu."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:145
+msgid ""
+"E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste "
+"naveli u zahtjevu za reset lozinke."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/lost.php:154
+msgid "Unesena e-ail adresa nije pronađena u bazi."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:30
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_country_edit.php:6
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_edit.php:6
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:7
+msgid "Ažuriranje!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:34
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_add.php:45
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:52
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_month_add.php:24
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_requests_add.php:29
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_year_add.php:23
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:63
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:73
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:34
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_country_edit.php:28
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_lang_add.php:38
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_add.php:22
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_edit.php:28
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:59
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:60
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:130
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:144
+msgid "Spasi!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:50
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:21
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:23
+msgid "Osnovni Podaci"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:56
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:22
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:32
+msgid "Ime"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:60
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:26
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:36
+msgid "Prezime"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:74
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:38
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:52
+msgid "Fotografija"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:80
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:108
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:141
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:105
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:22
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:44
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:58
+msgid "Odaberi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:82
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:46
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:60
+msgid ""
+"Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret)."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:110
+msgid "Kontakt Podaci"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:114
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:43
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:59
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:29
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:51
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:65
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:45
+msgid "Država"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:121
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:47
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:59
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:73
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:49
+msgid "Grad"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:125
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:51
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:63
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:77
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:53
+msgid "PTT"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:130
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:55
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:69
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:83
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:57
+msgid "Adresa"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:133
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:62
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:72
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:86
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:64
+msgid "Telefon"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:136
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:66
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:256
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:75
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:89
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:68
+msgid "E-mail"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:152
+msgid "Ostali Podaci"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:156
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:89
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:103
+msgid "Jezik aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:180
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:82
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:68
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:238
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:94
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:61
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_country_edit.php:55
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_edit.php:55
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:287
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:90
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:68
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:187
+msgid "Pogrešan ID stranice, molimo kontaktirajte administratora."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:216
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:168
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:178
+msgid "Prikaži"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:217
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:169
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:179
+msgid "Sakrij"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/edit-profile.php:218
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:170
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:180
+msgid "Generiši"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:22
+msgid "Moje satnice"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:27
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_add.php:12
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:9
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_month_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_requests_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_year_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:20
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:20
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:62
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:329
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:375
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_lang_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:20
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:7
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:20
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:7
+msgid "Novi unos"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:58
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:129
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:141
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:368
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:57
+msgid "Dali ste sigurni da želite brisati?"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:67
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:66
+msgid "Još nije bilo unosa za:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:77
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:76
+msgid "Spašeno"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:78
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:98
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:156
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:48
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:77
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:43
+msgid "Odobreno"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/hourlyrate_days.php:79
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:100
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:158
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:53
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:78
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:48
+msgid "Odbijeno"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_add.php:28
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:35
+msgid "Dan"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_add.php:34
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:41
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:42
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:37
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:42
+msgid "Broj sati"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_add.php:38
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_edit.php:45
+msgid "Status"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:9
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:9
+msgid "Pregled"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:30
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:30
+msgid "ODOBRENO"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:33
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:33
+msgid "ODBIJENO"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:46
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:46
+msgid "Obradio:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_day_view.php:54
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_view.php:54
+msgid "Komentar:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_requests_add.php:19
+msgid "Period od-do:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_requests_add.php:23
+msgid "do"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:6
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:6
+msgid "Pregled/obrada zadatka"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:24
+msgid ""
+"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi "
+"stavke zadatka."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:25
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:132
+msgid "Prihvati zadatak"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:31
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:173
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:30
+msgid "Zaduženi:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:35
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:105
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:164
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:34
+msgid "Izvršiti do:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:40
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:39
+msgid "Kreirao:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:78
+msgid ""
+"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status "
+"zadatka. Ovdje možete pratiti kometare i ocjenu zadatka."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:105
+msgid "stavke su završene. sada možete Zadatak oznaćiti završenim."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:106
+msgid "Završi zadatak"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:113
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:173
+msgid "Komentari"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:126
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:186
+msgid "Ostavite komentar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:129
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:189
+msgid "Dodaj komentar!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:135
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:195
+msgid "Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/popup_tasks_view.php:137
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:116
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:179
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:135
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:197
+msgid "Ocjena:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:73
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:100
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:114
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:75
+msgid "Pozicija"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:77
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:102
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:104
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:118
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:79
+msgid "Sektor"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:81
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:112
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:126
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:83
+msgid "Nadređeni korisnik"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:89
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:91
+msgid "Datum registracije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:94
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:96
+msgid "Datum reaktivacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:109
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/hourlyrate_days.php:23
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:111
+msgid "Satnice"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:110
+msgid "Dodaj godinu"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:150
+msgid "Dodaj mjesec"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/profile.php:157
+msgid "Još niste počeli unositi satnice"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:60
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:58
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:93
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:90
+msgid "Aktivni"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:61
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:59
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:94
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:91
+msgid "Arhiva"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:93
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:151
+msgid "Zahtjev za G.O."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:95
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:153
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:28
+msgid "Od:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:96
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:154
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:29
+msgid "Do:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:102
+msgid "Na čekanju..."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:112
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:166
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:32
+msgid "Zahtjev kreiran:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:120
+msgid "Zahtjev odobren:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:122
+msgid "Zahtjev odbijen:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:131
+msgid "Dali ste sigurni da želite poništiti zahtjev?"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:133
+msgid "Dali ste sigurni da želite arhivirati zahtjev?"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/requests.php:142
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:180
+msgid "Nema spašenih zahtjeva prema odabranim parametrima."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:95
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:154
+msgid "Na čekanju"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:97
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:156
+msgid "Prihvaćen"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:99
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:158
+msgid "Završen"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:136
+msgid "Dali ste sigurni da želite arhivirati zadatak?"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/pages/tasks.php:145
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:205
+msgid "Nema spašenih zadataka prema odabranim parametrima."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/unauthorized.php:55
+msgid "Neovlašten pristup"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/unauthorized.php:56
+msgid ""
+"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do "
+"greške, kontaktirajte administratora."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/default/unauthorized.php:58
+msgid "Nazad na moj profil"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/all.php:15
+msgid "Zahtjevi za G.O."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:7
+msgid "Obrada zahtjeva!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:44
+msgid "Status zahtjeva:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/requests/pages/popup_requests_reponse.php:58
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:44
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:55
+msgid "Komentar"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:15
+msgid "Gradovi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:16
+msgid ""
+"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i "
+"rezervacija."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:58
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:70
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:111
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:305
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:352
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_city_edit.php:26
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_country_edit.php:25
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_lang_add.php:19
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_add.php:19
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_status_edit.php:25
+msgid "Naziv"
+msgstr "Title"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:74
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/countries.php:127
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:322
+msgid "Dali ste sigurni da želite brisati:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/cities.php:79
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:151
+msgid "Još nije bilo unosa"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:125
+msgid "Općenito"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:129
+msgid "Naslov aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:143
+msgid "Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:153
+msgid "Boje aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:159
+msgid "Pozadina aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:168
+msgid "Boja teksta aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:177
+msgid "Pozadina gornje trake - HEADER"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:186
+msgid "Boja teksta gornje trake - HEADER"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:195
+msgid "Boja teksta gornje trake - HEADER (:hover :active)"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:204
+msgid "Boja naslova (H1,H2,H3,H4,H5,H6)"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:213
+msgid "Pozadina - BUTTONS"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:222
+msgid "Tekst i ikona - BUTTONS"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:243
+msgid "SMTP parametri"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:247
+msgid "SMTP status"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:248
+msgid ""
+"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti "
+"standardnu PHP MAIL() funkciju."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:259
+msgid "SMTP host"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:262
+msgid "SMTP korisnik"
+msgstr "SMTP username"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:265
+msgid "SMTP lozinka"
+msgstr "SMTP password"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:271
+msgid "SMTP port"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:275
+msgid "SMTP sigurnost"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:292
+msgid "Jezici aplikacije"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:306
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_lang_add.php:25
+msgid "Kod"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/general.php:339
+msgid "Statusi satnice"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/settings/pages/popup_lang_add.php:29
+msgid "Direkcija teksta"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/all.php:196
+msgid "Dali ste sigurni da želite poništiti zadatak?"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:24
+msgid "Zadatak jos nije prihvaćen od strane zaduženog korinika7."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:99
+msgid "Ocjeni!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:119
+msgid "u obradi..."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:130
+msgid ""
+"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti "
+"kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte "
+"prije ocjene."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_task_view.php:166
+msgid "Kompletiraj!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:20
+msgid "Zadatak/Cilj za korinika:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:36
+msgid "Zadatak/Cilj:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:38
+msgid "Naziv Zadatka/Cilja"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:40
+msgid "Dodaj polje"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/tasks/pages/popup_tasks_add.php:51
+msgid "Omogući vremensko ogranićenje zadatka/cilja"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:25
+msgid "Traži..."
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:76
+msgid "Svi"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:83
+msgid "Rezultati pretrage za:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:87
+msgid "Deaktivirani korisnici"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:98
+msgid "ID"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:100
+#, fuzzy
+msgid "Korinik"
+msgstr "Username"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:101
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_add.php:83
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_users_edit.php:97
+#, fuzzy
+msgid "Nivo administracije"
+msgstr "Administration"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:103
+msgid "Info"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:129
+msgid "deaktiviran:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:131
+#, fuzzy
+msgid "registracija:"
+msgstr "Administration"
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:142
+msgid "Dali ste sigurni da želite deaktivirati korisnika:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/all.php:145
+msgid "Dali ste sigurni da želite ponovo aktivirati korisnika:"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/popup_day_review.php:8
+msgid "Obrada satnice!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/modules/users/pages/profile_view.php:151
+msgid "Još nije bilo unosa satnica"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/theme/header.php:141
+msgid "Pozdrav!"
+msgstr ""
+
+#: /home/code7/Desktop/PROJECTS/APP_intranet/app/theme/header.php:142
+#, fuzzy
+msgid "Odjava!"
+msgstr "Login!"
+
+#, fuzzy
+#~ msgid "Korisnik"
+#~ msgstr "Username"
+
+msgid "Godina"
+msgstr "Ano"
+
+

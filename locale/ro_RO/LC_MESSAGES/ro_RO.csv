@@ -1,0 +1,257 @@
+,Administrator,Administrator
+,Menadžer administratora satnica,Administrator de administrator de timp
+,Nadređeni,O superioară
+,Zaposlenik,angajat
+,Odaberi...,Alegeți ...
+,Nema dostupnih jezika.,Nu există limbi disponibile.
+,Dodaj službeno putovanje,Adăugați o călătorie de afaceri
+,Nema unesenih država.,Nu au intrat țări.
+,Nema unesenih statusa.,Nu a fost introdus niciun statut.
+,Januar,ianuarie
+,Februar,februarie
+,Mart,martie
+,April,aprilie
+,Maj,mai
+,Juni,iunie
+,Juli,iulie
+,Avgust,august
+,Septembar,septembrie
+,Oktobar,octombrie
+,Novembar,noiembrie
+,Decembar,decembrie
+,Moj profil,Profilul meu
+,Moji Zadaci/Ciljevi,Sarcinile / obiectivele mele
+,Moji Zahtjevi,Cererile mele
+,Uredi profil,Editați profilul
+,Zadaci/Ciljevi,Sarcini / Obiective
+,Zahtjevi,cerinţe
+,Korisnici,utilizatorii
+,Podešavanja,Setări
+,Države,stat
+,Informacije su uspješno sapšene!,Informația a fost capturată cu succes!
+,Izmjene su uspješno sapšene!,Modificările au fost confiscate cu succes!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Numele de utilizator este ocupat. Încercați altcineva.
+,Greška!,Eroare!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Introduceți numele de utilizator și / sau parola greșit, încercați din nou."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Contul dvs. a fost dezactivat. Pentru mai multe informații contactați-ne.
+,Uspješno!,Cu succes!
+,Uspješno ste se odjavili.,V-ați deconectat cu succes.
+,Neuspješno!,Nu a reușit!
+,Vaš korisnički nalog je deaktiviran.,Contul dvs. este dezactivat.
+,Korisničko ime,nume utilizator
+,Lozinka,parolă
+,Prijava!,Înregistrează-te!
+,Zaboravili ste lozinku?,Ați uitat parola?
+,Vaša e-mail adresa,Adresa dvs. de e-mail
+,Poništi lozinku,Resetați parola
+,Nazad na stranicu za prijavu,Înapoi la pagina de conectare
+,"Poštovani,","Stimati domni,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Ați solicitat parola de resetare, este atașat un nou."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"Trimiteți un e-mail cu instrucțiunile trimise, verificați mesajele din e-mailul furnizat în solicitarea de resetare a parolei."
+,Unesena e-ail adresa nije pronađena u bazi.,Adresa de e-mail introdusă nu a fost găsită în baza de date.
+,Ažuriranje!,Update!
+,Spasi!,Salvează-l!
+,Osnovni podaci,Informații de bază
+,Osnovni Podaci,Datele de bază
+,Ime,nume
+,Prezime,nume de familie
+,Fotografija,fotografie
+,Odaberi,selecta
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Formate acceptate JPG / PNG / GIF. Dimensiuni recomandate 480x640 px (portret).
+,Kontakt Podaci,Datele de contact
+,Država,țară
+,Grad,oraș
+,PTT,PTT
+,Adresa,adresa
+,Telefon,telefon
+,E-mail,E-mail
+,Ostali Podaci,Alte date
+,Jezik aplikacije,Limba aplicației
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Codul paginii incorect, contactați administratorul."
+,Prikaži,spectacol
+,Sakrij,ascunde
+,Generiši,genera
+,Moje satnice,Programul meu
+,Novi unos,Intrare nouă
+,Dali ste sigurni da želite brisati?,Sigur doriți să ștergeți?
+,Još nije bilo unosa za:,Nu a fost încă o intrare pentru:
+,Ukupno,total
+,Iskorišteno,utilizate
+,Ostalo,alte
+,Spašeno,salvate
+,Odobreno,acordat
+,Odbijeno,respins
+,Dan,zi
+,Broj sati,Numărul de ore
+,Status,stare
+,Pregled,Privire de ansamblu asupra
+,ODOBRENO,APROBAT
+,ODBIJENO,RESPINSĂ
+,Obradio:,Procesat de:
+,Komentar:,comentariu:
+,Period od-do:,Perioada de la-la:
+,do,la
+,Pregled/obrada zadatka,Prelucrare generală / sarcină
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Sarcina nu este acceptată încă de dvs. și, prin urmare, nu este posibilă procesarea elementelor de activitate."
+,Prihvati zadatak,Acceptați sarcina
+,Zaduženi:,taxa:
+,Izvršiti do:,Executați la:
+,Kreirao:,Creat de:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Sarcina / obiectivul este marcat ca finalizat și, prin urmare, nu puteți schimba starea sarcinii. Puteți urmări veniturile aici și puteți evalua sarcina aici."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Elementele sunt completate. puteți marca acum sarcina finalizată.
+,Završi zadatak,Terminați sarcina
+,Komentari,Comentarii
+,Ostavite komentar,Lasă un comentariu
+,Dodaj komentar!,Adaugă un comentariu!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Sarcina a fost finalizată și evaluată, iar comentariile au fost închise."
+,Ocjena:,Evaluare:
+,Pozicija,poziție
+,Sektor,sector
+,Nadređeni korisnik,Utilizator superior
+,Datum registracije,Data înregistrării
+,Datum reaktivacije,Data reactivării
+,Satnice,căpitan
+,Dodaj godinu,Adaugă anul
+,Dodaj mjesec,Adăugați luna
+,Još niste počeli unositi satnice,Încă nu ați început să introduceți programul
+,Aktivni,activat
+,Arhiva,arhive
+,Zahtjev za G.O.,Cerere pentru G.O.
+,Od:,de la:
+,Do:,la:
+,Na čekanju...,Așteptare ...
+,Zahtjev kreiran:,Solicitarea a fost creată:
+,Zahtjev odobren:,Cererea aprobată:
+,Zahtjev odbijen:,Solicitare respinsă:
+,Dali ste sigurni da želite poništiti zahtjev?,Sigur doriți să anulați solicitarea?
+,Dali ste sigurni da želite arhivirati zahtjev?,Sigur doriți să arhivați solicitarea?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Nu există solicitări salvate pentru parametrii selectați.
+,Na čekanju,în așteptarea
+,Prihvaćen,admis
+,Završen,terminat
+,Dali ste sigurni da želite arhivirati zadatak?,Sigur doriți să arhivați sarcina?
+,Nema spašenih zadataka prema odabranim parametrima.,Nu există sarcini salvate pentru parametrii selectați.
+,Neovlašten pristup,Acces neautorizat
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Nu aveți autoritatea de a accesa această parte a aplicației. Dacă a apărut o eroare, contactați administratorul."
+,Nazad na moj profil,Înapoi la profilul meu
+,Zahtjevi za G.O.,Cererile pentru G.O.
+,Obrada zahtjeva!,Procesați cererea!
+,Status zahtjeva:,Starea Solicitării:
+,Komentar,comentariu
+,Gradovi,orașe
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Lista orașelor introduse, care sunt necesare pentru a crea destinații și rezervări."
+,Naziv,nume
+,Dali ste sigurni da želite brisati:,Sigur doriți să ștergeți:
+,Još nije bilo unosa,Nu a fost încă o intrare
+,Općenito,Prezentare generală
+,Naslov aplikacije,Titlul aplicației
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Formate acceptate JPG / PNG / GIF. Dimensiuni recomandate 400x200 px.
+,Boje aplikacije,Culorile aplicației
+,Pozadina aplikacije,Contextul cererii
+,Boja teksta aplikacije,Culoarea textului aplicației
+,Pozadina gornje trake - HEADER,Bara de fundal - HEADER
+,Boja teksta gornje trake - HEADER,Culoarea textului benzii superioare - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Culoarea textului panglicii de sus - HEADER (: hover: active)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Culoarea titlurilor (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Fundal - BUTOANE
+,Tekst i ikona - BUTTONS,Text și pictogramă - BUTOANE
+,SMTP parametri,Parametrii SMTP
+,SMTP status,Stare SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Dacă SMTP este inactivă sau parametrii nu sunt disponibili, sistemul va folosi funcția standard PHP MAIL ()."
+,SMTP host,Gazdă SMTP
+,SMTP korisnik,Utilizator SMTP
+,SMTP lozinka,Parola SMTP
+,SMTP port,Portul SMTP
+,SMTP sigurnost,Securitatea SMTP
+,Jezici aplikacije,Limbi de aplicație
+,Kod,la
+,Statusi satnice,Statutul orar
+,Direkcija teksta,Direcția textului
+,Dali ste sigurni da želite poništiti zadatak?,Sigur doriți să anulați sarcina?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Sarcina nu a fost încă acceptată de corinki îndatorat7.
+,Ocjeni!,Rata!
+,u obradi...,în procesarea ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Sarcina este marcată ca terminată. , iar acum puteți lăsa nota și marcați-o ca o sarcină completă. Dacă doriți să lăsați un comentariu, adăugați-l înainte de evaluare."
+,Kompletiraj!,Complet!
+,Zadatak/Cilj za korinika:,Sarcina / ținta pentru colț:
+,Zadatak/Cilj:,Sarcină / Obiectiv:
+,Naziv Zadatka/Cilja,Titlul obiectivului / obiectivului
+,Dodaj polje,Adăugați un câmp
+,Omogući vremensko ogranićenje zadatka/cilja,Activați Timpul / Limita de timp a obiectivului
+,Traži...,Căutare ...
+,Svi,toate
+,Rezultati pretrage za:,Rezultate căutare pentru:
+,Deaktivirani korisnici,Utilizatori dezactivați
+,ID,ID-ul
+,Korinik,Utilizatorul
+,Nivo administracije,Nivelul de administrare
+,Info,info
+,deaktiviran:,dezactivată:
+,registracija:,Înregistrare:
+,Dali ste sigurni da želite deaktivirati korisnika:,Sigur doriți să dezactivați utilizatorul:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Sigur doriți să reactivați utilizatorul:
+,Obrada satnice!,Procesați programul!
+,Još nije bilo unosa satnica,Nu au fost încă înregistrate
+,Pozdrav!,Salutări!
+,Odjava!,Ieșiți!
+,Godina,an
+,Mjesec,lună
+,MBO ciljevi,Obiectivele MBO
+,Zahtjevi za trening,Cerințe pentru instruire
+,Zahtjevi za službena putovanja,Cereri pentru călătorii de afaceri
+,Zaposlenici,angajați
+,Korekcije satnica,Timpi de corecție
+,Upravljanje satnicama,Gestionarea timpului
+,Upravljanje korekcijama satnica,Gestionați corecțiile orare de timp
+,Godišnji/Odsustva,Anul / absența
+,Programi obuke,Programe de instruire
+,Zadužnice/Razdužnice,Facturi / foi de calcul
+,Organizaciona šema,Schema organizatorică
+,Moj MBO,MBO-ul meu
+,Moja službena putovanja,Călătoriile mele de afaceri
+,Moji treninzi,Trenurile mele
+,Uredi profil,Editați profilul
+,Moje satnice,Programul meu
+,Verifikacija satnica,Verificarea calendarelor
+,Verifikacija korekcija,Verificări corecte
+,Zadužnice,obligațiuni
+,Razdužnice,Razdužnice
+,Pristupi,abordări
+,Korekcije,corecţiile
+,Bosna i Hercegovina,Bosnia și Herțegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Vacanța din anul precedent
+,Godišnji odmor tekuća godina,Vacanță anuală a anului curent
+,Plaćeni vjerski praznici,Sărbători religioase plătite
+,Neplaćeni vjerski praznici,Sărbători religioase neplătite
+,Plaćeno odsustvo,Concediu plătit
+,Smrtni slučaj,moarte
+,Darivanje krvi,Donarea de sânge
+,Redovni rad,Lucru regulat
+,Godišnji odmor tekuca godina,Vacanță anuală a anului curent
+,Ponedjeljak,luni
+,Utorak,marți
+,Srijeda,miercuri
+,Četvrtak,joi
+,Petak,vineri
+,Subota,sâmbătă
+,Nedjelja,duminică
+,Dodaj trening,Adăugați antrenament
+,Zahtjevi za službeno putovanje,Cererile de călătorie oficiale
+,Pretraga zaposlenih,Căutați angajați
+,Орг. јединица,Org. unitate
+,Ime i prezime:,Numele și prenumele:
+,Prikaži kalendar,Afișați calendarul
+,Odustani!,Dă-l în sus!
+,Izaberi!,Selectați!
+,B-1 sa regijama,B-1 cu regiuni
+,Naziv org. jed.,Numele org. fel de mâncare.
+,Općenito,Prezentare generală
+,Naslov aplikacije,Titlul aplicației
+,Logo aplikacije,Aplicația Logo
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Formate acceptate JPG / PNG / GIF. Dimensiuni recomandate 400x200 px.
+,Boje aplikacije,Culorile aplicației
+,Skriveni Tabovi,Taburi ascunse
+,Nazivi tabova,Numele tabelor
+,Role,rol
+,Spasi!,Salvează-l!

@@ -1,0 +1,237 @@
+,Administrator,Administrator
+,Menadžer administratora satnica,Tidssjefadministrator
+,Nadređeni,En overlegen
+,Zaposlenik,ansatt
+,Odaberi...,Velg ...
+,Nema dostupnih jezika.,Det finnes ingen tilgjengelige språk.
+,Nema unesenih država.,Ingen land kom inn.
+,Nema unesenih statusa.,Ingen status oppgitt.
+,Januar,januar
+,Februar,februar
+,Mart,mars
+,April,april
+,Maj,mai
+,Juni,juni
+,Juli,juli
+,Avgust,august
+,Septembar,september
+,Oktobar,oktober
+,Novembar,november
+,Decembar,desember
+,Moj profil,Min profil
+,Moji Zadaci/Ciljevi,Mine oppgaver / mål
+,Moji Zahtjevi,Mine forespørsler
+,Uredi profil,Rediger profil
+,Zadaci/Ciljevi,Oppgaver / mål
+,Zahtjevi,krav
+,Korisnici,Brukerne
+,Podešavanja,innstillinger
+,Države,stat
+,Informacije su uspješno sapšene!,Informasjonen har blitt tatt med suksess!
+,Izmjene su uspješno sapšene!,Endringene ble beslaglagt med hell!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Brukernavnet er opptatt. Vennligst prøv noen andre.
+,Greška!,Feil!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Vennligst skriv inn feil brukernavn og / eller passord, vennligst prøv igjen."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,"Kontoen din er deaktivert. For mer informasjon, kontakt oss."
+,Uspješno!,Vellykket!
+,Uspješno ste se odjavili.,Du har blitt logget ut.
+,Neuspješno!,Feilet!
+,Vaš korisnički nalog je deaktiviran.,Din konto er deaktivert.
+,Korisničko ime,brukernavn
+,Lozinka,passord
+,Prijava!,Registrer deg!
+,Zaboravili ste lozinku?,Glemt passordet ditt?
+,Vaša e-mail adresa,Din e-postadresse
+,Poništi lozinku,Tilbakestill passord
+,Nazad na stranicu za prijavu,Tilbake til innloggingssiden
+,"Poštovani,","Kjære herrer,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Du har bedt om tilbakestilt passord, nytt er vedlagt."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-post med instruksjoner sendt, vennligst sjekk meldingene på e-posten du oppgav i tilbakestillingsanmodningen om passord."
+,Unesena e-ail adresa nije pronađena u bazi.,Den oppgitte e-postadressen ble ikke funnet i databasen.
+,Ažuriranje!,Oppdatere!
+,Spasi!,Lagre det!
+,Osnovni podaci,Grunnleggende informasjon
+,Osnovni Podaci,Grunnleggende data
+,Ime,navn
+,Prezime,etternavn
+,Fotografija,fotografering
+,Odaberi,Velg
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Tillatt JPG / PNG / GIF-formater. Anbefalte dimensjoner 480x640 px (portrett).
+,Kontakt Podaci,Kontaktdata
+,Država,land
+,Grad,by
+,PTT,PTT
+,Adresa,adresse
+,Telefon,telefon
+,E-mail,E-post
+,Ostali Podaci,Andre data
+,Jezik aplikacije,Applikasjonsspråk
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Feil side ID, vennligst kontakt administratoren."
+,Prikaži,Vis
+,Sakrij,skjule
+,Generiši,generere
+,Moje satnice,Min tidsplan
+,Novi unos,Ny oppføring
+,Dali ste sigurni da želite brisati?,Er du sikker på at du vil slette?
+,Još nije bilo unosa za:,Det var ikke en oppføring for:
+,Ukupno,total
+,Iskorišteno,benyttes
+,Ostalo,andre
+,Spašeno,lagret
+,Odobreno,innvilget
+,Odbijeno,avvist
+,Dan,dag
+,Broj sati,Antall timer
+,Status,status
+,Pregled,oversikt
+,ODOBRENO,GODKJENT
+,ODBIJENO,AVVIST
+,Obradio:,Behandlet av:
+,Komentar:,kommentar:
+,Period od-do:,Periode fra-til:
+,do,til
+,Pregled/obrada zadatka,Oversikt / oppgavebehandling
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Oppgaven er ikke godkjent av deg, og det er derfor ikke mulig å behandle oppgavene."
+,Prihvati zadatak,Godta oppgaven
+,Zaduženi:,kostnad:
+,Izvršiti do:,Utfør til:
+,Kreirao:,Opprettet av:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Oppgave / Mål er merket som ferdig, og derfor kan du ikke endre status for oppgaven. Du kan følge cometers her og evaluere oppgaven her."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Elementene er fullført. Du kan nå markere oppgaven som er fullført.
+,Završi zadatak,Fullfør oppgaven
+,Komentari,kommentarer
+,Ostavite komentar,Legg igjen en kommentar
+,Dodaj komentar!,Legg til en kommentar!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Oppgaven ble fullført og evaluert, og med dette ble kommentarene stengt."
+,Ocjena:,vurdering:
+,Pozicija,stilling
+,Sektor,sektoren
+,Nadređeni korisnik,Overlegen bruker
+,Datum registracije,Dato for registrering
+,Datum reaktivacije,Reaktiveringsdato
+,Satnice,kaptein
+,Dodaj godinu,Legg til år
+,Dodaj mjesec,Legg til måned
+,Još niste počeli unositi satnice,Du har ennå ikke begynt å skrive inn tidsplanen
+,Aktivni,aktivert
+,Arhiva,arkiver
+,Zahtjev za G.O.,Forespørsel om G.O.
+,Od:,fra:
+,Do:,til:
+,Na čekanju...,Venter ...
+,Zahtjev kreiran:,Forespørsel opprettet:
+,Zahtjev odobren:,Forespørsel godkjent:
+,Zahtjev odbijen:,Forespørsel nektet:
+,Dali ste sigurni da želite poništiti zahtjev?,Er du sikker på at du vil avbryte forespørselen?
+,Dali ste sigurni da želite arhivirati zahtjev?,Er du sikker på at du vil arkivere forespørselen?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Det er ingen lagrede forespørsler for de valgte parameterne.
+,Na čekanju,påvente
+,Prihvaćen,aksepterte
+,Završen,ferdig
+,Dali ste sigurni da želite arhivirati zadatak?,Er du sikker på at du vil arkivere oppgaven?
+,Nema spašenih zadataka prema odabranim parametrima.,Det er ingen lagrede oppgaver for de valgte parameterne.
+,Neovlašten pristup,Uautorisert tilgang
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Du har ingen myndighet til å få tilgang til denne delen av programmet. Hvis en feil har oppstått, kontakt administratoren."
+,Nazad na moj profil,Tilbake til profilen min
+,Zahtjevi za G.O.,Forespørsler om G.O.
+,Obrada zahtjeva!,Behandler forespørselen!
+,Status zahtjeva:,Forespørselsstatus:
+,Komentar,kommentar
+,Gradovi,byer
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Liste over innlagte byer, som kreves for å opprette destinasjoner og reservasjoner."
+,Naziv,navn
+,Dali ste sigurni da želite brisati:,Er du sikker på at du vil slette:
+,Još nije bilo unosa,Det var ikke en oppføring ennå
+,Općenito,oversikt
+,Naslov aplikacije,App tittel
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Tillatt JPG / PNG / GIF-formater. Anbefalte dimensjoner 400x200 px.
+,Boje aplikacije,Søknad farger
+,Pozadina aplikacije,Bakgrunn for søknaden
+,Boja teksta aplikacije,Søknadstekstfarge
+,Pozadina gornje trake - HEADER,Bakgrunnsbjelke - HEADER
+,Boja teksta gornje trake - HEADER,Tekstfarge på det øvre båndet - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Tekstfarge på toppbandet - HEADER (: hover: aktiv)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Tittelfarge (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Bakgrunn - KNAPPER
+,Tekst i ikona - BUTTONS,Tekst og ikon - KNAPPER
+,SMTP parametri,SMTP parametere
+,SMTP status,SMTP-status
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Hvis SMTP er inaktiv eller parametrene ikke er tilgjengelige, vil systemet bruke standard PHP MAIL () -funksjonen."
+,SMTP host,SMTP-vert
+,SMTP korisnik,SMTP-bruker
+,SMTP lozinka,SMTP-passord
+,SMTP port,SMTP-port
+,SMTP sigurnost,SMTP-sikkerhet
+,Jezici aplikacije,Applikasjonsspråk
+,Kod,ved
+,Statusi satnice,Timestatus
+,Direkcija teksta,Retning av teksten
+,Dali ste sigurni da želite poništiti zadatak?,Er du sikker på at du vil avbryte oppgaven?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Oppgaven er ennå ikke akseptert av den gjeldsgjorte korinki7.
+,Ocjeni!,Rate!
+,u obradi...,i behandling ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Oppgaven er merket som ferdig. , og du kan nå legge karakteren og merke den som en komplett oppgave. Hvis du vil legge igjen en kommentar, legg den til før vurderingen."
+,Kompletiraj!,Komplett!
+,Zadatak/Cilj za korinika:,Oppgave / Mål for hjørnet:
+,Zadatak/Cilj:,Oppgave / Mål:
+,Naziv Zadatka/Cilja,Tittel av mål / mål
+,Dodaj polje,Legg til et felt
+,Omogući vremensko ogranićenje zadatka/cilja,Aktiver Timing / Måltid Limit
+,Traži...,Søk ...
+,Svi,alt
+,Rezultati pretrage za:,Søkeresultater for:
+,Deaktivirani korisnici,Deaktiverte brukere
+,ID,ID
+,Korinik,Bruker
+,Nivo administracije,Administrasjonsnivå
+,Info,info
+,deaktiviran:,deaktivert:
+,registracija:,påmelding:
+,Dali ste sigurni da želite deaktivirati korisnika:,Er du sikker på at du vil deaktivere brukeren:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Er du sikker på at du vil aktivere brukeren på nytt:
+,Obrada satnice!,Behandling av timeplanen!
+,Još nije bilo unosa satnica,Det var ingen innlegg ennå
+,Pozdrav!,Hilsener!
+,Odjava!,Logg ut!
+,Godina,år
+,Mjesec,måned
+,MBO ciljevi,MBO mål
+,Zahtjevi za trening,Krav til opplæring
+,Zahtjevi za službena putovanja,Forespørsler om forretningsreiser
+,Zaposlenici,ansatte
+,Korekcije satnica,Korreksjonstider
+,Upravljanje satnicama,Tidshåndtering
+,Upravljanje korekcijama satnica,Administrer timetidsjusteringer
+,Godišnji/Odsustva,Årlig / Fravær
+,Programi obuke,Opplæringsprogrammer
+,Zadužnice/Razdužnice,Regninger / regneark
+,Organizaciona šema,Organisasjonssystem
+,Moj MBO,Min MBO
+,Moja službena putovanja,Mine forretningsreiser
+,Moji treninzi,Mine treninger
+,Uredi profil,Rediger profil
+,Moje satnice,Min tidsplan
+,Verifikacija satnica,Verifisering av rutetabeller
+,Verifikacija korekcija,Verifikasjonskorrigeringer
+,Zadužnice,gjeldsbrev
+,Razdužnice,Razdužnice
+,Pristupi,tilnærminger
+,Korekcije,korreksjoner
+,Bosna i Hercegovina,Bosnia-Hercegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Det forrige årets ferie
+,Godišnji odmor tekuća godina,Årlig ferie i inneværende år
+,Plaćeni vjerski praznici,Betalte religiøse helligdager
+,Neplaćeni vjerski praznici,Ubetalte religiøse helligdager
+,Plaćeno odsustvo,Betalt permisjon
+,Smrtni slučaj,død
+,Darivanje krvi,Bloddonasjon
+,Redovni rad,Vanlig arbeid
+,Godišnji odmor tekuca godina,Årlig ferie i inneværende år
+,Ponedjeljak,mandag
+,Utorak,tirsdag
+,Srijeda,onsdag
+,Četvrtak,torsdag
+,Petak,fredag
+,Subota,lørdag
+,Nedjelja,søndag

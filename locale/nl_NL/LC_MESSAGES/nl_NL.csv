@@ -1,0 +1,237 @@
+,Administrator,Administrateur
+,Menadžer administratora satnica,Tijd beheerder
+,Nadređeni,Een superieure
+,Zaposlenik,werknemer
+,Odaberi...,Kies ...
+,Nema dostupnih jezika.,Er zijn geen beschikbare talen.
+,Nema unesenih država.,Geen landen ingevoerd.
+,Nema unesenih statusa.,Geen status ingevoerd.
+,Januar,januari
+,Februar,februari
+,Mart,maart
+,April,april
+,Maj,mei
+,Juni,juni
+,Juli,juli
+,Avgust,augustus
+,Septembar,september
+,Oktobar,oktober
+,Novembar,november
+,Decembar,december
+,Moj profil,Mijn profiel
+,Moji Zadaci/Ciljevi,Mijn taken / doelen
+,Moji Zahtjevi,Mijn verzoeken
+,Uredi profil,Bewerk profiel
+,Zadaci/Ciljevi,Taken / Doelstellingen
+,Zahtjevi,vereisten
+,Korisnici,de gebruikers
+,Podešavanja,instellingen
+,Države,staat
+,Informacije su uspješno sapšene!,De informatie is met succes vastgelegd!
+,Izmjene su uspješno sapšene!,De wijzigingen zijn succesvol verwerkt!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Gebruikersnaam is bezet. Probeer alstublieft iemand anders.
+,Greška!,Fout!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Voer de verkeerde gebruikersnaam en / of wachtwoord in, probeer het opnieuw."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Uw account is gedeactiveerd. Neem voor meer informatie contact met ons op.
+,Uspješno!,Geslaagd!
+,Uspješno ste se odjavili.,U bent succesvol afgemeld.
+,Neuspješno!,Mislukt!
+,Vaš korisnički nalog je deaktiviran.,Uw account is gedeactiveerd.
+,Korisničko ime,gebruikersnaam
+,Lozinka,wachtwoord
+,Prijava!,Meld je aan!
+,Zaboravili ste lozinku?,Wachtwoord vergeten?
+,Vaša e-mail adresa,Uw e-mailadres
+,Poništi lozinku,Wachtwoord opnieuw instellen
+,Nazad na stranicu za prijavu,Terug naar inlogpagina
+,"Poštovani,","Geachte heren,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","U hebt gevraagd om het wachtwoord opnieuw in te stellen, nieuw is bijgevoegd."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mail met instructies verzonden, controleer de berichten op de e-mail die u hebt opgegeven in het verzoek voor het opnieuw instellen van het wachtwoord."
+,Unesena e-ail adresa nije pronađena u bazi.,Het ingevoerde e-mailadres is niet gevonden in de database.
+,Ažuriranje!,Update!
+,Spasi!,Bewaar het!
+,Osnovni podaci,Basis informatie
+,Osnovni Podaci,Basisgegevens
+,Ime,naam
+,Prezime,achternaam
+,Fotografija,fotografie
+,Odaberi,kiezen
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Toegestane JPG / PNG / GIF-indelingen. Aanbevolen afmetingen 480x640 px (portret).
+,Kontakt Podaci,Contact gegevens
+,Država,land
+,Grad,stad
+,PTT,PTT
+,Adresa,adres
+,Telefon,telefoon
+,E-mail,E-mail
+,Ostali Podaci,Andere gegevens
+,Jezik aplikacije,Toepassing taal
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","Onjuiste pagina-ID, neem contact op met de beheerder."
+,Prikaži,tonen
+,Sakrij,verbergen
+,Generiši,voortbrengen
+,Moje satnice,Mijn schema
+,Novi unos,Nieuwe invoer
+,Dali ste sigurni da želite brisati?,Weet je zeker dat je wilt verwijderen?
+,Još nije bilo unosa za:,Er was nog geen vermelding voor:
+,Ukupno,totaal
+,Iskorišteno,benut
+,Ostalo,anders
+,Spašeno,gered
+,Odobreno,toegekend
+,Odbijeno,verworpen
+,Dan,dag
+,Broj sati,Aantal uren
+,Status,staat
+,Pregled,overzicht
+,ODOBRENO,GOEDGEKEURD
+,ODBIJENO,AFGEWEZEN
+,Obradio:,Verwerkt door:
+,Komentar:,commentaar:
+,Period od-do:,Periode van-tot:
+,do,naar
+,Pregled/obrada zadatka,Overzicht / taakverwerking
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",De taak is nog niet door u geaccepteerd en het is daarom niet mogelijk om de taakitems te verwerken.
+,Prihvati zadatak,Accepteer de taak
+,Zaduženi:,kosten:
+,Izvršiti do:,Uitvoeren naar:
+,Kreirao:,Gemaakt door:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",Taak / doel is gemarkeerd als voltooid en daarom kunt u de status van de taak niet wijzigen. Je kunt hier cometers volgen en de taak hier evalueren.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Items zijn voltooid. je kunt nu de voltooide taak markeren.
+,Završi zadatak,Maak de taak af
+,Komentari,Comments
+,Ostavite komentar,Laat een reactie achter
+,Dodaj komentar!,Voeg een commentaar toe!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",De taak is voltooid en geëvalueerd en hiermee zijn de opmerkingen gesloten.
+,Ocjena:,Rating:
+,Pozicija,positie
+,Sektor,sector
+,Nadređeni korisnik,Superieure gebruiker
+,Datum registracije,Datum van registratie
+,Datum reaktivacije,Reactiveringsdatum
+,Satnice,kapitein
+,Dodaj godinu,Jaar toevoegen
+,Dodaj mjesec,Voeg maand toe
+,Još niste počeli unositi satnice,U bent nog niet begonnen aan het invoeren van het schema
+,Aktivni,geactiveerd
+,Arhiva,archief
+,Zahtjev za G.O.,Verzoek om G.O.
+,Od:,uit:
+,Do:,naar:
+,Na čekanju...,Wachten ...
+,Zahtjev kreiran:,Verzoek gecreëerd:
+,Zahtjev odobren:,Verzoek goedgekeurd:
+,Zahtjev odbijen:,Verzoek geweigerd:
+,Dali ste sigurni da želite poništiti zahtjev?,Weet je zeker dat je het verzoek wilt annuleren?
+,Dali ste sigurni da želite arhivirati zahtjev?,Weet je zeker dat je het verzoek wilt archiveren?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Er zijn geen opgeslagen verzoeken voor de geselecteerde parameters.
+,Na čekanju,in afwachting van
+,Prihvaćen,aanvaard
+,Završen,afgewerkt
+,Dali ste sigurni da želite arhivirati zadatak?,Weet je zeker dat je de taak wilt archiveren?
+,Nema spašenih zadataka prema odabranim parametrima.,Er zijn geen opgeslagen taken voor de geselecteerde parameters.
+,Neovlašten pristup,Ongeautoriseerde toegang
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.",U bent niet gemachtigd om toegang te krijgen tot dit onderdeel van de toepassing. Neem contact op met de beheerder als zich een fout heeft voorgedaan.
+,Nazad na moj profil,Terug naar mijn profiel
+,Zahtjevi za G.O.,Verzoeken om G.O.
+,Obrada zahtjeva!,Verwerking van het verzoek!
+,Status zahtjeva:,Verzoekstatus:
+,Komentar,commentaar
+,Gradovi,steden
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",Lijst met ingevoerde steden die nodig zijn om bestemmingen en reserveringen te maken.
+,Naziv,naam
+,Dali ste sigurni da želite brisati:,Weet je zeker dat je wilt verwijderen:
+,Još nije bilo unosa,Er was nog geen toegang
+,Općenito,Overzicht
+,Naslov aplikacije,App-titel
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Toegestane JPG / PNG / GIF-indelingen. Aanbevolen afmetingen 400x200 px.
+,Boje aplikacije,Applicatiekleuren
+,Pozadina aplikacije,Achtergrond van de applicatie
+,Boja teksta aplikacije,Tekstkleur van de toepassing
+,Pozadina gornje trake - HEADER,Achtergrondbalk - HEADER
+,Boja teksta gornje trake - HEADER,Tekstkleur van de bovenste tape - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Tekstkleur van het bovenste lint - HEADER (: hover: active)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Titelkleur (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Achtergrond - KNOPEN
+,Tekst i ikona - BUTTONS,Tekst en pictogram - KNOPPEN
+,SMTP parametri,SMTP-parameters
+,SMTP status,SMTP-status
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Als SMTP inactief is of als de parameters niet beschikbaar zijn, gebruikt het systeem de standaard PHP MAIL () -functie."
+,SMTP host,SMTP-host
+,SMTP korisnik,SMTP-gebruiker
+,SMTP lozinka,SMTP-wachtwoord
+,SMTP port,SMTP-poort
+,SMTP sigurnost,SMTP-beveiliging
+,Jezici aplikacije,Applicatietalen
+,Kod,bij
+,Statusi satnice,Uurstatus
+,Direkcija teksta,Richting van de tekst
+,Dali ste sigurni da želite poništiti zadatak?,Weet je zeker dat je de taak wilt annuleren?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,De taak is nog niet aanvaard door de schatplichtige korinki7.
+,Ocjeni!,Rate!
+,u obradi...,in verwerking ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","De taak is gemarkeerd als voltooid. en je kunt nu het cijfer verlaten en markeren als een volledige taak. Als je een reactie wilt achterlaten, voeg je deze toe vóór de beoordeling."
+,Kompletiraj!,Complete!
+,Zadatak/Cilj za korinika:,Taak / doelwit voor de hoek:
+,Zadatak/Cilj:,Taak / doel:
+,Naziv Zadatka/Cilja,Titel van doelstelling / doelstelling
+,Dodaj polje,Voeg een veld toe
+,Omogući vremensko ogranićenje zadatka/cilja,Timing / Goal-tijdslimiet inschakelen
+,Traži...,Zoeken ...
+,Svi,alle
+,Rezultati pretrage za:,Zoekresultaten voor:
+,Deaktivirani korisnici,Gedeactiveerde gebruikers
+,ID,ID
+,Korinik,de Gebruiker
+,Nivo administracije,Niveau van toediening
+,Info,info
+,deaktiviran:,gedeactiveerd:
+,registracija:,registratie:
+,Dali ste sigurni da želite deaktivirati korisnika:,Weet je zeker dat je de gebruiker wilt deactiveren:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Weet je zeker dat je de gebruiker opnieuw wilt activeren:
+,Obrada satnice!,Het schema verwerken!
+,Još nije bilo unosa satnica,Er waren nog geen inzendingen
+,Pozdrav!,Gegroet!
+,Odjava!,Uitloggen!
+,Godina,jaar
+,Mjesec,maand
+,MBO ciljevi,MBO-doelen
+,Zahtjevi za trening,Vereisten voor training
+,Zahtjevi za službena putovanja,Verzoeken voor zakenreizen
+,Zaposlenici,werknemers
+,Korekcije satnica,Correctietijden
+,Upravljanje satnicama,Tijd management
+,Upravljanje korekcijama satnica,Beheer per uur tijdcorrecties
+,Godišnji/Odsustva,Jaarlijks / afwezig
+,Programi obuke,Trainingsprogramma's
+,Zadužnice/Razdužnice,Rekeningen / spreadsheets
+,Organizaciona šema,Organisatorisch schema
+,Moj MBO,Mijn MBO
+,Moja službena putovanja,Mijn zakenreizen
+,Moji treninzi,Mijn trainingen
+,Uredi profil,Bewerk profiel
+,Moje satnice,Mijn schema
+,Verifikacija satnica,Verificatie van dienstregelingen
+,Verifikacija korekcija,Verificatie correcties
+,Zadužnice,obligaties
+,Razdužnice,Razdužnice
+,Pristupi,benaderingen
+,Korekcije,correcties
+,Bosna i Hercegovina,Bosnië en Herzegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,De vakantie van het jaar ervoor
+,Godišnji odmor tekuća godina,Jaarlijkse vakantie van het lopende jaar
+,Plaćeni vjerski praznici,Betaalde religieuze feestdagen
+,Neplaćeni vjerski praznici,Onbetaalde religieuze feestdagen
+,Plaćeno odsustvo,Betaalde vakantie
+,Smrtni slučaj,dood
+,Darivanje krvi,Bloeddonatie
+,Redovni rad,Regelmatig werk
+,Godišnji odmor tekuca godina,Jaarlijkse vakantie van het lopende jaar
+,Ponedjeljak,maandag
+,Utorak,dinsdag
+,Srijeda,woensdag
+,Četvrtak,donderdag
+,Petak,vrijdag
+,Subota,zaterdag
+,Nedjelja,zondag

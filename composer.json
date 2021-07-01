@@ -1,0 +1,29 @@
+{
+    "name": "infodom/epraiffeisen",
+    "description": "Raiffeisen Bank Employee Portal",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^1.24",
+        "gettext/gettext": "^4.6",
+        "maximebf/debugbar": "^1.15",
+      "ext-calendar": "*",
+        "phpoffice/phpspreadsheet": "^1.17",
+      "ext-json": "*",
+        "nesbot/carbon": "^2.48",
+      "ext-soap": "*",
+      "ext-curl": "*",
+      "ext-libxml": "*",
+        "laminas/laminas-soap": "^2.9",
+      "ext-simplexml": "*"
+    },
+    "authors": [
+        {
+            "name": "Infodom Sarajevo",
+            "email": "info@infodom.ba"
+        }
+    ],
+    "config": {
+
+      "platform-check": false
+    }
+}

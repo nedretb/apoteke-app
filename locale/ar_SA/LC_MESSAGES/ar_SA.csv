@@ -1,0 +1,237 @@
+,Administrator,مدير
+,Menadžer administratora satnica,مدير إدارة الوقت
+,Nadređeni,A متفوقة
+,Zaposlenik,عامل
+,Odaberi...,اختر ...
+,Nema dostupnih jezika.,لا توجد لغات متاحة.
+,Nema unesenih država.,لم يتم إدخال أي بلد.
+,Nema unesenih statusa.,لم يتم إدخال أي حالة.
+,Januar,يناير
+,Februar,فبراير
+,Mart,مارس
+,April,أبريل
+,Maj,مايو
+,Juni,يونيو
+,Juli,يوليو
+,Avgust,أغسطس
+,Septembar,سبتمبر
+,Oktobar,أكتوبر
+,Novembar,تشرين الثاني
+,Decembar,ديسمبر
+,Moj profil,ملفي الشخصي
+,Moji Zadaci/Ciljevi,المهام / الأهداف
+,Moji Zahtjevi,طلبي
+,Uredi profil,تعديل الملف الشخصي
+,Zadaci/Ciljevi,المهام / الأهداف
+,Zahtjevi,متطلبات
+,Korisnici,المستخدمين
+,Podešavanja,إعدادات
+,Države,دولة
+,Informacije su uspješno sapšene!,تم القبض على المعلومات بنجاح!
+,Izmjene su uspješno sapšene!,تم ضبط التغييرات بنجاح!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,اسم المستخدم مشغول. الرجاء محاولة شخص آخر.
+,Greška!,خطأ!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.",الرجاء إدخال اسم المستخدم و / أو كلمة المرور غير صحيح، يرجى إعادة المحاولة.
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,تم إلغاء تنشيط حسابك. لمزيد من المعلومات الاتصال بنا.
+,Uspješno!,ناجحة!
+,Uspješno ste se odjavili.,لقد سجلت الخروج بنجاح.
+,Neuspješno!,فشل!
+,Vaš korisnički nalog je deaktiviran.,تم إلغاء تنشيط حسابك.
+,Korisničko ime,اسم المستخدم
+,Lozinka,كلمة المرور
+,Prijava!,الاشتراك!
+,Zaboravili ste lozinku?,هل نسيت كلمة المرور؟
+,Vaša e-mail adresa,عنوان بريدك الإلكتروني
+,Poništi lozinku,إعادة تعيين كلمة المرور
+,Nazad na stranicu za prijavu,الرجوع إلى صفحة تسجيل الدخول
+,"Poštovani,",ايها السادة،
+,"Zatražili ste reset lozinke, nova je u prilogu.",لقد طلبت إعادة تعيين كلمة المرور، يتم إرفاق جديدة.
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,البريد الإلكتروني مع التعليمات المرسلة، يرجى التحقق من الرسائل على البريد الإلكتروني الذي قدمته في طلب إعادة تعيين كلمة المرور.
+,Unesena e-ail adresa nije pronađena u bazi.,لم يتم العثور على عنوان البريد الإلكتروني الذي تم إدخاله في قاعدة البيانات.
+,Ažuriranje!,تحديث!
+,Spasi!,حفظه!
+,Osnovni podaci,المعلومات الأساسية
+,Osnovni Podaci,البيانات الأساسية
+,Ime,اسم
+,Prezime,لقب
+,Fotografija,تصوير
+,Odaberi,اختر
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,تنسيقات جبغ / ينغ / جيف المسموح بها. الأبعاد الموصى بها 480 × 640 بكسل (عمودي).
+,Kontakt Podaci,بيانات الاتصال
+,Država,بلد
+,Grad,مدينة
+,PTT,PTT
+,Adresa,عنوان
+,Telefon,هاتف
+,E-mail,البريد الإلكتروني E-
+,Ostali Podaci,بيانات أخرى
+,Jezik aplikacije,لغة التطبيق
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.",معرف صفحة غير صحيح، يرجى الاتصال بالمشرف.
+,Prikaži,عرض
+,Sakrij,إخفاء
+,Generiši,توليد
+,Moje satnice,الجدول الزمني الخاص بي
+,Novi unos,إدخال جديد
+,Dali ste sigurni da želite brisati?,هل تريد بالتأكيد الحذف؟
+,Još nije bilo unosa za:,لم يكن هناك حتى الآن دخول ل:
+,Ukupno,مجموع
+,Iskorišteno,تستخدم
+,Ostalo,آخر
+,Spašeno,حفظ
+,Odobreno,منحت
+,Odbijeno,مرفوض
+,Dan,يوم
+,Broj sati,عدد الساعات
+,Status,وضع
+,Pregled,نظرة عامة
+,ODOBRENO,وافق
+,ODBIJENO,مرفوض
+,Obradio:,تمت معالجتها بواسطة:
+,Komentar:,التعليق:
+,Period od-do:,الفترة من إلى:
+,do,إلى
+,Pregled/obrada zadatka,نظرة عامة / معالجة المهام
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",لم يتم قبول المهمة بعد من قبلك، وبالتالي لا يمكن معالجة عناصر المهمة.
+,Prihvati zadatak,قبول المهمة
+,Zaduženi:,المسؤول:
+,Izvršiti do:,تنفيذ إلى:
+,Kreirao:,تم الإنشاء بواسطة:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",يتم وضع علامة على المهمة / الهدف كما اكتملت، وبالتالي لا يمكنك تغيير حالة المهمة. يمكنك متابعة كوميتر هنا وتقييم المهمة هنا.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,يتم الانتهاء من العناصر. يمكنك الآن وضع علامة على المهمة المكتملة.
+,Završi zadatak,إنهاء المهمة
+,Komentari,تعليقات
+,Ostavite komentar,اترك تعليقا
+,Dodaj komentar!,إضافة تعليق!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",تم الانتهاء من المهمة وتقييمها، ومع هذا تم إغلاق التعليقات.
+,Ocjena:,التصويت:
+,Pozicija,موقف
+,Sektor,قطاع
+,Nadređeni korisnik,متفوقة المستخدم
+,Datum registracije,تاريخ التسجيل
+,Datum reaktivacije,تاريخ إعادة التنشيط
+,Satnice,نقيب
+,Dodaj godinu,إضافة سنة
+,Dodaj mjesec,إضافة شهر
+,Još niste počeli unositi satnice,لم تبدأ بعد في إدخال الجدول الزمني
+,Aktivni,تنشيط
+,Arhiva,أرشيف
+,Zahtjev za G.O.,طلب G.O.
+,Od:,من:
+,Do:,إلى:
+,Na čekanju...,جار الانتظار ...
+,Zahtjev kreiran:,تم إنشاء الطلب:
+,Zahtjev odobren:,تمت الموافقة على الطلب:
+,Zahtjev odbijen:,تم رفض الطلب:
+,Dali ste sigurni da želite poništiti zahtjev?,هل تريد بالتأكيد إلغاء الطلب؟
+,Dali ste sigurni da želite arhivirati zahtjev?,هل تريد بالتأكيد أرشفة الطلب؟
+,Nema spašenih zahtjeva prema odabranim parametrima.,لا توجد طلبات محفوظة للمعلمات المحددة.
+,Na čekanju,ريثما
+,Prihvaćen,مقبول
+,Završen,انتهى
+,Dali ste sigurni da želite arhivirati zadatak?,هل تريد بالتأكيد أرشفة المهمة؟
+,Nema spašenih zadataka prema odabranim parametrima.,لا توجد مهام محفوظة للمعلمات المحددة.
+,Neovlašten pristup,الدخول غير المصرح به
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.",ليس لديك سلطة الوصول إلى هذا الجزء من التطبيق. في حالة حدوث خطأ، اتصل بالمسؤول.
+,Nazad na moj profil,الرجوع إلى ملفي الشخصي
+,Zahtjevi za G.O.,طلبات G.O.
+,Obrada zahtjeva!,معالجة الطلب!
+,Status zahtjeva:,حالة الطلب:
+,Komentar,تعليق
+,Gradovi,المدن
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",قائمة المدن دخلت، والتي هي المطلوبة لإنشاء الوجهات والتحفظات.
+,Naziv,اسم
+,Dali ste sigurni da želite brisati:,هل تريد بالتأكيد حذف:
+,Još nije bilo unosa,لم يكن هناك حتى الآن دخول
+,Općenito,نظرة عامة
+,Naslov aplikacije,عنوان التطبيق
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,تنسيقات جبغ / ينغ / جيف المسموح بها. الأبعاد الموصى بها 400x200 بكسل.
+,Boje aplikacije,ألوان التطبيق
+,Pozadina aplikacije,خلفية التطبيق
+,Boja teksta aplikacije,لون نص التطبيق
+,Pozadina gornje trake - HEADER,شريط الخلفية - هيدر
+,Boja teksta gornje trake - HEADER,لون النص من الشريط العلوي - هيدر
+,Boja teksta gornje trake - HEADER (:hover :active),لون نص الشريط العلوي - هيدر (: تمرير الماوس: نشط)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)",لون العنوان (H1، H2، H3، H4، H5، H6)
+,Pozadina - BUTTONS,الخلفية - أزرار
+,Tekst i ikona - BUTTONS,النص والرمز - أزرار
+,SMTP parametri,معلمات سمتب
+,SMTP status,حالة سمتب
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.",إذا كان سمتب غير نشط أو المعلمات غير متوفرة، سيقوم النظام باستخدام وظيفة فب ميل () القياسية.
+,SMTP host,مضيف سمتب
+,SMTP korisnik,مستخدم سمتب
+,SMTP lozinka,كلمة مرور سمتب
+,SMTP port,منفذ سمتب
+,SMTP sigurnost,أمن سمتب
+,Jezici aplikacije,لغات التطبيق
+,Kod,في
+,Statusi satnice,حالة كل ساعة
+,Direkcija teksta,اتجاه النص
+,Dali ste sigurni da želite poništiti zadatak?,هل تريد بالتأكيد إلغاء المهمة؟
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,ولم تقبل كيورينكي 7 هذه المهمة بعد.
+,Ocjeni!,معدل!
+,u obradi...,في المعالجة ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.",يتم وضع علامة على المهمة كما اكتملت. ، ويمكنك الآن ترك الصف ووضع علامة عليه كمهمة كاملة. إذا كنت ترغب في ترك تعليق، إضافته قبل التقييم.
+,Kompletiraj!,كاملة!
+,Zadatak/Cilj za korinika:,المهمة / الهدف للزاوية:
+,Zadatak/Cilj:,المهمة / الهدف:
+,Naziv Zadatka/Cilja,عنوان الهدف / الهدف
+,Dodaj polje,إضافة حقل
+,Omogući vremensko ogranićenje zadatka/cilja,تمكين الوقت / الهدف المهلة
+,Traži...,البحث ...
+,Svi,جميع
+,Rezultati pretrage za:,نتائج البحث عن:
+,Deaktivirani korisnici,المستخدمون المعطلون
+,ID,الهوية
+,Korinik,المستخدم
+,Nivo administracije,مستوى الإدارة
+,Info,معلومات
+,deaktiviran:,المعطلة:
+,registracija:,تسجيل:
+,Dali ste sigurni da želite deaktivirati korisnika:,هل تريد بالتأكيد إلغاء تنشيط المستخدم:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,هل تريد بالتأكيد إعادة تنشيط المستخدم:
+,Obrada satnice!,تجهيز الجدول الزمني!
+,Još nije bilo unosa satnica,لم تكن هناك أية إدخالات بعد
+,Pozdrav!,تحية!
+,Odjava!,تسجيل الخروج!
+,Godina,سنوات
+,Mjesec,شهر
+,MBO ciljevi,أهداف مبو
+,Zahtjevi za trening,متطلبات التدريب
+,Zahtjevi za službena putovanja,طلبات لرحلات العمل
+,Zaposlenici,موظف
+,Korekcije satnica,أوقات التصحيح
+,Upravljanje satnicama,إدارة الوقت
+,Upravljanje korekcijama satnica,إدارة كل ساعة التصحيحات
+,Godišnji/Odsustva,السنوي / الغياب
+,Programi obuke,برامج التدريب
+,Zadužnice/Razdužnice,الفواتير / جداول البيانات
+,Organizaciona šema,النظام التنظيمي
+,Moj MBO,بلدي مبو
+,Moja službena putovanja,رحلات عملي
+,Moji treninzi,بلدي التدريبات
+,Uredi profil,تعديل الملف الشخصي
+,Moje satnice,الجدول الزمني الخاص بي
+,Verifikacija satnica,التحقق من الجداول الزمنية
+,Verifikacija korekcija,تصحيحات التحقق
+,Zadužnice,سندات
+,Razdužnice,Razdužnice
+,Pristupi,اقتراب
+,Korekcije,التصحيحات
+,Bosna i Hercegovina,البوسنة والهرسك
+,Sarajevo,سراييفو
+,Godišnji odmor predhodna godina,عطلة العام الماضي
+,Godišnji odmor tekuća godina,عطلة سنوية من السنة الحالية
+,Plaćeni vjerski praznici,الأعياد الدينية المدفوعة
+,Neplaćeni vjerski praznici,الأعياد الدينية غير المدفوعة
+,Plaćeno odsustvo,إجازة مدفوعة الأجر
+,Smrtni slučaj,الموت
+,Darivanje krvi,التبرع بالدم
+,Redovni rad,العمل المنتظم
+,Godišnji odmor tekuca godina,عطلة سنوية من السنة الحالية
+,Ponedjeljak,الإثنين
+,Utorak,الثلاثاء
+,Srijeda,الأربعاء
+,Četvrtak,الخميس
+,Petak,الجمعة
+,Subota,السبت
+,Nedjelja,الأحد

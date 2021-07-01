@@ -1,0 +1,257 @@
+,Administrator,Pentadbir
+,Menadžer administratora satnica,Pengurus pentadbir masa
+,Nadređeni,Superior
+,Zaposlenik,Pekerja
+,Odaberi...,Pilih ...
+,Nema dostupnih jezika.,Tiada bahasa yang tersedia.
+,Dodaj službeno putovanje,Tambah perjalanan perniagaan
+,Nema unesenih država.,Tiada negara yang masuk.
+,Nema unesenih statusa.,Tiada status yang dimasukkan.
+,Januar,Januari
+,Februar,Februari
+,Mart,Mac
+,April,April
+,Maj,Mei
+,Juni,Jun
+,Juli,Julai
+,Avgust,Ogos
+,Septembar,September
+,Oktobar,Oktober
+,Novembar,November
+,Decembar,Disember
+,Moj profil,Profil saya
+,Moji Zadaci/Ciljevi,Tugas / Matlamat Saya
+,Moji Zahtjevi,Permintaan saya
+,Uredi profil,Edit profil
+,Zadaci/Ciljevi,Tugas / Matlamat
+,Zahtjevi,Permintaan
+,Korisnici,Pengguna
+,Podešavanja,Tetapan
+,Države,Negara
+,Informacije su uspješno sapšene!,Maklumat telah berjaya ditangkap!
+,Izmjene su uspješno sapšene!,Perubahan berjaya disita!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,Nama pengguna sibuk. Sila cuba orang lain.
+,Greška!,Ralat!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.","Sila masukkan nama pengguna dan / atau kata laluan yang salah, sila cuba lagi."
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,Akaun anda telah dinyahaktifkan. Untuk maklumat lanjut hubungi kami.
+,Uspješno!,Berjaya!
+,Uspješno ste se odjavili.,Anda telah berjaya melog keluar.
+,Neuspješno!,Tidak berjaya!
+,Vaš korisnički nalog je deaktiviran.,Akaun anda dinyahaktifkan.
+,Korisničko ime,Nama pengguna
+,Lozinka,Kata laluan
+,Prijava!,Masuk!
+,Zaboravili ste lozinku?,Lupa kata laluan anda?
+,Vaša e-mail adresa,Alamat e-mel anda
+,Poništi lozinku,Tetapkan semula kata laluan
+,Nazad na stranicu za prijavu,Kembali ke halaman Log masuk
+,"Poštovani,","Halo,"
+,"Zatražili ste reset lozinke, nova je u prilogu.","Anda telah meminta kata laluan reset, baru dilampirkan."
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,"E-mel dengan arahan yang dihantar, sila periksa mesej pada e-mel yang anda berikan dalam permintaan penetapan kata laluan."
+,Unesena e-ail adresa nije pronađena u bazi.,Alamat e-mel yang dimasukkan tidak terdapat dalam pangkalan data.
+,Ažuriranje!,Mengemaskini!
+,Spasi!,Simpan!
+,Osnovni podaci,Maklumat asas
+,Osnovni Podaci,Data Asas
+,Ime,Nama
+,Prezime,Nama keluarga
+,Fotografija,Foto
+,Odaberi,Pilih
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,Format JPG / PNG / GIF yang dibenarkan. Dimensi yang disyorkan 480x640 px (potret).
+,Kontakt Podaci,Hubungi Data
+,Država,Negara
+,Grad,City
+,PTT,PTT
+,Adresa,Alamat
+,Telefon,Telefon
+,E-mail,E-mel
+,Ostali Podaci,Data Lain
+,Jezik aplikacije,Bahasa aplikasi
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.","ID halaman yang salah, sila hubungi pentadbir."
+,Prikaži,Tunjukkan
+,Sakrij,Sembunyikan
+,Generiši,Jana
+,Moje satnice,Jadual saya
+,Novi unos,Kemasukan baru
+,Dali ste sigurni da želite brisati?,Adakah anda pasti mahu memadamkannya?
+,Još nije bilo unosa za:,Belum ada entri untuk:
+,Ukupno,Jumlah
+,Iskorišteno,Digunakan
+,Ostalo,Lain-lain
+,Spašeno,Diselamatkan
+,Odobreno,Diluluskan
+,Odbijeno,Ditolak
+,Dan,Dan
+,Broj sati,Bilangan jam
+,Status,Status
+,Pregled,Gambaran keseluruhan
+,ODOBRENO,DILULUSKAN
+,ODBIJENO,ODBIJENO
+,Obradio:,Diproses oleh:
+,Komentar:,Komen:
+,Period od-do:,Tempoh dari-ke:
+,do,kepada
+,Pregled/obrada zadatka,Gambaran keseluruhan / pemprosesan tugas
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.","Tugas ini belum diterima oleh anda, dan oleh itu tidak mungkin untuk memproses item tugas."
+,Prihvati zadatak,Terima tugas itu
+,Zaduženi:,Bertanggungjawab:
+,Izvršiti do:,Jalankan ke:
+,Kreirao:,Dicipta oleh:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.","Tugas / Matlamat ditandakan sebagai selesai, dan oleh itu anda tidak boleh mengubah status tugas itu. Anda boleh mengikuti kometers di sini dan menilai tugas di sini."
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,Item selesai. anda kini boleh menandakan tugas selesai.
+,Završi zadatak,Selesaikan tugas itu
+,Komentari,Komen
+,Ostavite komentar,Tinggalkan komen
+,Dodaj komentar!,Tambah komen!
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.","Tugas itu selesai dan dinilai, dan dengan ini komen-komen itu ditutup."
+,Ocjena:,Penilaian:
+,Pozicija,Jawatan
+,Sektor,Sektor
+,Nadređeni korisnik,Pengguna Superior
+,Datum registracije,Tarikh pendaftaran
+,Datum reaktivacije,Tarikh pengaktifan semula
+,Satnice,Jadual
+,Dodaj godinu,Tambah tahun
+,Dodaj mjesec,Tambah bulan
+,Još niste počeli unositi satnice,Anda masih belum memasuki jadual
+,Aktivni,Aktif
+,Arhiva,Arkib
+,Zahtjev za G.O.,Permintaan untuk G.O.
+,Od:,Dari:
+,Do:,Kepada:
+,Na čekanju...,Menunggu ...
+,Zahtjev kreiran:,Permintaan dibuat:
+,Zahtjev odobren:,Permintaan diluluskan:
+,Zahtjev odbijen:,Permintaan ditolak:
+,Dali ste sigurni da želite poništiti zahtjev?,Adakah anda pasti mahu membatalkan permintaan itu?
+,Dali ste sigurni da želite arhivirati zahtjev?,Adakah anda pasti mahu mengarkibkan permintaan itu?
+,Nema spašenih zahtjeva prema odabranim parametrima.,Tiada permintaan yang disimpan untuk parameter yang dipilih.
+,Na čekanju,Menunggu
+,Prihvaćen,Diterima
+,Završen,Selesai
+,Dali ste sigurni da želite arhivirati zadatak?,Adakah anda pasti mahu mengarkibkan tugas itu?
+,Nema spašenih zadataka prema odabranim parametrima.,Tiada tugas yang disimpan untuk parameter yang dipilih.
+,Neovlašten pristup,Akses tanpa izin
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.","Anda tidak mempunyai kuasa untuk mengakses bahagian permohonan ini. Jika ralat telah berlaku, hubungi pentadbir."
+,Nazad na moj profil,Kembali ke profil saya
+,Zahtjevi za G.O.,Permintaan untuk G.O.
+,Obrada zahtjeva!,Memproses permintaan!
+,Status zahtjeva:,Permintaan Status:
+,Komentar,Komen
+,Gradovi,Bandar
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.","Senarai bandar yang dimasukkan, yang diperlukan untuk membuat destinasi dan tempahan."
+,Naziv,Nama
+,Dali ste sigurni da želite brisati:,Adakah anda pasti mahu memadamkan:
+,Još nije bilo unosa,Belum ada entri
+,Općenito,Ketua
+,Naslov aplikacije,Tajuk aplikasi
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Format JPG / PNG / GIF yang dibenarkan. Dimensi yang disyorkan 400x200 px.
+,Boje aplikacije,Warna permohonan
+,Pozadina aplikacije,Latar belakang permohonan
+,Boja teksta aplikacije,Warna teks permohonan
+,Pozadina gornje trake - HEADER,Bar latar belakang - HEADER
+,Boja teksta gornje trake - HEADER,Warna teks pita atas - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),Warna teks pita atas - HEADER (: hover: aktif)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)","Warna tajuk (H1, H2, H3, H4, H5, H6)"
+,Pozadina - BUTTONS,Latar Belakang - BUTTONS
+,Tekst i ikona - BUTTONS,Teks dan ikon - BUTTONS
+,SMTP parametri,Parameter SMTP
+,SMTP status,Status SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.","Sekiranya SMTP tidak aktif atau parameter tidak tersedia, sistem akan menggunakan fungsi PHP MAIL ()."
+,SMTP host,Hos SMTP
+,SMTP korisnik,Pengguna SMTP
+,SMTP lozinka,Kata laluan SMTP
+,SMTP port,Pelabuhan SMTP
+,SMTP sigurnost,Keselamatan SMTP
+,Jezici aplikacije,Bahasa aplikasi
+,Kod,Kod
+,Statusi satnice,Status setiap jam
+,Direkcija teksta,Arah teks
+,Dali ste sigurni da želite poništiti zadatak?,Adakah anda pasti mahu membatalkan tugas?
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,Tugas ini belum diterima oleh korinki7 yang terhutang budi.
+,Ocjeni!,Kadar!
+,u obradi...,dalam memproses ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.","Tugas itu ditandakan sebagai selesai. , dan kini anda boleh meninggalkan gred dan menandakannya sebagai tugas yang lengkap. Jika anda ingin meninggalkan ulasan, tambahkannya sebelum penarafan."
+,Kompletiraj!,Lengkap!
+,Zadatak/Cilj za korinika:,Tugas / Sasaran untuk Sudut:
+,Zadatak/Cilj:,Tugas / Matlamat:
+,Naziv Zadatka/Cilja,Tajuk Objektif / Objektif
+,Dodaj polje,Tambah medan
+,Omogući vremensko ogranićenje zadatka/cilja,Dayakan Batasan Masa / Matlamat
+,Traži...,Carian ...
+,Svi,Semua orang
+,Rezultati pretrage za:,Hasil carian untuk:
+,Deaktivirani korisnici,Pengguna yang dinyahaktifkan
+,ID,ID
+,Korinik,Corinne
+,Nivo administracije,Tahap pentadbiran
+,Info,Maklumat
+,deaktiviran:,dinyahaktifkan:
+,registracija:,pendaftaran:
+,Dali ste sigurni da želite deaktivirati korisnika:,Adakah anda pasti mahu menyahaktifkan pengguna:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,Adakah anda pasti mahu mengaktifkan semula pengguna:
+,Obrada satnice!,Memproses jadual!
+,Još nije bilo unosa satnica,Tiada penyertaan lagi
+,Pozdrav!,Hello!
+,Odjava!,Keluar!
+,Godina,Tahun
+,Mjesec,Bulan
+,MBO ciljevi,Matlamat MBO
+,Zahtjevi za trening,Keperluan untuk latihan
+,Zahtjevi za službena putovanja,Permintaan untuk perjalanan perniagaan
+,Zaposlenici,Pekerja
+,Korekcije satnica,Masa pembetulan
+,Upravljanje satnicama,Pengurusan masa
+,Upravljanje korekcijama satnica,Mengurus Pembetulan Masa Pelbagai
+,Godišnji/Odsustva,Tahunan / Ketidakhadiran
+,Programi obuke,Program latihan
+,Zadužnice/Razdužnice,Bil / Spreadsheets
+,Organizaciona šema,Skim organisasi
+,Moj MBO,MBO saya
+,Moja službena putovanja,Perjalanan perniagaan saya
+,Moji treninzi,Latihan saya
+,Uredi profil,Edit profil
+,Moje satnice,Jadual saya
+,Verifikacija satnica,Pengesahan jadual waktu
+,Verifikacija korekcija,Pembetulan pengesahan
+,Zadužnice,Bil
+,Razdužnice,Sprays
+,Pristupi,Pendekatan
+,Korekcije,Pembetulan
+,Bosna i Hercegovina,Bosnia dan Herzegovina
+,Sarajevo,Sarajevo
+,Godišnji odmor predhodna godina,Percutian tahun sebelumnya
+,Godišnji odmor tekuća godina,Percutian tahunan tahun semasa
+,Plaćeni vjerski praznici,Cuti keagamaan yang dibayar
+,Neplaćeni vjerski praznici,Cuti keagamaan yang tidak dibayar
+,Plaćeno odsustvo,Cuti berbayar
+,Smrtni slučaj,Kematian
+,Darivanje krvi,Derma darah
+,Redovni rad,Kerja tetap
+,Godišnji odmor tekuca godina,Percutian tahunan tahun semasa
+,Ponedjeljak,Isnin
+,Utorak,Selasa
+,Srijeda,Rabu
+,Četvrtak,Khamis
+,Petak,Jumaat
+,Subota,Sabtu
+,Nedjelja,Ahad
+,Dodaj trening,Tambah latihan
+,Zahtjevi za službeno putovanje,Permintaan untuk perjalanan rasmi
+,Pretraga zaposlenih,Cari pekerja
+,Орг. јединица,Org. unit
+,Ime i prezime:,Nama dan nama keluarga:
+,Prikaži kalendar,Tunjukkan kalendar
+,Odustani!,Batalkan!
+,Izaberi!,Pilih!
+,B-1 sa regijama,B-1 dengan wilayah
+,Naziv org. jed.,Nama org. jed.
+,Općenito,Ketua
+,Naslov aplikacije,Tajuk aplikasi
+,Logo aplikacije,Aplikasi Logo
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,Format JPG / PNG / GIF yang dibenarkan. Dimensi yang disyorkan 400x200 px.
+,Boje aplikacije,Warna permohonan
+,Skriveni Tabovi,Tab Tersembunyi
+,Nazivi tabova,Nama tab
+,Role,Peranan
+,Spasi!,Simpan!

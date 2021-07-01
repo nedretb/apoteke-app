@@ -1,0 +1,257 @@
+,Administrator,مدیر
+,Menadžer administratora satnica,مدیریت زمان مدیر
+,Nadređeni,عالی
+,Zaposlenik,کارمند
+,Odaberi...,انتخاب کنید ...
+,Nema dostupnih jezika.,زبان های موجود وجود ندارد.
+,Dodaj službeno putovanje,یک سفر تجاری اضافه کنید
+,Nema unesenih država.,هیچ کشور وارد نشده است.
+,Nema unesenih statusa.,هیچ وضعیتی وارد نشده است.
+,Januar,ژانویه
+,Februar,فوریه
+,Mart,مارس
+,April,آوریل
+,Maj,ماه مه
+,Juni,ماه ژوئن
+,Juli,جولای
+,Avgust,آگوست
+,Septembar,سپتامبر
+,Oktobar,اکتبر
+,Novembar,نوامبر
+,Decembar,دسامبر
+,Moj profil,نمایه من
+,Moji Zadaci/Ciljevi,وظایف من / اهداف
+,Moji Zahtjevi,درخواستهای من
+,Uredi profil,ویرایش نمایه
+,Zadaci/Ciljevi,وظایف / اهداف
+,Zahtjevi,درخواستها
+,Korisnici,کاربران
+,Podešavanja,تنظیمات
+,Države,کشورها
+,Informacije su uspješno sapšene!,اطلاعات با موفقیت دستگیر شده اند!
+,Izmjene su uspješno sapšene!,تغییرات با موفقیت دستگیر شدند!
+,Korisničko ime je zauzeto. Molimo pokušajte sa nekim drugim.,نام کاربری مشغول است لطفا دیگران را امتحان کنید
+,Greška!,خطا!
+,"Pogrešno korisičko ime i/ili lozinka, molimo pokušajte ponovo.",لطفا نام کاربری و / یا نام کاربری اشتباه را وارد کنید، لطفا دوباره امتحان کنید.
+,Vaš račun je deaktiviran. Za više informacija kontaktirajte  nas.,حساب کاربری شما غیرفعال شده است برای اطلاعات بیشتر با ما تماس بگیرید
+,Uspješno!,موفقیت آمیز!
+,Uspješno ste se odjavili.,شما با موفقیت خارج شدید
+,Neuspješno!,موفق نشدم
+,Vaš korisnički nalog je deaktiviran.,حساب کاربری شما غیر فعال شده است
+,Korisničko ime,نام کاربری
+,Lozinka,رمز عبور
+,Prijava!,ورود
+,Zaboravili ste lozinku?,رمز عبور خود را فراموش کرده اید؟
+,Vaša e-mail adresa,آدرس ایمیل شما
+,Poništi lozinku,بازنشانی گذرواژه
+,Nazad na stranicu za prijavu,بازگشت به صفحه ورود
+,"Poštovani,",سلام
+,"Zatražili ste reset lozinke, nova je u prilogu.",شما درخواست رمز عبور مجدد را درخواست کرده اید، جدید پیوست شده است.
+,E-mail sa uputama je poslan molimo provjerite poruke na email-u koji ste naveli u zahtjevu za reset lozinke.,پست الکترونیکی با دستورالعمل ارسال شده، لطفا پیام های ایمیل شما در درخواست بازنشستگی رمز عبور را بررسی کنید.
+,Unesena e-ail adresa nije pronađena u bazi.,آدرس ایمیل وارد شده در پایگاه داده یافت نشد.
+,Ažuriranje!,به روز رسانی!
+,Spasi!,ذخیره آن!
+,Osnovni podaci,اطلاعات پایه
+,Osnovni Podaci,داده های پایه
+,Ime,نام
+,Prezime,نام خانوادگی
+,Fotografija,عکس
+,Odaberi,انتخاب کنید
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 480x640 px (portret).,قالب های JPG / PNG / GIF مجاز. ابعاد توصیه شده 480x640 پیکسل (پرتره).
+,Kontakt Podaci,اطلاعات تماس
+,Država,کشور
+,Grad,شهر
+,PTT,PTT
+,Adresa,آدرس
+,Telefon,تلفن
+,E-mail,پست الکترونیکی
+,Ostali Podaci,سایر اطلاعات
+,Jezik aplikacije,زبان برنامه
+,"Pogrešan ID stranice, molimo kontaktirajte administratora.",شناسه صفحه اشتباه، لطفا با مدیر تماس بگیرید
+,Prikaži,نمایش
+,Sakrij,پنهان کردن
+,Generiši,تولید کنید
+,Moje satnice,برنامه من
+,Novi unos,ورودی جدید
+,Dali ste sigurni da želite brisati?,آیا مطمئن هستید که میخواهید حذف شود؟
+,Još nije bilo unosa za:,هنوز ورودی وجود ندارد:
+,Ukupno,کل
+,Iskorišteno,استفاده شده
+,Ostalo,دیگران
+,Spašeno,نجات داد
+,Odobreno,تایید شده
+,Odbijeno,رد شد
+,Dan,دن
+,Broj sati,تعداد ساعت ها
+,Status,وضعیت
+,Pregled,بررسی
+,ODOBRENO,تایید شده
+,ODBIJENO,ODBIJENO
+,Obradio:,پردازش شده توسط:
+,Komentar:,نظر:
+,Period od-do:,دوره از:
+,do,به
+,Pregled/obrada zadatka,بررسی اجمالی / پردازش وظیفه
+,"Zadatak jos nije prihvaćen sa Vaše strane, i zbog toga nije moguće obraditi stavke zadatka.",این کار هنوز توسط شما پذیرفته نشده است و بنابراین امکان پردازش موارد کار وجود ندارد.
+,Prihvati zadatak,وظیفه را قبول کنید
+,Zaduženi:,مسئولیت:
+,Izvršiti do:,اجرای به:
+,Kreirao:,ایجاد شده توسط:
+,"Zadatak/Cilj je oznaćen kao završen, te zbog toga nemožete mijenjati status zadatka. Ovdje možete pratiti kometare i ocjenu zadatka.",وظیفه / هدف به عنوان تکمیل مشخص شده است، بنابراین شما نمی توانید وضعیت کار را تغییر دهید. شما می توانید cometers را در اینجا دنبال کنید و کار را در اینجا ارزیابی کنید.
+,stavke su završene. sada možete Zadatak oznaćiti završenim.,موارد تکمیل شده اند شما هم اکنون می توانید کار کامل را علامت بزنید.
+,Završi zadatak,وظیفه را پایان دهید
+,Komentari,نظرات
+,Ostavite komentar,نظر بدهید
+,Dodaj komentar!,یک نظر اضافه کنید
+,"Zadatak je završen i ocjenjen, a s tim su i komentari zatvoreni.",این کار تکمیل و ارزیابی شد و با این کار نظرات بسته شد.
+,Ocjena:,رتبه بندی:
+,Pozicija,موقعیت
+,Sektor,بخش
+,Nadređeni korisnik,کاربر برتر
+,Datum registracije,تاریخ ثبت نام
+,Datum reaktivacije,تاریخ واکنش پذیری
+,Satnice,برنامه
+,Dodaj godinu,اضافه کردن سال
+,Dodaj mjesec,اضافه کردن ماه
+,Još niste počeli unositi satnice,شما هنوز وارد برنامه نشده اید
+,Aktivni,فعال
+,Arhiva,بایگانی
+,Zahtjev za G.O.,درخواست G.O.
+,Od:,از:
+,Do:,به:
+,Na čekanju...,منتظر ...
+,Zahtjev kreiran:,درخواست ایجاد شده:
+,Zahtjev odobren:,درخواست تایید شده:
+,Zahtjev odbijen:,درخواست رد شد:
+,Dali ste sigurni da želite poništiti zahtjev?,آیا مطمئن هستید که میخواهید درخواست را لغو کنید؟
+,Dali ste sigurni da želite arhivirati zahtjev?,آیا مطمئن هستید که میخواهید درخواست را بایگانی کنید؟
+,Nema spašenih zahtjeva prema odabranim parametrima.,هیچ درخواست ذخیره شده برای پارامترهای انتخاب شده وجود ندارد.
+,Na čekanju,منتظر
+,Prihvaćen,پذیرفته شد
+,Završen,تکمیل شده
+,Dali ste sigurni da želite arhivirati zadatak?,آیا مطمئن هستید که می خواهید این کار را بایگانی کنید؟
+,Nema spašenih zadataka prema odabranim parametrima.,وظایف ذخیره شده برای پارامترهای انتخاب شده وجود ندارد.
+,Neovlašten pristup,دسترسی غیر مجاز
+,"Nemate ovlasti za pristup ovom dijelu aplikacije. Ukoliko je doslo do greške, kontaktirajte administratora.",شما مجاز به دسترسی به این قسمت از برنامه نیستید. اگر خطایی رخ داده است، با مدیر تماس بگیرید.
+,Nazad na moj profil,بازگشت به نمایه من
+,Zahtjevi za G.O.,درخواست برای G.O.
+,Obrada zahtjeva!,پردازش درخواست!
+,Status zahtjeva:,وضعیت درخواست:
+,Komentar,نظر
+,Gradovi,شهرها
+,"Lista unešenih gradova, koji su obavezni za kreiranje destinacija i rezervacija.",فهرست شهرهای ورودی که مورد نیاز برای ایجاد مقصد و رزرو هستند.
+,Naziv,نام
+,Dali ste sigurni da želite brisati:,مطمئنید که میخواهید حذف شود:
+,Još nije bilo unosa,ورودی هنوز وجود نداشت
+,Općenito,عمومی
+,Naslov aplikacije,عنوان برنامه
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,قالب های JPG / PNG / GIF مجاز. ابعاد توصیه شده 400x200 پیکسل
+,Boje aplikacije,رنگ برنامه
+,Pozadina aplikacije,زمینه کاربرد
+,Boja teksta aplikacije,رنگ متن درخواست
+,Pozadina gornje trake - HEADER,نوار پیش زمینه - HEADER
+,Boja teksta gornje trake - HEADER,رنگ متن نوار فوقانی - HEADER
+,Boja teksta gornje trake - HEADER (:hover :active),رنگ متن بالای نوار - HEADER (: شناور: فعال)
+,"Boja naslova (H1,H2,H3,H4,H5,H6)",رنگ عنوان (H1، H2، H3، H4، H5، H6)
+,Pozadina - BUTTONS,پس زمینه - دکمه ها
+,Tekst i ikona - BUTTONS,متن و نماد - دکمه ها
+,SMTP parametri,پارامترهای SMTP
+,SMTP status,وضعیت SMTP
+,"Ukoliko je SMTP neaktivan ili su parametri nepotupni, sistem ce koristiti standardnu PHP MAIL() funkciju.",اگر SMTP غیرفعال باشد یا پارامترها در دسترس نیستند، سیستم از تابع استاندارد PHP MAIL () استفاده می کند.
+,SMTP host,میزبان SMTP
+,SMTP korisnik,کاربر SMTP
+,SMTP lozinka,رمز عبور SMTP
+,SMTP port,پورت SMTP
+,SMTP sigurnost,امنیت SMTP
+,Jezici aplikacije,زبان برنامه
+,Kod,کد
+,Statusi satnice,وضعیت ساعتی
+,Direkcija teksta,جهت متن
+,Dali ste sigurni da želite poništiti zadatak?,آیا مطمئن هستید که میخواهید وظیفه را لغو کنید؟
+,Zadatak jos nije prihvaćen od strane zaduženog korinika7.,این کار هنوز توسط korinki7 بدهکار پذیرفته نشده است.
+,Ocjeni!,نرخ!
+,u obradi...,در پردازش ...
+,"Zadatak je oznaćen kao završen. , i sada možete ostaviti ocjenu i oznaćiti kao potpuno kompletiran zadatak. Ukoliko želite ostaviti komentar, dodajte prije ocjene.",وظیفه به عنوان تکمیل شده مشخص شده است. ، و شما هم اکنون می توانید درجه را ترک کنید و آن را به عنوان یک کار کامل مشخص کنید. اگر می خواهید نظر بدهید، آن را قبل از رتبه بندی اضافه کنید.
+,Kompletiraj!,تکمیل!
+,Zadatak/Cilj za korinika:,وظیفه / هدف برای گوشه:
+,Zadatak/Cilj:,وظیفه / هدف:
+,Naziv Zadatka/Cilja,عنوان هدف / هدف
+,Dodaj polje,یک فیلد اضافه کنید
+,Omogući vremensko ogranićenje zadatka/cilja,فعال کردن زمان بندی / اهداف زمان محدود
+,Traži...,جستجو ...
+,Svi,همه
+,Rezultati pretrage za:,نتایج جستجو برای:
+,Deaktivirani korisnici,کاربران غیرفعال شده
+,ID,شناسه
+,Korinik,کورینا
+,Nivo administracije,سطح مدیریت
+,Info,اطلاعات
+,deaktiviran:,غیرفعال شده است:
+,registracija:,ثبت نام:
+,Dali ste sigurni da želite deaktivirati korisnika:,آیا مطمئن هستید که می خواهید کاربر را غیرفعال کنید:
+,Dali ste sigurni da želite ponovo aktivirati korisnika:,آیا مطمئن هستید که میخواهید دوباره کاربر را فعال کنید:
+,Obrada satnice!,پردازش برنامه!
+,Još nije bilo unosa satnica,هنوز ورودی وجود ندارد
+,Pozdrav!,سلام
+,Odjava!,خارج شوید
+,Godina,سال
+,Mjesec,ماه
+,MBO ciljevi,اهداف MBO
+,Zahtjevi za trening,الزامات آموزش
+,Zahtjevi za službena putovanja,درخواست سفرهای تجاری
+,Zaposlenici,کارکنان
+,Korekcije satnica,زمان اصلاح
+,Upravljanje satnicama,مدیریت زمان
+,Upravljanje korekcijama satnica,مدیریت اصلاحات ساعته
+,Godišnji/Odsustva,سالانه / عدم وجود
+,Programi obuke,برنامه های آموزشی
+,Zadužnice/Razdužnice,لوایح / صفحات گسترده
+,Organizaciona šema,طرح سازمانی
+,Moj MBO,MBO من
+,Moja službena putovanja,سفرهای کاری من
+,Moji treninzi,تمرینات من
+,Uredi profil,ویرایش نمایه
+,Moje satnice,برنامه من
+,Verifikacija satnica,تایید جدول زمانی
+,Verifikacija korekcija,اصلاحات تأیید
+,Zadužnice,صورتحساب
+,Razdužnice,اسپری ها
+,Pristupi,رویکرد
+,Korekcije,اصلاحات
+,Bosna i Hercegovina,بوسنی و هرزگوین
+,Sarajevo,سارایوو
+,Godišnji odmor predhodna godina,تعطیلات سال گذشته
+,Godišnji odmor tekuća godina,تعطیل سالانه سال جاری
+,Plaćeni vjerski praznici,تعطیلات مذهبی پرداخت می شود
+,Neplaćeni vjerski praznici,تعطیلات مذهبی بدون پرداخت هزینه
+,Plaćeno odsustvo,ترک پرداخت
+,Smrtni slučaj,مرگ
+,Darivanje krvi,اهدا خون
+,Redovni rad,کار منظم
+,Godišnji odmor tekuca godina,تعطیل سالانه سال جاری
+,Ponedjeljak,دوشنبه
+,Utorak,سه شنبه
+,Srijeda,چهارشنبه
+,Četvrtak,پنجشنبه
+,Petak,جمعه
+,Subota,شنبه
+,Nedjelja,یکشنبه
+,Dodaj trening,اضافه کردن آموزش
+,Zahtjevi za službeno putovanje,درخواست سفر رسمی
+,Pretraga zaposlenih,جستجو برای کارکنان
+,Орг. јединица,سازمان واحد
+,Ime i prezime:,نام و نام خانوادگی:
+,Prikaži kalendar,نمایش تقویم
+,Odustani!,لغو!
+,Izaberi!,انتخاب کنید!
+,B-1 sa regijama,B-1 با مناطق
+,Naziv org. jed.,نام مجلس. جید
+,Općenito,عمومی
+,Naslov aplikacije,عنوان برنامه
+,Logo aplikacije,برنامه لوگو
+,Dozvoljeni formati JPG/PNG/GIF. Preporućene dimenzije 400x200 px.,قالب های JPG / PNG / GIF مجاز. ابعاد توصیه شده 400x200 پیکسل
+,Boje aplikacije,رنگ برنامه
+,Skriveni Tabovi,زبانه پنهان
+,Nazivi tabova,نام برگه
+,Role,نقش
+,Spasi!,ذخیره آن!
