@@ -130,12 +130,12 @@ include_once $root . '/modules/default/functions.php';
                     $('#comment_row').show();
                     $('#komentar').prop('required', true);
                     $('#spasi_registraciju').show();
-                } else if ($("#status option:selected").text().indexOf('SL_1 Službeni put') !== -1) {
+                } else if ($("#status option:selected").text().indexOf('1024 Službeni put') !== -1) {
                     $('#spasi_registraciju').hide();
                     $('#nalog').show();
                     $('#comment_row').hide();
                     $('#komentar').prop('required', false);
-                } else if ($("#status option:selected").text().indexOf('SL_2 Službeni put') !== -1) {
+                } else if ($("#status option:selected").text().indexOf('1024 Službeni put') !== -1) {
                     $('#spasi_registraciju').hide();
                     $('#nalog').hide();
                     $('#comment_row').hide();
@@ -256,14 +256,14 @@ include_once $root . '/modules/default/functions.php';
                     $('#komentar').prop('required', true);
                     $('#nalog').hide();
                     $('#spasi_registraciju').show();
-                } else if ($("#status option:selected").text().indexOf('SL_1 Službeni put') !== -1) {
+                } else if ($("#status option:selected").text().indexOf('1024 Službeni put') !== -1) {
                     $('#spasi_registraciju').hide();
                     $('#nalog').show();
                     $('#sa_troskom').hide();
                     $('#bez_troska').hide();
                     $('#comment_row').hide();
                     $('#komentar').prop('required', false);
-                } else if ($("#status option:selected").text().indexOf('SL_2 Službeni put') !== -1) {
+                } else if ($("#status option:selected").text().indexOf('1024 Službeni put') !== -1) {
                     $('#spasi_registraciju').hide();
                     $('#nalog').hide();
                     $('#comment_row').hide();
