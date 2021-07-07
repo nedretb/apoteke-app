@@ -8,7 +8,6 @@ foreach (glob($root . '/modules/profile/pages/classes/*.php') as $filename) requ
 $kontakt    = Kontakt::getData($_user['employee_no']);
 $kontakt = isset($kontakt[0]['users__kontakt_informacije']) ? $kontakt[0]['users__kontakt_informacije'][0] : null;
 
-
 //$sys = Sistematizacija::getIDs(1);
 //foreach ($sys as $s ){
 //
