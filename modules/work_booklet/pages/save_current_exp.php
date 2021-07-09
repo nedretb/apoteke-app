@@ -57,9 +57,8 @@ if ($_POST['tip'] == 'get_name'){
 }
 
 if ($_POST['tip'] == 'get_emp_no'){
-    //var_dump($_POST['employee_no']);
-    $gg = $db->query("select employee_no from [c0_intranet2_apoteke].[dbo].[users] where (fname + ' ' + lname) like '".$_POST['employee_no']."'")->fetch();
-    //var_dump($gg);
+    $names = explode(' ', $_POST['employee_no']);
+    $gg = $db->query("select employee_no from [c0_intranet2_apoteke].[dbo].[users] where fname=N'".$names[0]."' and lname=N'".$names[1]."'")->fetch();
     echo json_encode($gg['employee_no']);
 }
 
@@ -93,6 +92,11 @@ if($_POST['tip'] == 'save'){
                 ,[previous_exp_d]=?  where id=".$_POST['id'];
                 $dbq = $db->prepare($sql);
                 $dbq->execute([$emp_no, $employee_name[0], $employee_name[1], $starting_date_insert, $ending_date_insert, $employer, $coefficient, $invalid, $invalidity_category, $dc, 1, $result['y'], $result['m'], $result['d']]);
+
+//                $sql2= "update [c0_intranet2_apoteke].[dbo].[users] set employment_date=? where employee_no=".$emp_no;
+//                $dbq2 = $db->prepare($sql2);
+//                $dbq2->execute([$starting_date_insert]);
+
                 count_go($emp_no);
             }catch(Exception $e){
                 var_dump($e);
@@ -129,6 +133,10 @@ or '".$ending_date_insert."' between [Starting Date] and [Ending Date])");
                     $dbq = $db->prepare($sql);
 
                     $dbq->execute([$emp_no, $employee_name[0], $employee_name[1], $starting_date_insert, $ending_date_insert, $employer, $coefficient, $invalid, $invalidity_category, $dc, 1, $result['y'], $result['m'], $result['d']]);
+//                    $sql2= "update [c0_intranet2_apoteke].[dbo].[users] set employment_date=? where employee_no=".$emp_no;
+//                    $dbq2 = $db->prepare($sql2);
+//                    $dbq2->execute([$starting_date_insert]);
+
                     count_go($emp_no);
                 }catch(Exception $e){
                     var_dump($e);

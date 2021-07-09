@@ -75,10 +75,10 @@ function count_go($employee_no){
                 }
 
                 try {
-                    $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
-                    $dbq = $db->query($sql);
+//                    $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
+//                    $dbq = $db->query($sql);
 
-                    $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
+                    $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set total_exp_days=".$total_days_for_go.", Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
                     $dbq = $db->query($sql2);
 
                 }
@@ -114,10 +114,10 @@ function count_go($employee_no){
                         else{
                             $new_emp = $employer_curr['previous_exp_m'];
                         }
-                        $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$new_emp." where [Employee No_]=".$employer_curr['Employee No_'];
-                        $dbq = $db->query($sql);
+//                        $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$new_emp." where [Employee No_]=".$employer_curr['Employee No_'];
+//                        $dbq = $db->query($sql);
 
-                        $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$new_emp." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
+                        $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set total_exp_days=".$total_days_for_go.",  Br_dana=".$new_emp." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
                         $dbq = $db->query($sql2);
 
                     }
@@ -199,11 +199,11 @@ function count_go($employee_no){
 
             try {
 
-                $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
-                $dbq = $db->query($sql);
+//                $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
+//                $dbq = $db->query($sql);
 
-                $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
-
+                $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set total_exp_days=".$total_days_for_go.",  Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
+                var_dump($sql2);
                 $dbq = $db->query($sql2);
             }
             catch (Exception $e){
@@ -261,10 +261,10 @@ function count_go($employee_no){
             }
 
             try {
-                $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
-                $dbq = $db->query($sql);
+//                $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$total_go_days." where [Employee No_]=".$employer_curr['Employee No_'];
+//                $dbq = $db->query($sql);
 
-                $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
+                $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set total_exp_days=".$total_days_for_go.",  Br_dana=".$total_go_days." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
                 $dbq = $db->query($sql2);
 
             }
@@ -303,8 +303,8 @@ function count_go($employee_no){
                     else{
                         $new_emp = $employer_curr['previous_exp_m'];
                     }
-                    $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$new_emp." where [Employee No_]=".$employer_curr['Employee No_'];
-                    $dbq = $db->query($sql);
+//                    $sql = "update [c0_intranet2_apoteke].[dbo].[vacation_days] set vacation_days_no=".$new_emp." where [Employee No_]=".$employer_curr['Employee No_'];
+//                    $dbq = $db->query($sql);
 
                     $sql2 = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$new_emp." where employee_no=".$employer_curr['Employee No_']." and year=".$previous_year;
                     $dbq = $db->query($sql2);

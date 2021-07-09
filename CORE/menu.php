@@ -49,7 +49,7 @@ function pageMenu()
 
     if ($show_odsustva) $zahtjevi_go_radnici_role = $_user['role']; else $zahtjevi_go_radnici_role = 69;
 
-    $zahtjevi_go_radnici_role=114444445;
+
     $list_pages = array(
         'default' => array(
             'name' => ___($tab_name['default']),

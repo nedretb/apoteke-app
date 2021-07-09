@@ -35,18 +35,20 @@ function secondsToTime($inputSeconds)
 }
 
 $podaci_excel = $db->query("
-    SELECT *  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+    SELECT *  FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
-  inner join [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] as table4
+  inner join [c0_intranet2_mkt].[dbo].[sl_put_ostali_info] as table4
   ON table2.id = table4.sl_put_id_fk
-  left join [c0_intranet2_apoteke].[dbo].[countries] as c
+  left join [c0_intranet2_mkt].[dbo].[countries] as c
   ON table2.odredisna_drzava =  c.country_id
   where table2.id = " . $_GET['sl_put_id'] . "
   ");
 $data = $podaci_excel->fetch();
+
+
 
 $kvv = $data['kraj_vrijeme'];
 if (strlen($data['pocetak_vrijeme']) < 1) {
@@ -61,7 +63,7 @@ if (strlen($data['kraj_vrijeme']) < 1) {
 //dr drzava
 if ($data['odredisna_drzava2'] != '' and ctype_space($data['odredisna_drzava2']) == false) {
     $dr_drzava = $db->query("
-    SELECT * from [c0_intranet2_apoteke].[dbo].[countries]
+    SELECT * from [c0_intranet2_mkt].[dbo].[countries]
   where country_id = " . $data['odredisna_drzava2'] . "
   ");
     $dr_drzava = $dr_drzava->fetch();
@@ -117,14 +119,14 @@ if ($data['kraj_datum2']) {
 if ($dnevnicaa === 0) $dnevnica = 0;
 
 $podaci_excel = $db->query("
-    SELECT fname,lname FROM [c0_intranet2_apoteke].[dbo].[users] as table1
+    SELECT fname,lname FROM [c0_intranet2_mkt].[dbo].[users] as table1
  where employee_no= " . $data['parent'] . "
   ");
 $parent = $podaci_excel->fetch();
 
 if ($data['odredisna_drzava'] and is_numeric($data['odredisna_drzava'])) {
     $podaci_excel = $db->query("
-    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries] 
+    SELECT * FROM [c0_intranet2_mkt].[dbo].[countries] 
     where [country_id] = " . $data['odredisna_drzava'] . "
     ");
     $drzava = $podaci_excel->fetch();
@@ -134,7 +136,7 @@ if ($data['odredisna_drzava'] and is_numeric($data['odredisna_drzava'])) {
 }
 if ($data['odredisna_drzava2'] and is_numeric($data['odredisna_drzava2'])) {
     $podaci_excel = $db->query("
-    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries] 
+    SELECT * FROM [c0_intranet2_mkt].[dbo].[countries] 
     where [country_id] = " . $data['odredisna_drzava2'] . "
     ");
     $drzava2 = $podaci_excel->fetch();
@@ -144,7 +146,7 @@ if ($data['odredisna_drzava2'] and is_numeric($data['odredisna_drzava2'])) {
 }
 if ($data['odredisna_drzava3'] and is_numeric($data['odredisna_drzava3'])) {
     $podaci_excel = $db->query("
-    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries] 
+    SELECT * FROM [c0_intranet2_mkt].[dbo].[countries] 
     where [country_id] = " . $data['odredisna_drzava3'] . "
     ");
     $drzava3 = $podaci_excel->fetch();
@@ -168,32 +170,33 @@ if (isset($data['grad_polaska']) and $data['grad_polaska'] != '') {
     $relacija .= ' - ' . $data['grad_polaska'];
 }
 
-$danaq = $db->query("SELECT top 1 * from [c0_intranet2_apoteke].[dbo].[sl_put_logs] where sl_put_request_id = " . $_GET['sl_put_id'] . " order by id desc");
+$danaq = $db->query("SELECT top 1 * from [c0_intranet2_mkt].[dbo].[sl_put_logs] where sl_put_request_id = " . $_GET['sl_put_id'] . " order by id desc");
 $dana = $danaq->fetch(PDO::FETCH_ASSOC);
 
 $created_at = date("Y-m-d", $data['created_at']);
 
 require_once($root . '\CORE\PHPExcel-1.8\Classes\PHPExcel.php');
 use Carbon\Carbon;
-$dana_na_putu = Carbon::parse($data['pocetak_datum'])->diffInDays($data['kraj_datum']);
+
 try{
-    $fileName = 'C:\wamp64\www\apoteke-app\CORE\files\excel\slp.xlsx';
+    $fileName = 'C:\wamp64\www\mkt-app\CORE\files\excel\slp.xlsx';
     $phpExcel = PHPExcel_IOFactory::load($fileName);
     $sheet = $phpExcel->setActiveSheetIndex(0);
 
     // -------------------------------------------------------------------------------------------------------------- //
-    $sheet->SetCellValue('J4', "Sarajevo, ".date('d.m.Y'));
+    $sheet->SetCellValue('J5', "Sarajevo, ".date('d.m.Y'));
 
-    $sheet->SetCellValue('I9', $data['fname'].' '.$data['lname']);
-    $sheet->SetCellValue('K11', $data['position']);
-    $sheet->SetCellValue('O11', $drzava['wage']);
-    $sheet->SetCellValue('J12', $drzava['wage']);
-    $sheet->SetCellValue('I13', $data['odredisni_grad'].", ".$drzava['name']);
-    $sheet->SetCellValue('K15', $dana_na_putu);
-    $sheet->SetCellValue('N15', $sati);
-    $sheet->SetCellValue('K17', $data['vrsta_transporta']);
-    $sheet->SetCellValue('K18', $data['grad_polaska']." - ".$data['odredisni_grad']);
-
+    $sheet->SetCellValue('I11', $data['fname'].' '.$data['lname']);
+    $sheet->SetCellValue('K13', $data['position']);
+    $sheet->SetCellValue('O13', 'dnevnica');
+    $sheet->SetCellValue('J14', 'vrj');
+    $sheet->SetCellValue('I15', $data['odredisni_grad']);
+    $sheet->SetCellValue('K15', $data['odredisni_grad2']);
+    $sheet->SetCellValue('J16', $data['svrha']);
+    $sheet->SetCellValue('K17', Carbon::parse($data['pocetak_datum'])->diffInDays($data['kraj_datum']));
+    $sheet->SetCellValue('K19', $data['vrsta_transporta']);
+    $sheet->SetCellValue('K20', $data['odredisni_grad'].' , '.$data['odredisni_grad2']);
+    $sheet->SetCellValue('K19', $data['svrha']);
 
     if($data['odredisni_grad2'] == ''){
         $grad = $data['odredisni_grad'];
@@ -210,64 +213,31 @@ try{
     }
 
     $trajanje = Carbon::parse($data['pocetak_datum'])->diffInDays(Carbon::parse($datum_do_)) + 1;
+    $sheet->SetCellValue('L23', $trajanje);
 
+    $sheet->SetCellValue('O24', number_format((float) $data['iznos_akontacije'], 2, '.', '') );
+
+    $sheet->SetCellValue('L29', $data['vrsta_transporta']);
+    $sheet->SetCellValue('L30', $data['transport_napomena']);
 
 
     // -------------------------------------------------------------------------------------------------------------- //
 
     $sheet = $phpExcel->setActiveSheetIndex(1);
 
+    $sheet->SetCellValue('I4', 'Na put sam krenuo-la dana '.(Carbon::parse($data['pocetak_datum'])->format('d.m.Y')).' u '.$data['pocetak_vrijeme'].' sati');
+    $sheet->SetCellValue('I5', 'Vratio-la sam se dana '.(Carbon::parse($datum_do_)->format('d.m.Y')).' u '.$datum_do_v.' sati');
 
     $datum_i_v_p = Carbon::parse($data['pocetak_datum'].' '.$data['pocetak_vrijeme']);
     $datum_i_v_k = Carbon::parse($datum_do_.' '.$datum_do_v);
 
     $razlika = $datum_i_v_p->diff($datum_i_v_k);
 
-    /***** troskovi prevoza ******/
-    $sheet->SetCellValue('I9', $data['ost_trosak1']);
-    $sheet->SetCellValue('N9', $data['ost_kolicina1']*$data['ost_iznos1']);
-
-    $sheet->SetCellValue('I10', $data['ost_trosak2']);
-    $sheet->SetCellValue('N10', $data['ost_kolicina2']*$data['ost_iznos2']);
-
-    $sheet->SetCellValue('I11', $data['ost_trosak3']);
-    $sheet->SetCellValue('N11', $data['ost_kolicina3']*$data['ost_iznos3']);
-
-    $sheet->SetCellValue('I12', $data['ost_trosak4']);
-    $sheet->SetCellValue('N12', $data['ost_kolicina4']*$data['ost_iznos4']);
-
-    $sheet->SetCellValue('I13', $data['ost_trosak5']);
-    $sheet->SetCellValue('N13', $data['ost_kolicina5']*$data['ost_iznos5']);
-
-    /***** dnevnice ******/
-    $sheet->SetCellValue('I15', $dnevnica);
-    $sheet->SetCellValue('M15', $dnevnica*$drzava['wage']);
-
-    $sheet->SetCellValue('I16', $dnevnica);
-    $sheet->SetCellValue('M16', $dnevnica*$drzava['wage']/2);
-
-    $sheet->SetCellValue('L17', $data['postotak_na_dnevnicu']);
-
-    $sheet->SetCellValue('P15', $dnevnica*$drzava['wage']*($data['postotak_na_dnevnicu']/100));
-    $sheet->SetCellValue('P16', $dnevnica*$drzava['wage']*($data['postotak_na_dnevnicu']/100)/2);
-
-    /***** ostali izdaci ******/
-    $sheet->SetCellValue('I19', $data['ost_trosak1']);
-    $sheet->SetCellValue('N19', $data['ost_kolicina1']*$data['ost_iznos1']);
-
-    $sheet->SetCellValue('I20', $data['ost_trosak2']);
-    $sheet->SetCellValue('N20', $data['ost_kolicina2']*$data['ost_iznos2']);
-
-    $sheet->SetCellValue('I21', $data['ost_trosak3']);
-    $sheet->SetCellValue('N21', $data['ost_kolicina3']*$data['ost_iznos3']);
-
-    /***** akontacija ******/
-    $sheet->SetCellValue('P24', $data['iznos_akontacije']);
-    $sheet->SetCellValue('P25', $data['iznos_akontacije']/2);
+    $sheet->SetCellValue('I6', 'Na putu sam proveo-la ukupno '.$razlika->d.' dana '.$razlika->h.' sati');
 
 
     $writer = PHPExcel_IOFactory::createWriter($phpExcel, "Excel2007");
-    $writer->save('C:\wamp64\www\apoteke-app\CORE\files\excel\slp2.xlsx');
+    $writer->save('C:\wamp64\www\mkt-app\CORE\files\excel\slp2.xlsx');
 
 
     header('Location: CORE/files/excel/slp2.xlsx');

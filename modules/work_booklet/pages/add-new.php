@@ -216,7 +216,7 @@ $invalid_category = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifa
             <h3>Trenutni poslodavac</h3>
             <div class="row">
                 <div class="col-md-4">
-                    <label>Ime i prezime zaposlenika</label>
+                    <label>Ime i prezime državnog službenika</label>
                     <?php if ($_GET['edit'] != 0) { ?>
                         <input required name="employee_name" class="form-control" id="emp_name" type="text"
                                value="<?php if ($_GET['edit'] != 0) {
@@ -234,7 +234,7 @@ $invalid_category = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifa
                 </div>
 
                 <div class="col-md-4">
-                    <label>Šifra zaposlenika</label>
+                    <label>Šifra državnog službenika</label>
                     <?php if ($_GET['edit'] != 0) { ?>
                         <input required pattern="[0-9]{1,5}" name="employee_no" id="emp_no" class="form-control"
                                type="text" value="<?php if ($_GET['edit'] != 0) {
@@ -294,7 +294,7 @@ $invalid_category = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifa
             </div>
 
             <br>
-            <div class="row">
+            <div style="display: none;" class="row">
                 <div class="col-md-4">
                     <label>Dijete sa posebnim potrebama</label>
                     <select id="dc" name="dc" class="form-control">

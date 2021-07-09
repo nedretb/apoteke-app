@@ -66,7 +66,10 @@
 
         <div class="box" id="c1">
 					<div class="head">
-
+						<div class="box-head-btn">
+							<a href="#" class="ion-ios-arrow-up" data-widget="collapse" data-id="c1a"></a>
+							<a href="#" class="ion-arrow-expand" data-widget="fullscreen" data-id="c1"></a>
+						</div>
 						<h3><?php echo __('Novi unos'); ?></h3>
 					</div>
 					<div class="content clear" id="c1a" style="display: block;">
@@ -140,8 +143,8 @@ ORDER BY name COLLATE Latin1_General_CS_AS_KS_WS ASC;");
     						<td><?php echo $item['name']; ?></td>
                 <td><?php echo $item['wage']; ?></td>
     						<td class="text-right">
-                  <a href="<?php echo $url.'/modules/'.$_mod.'/pages/popup_country_edit.php?id='.$tools_id; ?>" data-widget="ajax" data-id="opt2" data-width="400" class="table-btn countries-back"><i class="ion-edit"></i></a>
-                  <a href="<?php echo '/app_raiff/?m=business_trip&p=countries&del='.$item['country_id'] ?>" class="table-btn countries-back" ><i class="ion-android-close"></i></a>
+                  <a href="<?php echo $url.'/modules/'.$_mod.'/pages/popup_country_edit.php?id='.$tools_id; ?>" data-widget="ajax" data-id="opt2" data-width="400" class="table-btn"><i class="ion-edit"></i></a>
+                  <a href="<?php echo '/apoteke-app/?m=business_trip&p=countries&del='.$item['country_id'] ?>" class="table-btn" ><i class="ion-android-close"></i></a>
                 </td>
     					</tr>
               <?php } } ?>

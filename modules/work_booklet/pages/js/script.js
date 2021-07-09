@@ -96,7 +96,7 @@ $('form').on('submit', function (e){
                 else{
                     //$("#alert-success").show();
                     $('#respons').hide();
-                    window.location.replace('?m=work_booklet&p=add-new&edit=' + $('#emp_no').val());
+                    // window.location.replace('?m=work_booklet&p=add-new&edit=' + $('#emp_no').val());
                 }
 
 

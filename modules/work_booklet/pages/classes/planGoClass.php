@@ -28,10 +28,10 @@ class planGo{
     public static function getPismeno($id){
         return $db->query("select * from [c0_intranet2_apoteke].[dbo].[predmeti__pismena] where rbr_predmeta = ".$id)->fetchAll();
     }
-    public static function createPlan(){
+    public static function createPlan($jop){
         try{
             $_user = _user(_decrypt($_SESSION['SESSION_USER']));
-            $plan = self::_curlPost('http://localhost/apoteke-app/modules/default/pages/popup_plan_go.php', "_user=".$_user['employee_no'], true);
+            $plan = self::_curlPost('http://127.0.0.1:8080/apoteke-app/modules/default/pages/popup_plan_go.php', "_user=".$_user['employee_no']."&jop=".$jop, true);
 
             return $plan->fileName;
         }catch (\Exception $e){

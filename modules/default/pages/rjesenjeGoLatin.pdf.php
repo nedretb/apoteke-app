@@ -43,7 +43,7 @@ class mypdf extends TCPDF
 }
 
 
-function generatepdf()
+function generatepdf($user_data, $data, $ustrojstvena_jedinica, $years_exp)
 {
     ///////////////////// CONFIG
 
@@ -81,27 +81,27 @@ function generatepdf()
     $pdf->AddFont($tahomabd);        //custom font
     $pdf->setListIndentWidth(4);
 
-
+    $soc = $data['dani_invalidnost']+$data['dani_dijete_sa_posebnim_potrebama'];
 
     $html = '
 <h4 style="font-family: tahomabd;">JAVNA USTANOVA „APOTEKE SARAJEVO“</h4>
 <h4 style="font-family: tahomabd;">Broj: ____ubaciti broj____</h4>
-<h4 style="font-family: tahomabd;">Sarajevo, ___datum___. godine</h4>
+<h4 style="font-family: tahomabd;">Sarajevo, '.date('d.m.Y', strtotime($data['datum_kreiranja_rjesenja'])).'. godine</h4>
 <br>
 <p style="text-align: justify-all;">Na osnovu člana 112., 47., 50. i 52. Zakona o radu ( „Službene novine FBiH“ broj 26/16, 89/18 i 23/20), člana  49. i 50. Pravilnika o radu JU „Apoteke Sarajevo“, broj:01-01-78-2/20 od 08.01.2020. godine, Ugovora o radu i Plana korištenja godišnjih odmora, generalni direktor d o n o s i</p>
 <br><br>
 <p style="text-align: center; font-family: tahomabd;">R j e š e nj e</p>
 <p style="text-align: center; font-family: tahomabd;">o korištenju godišnjeg odmora za 2021. godinu</p>
-<p style="text-align: justify-all">1. Radniku (___ime i prezime___) raspoređenom na radno mjesto ___radno mjesto___ (dalje u tekstu: radnik) utvrđuje se pravo na  godišnji odmor za 2021. godinu, u trajanju od ukupno ___broj dana GO___ radnih dana, prema sljedećim osnovama i kriterijima:</p>
+<p style="text-align: justify-all">1. Radniku '.$user_data['fname'].' '.$user_data['lname'].' raspoređenom na radno mjesto '.$user_data['egop_radno_mjesto'].' (dalje u tekstu: radnik) utvrđuje se pravo na  godišnji odmor za 2021. godinu, u trajanju od ukupno '.$data['ukupan_broj_dana_go'].' radnih dana, prema sljedećim osnovama i kriterijima:</p>
 <ul>
-    <li>zakonski minimum....................................................... 20 radnih dana</li>
-    <li>dužina radnog staža.....................................................   5  radnih dana</li>
-    <li>složenost poslova........................................................    3  radnih dana</li>
-    <li>socijalni uslovi..............................................................   0 radnih dana</li>
-    <li>rad u dežurnoj apoteci.................................................    0 radnih dana</li>
-    <li>status demobiliziranog branioca....................................   0 radnih dana</li>
+    <li>zakonski minimum....................................................... '.$data['dani_zakonski'].' radnih dana</li>
+    <li>dužina radnog staža.....................................................   '.$data['dani_radno_iskustvo'].'  radnih dana</li>
+    <li>složenost poslova........................................................    '.$data['ukupan_broj_dana_go'].'  radnih dana</li>
+    <li>socijalni uslovi..............................................................   '.$soc.' radnih dana</li>
+    <li>rad u dežurnoj apoteci.................................................    '.$data['ukupan_broj_dana_go'].' radnih dana</li>
+    <li>status demobiliziranog branioca....................................   '.$data['ukupan_broj_dana_go'].' radnih dana</li>
 </ul>
-<p style="font-family: tahomabd;">I dio odmora radnik koristi od 07.06.2021. godine - 22.06.2021. godine.</p>
+<p style="font-family: tahomabd;">I dio odmora radnik koristi od '.date('d.m.Y', strtotime($data['datum_od'])).'. godine - '.date('d.m.Y', strtotime($data['datum_do'])).'. godine.</p>
 <p style="font-family: tahomabd;">II dio odmora radnik koristi od 06.09.2021. godine - 27.09.2021. godine.</p>
 <p style="text-align: justify-all">2. Shodno  odredbama člana 47. Zakona o radu u F BiH,  radnik, za svaku kalendarsku godinu, ima pravo na plaćeni godišnji odmor u trajanju od najmanje 20 radnih dana, a najduže 30 radnih dana.</p>
 <p style="text-align: justify-all">3. Radnik će prvi dio godišnjeg odmora u trajanju od najmanje 12 radnih dana koristiti shodno Planu korištenja godišnjeg odmora i dogovoru sa poslodavcem,  a drugi dio, najkasnije do 30. Juna naredne godine.

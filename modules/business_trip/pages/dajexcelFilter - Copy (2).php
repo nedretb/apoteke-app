@@ -1,5 +1,16 @@
 <?php
 error_reporting(0);
+//admin ili korisnik provjera
+$admin = $db->query("SELECT count(user_id) as br FROM [c0_intranet2_apoteke].[dbo].[users] where sl_put_admin=1 and user_id=".$_user['user_id']);
+foreach($admin as $admin1){
+  $admin = $admin1;
+}
+
+if ($admin1['br']==1){
+  $admin=true;
+} 
+else {$admin=false;}
+
 function secondsToTime($inputSeconds) {
 
     $secondsInAMinute = 60;
@@ -16,7 +27,6 @@ function secondsToTime($inputSeconds) {
     // extract minutes
     $minuteSeconds = $hourSeconds % $secondsInAnHour;
     $minutes = floor($minuteSeconds / $secondsInAMinute);
-    if($minutes<10) $minutes='0'.$minutes;
 
     // extract the remaining seconds
     $remainingSeconds = $minuteSeconds % $secondsInAMinute;
@@ -26,23 +36,11 @@ function secondsToTime($inputSeconds) {
     $obj = array(
         'd' => (int) $days,
         'h' => (int) $hours,
-        'm' => $minutes,
+        'm' => (int) $minutes,
         's' => (int) $seconds,
     );
     return $obj;
 }
-//admin ili korisnik provjera
-$admin = $db->query("SELECT count(user_id) as br FROM [c0_intranet2_apoteke].[dbo].[users] where sl_put_admin=1 and user_id=".$_user['user_id']);
-foreach($admin as $admin1){
-  $admin = $admin1;
-}
-
-if ($admin1['br']==1){
-  $admin=true;
-} 
-else {$admin=false;}
-
-
 
 // get podataka
 if (!empty($_GET['dod'])) {
@@ -119,13 +117,13 @@ if ($_GET["status"]==1) {
 }elseif ($_GET["status"]==12) {
   $stak="and table2.na_obradi=1 and (table2.status_hr=0 or table2.status_hr=2)";
 }elseif ($_GET["status"]==2) {
-  $stak="and operation = 'odbijanje' ";
+  $stak="and table2.status_hr=2";
 }elseif ($_GET["status"]==10) {
  $stak="and table2.na_obradi IS NULL";
 }elseif ($_GET["status"]==111) {
  $stak="and table2.lock=1 ";
 }elseif ($_GET["status"]==69) {
-  $stak = " and canceled = 1 ";
+  $stak = null;
 }
   $status_query = $stak;
 
@@ -163,7 +161,7 @@ END AS otkazano
         left join [c0_intranet2_apoteke].[dbo].[countries] as tableSOD on table2.smjestaj_drzava = tableSOD.country_id
         left join [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] as tableOST
         ON table2.id = tableOST.sl_put_id_fk
-        left join ".$_conf['nav_database'].".[RAIFFAISEN BANK\$Employee] as tableC4 on table3.employee_no = tableC4.[Modified Employee No_]
+        left join ".$_conf['nav_database'].".[RAIFFEISEN INVEST\$Employee] as tableC4 on table3.employee_no = tableC4.[Modified Employee No_]
         OUTER APPLY
         (
             SELECT TOP 1 *
@@ -190,7 +188,7 @@ END AS otkazano
 
       }else{
         $podaci_excel = $db->query("
-        SELECT *, tableSOD.name as S_odredisna_drzava, tableTPD.name as T_polazna_drzava,tableTOD.name as T_odredisna_drzava, tableCP.name as polazna_drzava1, tableC1.name as drzava1, tableC2.name as drzava2,  tableC3.name as drzava3, table2.status as sl_put_status, table2.id as sl_put_id,
+              SELECT tableSOD.name as S_odredisna_drzava, tableTPD.name as T_polazna_drzava,tableTOD.name as T_odredisna_drzava,tableCP.name as polazna_drzava1, tableC1.name as drzava1, tableC2.name as drzava2,  tableC3.name as drzava3,  * ,
               CASE
     WHEN (
   SELECT count(temp.id) from [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as temp
@@ -218,7 +216,7 @@ END AS otkazano
                left join [c0_intranet2_apoteke].[dbo].[countries] as tableSOD on table2.smjestaj_drzava = tableSOD.country_id
               left join [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] as tableOST
               ON table2.id = tableOST.sl_put_id_fk
-              inner join ".$_conf['nav_database'].".[RAIFFAISEN BANK\$Employee] as tableC4 on table3.employee_no = tableC4.[Modified Employee No_]
+              inner join ".$_conf['nav_database'].".[RAIFFEISEN INVEST\$Employee] as tableC4 on table3.employee_no = tableC4.[Modified Employee No_]
               where (table3.user_id = ".$_user['user_id']." or ".$_user['employee_no']." in (parent,parent2) 
               or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d)
               or ".$_user['employee_no']." in (admin1,admin2,admin3,admin4,admin5,admin6,admin7,admin8)
@@ -242,6 +240,16 @@ END AS otkazano
       };
       $arr=[];
 
+//       foreach ($data as $podatak_ex) {
+//         $br=$cell_broj++;
+
+//         if($podatak_ex['operation'] == 'obrada' or $podatak_ex['operation'] == 'odobravanje') {$statuss = 'Na obradi';}
+//         elseif ($podatak_ex['operation'] == 'odbijanje') {$statuss = 'Poslano na korekciju';}
+//         if ($podatak_ex['lock'] == 1 ) $statuss = 'Zaključano';
+//         if ($podatak_ex['otkazano'] == 'DA' and $podatak_ex['svrha'] != 'UPOTREBA VLASTITOG AUTOMOBILA U SLUŽBENE SVRHE') $statuss = 'Otkazano';
+//         array_push($arr, [$podatak_ex['sl_put_id'], $statuss]);
+// }var_dump($arr);
+// die();
 
 require_once($root.'\CORE\PHPExcel-1.8\Classes\PHPExcel.php');
 
@@ -258,132 +266,124 @@ $cell_broj = 3;
 ob_clean();
 
 $doc->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Broj naloga')
-            ->setCellValue('B1', 'Person ID')
-            ->setCellValue('C1', 'Prezime I ime')
-            ->setCellValue('D1', 'JMBG')
-            ->setCellValue('E1', 'TC')
-            ->setCellValue('F1', 'Iznos Akontacije')
-            ->setCellValue('G1', 'TRN')
-            ->setCellValue('H1', 'Status')
-            ->setCellValue('I1', 'Datum Kreiranja')
-            ->setCellValue('J1', 'Svrha')
-            ->setCellValue('K1', 'Odredište putovanja')
+            ->setCellValue('A1', 'Person ID')
+            ->setCellValue('B1', 'Prezime I ime')
+            ->setCellValue('C1', 'JMBG')
+            ->setCellValue('D1', 'Iznos Akontacije')
+            ->setCellValue('E1', 'TRN')
+            ->setCellValue('F1', 'Status')
+            ->setCellValue('G1', 'Datum Kreiranja')
+            ->setCellValue('H1', 'Svrha')
+            ->setCellValue('I1', 'Odredište putovanja')
 
-              ->setCellValue('K2', 'Početak datum')
-              ->setCellValue('L2', 'Kraj datum')
-              ->setCellValue('M2', 'Početak vrijeme')
-              ->setCellValue('N2', 'Kraj vrijeme')
-              ->setCellValue('O2', 'Polazna država')
-              ->setCellValue('P2', 'Grad polaska')
-              ->setCellValue('Q2', 'Odredišna država')
-              ->setCellValue('R2', 'Grad odredišta')
-              ->setCellValue('S2', 'Odredišna država2')
-              ->setCellValue('T2', 'Grad odredišta2')
-              ->setCellValue('U2', 'Razlog putovanja')
-              ->setCellValue('V2','Napomena')
+              ->setCellValue('I2', 'Početak datum')
+              ->setCellValue('J2', 'Kraj datum')
+              ->setCellValue('K2', 'Početak vrijeme')
+              ->setCellValue('L2', 'Kraj vrijeme')
+              ->setCellValue('M2', 'Polazna država')
+              ->setCellValue('N2', 'Grad polaska')
+              ->setCellValue('O2', 'Odredišna država')
+              ->setCellValue('P2', 'Grad odredišta')
+              ->setCellValue('Q2', 'Odredišna država2')
+              ->setCellValue('R2', 'Grad odredišta2')
+              ->setCellValue('S2', 'Razlog putovanja')
+              ->setCellValue('T2','Napomena')
 
-            ->setCellValue('W1','Dodavanje akontacije')
-              ->setCellValue('W2','Iznos akontacije')
-              ->setCellValue('X2','Valuta')
-              ->setCellValue('Y2','Akontacija do datuma')
-              ->setCellValue('Z2','Primanje sredstava')
-              ->setCellValue('AA2','Napomena')
+            ->setCellValue('U1','Dodavanje akontacije')
+              ->setCellValue('U2','Iznos akontacije')
+              ->setCellValue('V2','Valuta')
+              ->setCellValue('W2','Akontacija do datuma')
+              ->setCellValue('X2','Primanje sredstava')
+              ->setCellValue('Y2','Napomena')
 
 
-            ->setCellValue('AB1','Dodavanje transporta')
-              ->setCellValue('AB2','Sredstvo transporta')
-              ->setCellValue('AC2','Početak datum')
-              ->setCellValue('AD2','Kraj datum')
-              ->setCellValue('AE2','Početak vrijeme')
-              ->setCellValue('AF2','Kraj vrijeme')
-              ->setCellValue('AG2','Polazna država')
-              ->setCellValue('AH2','Grad polaska')
-              ->setCellValue('AI2','Odredišna država')
-              ->setCellValue('AJ2','Grad odredišta')
-              ->setCellValue('AK2','Napomena')
+            ->setCellValue('Z1','Dodavanje transporta')
+              ->setCellValue('Z2','Sredstvo transporta')
+              ->setCellValue('AA2','Početak datum')
+              ->setCellValue('AB2','Kraj datum')
+              ->setCellValue('AC2','Početak vrijeme')
+              ->setCellValue('AD2','Kraj vrijeme')
+              ->setCellValue('AE2','Polazna država')
+              ->setCellValue('AF2','Grad polaska')
+              ->setCellValue('AG2','Odredišna država')
+              ->setCellValue('AH2','Grad odredišta')
+              ->setCellValue('AI2','Napomena')
 
-            ->setCellValue('AL1','Dodavanje smještaja')
-              ->setCellValue('AL2','Smještaj')
-              ->setCellValue('AM2','Početak datum')
-              ->setCellValue('AN2','Kraj datum')
-              ->setCellValue('AO2','Početak vrijeme')
-              ->setCellValue('AP2','Kraj vrijeme')
-              ->setCellValue('AQ2','Odredišna država')
-              ->setCellValue('AR2','Odredišni grad')
-              ->setCellValue('AS2','Naziv/Adresa')
+            ->setCellValue('AJ1','Dodavanje smještaja')
+              ->setCellValue('AJ2','Smještaj')
+              ->setCellValue('AK2','Početak datum')
+              ->setCellValue('AL2','Kraj datum')
+              ->setCellValue('AM2','Početak vrijeme')
+              ->setCellValue('AN2','Kraj vrijeme')
+              ->setCellValue('AO2','Odredišna država')
+              ->setCellValue('AP2','Odredišni grad')
+              ->setCellValue('AQ2','Naziv/Adresa')
             
-            ->setCellValue('AT1','Postavljanje osiguranja-vize')
-              ->setCellValue('AT2','Osiguranje')
-              ->setCellValue('AU2','Početak datum')
-              ->setCellValue('AV2','Kraj datum')
-              ->setCellValue('AW2','Početak vrijeme')
-              ->setCellValue('AX2','Kraj vrijeme')
-              ->setCellValue('AY2','Dokument (pasoš) broj')
-              ->setCellValue('AZ2','Viza')
-              ->setCellValue('BA2','Napomena')
+            ->setCellValue('AR1','Postavljanje osiguranja-vize')
+              ->setCellValue('AR2','Osiguranje')
+              ->setCellValue('AS2','Početak datum')
+              ->setCellValue('AT2','Kraj datum')
+              ->setCellValue('AU2','Početak vrijeme')
+              ->setCellValue('AV2','Kraj vrijeme')
+              ->setCellValue('AW2','Dokument (pasoš) broj')
+              ->setCellValue('AX2','Viza')
+              ->setCellValue('AY2','Napomena')
 
-            ->setCellValue('BB1','Kratak opis zadatka (poslova) koji je obavljen na službenom putu')
-            ->setCellValue('BC1','Specifikacija troškova')
-            ->setCellValue('BD1','Izjava da li je bila osigurana ishrana na službenom putu (tri obroka)')
+            ->setCellValue('AZ1','Kratak opis zadatka (poslova) koji je obavljen na službenom putu')
+            ->setCellValue('BA1','Specifikacija troškova')
+            ->setCellValue('BB1','Izjava da li je bila osigurana ishrana na službenom putu (tri obroka)')
 
-            ->setCellValue('BE1','Troškovi prevoza')
-              ->setCellValue('BE2','Trošak 1')
-              ->setCellValue('BF2','Količina 1')
-              ->setCellValue('BG2','Iznos 1')
-              ->setCellValue('BH2','Ukupno')
-              ->setCellValue('BI2','Trošak 2')
-              ->setCellValue('BJ2','Količina 2')
-              ->setCellValue('BK2','Iznos 2')
-              ->setCellValue('BL2','Ukupno')
-              ->setCellValue('BM2','Količina goriva ')
-              ->setCellValue('BN2','Iznos KM')
+            ->setCellValue('BC1','Troškovi prevoza')
+              ->setCellValue('BC2','Trošak 1')
+              ->setCellValue('BD2','Količina 1')
+              ->setCellValue('BE2','Iznos 1')
+              ->setCellValue('BF2','Ukupno')
+              ->setCellValue('BG2','Trošak 2')
+              ->setCellValue('BH2','Količina 2')
+              ->setCellValue('BI2','Iznos 2')
+              ->setCellValue('BJ2','Ukupno')
+              ->setCellValue('BK2','Količina goriva ')
+              ->setCellValue('BL2','Iznos KM')
 
-            ->setCellValue('BO1','Izdaci za noćenje')
-              ->setCellValue('BO2','Naziv 1')
-              ->setCellValue('BP2','Količina 1')
-              ->setCellValue('BQ2','Iznos 1')
-              ->setCellValue('BR2','Ukupno')
-              ->setCellValue('BS2','Naziv 2')
-              ->setCellValue('BT2','Količina 2')
-              ->setCellValue('BU2','Iznos 2')
-              ->setCellValue('BV2','Ukupno')
-              ->setCellValue('BW2','Naziv 3')
-              ->setCellValue('BX2','Količina 3')
-              ->setCellValue('BY2','Iznos 3')
-              ->setCellValue('BZ2','Ukupno')
+            ->setCellValue('BM1','Izdaci za noćenje')
+              ->setCellValue('BM2','Naziv 1')
+              ->setCellValue('BN2','Količina 1')
+              ->setCellValue('BO2','Iznos 1')
+              ->setCellValue('BP2','Ukupno')
+              ->setCellValue('BQ2','Naziv 2')
+              ->setCellValue('BR2','Količina 2')
+              ->setCellValue('BS2','Iznos 2')
+              ->setCellValue('BT2','Ukupno')
+              ->setCellValue('BU2','Naziv 3')
+              ->setCellValue('BV2','Količina 3')
+              ->setCellValue('BW2','Iznos 3')
+              ->setCellValue('BX2','Ukupno')
 
-            ->setCellValue('CA1','Ostali troškovi')
-              ->setCellValue('CA2','Naziv troška 1')
-              ->setCellValue('CB2','Količina 1')
-              ->setCellValue('CC2','Iznos 1')
-              ->setCellValue('CD2','Ukupno')
-              ->setCellValue('CE2','Naziv troška2')
-              ->setCellValue('CF2','Količina 2')
-              ->setCellValue('CG2','Iznos 2')
-              ->setCellValue('CH2','Ukupno')
-              ->setCellValue('CI2','Naziv troška3')
-              ->setCellValue('CJ2','Količina 3')
-              ->setCellValue('CK2','Iznos 3')
-              ->setCellValue('CL2','Ukupno')
-              ->setCellValue('CM2','Naziv troška4')
-              ->setCellValue('CN2','Količina 4')
-              ->setCellValue('CO2','Iznos 4')
-              ->setCellValue('CP2','Ukupno')
-              ->setCellValue('CQ2','Naziv troška5')
-              ->setCellValue('CR2','Količina 5')
-              ->setCellValue('CS2','Iznos 5')
-              ->setCellValue('CT2','Ukupno')
-              ->setCellValue('CU2','Naziv troška6')
-              ->setCellValue('CV2','Količina 6')
-              ->setCellValue('CW2','Iznos 6')
-              ->setCellValue('CX2','Ukupno')
-
-              ->setCellValue('CY2','Ukupno Dnevnice')
-              ->setCellValue('CZ2','Dodaci/umanjenja')
-              ->setCellValue('DA2','Ukupni Troškovi')
-              ->setCellValue('DB2','Plaćeno biznis karticom')
-              ->setCellValue('DC2','Za isplatu')
+            ->setCellValue('BY1','Ostali troškovi')
+              ->setCellValue('BY2','Naziv troška 1')
+              ->setCellValue('BZ2','Količina 1')
+              ->setCellValue('CA2','Iznos 1')
+              ->setCellValue('CB2','Ukupno')
+              ->setCellValue('CC2','Naziv troška2')
+              ->setCellValue('CD2','Količina 2')
+              ->setCellValue('CE2','Iznos 2')
+              ->setCellValue('CF2','Ukupno')
+              ->setCellValue('CG2','Naziv troška3')
+              ->setCellValue('CH2','Količina 3')
+              ->setCellValue('CI2','Iznos 3')
+              ->setCellValue('CJ2','Ukupno')
+              ->setCellValue('CK2','Naziv troška4')
+              ->setCellValue('CL2','Količina 4')
+              ->setCellValue('CM2','Iznos 4')
+              ->setCellValue('CN2','Ukupno')
+              ->setCellValue('CO2','Naziv troška5')
+              ->setCellValue('CP2','Količina 5')
+              ->setCellValue('CQ2','Iznos 5')
+              ->setCellValue('CR2','Ukupno')
+              ->setCellValue('CS2','Naziv troška6')
+              ->setCellValue('CT2','Količina 6')
+              ->setCellValue('CU2','Iznos 6')
+              ->setCellValue('CV2','Ukupno')
 ;
 
 			  foreach ($data as $podatak_ex) {
@@ -409,108 +409,14 @@ $created_at = date("Y-m-d",$podatak_ex['created_at']);
 
 $tcq = $db->query("
 SELECT top 1 [Dimension  Name],[Dimension Value Code],[Employee No_],e.[Position Description]
-  FROM [NAV RAIFFEISEN].[dbo].[RAIFFAISEN BANK".'$Employee'." Contract Ledger] as e
-  join [NAV RAIFFEISEN].[dbo].[RAIFFAISEN BANK".'$Dimension'." for position] as d
+  FROM [NAV RAIFFEISEN].[dbo].[RAIFFEISEN INVEST".'$Employee'." Contract Ledger] as e
+  join [NAV RAIFFEISEN].[dbo].[RAIFFEISEN INVEST".'$Dimension'." for position] as d
   on 
  e.[Position Code]=d.[Position Code] and e.[Position Description]=d.[Position Description] and e.[Department Name]=d.[Org Belongs] and e.[Org_ Structure]=d.[ORG Shema]
   where [Show Record]=1 and [Employee No_]=".$podatak_ex['employee_no']." and [Starting Date]<='".$created_at." 00:00:00.000' and ([Ending Date]>='".$created_at." 00:00:00.000' or [Ending Date]='1753-01-01 00:00:00.000') 
   order by [Starting Date] desc
 ");
 $tc = $tcq->fetch(PDO::FETCH_ASSOC);
-
-  // Izračunajmo broj stanica
-$first  = strtotime($podatak_ex['pocetak_datum'].' '.$podatak_ex['pocetak_vrijeme'].':00');
-$second = strtotime($podatak_ex['kraj_datum'].' '.$podatak_ex['kraj_vrijeme'].':00');
-
-$seconds = $second - $first;
-$time = secondsToTime($seconds);
-
-$dana = $time['d'];
-$sati = $time['h'];
-
-if($sati < 8) $dnevnica = 0;
-else if($sati >=8 and $sati < 12) $dnevnica = 0.5;
-else if($sati >= 12 and $sati < 24) $dnevnica = 1;
-
-$dnevnica = $dana + $dnevnica;
-
-if($podatak_ex['kraj_datum2']){
-    $kd=$podatak_ex['kraj_datum'];
-
-
-//rework proporcionalne dnevnice
-  //I obracn
-  $poc  = strtotime($podatak_ex['pocetak_datum'].' '.$podatak_ex['pocetak_vrijeme'].':00');
-  $kraj = strtotime($podatak_ex['kraj_datum'].' '.$podatak_ex['kraj_vrijeme'].':00');
-  $trajanje_sati1 = ($kraj - $poc) / 3600; //sati  
-  //II obracun
-  $poc2  = strtotime($podatak_ex['kraj_datum'].' '.$podatak_ex['kraj_vrijeme'].':00');
-  $kraj2 = strtotime($podatak_ex['kraj_datum2'].' '.$podatak_ex['kraj_vrijeme2'].':00');
-  $trajanje_sati2 = ($kraj2 - $poc2) / 3600; //sati  
-
-  
-
-  $time = secondsToTime($kraj2 - $poc);
-
-  $dana = $time['d'];
-  $sati = $time['h'];
-
-  if($sati < 8) $dnevnicaa = 0;
-  else if($sati >=8 and $sati < 12) $dnevnicaa = 0.5;
-  else if($sati >= 12 and $sati < 24) $dnevnicaa = 1;
-
-  $faktor = $dana + $dnevnicaa;
-
-  $dnevnica = round(($trajanje_sati1 / ($trajanje_sati1 + $trajanje_sati2)) * $faktor,2);
-  $dnevnica2 = round(($trajanje_sati2 / ($trajanje_sati1 + $trajanje_sati2)) * $faktor,2);
-
-  $podatak_ex['kraj_datum'] = $podatak_ex['kraj_datum2'];
-  $podatak_ex['kraj_vrijeme'] = $podatak_ex['kraj_vrijeme2'];
-}
-//drzave 
- if ($podatak_ex['odredisna_drzava'] and is_numeric($podatak_ex['odredisna_drzava'])){
-    $podaci_excel = $db->query("
-    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries] 
-    where [country_id] = ".$podatak_ex['odredisna_drzava']."
-    ");
-  $drzava = $podaci_excel->fetch();
-  }else{
-      $drzava['name'] = null;
-      $drzava['wage'] = null; 
-  }
-  if ($podatak_ex['odredisna_drzava2'] and is_numeric($podatak_ex['odredisna_drzava2'])){
-    $podaci_excel = $db->query("
-    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries] 
-    where [country_id] = ".$podatak_ex['odredisna_drzava2']."
-    ");
-  $drzava2 = $podaci_excel->fetch();
-  }else{
-      $drzava2['name'] = null;
-      $drzava2['wage'] = null; 
-  }
-  //ukupno dnevnice 
-
-  $ukupno_dnevnice = $dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage']; //cy - h14
-  $dodaci_umanjenja = 0; //cz -h13
-
-  if($podatak_ex['vrsta_smjestaja'] == 'hotel' or  $podatak_ex['vrsta_smjestaja'] == 'Hotel'){
-    if($podatak_ex['dacheck']=='DA'){
-        $ukupno_dnevnice = ($dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage'])*0.7; //cy - h14
-    }else{
-        $ukupno_dnevnice = $dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage']; //cy - h14
-    }
-    $dodaci_umanjenja = $ukupno_dnevnice - $dnevnica*$drzava['wage'] - $dnevnica2*$drzava2['wage']; //cz -h13
-  }else if(strtolower($podatak_ex['vrsta_smjestaja']) == 'privatni smještaj'){
-      $dodaci_umanjenja = $ukupno_dnevnice - $dnevnica*$drzava['wage'] - $dnevnica2*$drzava2['wage']; //cz -h13
-    if($podatak_ex['dacheck']=='DA'){
-        $dodaci_umanjenja = ($dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage'])*70/100 - ($dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage']*30/100); //cz -h13
-      $ukupno_dnevnice = $dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage']; //cy - h14
-    }else{
-        $ukupno_dnevnice = ($dnevnica*$drzava['wage']+ $dnevnica2*$drzava2['wage'])*1.7; //cy - h14
-        $dodaci_umanjenja = $ukupno_dnevnice - $dnevnica*$drzava['wage'] - $dnevnica2*$drzava2['wage']; //cz -h13
-    }
-  }
-
 
 
 
@@ -579,11 +485,11 @@ $doc->setActiveSheetIndex(0)->setCellValue('BD'.$br.'', $jelidailine);
 $doc->setActiveSheetIndex(0)->setCellValue('BE'.$br.'', $podatak_ex['trosak1']);
 $doc->setActiveSheetIndex(0)->setCellValue('BF'.$br.'', $podatak_ex['kolicina1']);
 $doc->setActiveSheetIndex(0)->setCellValue('BG'.$br.'', $podatak_ex['iznos1']);
-$doc->setActiveSheetIndex(0)->setCellValue('BH'.$br.'', "=BF$br*BG$br");
+$doc->setActiveSheetIndex(0)->setCellValue('BH'.$br.'', "=BD$br*BE$br");
 $doc->setActiveSheetIndex(0)->setCellValue('BI'.$br.'', $podatak_ex['trosak2']);
 $doc->setActiveSheetIndex(0)->setCellValue('BJ'.$br.'', $podatak_ex['kolicina2']);
 $doc->setActiveSheetIndex(0)->setCellValue('BK'.$br.'', $podatak_ex['iznos2']);
-$doc->setActiveSheetIndex(0)->setCellValue('BL'.$br.'', "=BJ$br*BK$br");
+$doc->setActiveSheetIndex(0)->setCellValue('BL'.$br.'', "=BH$br*BI$br");
 $doc->setActiveSheetIndex(0)->setCellValue('BM'.$br.'', $podatak_ex['kol_gorivo']);
 if ($podatak_ex['kol_gorivo'] and $podatak_ex['iznos_gorivo'])
 $doc->setActiveSheetIndex(0)->setCellValue('BN'.$br.'', $podatak_ex['kol_gorivo'] ? round($podatak_ex['kol_gorivo']*$matches[1][0]*($matches[3][0]/100),2) : '0');
@@ -594,50 +500,42 @@ $doc->setActiveSheetIndex(0)->setCellValue('BN'.$br.'', '0');
 $doc->setActiveSheetIndex(0)->setCellValue('BO'.$br.'', $podatak_ex['izdaci_naziv1']);
 $doc->setActiveSheetIndex(0)->setCellValue('BP'.$br.'', $podatak_ex['izdaci_kol1']);
 $doc->setActiveSheetIndex(0)->setCellValue('BQ'.$br.'', $podatak_ex['izdaci_iznos1']);
-$doc->setActiveSheetIndex(0)->setCellValue('BR'.$br.'', "=BP$br*BQ$br");
+$doc->setActiveSheetIndex(0)->setCellValue('BR'.$br.'', "=BN$br*BO$br");
 $doc->setActiveSheetIndex(0)->setCellValue('BS'.$br.'', $podatak_ex['izdaci_naziv2']);
 $doc->setActiveSheetIndex(0)->setCellValue('BT'.$br.'', $podatak_ex['izdaci_kol2']);
 $doc->setActiveSheetIndex(0)->setCellValue('BU'.$br.'', $podatak_ex['izdaci_iznos2']);
-$doc->setActiveSheetIndex(0)->setCellValue('BV'.$br.'', "=BU$br*BT$br");
+$doc->setActiveSheetIndex(0)->setCellValue('BV'.$br.'', "=BR$br*BS$br");
 $doc->setActiveSheetIndex(0)->setCellValue('BW'.$br.'', $podatak_ex['izdaci_naziv3']);
 $doc->setActiveSheetIndex(0)->setCellValue('BX'.$br.'', $podatak_ex['izdaci_kol3']);
 $doc->setActiveSheetIndex(0)->setCellValue('BY'.$br.'', $podatak_ex['izdaci_iznos3']);
-$doc->setActiveSheetIndex(0)->setCellValue('BZ'.$br.'', "=BX$br*BY$br");
+$doc->setActiveSheetIndex(0)->setCellValue('BZ'.$br.'', "=BV$br*BW$br");
 
 $doc->setActiveSheetIndex(0)->setCellValue('CA'.$br.'', $podatak_ex['ost_trosak1']);
 $doc->setActiveSheetIndex(0)->setCellValue('CB'.$br.'', $podatak_ex['ost_kolicina1']);
 $doc->setActiveSheetIndex(0)->setCellValue('CC'.$br.'', $podatak_ex['ost_iznos1']);
-$doc->setActiveSheetIndex(0)->setCellValue('CD'.$br.'', "=CB$br*CC$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CD'.$br.'', "=BZ$br*CA$br");
 $doc->setActiveSheetIndex(0)->setCellValue('CE'.$br.'', $podatak_ex['ost_trosak2']);
 $doc->setActiveSheetIndex(0)->setCellValue('CF'.$br.'', $podatak_ex['ost_kolicina2']);
 $doc->setActiveSheetIndex(0)->setCellValue('CG'.$br.'', $podatak_ex['ost_iznos2']);
-$doc->setActiveSheetIndex(0)->setCellValue('CH'.$br.'', "=CF$br*CG$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CH'.$br.'', "=CD$br*CE$br");
 $doc->setActiveSheetIndex(0)->setCellValue('CI'.$br.'', $podatak_ex['ost_trosak3']);
 $doc->setActiveSheetIndex(0)->setCellValue('CJ'.$br.'', $podatak_ex['ost_kolicina3']);
 $doc->setActiveSheetIndex(0)->setCellValue('CK'.$br.'', $podatak_ex['ost_iznos3']);
-$doc->setActiveSheetIndex(0)->setCellValue('CL'.$br.'', "=CJ$br*CK$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CL'.$br.'', "=CH$br*CI$br");
 $doc->setActiveSheetIndex(0)->setCellValue('CM'.$br.'', $podatak_ex['ost_trosak4']);
 $doc->setActiveSheetIndex(0)->setCellValue('CN'.$br.'', $podatak_ex['ost_kolicina4']);
 $doc->setActiveSheetIndex(0)->setCellValue('CO'.$br.'', $podatak_ex['ost_iznos4']);
-$doc->setActiveSheetIndex(0)->setCellValue('CP'.$br.'', "=CN$br*CO$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CP'.$br.'', "=CL$br*CM$br");
 $doc->setActiveSheetIndex(0)->setCellValue('CQ'.$br.'', $podatak_ex['ost_trosak5']);
 $doc->setActiveSheetIndex(0)->setCellValue('CR'.$br.'', $podatak_ex['ost_kolicina5']);
 $doc->setActiveSheetIndex(0)->setCellValue('CS'.$br.'', $podatak_ex['ost_iznos5']);
-$doc->setActiveSheetIndex(0)->setCellValue('CT'.$br.'', "=CR$br*CS$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CT'.$br.'', "=CQ$br*CP$br");
 $doc->setActiveSheetIndex(0)->setCellValue('CU'.$br.'', $podatak_ex['ost_trosak6']);
 $doc->setActiveSheetIndex(0)->setCellValue('CV'.$br.'', $podatak_ex['ost_kolicina6']);
 $doc->setActiveSheetIndex(0)->setCellValue('CW'.$br.'', $podatak_ex['ost_iznos6']);
-$doc->setActiveSheetIndex(0)->setCellValue('CX'.$br.'', "=CV$br*CW$br");
-
-$doc->setActiveSheetIndex(0)->setCellValue('CY'.$br.'', $podatak_ex['svrha'] != 'UPOTREBA VLASTITOG AUTOMOBILA U SLUŽBENE SVRHE' ? $ukupno_dnevnice - $dodaci_umanjenja  : 0);
-$doc->setActiveSheetIndex(0)->setCellValue('CZ'.$br.'', $podatak_ex['svrha'] != 'UPOTREBA VLASTITOG AUTOMOBILA U SLUŽBENE SVRHE' ? $dodaci_umanjenja : 0);
-$doc->setActiveSheetIndex(0)->setCellValue('DA'.$br.'', "=BH$br + BL$br + BN$br + BR$br + BV$br + BZ$br + CD$br + CH$br + CL$br + CP$br + CT$br + CX$br + CY$br +  CZ$br + ".round($ostali_troskovi,2)." ");
-$doc->setActiveSheetIndex(0)->setCellValue('DB'.$br.'', $podatak_ex['placeno_biznis_karticom']);
-$doc->setActiveSheetIndex(0)->setCellValue('DC'.$br.'', "=DA$br - W$br - DB$br");
+$doc->setActiveSheetIndex(0)->setCellValue('CX'.$br.'', "=CU$br*CT$br");
 
 }
-
-
 
 //stil
 $styleArray = array(
@@ -664,25 +562,20 @@ $doc->getActiveSheet()->mergeCells("E1:E2");
 $doc->getActiveSheet()->mergeCells("F1:F2");
 $doc->getActiveSheet()->mergeCells("G1:G2");
 $doc->getActiveSheet()->mergeCells("H1:H2");
-$doc->getActiveSheet()->mergeCells("I1:I2");
-$doc->getActiveSheet()->mergeCells("J1:J2");
-
-$doc->getActiveSheet()->mergeCells("K1:V1");
-$doc->getActiveSheet()->mergeCells("W1:AA1");
-$doc->getActiveSheet()->mergeCells("AB1:AK1");
-$doc->getActiveSheet()->mergeCells("AL1:AS1");
-$doc->getActiveSheet()->mergeCells("AT1:BA1");
-
+$doc->getActiveSheet()->mergeCells("I1:T1");
+$doc->getActiveSheet()->mergeCells("U1:Y1");
+$doc->getActiveSheet()->mergeCells("Z1:AI1");
+$doc->getActiveSheet()->mergeCells("AJ1:AQ1");
+$doc->getActiveSheet()->mergeCells("AR1:AY1");
+$doc->getActiveSheet()->mergeCells("AZ1:AZ2");
+$doc->getActiveSheet()->mergeCells("BA1:BA2");
 $doc->getActiveSheet()->mergeCells("BB1:BB2");
-$doc->getActiveSheet()->mergeCells("BC1:BC2");
-$doc->getActiveSheet()->mergeCells("BD1:BD2");
-
-$doc->getActiveSheet()->mergeCells("BE1:BN1");
-$doc->getActiveSheet()->mergeCells("BO1:BZ1");
-$doc->getActiveSheet()->mergeCells("CA1:CX1");
+$doc->getActiveSheet()->mergeCells("BC1:BL1");
+$doc->getActiveSheet()->mergeCells("BM1:BX1");
+$doc->getActiveSheet()->mergeCells("BY1:CV1");
 
 //linije
-$boxes = ["A1:CX2","K1:V$br","W1:AA$br","AB1:AK$br","AL1:AS$br","AT1:BA$br","BE1:BN$br","BO1:BZ$br","CA1:CX$br"];
+$boxes = ["I1:T$br","BY1:CV$br","BM1:BX$br","BC1:BL$br","AR1:AY$br","AJ1:AQ$br","Z1:AI$br","U1:Y$br","I1:T1","BY1:CV1","BM1:BX1","BC1:BL1","AR1:AY1","AJ1:AQ1","Z1:AI1","U1:Y1","A1:CV2"];
 foreach ($boxes as $key => $value) {
   $doc->getActiveSheet()->getStyle($value)->applyFromArray(
       array(

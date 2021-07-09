@@ -9,7 +9,7 @@
   $filtertdate=date('Y')."-".date('M')."-1 00:00:00.000";
   //var_dump($filtertdate);
   $canSendMail = $db->query("SELECT value
-  FROM [c0_intranet2_apoteke].[dbo].[settings]
+  FROM [c0_intranet2_mkt].[dbo].[settings]
   where name = 'hr_notifications'");
   $canSendMail = $canSendMail->fetch();
   
@@ -17,16 +17,16 @@
 
 if(isset($_POST['razlog'])){
   $podaci_mailq = $db->query("
-    SELECT *  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+    SELECT *  FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   where table2.id = ".$_GET['odbij']."
   ");
   $podaci_mail = $podaci_mailq->fetch();
 
-  $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parentMBO2']." ");
+  $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_mkt].[dbo].[users] WHERE employee_no = ".$podaci_mail['parentMBO2']." ");
   $parent = $parentq ->fetch(); 
 
   require 'lib/PHPMailer/PHPMailer.php';
@@ -58,17 +58,17 @@ if(isset($_POST['razlog'])){
   }
 
   if(isset($_GET['odbij'])){
-    $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_apoteke].[dbo].[sl_put] where status_hr = '2' and id =".$_GET['odbij']);
+    $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_mkt].[dbo].[sl_put] where status_hr = '2' and id =".$_GET['odbij']);
     foreach ($provjeraq as $one){
       $provjera = $one['aa'];
     }
     if ($one['aa']==0){
-        $odbij_req = $db->query("UPDATE [c0_intranet2_apoteke].[dbo].[sl_put] set status_hr = 2 where id =".$_GET['odbij']);
+        $odbij_req = $db->query("UPDATE [c0_intranet2_mkt].[dbo].[sl_put] set status_hr = 2 where id =".$_GET['odbij']);
         $odbij_req->execute();
-        $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
+        $insert_log = $db->query("INSERT INTO [c0_intranet2_mkt].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
         VALUES (".$_GET['odbij'].", 'odbijanje', $user, $ts)");
   
-    header("Location: /apoteke-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
+    header("Location: /mkt-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
     exit();
     }
   }
@@ -76,32 +76,32 @@ if(isset($_POST['razlog'])){
 //odobravanje
 
 if(isset($_GET['odobri'])){
-  $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_apoteke].[dbo].[sl_put] where status_hr = '1' and id =".$_GET['odobri']);
+  $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_mkt].[dbo].[sl_put] where status_hr = '1' and id =".$_GET['odobri']);
   foreach ($provjeraq as $one){
     $provjera = $one['aa'];
   }
   if ($one['aa']==0){
-    $odobri_req = $db->query("UPDATE [c0_intranet2_apoteke].[dbo].[sl_put] set status_hr = 1 where request_id =".$_GET['odobri']);
+    $odobri_req = $db->query("UPDATE [c0_intranet2_mkt].[dbo].[sl_put] set status_hr = 1 where request_id =".$_GET['odobri']);
     $odobri_req->execute();
-    $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
+    $insert_log = $db->query("INSERT INTO [c0_intranet2_mkt].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
     VALUES (".$_GET['odobri'].", 'odobravanje', $user, $ts)");
     //prijenos na satnicama
 
     $podaci_mailq = $db->query("
-    SELECT *  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+    SELECT *  FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   where table1.id = ".$_GET['odobri']."
   ");
   $podaci_mail = $podaci_mailq->fetch();
 
-    $parent = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parent']." ");
+    $parent = $db->query("SELECT email_company, fname, lname from [c0_intranet2_mkt].[dbo].[users] WHERE employee_no = ".$podaci_mail['parent']." ");
     $parent = $parent ->fetch();
     send_mails($podaci_mail,$parent,false);
   }
-  header("Location: /apoteke-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
+  header("Location: /mkt-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
   exit();
 }
 
@@ -109,23 +109,23 @@ if(isset($_GET['odobri'])){
 
 //zakljucavanje - odkljucavanje
 if(isset($_GET['zakljucaj'])){
-  // $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_apoteke].[dbo].[sl_put] where lock = '1' and request_id =".$_GET['zakljucaj']);
+  // $provjeraq = $db->query("SELECT count(*) as aa FROM [c0_intranet2_mkt].[dbo].[sl_put] where lock = '1' and request_id =".$_GET['zakljucaj']);
   // foreach ($provjeraq as $one){
   //   $provjera = $one['aa'];
   // }
   // if ($provjera==1){
-  //   $lock_req = $db->query("UPDATE [c0_intranet2_apoteke].[dbo].[sl_put] set lock = 0 where request_id =".$_GET['zakljucaj']);
+  //   $lock_req = $db->query("UPDATE [c0_intranet2_mkt].[dbo].[sl_put] set lock = 0 where request_id =".$_GET['zakljucaj']);
   //   $lock_req->execute();
-  //   $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
+  //   $insert_log = $db->query("INSERT INTO [c0_intranet2_mkt].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
   //   VALUES (".$_GET['zakljucaj'].", 'odkljucavanje', $user, $ts)");
   //   }else{
-      $lock_req = $db->query("UPDATE [c0_intranet2_apoteke].[dbo].[sl_put] set lock = 1 where id =".$_GET['zakljucaj']);
+      $lock_req = $db->query("UPDATE [c0_intranet2_mkt].[dbo].[sl_put] set lock = 1 where id =".$_GET['zakljucaj']);
       $lock_req->execute();
-      $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
+      $insert_log = $db->query("INSERT INTO [c0_intranet2_mkt].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
       VALUES (".$_GET['zakljucaj'].", 'zakljucavanje', $user, $ts)");
       // }
 
-      header("Location: /apoteke-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
+      header("Location: /mkt-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
       exit();
 }
 //trenutni link
@@ -146,7 +146,7 @@ while (strpos($trenutni_link, '&&') !== false){
   $trenutni_link = str_replace("&&", "", $trenutni_link);
 }
 //admin ili korisnik provjera
-$admin = $db->query("SELECT count(user_id) as br FROM [c0_intranet2_apoteke].[dbo].[users] where sl_put_admin=1 and user_id=".$_user['user_id']);
+$admin = $db->query("SELECT count(user_id) as br FROM [c0_intranet2_mkt].[dbo].[users] where sl_put_admin=1 and user_id=".$_user['user_id']);
 foreach($admin as $admin1){
   $admin = $admin1;
 }
@@ -263,15 +263,15 @@ if ($_GET["status"]==1) {
 if ($admin==true or $_user['role'] == 4){
   
   $total_rowsq = $db->query("
-  SELECT count(*) FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+  SELECT count(*) FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   OUTER APPLY
     (
         SELECT TOP 1 *
-        FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] logs
+        FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] logs
         WHERE logs.sl_put_request_id = table2.id 
     order by logs.id desc
     ) logs
@@ -298,7 +298,7 @@ if ($admin==true or $_user['role'] == 4){
   SELECT *,table2.status as sl_put_status, table2.id as sl_put_id,
 CASE
     WHEN (
-  SELECT count(temp.id) from [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as temp
+  SELECT count(temp.id) from [c0_intranet2_mkt].[dbo].[hourlyrate_day] as temp
   where temp.Date >=table2.pocetak_datum and  temp.Date <=
     CASE
       WHEN table2.kraj_datum2 is null or table2.kraj_datum2 ='' THEN table2.kraj_datum 
@@ -310,15 +310,15 @@ CASE
     ELSE 'NE'
 END AS otkazano
 
-FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   OUTER APPLY
     (
         SELECT TOP 1 *
-        FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] logs
+        FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] logs
         WHERE logs.sl_put_request_id = table2.id 
     order by logs.id desc
     ) logs
@@ -341,20 +341,20 @@ FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
 
 } else {
    $total_rowsq = $db->query("
-  SELECT count(*)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+  SELECT count(*)  FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   OUTER APPLY
     (
         SELECT TOP 1 *
-        FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] logs
+        FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] logs
         WHERE logs.sl_put_request_id = table2.id 
     order by id desc
     ) logs
   where (table3.user_id= ".$_user['user_id']."
-  or (SELECT TOP 1 user_id FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] as table4 where table4.sl_put_request_id = table2.id order by table4.[sl_put_request_id] asc) = ".$_user['user_id'].")
+  or (SELECT TOP 1 user_id FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] as table4 where table4.sl_put_request_id = table2.id order by table4.[sl_put_request_id] asc) = ".$_user['user_id'].")
   $korisnik_id_ime_prez
   $jmb_filter
   $date_query_od
@@ -375,7 +375,7 @@ FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
   SELECT *,table2.status as sl_put_status, table2.id as sl_put_id,
 CASE
     WHEN (
-  SELECT count(temp.id) from [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as temp
+  SELECT count(temp.id) from [c0_intranet2_mkt].[dbo].[hourlyrate_day] as temp
   where temp.Date >=table2.pocetak_datum and  temp.Date <=
     CASE
       WHEN table2.kraj_datum2 is null or table2.kraj_datum2 ='' THEN table2.kraj_datum 
@@ -387,22 +387,22 @@ CASE
     ELSE 'NE'
 END AS otkazano
 
-FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
-  INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
+FROM [c0_intranet2_mkt].[dbo].[hourlyrate_day] as table1
+  INNER JOIN [c0_intranet2_mkt].[dbo].[sl_put] as table2
   ON table1.id = table2.request_id 
-  inner join [c0_intranet2_apoteke].[dbo].[users] as table3
+  inner join [c0_intranet2_mkt].[dbo].[users] as table3
   ON table1.user_id = table3.user_id
   OUTER APPLY
     (
         SELECT TOP 1 *
-        FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] logs
+        FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] logs
         WHERE logs.sl_put_request_id = table2.id 
     order by id desc
     ) logs
   where (table3.user_id = ".$_user['user_id']." or ".$_user['employee_no']." in (parent,parent2) 
   or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d)
   or ".$_user['employee_no']." in (admin1,admin2,admin3,admin4,admin5,admin6,admin7,admin8)
-  or (SELECT TOP 1 user_id FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] as table4 where table4.sl_put_request_id = table2.id order by table4.[sl_put_request_id] asc) = ".$_user['user_id'].")
+  or (SELECT TOP 1 user_id FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] as table4 where table4.sl_put_request_id = table2.id order by table4.[sl_put_request_id] asc) = ".$_user['user_id'].")
   $korisnik_id_ime_prez
   $jmb_filter
   $date_query_od
@@ -447,9 +447,7 @@ else return null;
 
 .documents:hover{
     background-color: #006595;
-    color: white;
 }
-
 </style>
 <!-- START - Main section -->
 <section class="full">
@@ -484,6 +482,7 @@ else if (isset($lock_req)){
   <?php
 }
 ?>
+
     <div class="row">
       <div class="col-sm-6">
         <h2>
@@ -491,11 +490,15 @@ else if (isset($lock_req)){
         </h2>
       </div>
     </div>
+
 <!-- OVDJE POCINJU FILTERI -->
 <div class="row">
 
-
+    <div id="respons" class="alert alert-warning" style="margin-left: 15px; width: 88.5%;">
+        Molimo vas unesite tačne podatke
+    </div>
       <div class="col-sm-12 ">
+
 <!--filter za ime i prezime i Person ID -->
           <div class="col-sm-2 col-md-offset-1">
             <label> Zaposlenik</label>
@@ -505,15 +508,15 @@ else if (isset($lock_req)){
                   /*
                   $neki_sql=$db->query("
                     SELECT DISTINCT table3.employee_no, table3.fname, table3.lname 
-                    FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
+                    FROM  [c0_intranet2_mkt].[dbo].[users] as table3
                      where role <> 0");*/
 
                   if($_user['role'] == 4 or $admin){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
+                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_mkt].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
 
                   } 
                   elseif($_user['role'] == 2){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
+                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_mkt].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
 
                   }
                   foreach ($neki_sql as $podatakID) {
@@ -544,55 +547,55 @@ else if (isset($lock_req)){
               if ($admin==true){
                   $neki_sql=$db->query("
                     SELECT DISTINCT table3.employee_no, table3.JMB
-                    from [c0_intranet2_apoteke].[dbo].[users] as table3
+                    from [c0_intranet2_mkt].[dbo].[users] as table3
                     ");
                   }else{
                   $neki_sql=$db->query("
                     SELECT DISTINCT table3.employee_no, table3.JMB
-                    FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
+                    FROM  [c0_intranet2_mkt].[dbo].[users] as table3
                     ");
                   }*/
 
-                   if($_user['role'] == 4 or $admin){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
-
-                  } 
-                  elseif($_user['role'] == 2){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
-
-                  }
-
-                  foreach ($neki_sql as $podatakJMB) {
-                    
-                    $selected =  "";
-                    $vrijednost = $podatakJMB['JMB'];
-
-                 if (isset($_GET['jmb'])) {
-
-
-                  if($_GET['kid'] == $podatakJMB['employee_no']){
-                      $selected =  "selected";
-                      $vrijednost = "";
-                      echo "<div style='display:none;' id='jmbkorisnika'>".$podatakJMB['JMB']."</div>";
-                    }else{
-
-                    $selected =  "";
-                    $vrijednost = $podatakJMB['JMB'];
-
-                    }
-              if ($_GET['jmb']!=0) {
-                    if($_GET['jmb'] == $podatakJMB['JMB']){
-                      $selected =  "selected";
-                      $vrijednost = $podatakJMB['JMB'];
-                    }
-                     }
-
-                    }
-
-
-
-                      echo "<option ".$selected." id='jmb".$vrijednost."' value=".$vrijednost.">".$podatakJMB['JMB']."</option>";
-                  }
+//                   if($_user['role'] == 4 or $admin){
+//                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_mkt].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
+//
+//                  }
+//                  elseif($_user['role'] == 2){
+//                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_mkt].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
+//
+//                  }
+//
+//                  foreach ($neki_sql as $podatakJMB) {
+//
+//                    $selected =  "";
+//                    $vrijednost = $podatakJMB['JMB'];
+//
+//                 if (isset($_GET['jmb'])) {
+//
+//
+//                  if($_GET['kid'] == $podatakJMB['employee_no']){
+//                      $selected =  "selected";
+//                      $vrijednost = "";
+//                      echo "<div style='display:none;' id='jmbkorisnika'>".$podatakJMB['JMB']."</div>";
+//                    }else{
+//
+//                    $selected =  "";
+//                    $vrijednost = $podatakJMB['JMB'];
+//
+//                    }
+//              if ($_GET['jmb']!=0) {
+//                    if($_GET['jmb'] == $podatakJMB['JMB']){
+//                      $selected =  "selected";
+//                      $vrijednost = $podatakJMB['JMB'];
+//                    }
+//                     }
+//
+//                    }
+//
+//
+//
+//                      echo "<option ".$selected." id='jmb".$vrijednost."' value=".$vrijednost.">".$podatakJMB['JMB']."</option>";
+//                  }
               ?>
           </select></div>
 
@@ -604,11 +607,11 @@ else if (isset($lock_req)){
               <?php
               if ($admin==true){
                   $neki_sql=$db->query("
-                    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries]
+                    SELECT * FROM [c0_intranet2_mkt].[dbo].[countries]
                     ");
                   }else{
                   $neki_sql=$db->query("
-                    SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries]
+                    SELECT * FROM [c0_intranet2_mkt].[dbo].[countries]
                     ");
 
                   }
@@ -632,7 +635,50 @@ else if (isset($lock_req)){
             <label>TRN broj</label>
     <select class="filter_form_SL form-control" id="trn_filter" name="trn_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
               <option value="">Odaberi...</option>
-
+              <?php
+//              if ($admin==true){
+//                  $neki_sql=$db->query("SELECT DISTINCT [Modified Employee No_], [Bank Account No_]
+//                  FROM ".$_conf['nav_database'].".[RAIFFAISEN BANK\$Employee]
+//                  ");
+//                  }else{
+//                  $neki_sql=$db->query("SELECT DISTINCT [Modified Employee No_], [Bank Account No_]
+//                  FROM ".$_conf['nav_database'].".[RAIFFAISEN BANK\$Employee]
+//                  ");
+//
+//                  }
+//
+//                  foreach ($neki_sql as $podatakTRN) {
+//                    $selected =  "";
+//                    $vrijednost = $podatakTRN['Modified Employee No_'];
+//
+//                 if (isset($_GET['trn'])) {
+//
+//
+//                  if($_GET['kid'] == $podatakTRN['Modified Employee No_']){
+//                      $selected =  "selected";
+//                      $vrijednost = "";
+//
+//                    }else{
+//
+//                    $selected =  "";
+//                    $vrijednost = $podatakTRN['Modified Employee No_'];
+//
+//                    }
+//              if ($_GET['trn']!=0) {
+//                    if($_GET['trn'] == $podatakTRN['Modified Employee No_']){
+//                      $selected =  "selected";
+//                      $vrijednost = $podatakTRN['Modified Employee No_'];
+//                    }
+//                     }
+//
+//                    }
+//
+//
+//
+//                      echo "<option ".$selected." id='trn".$vrijednost."' value=".$vrijednost.">".$podatakTRN['Bank Account No_']."</option>";
+//
+//                  }
+              ?>
           </select></div>
 
 <!--filter za status -->
@@ -671,7 +717,7 @@ else if (isset($lock_req)){
 <!--filter za akontaciju  -->
    <div class="col-sm-2" style="margin-top: 4px;">
             <label>Iznos akontacije </label>
-<input type="number" name="akonod" id="akonod" style="height: 39px;" class="form-control" placeholder="Akontacija od"
+<input type="number" min="0" step="1" name="akonod" id="akonod" style="height: 39px;" class="form-control" placeholder="Akontacija od"
                     value="<?php echo $akonod; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
 
 <input type="number" name="akondo" id="akondo" style="height: 39px;"  class="form-control" placeholder="Akontacija do"
@@ -682,9 +728,19 @@ else if (isset($lock_req)){
 
   <input type="button" style="height: 39px;text-align: center; <?php if (isset($_GET['kid'])){echo "margin-top: 31px;";}else{echo "margin-top: 31px;";}?>"name="dugme_filter" class="form-control" id="dugme_filter" value="FILTRIRAJ" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
 
-  <a style="height: 39px ;text-align: center;" name="and $podatak['lock']!=1" class="form-control" href="/apoteke-app/?m=business_trip&p=all&pg=1">OBRISI FILTER</a>
+  <a style="height: 39px ;text-align: center;" name="and $podatak['lock']!=1" class="form-control" href="/mkt-app/?m=business_trip&p=all&pg=1">OBRISI FILTER</a>
 
       </div>
+          <div class="col-sm-2">
+
+              <?php /******** Plan sluzbenih putovanja *******/ ?>
+<!--              <select type="button" style="height: 39px;text-align: center; --><?php //if (isset($_GET['kid'])){echo "margin-top: 31px;";}else{echo "margin-top: 31px;";}?><!--"name="dugme_filter" class="form-control" id="sector_select" value="FILTRIRAJ" current_url="?m=--><?//= $_GET['m']; ?><!--&p=--><?//= $_GET['p']; ?><!--&pg=1">-->
+<!--                  --><?php //echo _optionB_1(''); ?>
+<!--                  <option>--><?php //echo ___('Svi'); ?><!--</option>-->
+<!--              </select>-->
+<!--              <a id="plan_sp" style="text-align: center; padding: 0;" name="and $podatak['lock']!=1" class="form-control" href="--><?php //echo $url . '/modules/' . $_mod . '/pages/popup_pdf_plan.php'; ?><!--">Plan službenih putovanja</a>-->
+
+          </div>
 
 
 
@@ -702,7 +758,7 @@ else if (isset($lock_req)){
  if (!empty($_GET["status"])){$dataEX11 =htmlspecialchars($_GET["status"]);}else{$dataEX11 = '';};
 
   ?>
-<a href="<?php echo '/apoteke-app/?m=business_trip&p=dajexcelFilter&kid='.$dataEX1.'&jmb='.$dataEX2.'&dod='.$dataEX3.'&ddo='.$dataEX4.'&dkod='.$dataEX5.'&dkdo='.$dataEX6.'&mjesto='.$dataEX7.'&akood='.$dataEX8.'&akodo='.$dataEX9.'&trn='.$dataEX10.'&status='.$dataEX11.''; ?>" style="  <?php if (isset($_GET['kid'])){echo "display: inline-block;";}else{echo "display: none;";}?>padding: 0 7px;line-height: 38px;width: 183px;text-align: center;color: #777777;
+<a href="<?php echo '/mkt-app/?m=business_trip&p=dajexcelFilter&kid='.$dataEX1.'&jmb='.$dataEX2.'&dod='.$dataEX3.'&ddo='.$dataEX4.'&dkod='.$dataEX5.'&dkdo='.$dataEX6.'&mjesto='.$dataEX7.'&akood='.$dataEX8.'&akodo='.$dataEX9.'&trn='.$dataEX10.'&status='.$dataEX11.''; ?>" style="  <?php if (isset($_GET['kid'])){echo "display: inline-block;";}else{echo "display: none;";}?>padding: 0 7px;line-height: 38px;width: 183px;text-align: center;color: #777777;
 margin: 69px 0 0px 16px;background: #fff;font-size: 15px;border-bottom: 1px solid #777777;"><i class="ion-document" title="Preuzmite excel nalog!" style="padding-right: 14px;"></i>Excell izvještaj</a>
 </div>
       <div class="col-sm-12" style="height: 10px; border-top: 0px solid white; margin-top: 14px;"></div>
@@ -723,10 +779,10 @@ foreach($podaci as $podatak){
   if (!$podatak['canceled'] and $bool) continue;
 
   //uposlenik
-  $user = $db->query("SELECT TOP 1 * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE user_id =".$podatak[1]);
+  $user = $db->query("SELECT TOP 1 * FROM [c0_intranet2_mkt].[dbo].[users] WHERE user_id =".$podatak[1]);
   $user = $user->fetch();
   //historizacija
-  $logsq = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[sl_put_logs] WHERE [sl_put_request_id] =".$podatak['sl_put_id']." order by id desc");
+  $logsq = $db->query("SELECT * FROM [c0_intranet2_mkt].[dbo].[sl_put_logs] WHERE [sl_put_request_id] =".$podatak['sl_put_id']." order by id desc");
   $logs = $logsq->fetchAll();
 
   //kartica
@@ -766,7 +822,7 @@ foreach($podaci as $podatak){
           Status:<br>
            <?php
            foreach($logs as $log){
-            $ko = $db->query("SELECT TOP 1 fname,lname FROM [c0_intranet2_apoteke].[dbo].[users] WHERE user_id =".$log['user_id']);
+            $ko = $db->query("SELECT TOP 1 fname,lname FROM [c0_intranet2_mkt].[dbo].[users] WHERE user_id =".$log['user_id']);
             $ko = $ko->fetch();
              if($log['operation']=='odobravanje'){
                 $span_style = "#009900;"; $image = "ion-android-checkmark-circle"; $text = "Poslao/la na obradu: ".$ko['fname'].' '.$ko['lname']." - ".date("d.m.Y H:i:s", $log['vrijeme']);
@@ -806,12 +862,19 @@ foreach($podaci as $podatak){
 
               ?>
 
-<a href="<?php echo '/apoteke-app/?m=default&p=novi_nalog&id='.$podatak['request_id'].'&status='.$podatak['sl_put_status'].'&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents">Ažuriraj zahtjev</a>
+<a href="<?php echo '/mkt-app/?m=default&p=novi_nalog&id='.$podatak['request_id'].'&status='.$podatak['sl_put_status'].'&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents">Ažuriraj zahtjev</a>
 
 <?php }}?>
-<a href="<?php echo '/apoteke-app/?m=business_trip&p=dajexcel&id='.$podatak['request_id'].'&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents">Putni nalog</a>
+<a href="<?php echo '/mkt-app/?m=business_trip&p=dajexcel&id='.$podatak['request_id'].'&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents" target="_blank">Putni nalog</a>
 
-<a href="<?php echo '/apoteke-app/?m=default&p=novi_nalog&id='.$podatak['request_id'].'&status='.$podatak['status'].'&view=1&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents">Pregled zahtjeva</a>
+              <a target="_blank"
+                 href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_pdf.php?id='.$podatak['sl_put_id'].'&doc=odluka'; ?>"
+                 class="table-btn documents">Preuzmite odluku </a>
+              <a target="_blank"
+                 href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_pdf.php?id='.$podatak['sl_put_id'].'&doc=zahtjev'; ?>"
+                 class="table-btn documents">Preuzmite zahtjev </a>
+
+<a href="<?php echo '/mkt-app/?m=default&p=novi_nalog&id='.$podatak['request_id'].'&status='.$podatak['status'].'&view=1&sl_put_id='.$podatak['sl_put_id']; ?>"class="table-btn documents">Pregled zahtjeva</a>
 
           
           <!-- <?php if($podatak['lock'] != 1 and $podatak['status_hr']!=1 and $podatak['na_obradi'] == 1){?>
@@ -899,6 +962,7 @@ function dajpglink($n,$pageno,$trenutni_link){
 </body>
 </html>
 <script>
+    $('#respons').hide();
 function azuriraj_satnice(request, request_id,day,hour,status,status_hr){
   if(status_hr == 1){
     //postavljanje forme
@@ -935,11 +999,11 @@ function copyToClipboard(element) {
 <script type="text/javascript">
  $( document ).ready(function() {
 
-  window.setTimeout(function() {
-    $(".alert").fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove(); 
-    });
-}, 2000);
+//   window.setTimeout(function() {
+//     $(".alert").fadeTo(500, 0).slideUp(500, function(){
+//         $(this).remove();
+//     });
+// }, 2000);
 
   $(".filter_form_SL").select2();
 //url generator atributa za filter
@@ -955,7 +1019,20 @@ $('#dugme_filter').click(function(){
   var datum_do = $('#datedo').datepicker({ dateFormat: 'dd-mm-yyyy' }).val();
   var datum_kreiranja_od = $('#date_kreiranja_od').datepicker({ dateFormat: 'dd-mm-yyyy' }).val();
   var datum_kreiranja_do = $('#date_kreiranja_do').datepicker({ dateFormat: 'dd-mm-yyyy' }).val();
-            window.location = $(this).attr('current_url') + '&kid=' + korisnikID + '&jmb=' + jmbfill + '&dod=' + datum_od + '&ddo=' + datum_do + '&dkod=' + datum_kreiranja_od + '&dkdo=' + datum_kreiranja_do + '&mjesto=' + mjestoF + '&akood=' + akontacija_od + '&akodo=' + akontacija_do + '&trn=' + trn+ '&status=' + status_filter;
+  console.log(akontacija_do);
+  console.log(akontacija_od);
+  if ((akontacija_od >= '0'|| akontacija_od == '') && (akontacija_do >= '0' || akontacija_do == '')){
+       window.location = $(this).attr('current_url') + '&kid=' + korisnikID + '&jmb=' + jmbfill + '&dod=' + datum_od + '&ddo=' + datum_do + '&dkod=' + datum_kreiranja_od + '&dkdo=' + datum_kreiranja_do + '&mjesto=' + mjestoF + '&akood=' + akontacija_od + '&akodo=' + akontacija_do + '&trn=' + trn+ '&status=' + status_filter;
+  }else {
+      $('#respons').show();
+  }
+  // if(akontacija_od <= '0' || akontacija_do <= '0'){
+  //     console.log('ww');
+  //     $('#respons').show();
+  //   }
+  // else if(akontacija_od <= '0' || akontacija_do <= '0' || akontacija_od == '' || akontacija_do == ''){
+  //       window.location = $(this).attr('current_url') + '&kid=' + korisnikID + '&jmb=' + jmbfill + '&dod=' + datum_od + '&ddo=' + datum_do + '&dkod=' + datum_kreiranja_od + '&dkdo=' + datum_kreiranja_do + '&mjesto=' + mjestoF + '&akood=' + akontacija_od + '&akodo=' + akontacija_do + '&trn=' + trn+ '&status=' + status_filter;
+  //   }
         });
 
 
@@ -1049,6 +1126,12 @@ else{
  function postavi_link(to){
     $('#korekcija_form').attr("action", to.getAttribute('data-link')); //Will set it
  }
+
+$('#sector_select').on('change', function (){
+    console.log($('#sector_select').val());
+    console.log('<?php echo $url . '/modules/' . $_mod . '/pages/popup_pdf_plan.php'; ?>'+'&sec='+$('#sector_select').val().split(' ').join('-'));
+    $("#plan_sp").attr("href", '<?php echo $url . '/modules/' . $_mod . '/pages/popup_pdf_plan'; ?>'+'?sec='+$('#sector_select').val().split(' ').join('-'));
+});
 </script>
 
 

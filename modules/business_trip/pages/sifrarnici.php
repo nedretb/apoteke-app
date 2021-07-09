@@ -62,7 +62,7 @@
             <?php echo $value; ?>
             </td>
             <td style='text-align:center;'>
-            <a class='table-btn bt-admins' onclick="window.location.href ='/apoteke-app/?m=business_trip&p=sifrarnik&name=<?php echo $key;?>'"><i class='ion-android-list'></i></a>
+            <a class='table-btn' onclick="window.location.href ='/apoteke-app/?m=business_trip&p=sifrarnik&name=<?php echo $key;?>'"><i class='ion-android-list'></i></a>
             </td>
             </tr>
             <?php

@@ -1,6 +1,20 @@
 <?php
 use SoapEvents as Soap;
 use PLanGo as PGO;
+include $root.'/modules/api/MySoapClient.php';
+
+function getDataNTML($uri, $method, $param){
+    try{
+        $options = [
+            'ntlm_username' => 'VM\epinsatest',
+            'ntlm_password' => 'Sarajevo101'
+        ];
+        $_client = new NTLMSoap\Client($uri, $options);
+
+        return $_client->$method($param);
+    }catch (\Exception $e){var_dump($e);}
+}
+
 
 // ------------------------------------------------------------------------------------------------------------------ //
 
@@ -29,11 +43,11 @@ if(isset($_GET['kreiraj-plan-go'])){
         if(!$predmet){
             // If there is no plan, create an request, and create new sample inside database
 
-            $data = Soap::getData(
+            $data = getDataNTML(
                 'http://10.0.8.41/EAI_MKT/ServicePredmet.asmx?WSDL',
                 'KreirajPredmet2',
                 [
-                    'userName' => 'VM\epinsatest',
+                    'userName' => 'VM\egop10service',
                     'upisnaKnjiga' => 'NP', // Uvijek NP
                     'vrstaPredmeta' => $vrstaPredmeta, // Plan korištenja GO
                     'nadleznaOrgJedinica' => 7, // Odsjek za personalne i opće poslove
@@ -62,11 +76,11 @@ if(isset($_GET['kreiraj-plan-go'])){
          */
 
 
-        $pismenoResp = Soap::getData(
+        $pismenoResp = getDataNTML(
             'http://10.0.8.41/EAI_MKT/ServicePismeno.asmx?WSDL',
             'KreirajPismeno2',
             [
-                'userName' => 'VM\epinsatest',
+                'userName' => 'VM\egop10service',
                 'vrstaPismena' => 68,                          // Plan korištenja godišnjih odmora
                 'rbrSpisa' => $predmet['rbr_predmeta'],        // Redni broj predmeta (ID) u koji se ulaže pismeno (dobiva se iz metode KreirajPredmet2)
                 'uredskaGodina' => $predmet['uredska_godina'], // Uredska godina predmeta u koji se ulaže pismeno
@@ -74,9 +88,10 @@ if(isset($_GET['kreiraj-plan-go'])){
                 'nazivPismena' => 'Plan korištenja godišnjih odmora za '.date('Y').' godinu'
             ]
         );
+        $jop_response = $pismenoResp->KreirajPismeno2Result->jop;
 
         try{
-            $plan = PGO::createPlan(); // Kreiramo plan, dobijemo naziv PDF dokumenta
+            $plan = PGO::createPlan($jop_response); // Kreiramo plan, dobijemo naziv PDF dokumenta
 
             $pismeno = Pismeno::insert([
                 'uredska_godina' => $predmet['uredska_godina'],
@@ -97,7 +112,7 @@ if(isset($_GET['kreiraj-plan-go'])){
                 $contents = fread($handle, filesize($root.'/modules/default/pages/files/plan-go/'.$plan));
                 fclose($handle);
 
-                $pismenoFileResp = Soap::getData(
+                $pismenoFileResp = getDataNTML(
                     'http://10.0.8.41/EAI_MKT/ServicePismeno.asmx?WSDL',
                     'KreirajDokumentZaPismeno',
                     [

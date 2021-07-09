@@ -45,7 +45,7 @@ $inactive_users = $db->query("select distinct [Employee No_] from [c0_intranet2_
     <thead>
         <tr>
            <th scope="col" class="text-center" width="80px">#</th>
-           <th scope="col">Šifra zaposlenika</th>
+           <th scope="col">Šifra državnog službenika</th>
            <th scope="col">Ime i prezime</th>
            <th scope="col" width="120px" class="text-center">Akcije</th>
         </tr>
@@ -83,7 +83,7 @@ $inactive_users = $db->query("select distinct [Employee No_] from [c0_intranet2_
     <thead>
     <tr>
         <th scope="col" class="text-center" width="80px">#</th>
-        <th scope="col">Šifra zaposlenika</th>
+        <th scope="col">Šifra državnog službenika</th>
         <th scope="col">Ime i prezime</th>
         <th scope="col" width="120px" class="text-center">Akcije</th>
     </tr>
