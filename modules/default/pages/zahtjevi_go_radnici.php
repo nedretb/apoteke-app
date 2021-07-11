@@ -30,7 +30,7 @@ if (!empty($_POST['ime_prezime'])) {
     $ime_prezimeq = '';
 }
 //paginacija
-$limit = 10;
+$limit = 5;
 if (!empty($_POST['pg'])) {
     $page = $_POST['pg'];
 } else {
@@ -39,7 +39,7 @@ if (!empty($_POST['pg'])) {
 
 $offset = ($page - 1) * $limit;
 
-$fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq);
+$fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq." order by v.employee_no offset ".$offset. " rows fetch next ".$limit." rows only");
 
 $pg_max = ceil($total[0] / $limit);
 if ($pg_max == 0) {
@@ -84,7 +84,7 @@ if ($pg_max == 0) {
 
     .table-btn {
         padding: 3px 10px;
-        width: auto;
+        width: auto !important;
     }
 
     .right_box {
@@ -115,8 +115,7 @@ if ($pg_max == 0) {
                 <h2 style="display:inline-block;"><?php echo __('Rješenja o korištenju godišnjeg odmora za zaposlenike'); ?></h2>
             </div>
             <div class="col-md-3" style="position: relative; margin-top: 20px;">
-                <button style="width:auto;" class="btn btn-red pull-left btn-sm"><a href="<?php echo $url . '/modules/' . $_mod . '/pages/kreirajRjesenjaGo.php'; ?>"><?php echo __('Kreiraj rješenja za godišnji odmor'); ?></a> <i
-                            class="create-outline"></i></button><br/><br/>
+                <button onclick="kreirajRjesenja();" style="width:auto;" class="btn btn-red pull-left btn-sm"><?php echo __('Kreiraj rješenja za godišnji odmor'); ?><i class="create-outline"></i></button><br/><br/>
             </div>
         </div>
     </div>
@@ -186,7 +185,7 @@ if ($pg_max == 0) {
                     foreach ($fgr as $one) { ?>
                         <tr>
                             <td><?php echo $one['fname'] . ' ' . $one['lname']; ?></td>
-                            <td><?php echo date("d.m.Y", strtotime($one['datum_kreiranja'])); ?></td>
+                            <td><?php echo date("d.m.Y", strtotime($one['datum_kreiranja_rjesenja'])); ?></td>
                             <td><?php echo date("d.m.Y", strtotime($one['datum_od'])) . ' - ' . date("d.m.Y", strtotime($one['datum_do'])); ?></td>
                             <td>
                                 <a target="_blank"
@@ -266,6 +265,22 @@ include $_themeRoot . '/footer.php';
             }
         });
     });
+
+    function kreirajRjesenja(){
+        console.log('wwwwwww');
+
+        $.ajax({
+            url: 'modules/default/pages/kreirajRjesenjaGo.php',
+            method: 'POST',
+            data: {},
+            success: function success(response){
+                console.log(response);
+                location.reload();
+
+                // window.location.replace('?m=default&p=zahtjevi_go_radnici&edit=');
+            }
+        });
+    }
     //function myselect() {
     //
     //    $.post("<?php //echo $url . '/modules/admin_manager_verification/ajax.php'; ?>//", {

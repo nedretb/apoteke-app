@@ -1,9 +1,12 @@
 <?php
+error_reporting(E_ALL);
 require_once '../../../configuration.php';
-require_once ($root.'/CORE/classes/Model.php');
+require_once($root . '/CORE/classes/Model.php');
 require_once($root . '/tcpdf/tcpdf.php');
 require __DIR__ . '/../../../vendor/autoload.php';
+
 use Carbon\Carbon;
+
 foreach (glob($root . '/CORE/classes/Models/*.php') as $filename) require_once $filename;
 
 global $db;
@@ -17,18 +20,17 @@ $total_exp_days = 0;
 $datum_kreiranja_rjesenja = date('Y-m-d');
 
 $_user = _user(_decrypt($_SESSION['SESSION_USER']));
-$user = Profile::where('employee_no = '.$_user['employee_no'])->first();
+$user = Profile::where('employee_no = ' . $_user['employee_no'])->first();
 
 $data = ($user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($user);
 
 $profiles = Profile::select('employee_no, fname, lname, egop_radno_mjesto, egop_ustrojstvena_jedinica, nadredjeni, parent')->get();
 
-
-if(!empty($profiles)){
+if (!empty($profiles)) {
 
     $count = 0;
-    foreach ($profiles as $e){
-        $go_dana = $db->query('select Br_dana from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where year = 2021 and employee_no='.$e['employee_no'])->fetch();
+    foreach ($profiles as $e) {
+        $go_dana = $db->query('select Br_dana from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where year = 2021 and employee_no=' . $e['employee_no'])->fetch();
         $used_go = $db->query("select Date, weekday from [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=" . $e['employee_no'] . " 
             and Date between '2021-01-01' and '2021-12-31' and status = 18")->fetchAll();
 
@@ -62,7 +64,7 @@ if(!empty($profiles)){
                 }
 
             }
-                $sql_statement = "insert into [c0_intranet2_apoteke].[dbo].[rjesenja_go] 
+            $sql_statement = "insert into [c0_intranet2_apoteke].[dbo].[rjesenja_go] 
 	  ([employee_no]
       ,[godina]
       ,[datum_od]
@@ -70,70 +72,70 @@ if(!empty($profiles)){
       ,[trajanje_go]
       ,[odobreno]
       ) values (?, ?, ?, ?, ?, ?)";
-                $sql = $db->prepare($sql_statement);
-                $sql->execute([$e['employee_no'], date('Y'), $starting_date_go, $ending_date_go, $total_days, 1]);
+            $sql = $db->prepare($sql_statement);
+            $sql->execute([$e['employee_no'], date('Y'), $starting_date_go, $ending_date_go, $total_days, 1]);
 
 
-            $zakonski = $db->query("select number_of_days from [c0_intranet2_apoteke].[dbo].[sifarnik_zakonski_go] where region='FBIH' and year=".$year)->fetch();
+            $zakonski = $db->query("select number_of_days from [c0_intranet2_apoteke].[dbo].[sifarnik_zakonski_go] where region='FBIH' and year=" . $year)->fetch();
 
             $dani_zakonski = $zakonski['number_of_days'];
 
             $rjesenja = $db->query("select * from [c0_intranet2_apoteke].[dbo].[rjesenja_go]");
 
-            foreach ($rjesenja as $r){
-                $godina_rada_go = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go]");
+            $count++;
+        }
+    }
+}
 
-                $vac_data = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where employee_no = ".$r['employee_no']." and year=".$year)->fetch();
-                $years_exp = floor($vac_data['total_exp_days']/365);
+foreach ($rjesenja as $r) {
+    $godina_rada_go = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go]");
 
-                foreach ($godina_rada_go as $g){
-                    if ($years_exp >= $g['min'] and $years_exp <= $g['max']){
-                        $dani_radno_iskustvo = $g['number_of_days'];
-                    }
-                }
+    $vac_data = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where employee_no = " . $r['employee_no'] . " and year=" . $year)->fetch();
+    $years_exp = floor($vac_data['total_exp_days'] / 365);
 
-                $zdrav_stanjeq = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users__zdravstveno_stanje] where employee_no=".$r['employee_no']);
+    foreach ($godina_rada_go as $g) {
+        if ($years_exp >= $g['min'] and $years_exp <= $g['max']) {
+            $dani_radno_iskustvo = $g['number_of_days'];
+        }
+    }
 
-                if ($zdrav_stanjeq->rowCount() < 0){
-                    $zdrav_stanje = $zdrav_stanjeq->fetch();
+    $zdrav_stanjeq = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users__zdravstveno_stanje] where employee_no=" . $r['employee_no']);
 
-                    if($zdrav_stanje['dijete_sa_posebnim_potrebama'] == 'Da'){
-                        $dani_dijete_sa_posebnim_potrebama = 2;
-                    }
+    if ($zdrav_stanjeq->rowCount() < 0) {
+        $zdrav_stanje = $zdrav_stanjeq->fetch();
 
-                    if ($zdrav_stanje['invalid_'] == 'Da'){
-                        $invalid_sif = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_kategorije_invalidnosti_go] where id=".$zdrav_stanje['stepen_invalidnosti'])->fetch();
-                        $dani_invalidnost = $invalid_sif['number_of_days'];
-                    }
-                }
+        if ($zdrav_stanje['dijete_sa_posebnim_potrebama'] == 'Da') {
+            $dani_dijete_sa_posebnim_potrebama = 2;
+        }
 
-                $ukupan_broj_dana_go = $dani_invalidnost +$dani_dijete_sa_posebnim_potrebama + $dani_zakonski + $dani_radno_iskustvo;
+        if ($zdrav_stanje['invalid_'] == 'Da') {
+            $invalid_sif = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_kategorije_invalidnosti_go] where id=" . $zdrav_stanje['stepen_invalidnosti'])->fetch();
+            $dani_invalidnost = $invalid_sif['number_of_days'];
+        }
+    }
 
-                try {
+    $ukupan_broj_dana_go = $dani_invalidnost + $dani_dijete_sa_posebnim_potrebama + $dani_zakonski + $dani_radno_iskustvo;
 
-                    $sqlq = "update [c0_intranet2_apoteke].[dbo].[rjesenja_go] set 
+    try {
+
+        $sqlq = "update [c0_intranet2_apoteke].[dbo].[rjesenja_go] set 
       [dani_zakonski]=?
       ,[dani_radno_iskustvo]=?
       ,[dani_invalidnost]=?
       ,[dani_dijete_sa_posebnim_potrebama]=?
       ,[ukupan_broj_dana_go]=?
       ,[broj_dana_radnog_iskustva]=?
-      ,[datum_kreiranja_rjesenja]=? where employee_no=".$r['employee_no'];
-
-                    if ($vac_data['total_exp_days'] != null){
-                        $total_exp_days = $vac_data['total_exp_days'];
-                    }
-                    $sql = $db->prepare($sqlq);
-                    $sql->execute([$dani_zakonski, $dani_radno_iskustvo, $dani_invalidnost, $dani_dijete_sa_posebnim_potrebama, $ukupan_broj_dana_go, $total_exp_days, date('Y-m-d')]);
-                }
-                catch (Exception $e){
-
-                }
-
-        } 
-        $count++;
+      ,[datum_kreiranja_rjesenja]=? where employee_no=" . $r['employee_no'];
+        var_dump($sqlq);
+        if ($vac_data['total_exp_days'] != null) {
+            $total_exp_days = $vac_data['total_exp_days'];
+        }
+        $sql = $db->prepare($sqlq);
+        $sql->execute([$dani_zakonski, $dani_radno_iskustvo, $dani_invalidnost, $dani_dijete_sa_posebnim_potrebama, $ukupan_broj_dana_go, $total_exp_days, date('Y-m-d')]);
+    } catch (Exception $e) {
+        var_dump($e);
     }
-}
+
 }
 
-header('Location: ?m=default&p=profile');
+//header('Location: ?m=default&p=profile');

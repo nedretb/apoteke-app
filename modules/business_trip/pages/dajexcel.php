@@ -185,7 +185,7 @@ try{
     $sheet->SetCellValue('J4', "Sarajevo, ".date('d.m.Y'));
 
     $sheet->SetCellValue('I9', $data['fname'].' '.$data['lname']);
-    $sheet->SetCellValue('K11', $data['position']);
+    $sheet->SetCellValue('K11', $data['egop_radno_mjesto']);
     $sheet->SetCellValue('O11', $drzava['wage']);
     $sheet->SetCellValue('J12', $drzava['wage']);
     $sheet->SetCellValue('I13', $data['odredisni_grad'].", ".$drzava['name']);
