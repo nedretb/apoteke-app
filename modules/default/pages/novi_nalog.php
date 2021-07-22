@@ -2638,15 +2638,15 @@ function prebaciDatumBih($datum){
         return (Math.round((num + Number.EPSILON) * 100) / 100).toFixed(2);
     }
 
-    // function calculate_total_ot(){
-    //     $("#ost_ukupno19").text(myround($("#ost_kolicina19").val() * $("#ost_iznos19").val()));
-    //     $("#ost_ukupno1").text(myround($("#ost_kolicina1").val() * $("#ost_iznos1").val()));
-    //     $("#ost_ukupno2").text(myround($("#ost_kolicina2").val() * $("#ost_iznos2").val()));
-    //     $("#ost_ukupno3").text(myround($("#ost_kolicina3").val() * $("#ost_iznos3").val()));
-    //     $("#ost_ukupno4").text(myround($("#ost_kolicina4").val() * $("#ost_iznos4").val()));
-    //     $("#ost_ukupno5").text(myround($("#ost_kolicina5").val() * $("#ost_iznos5").val()));
-    //     $("#ost_ukupno6").text(myround($("#ost_kolicina6").val() * $("#ost_iznos6").val()));
-    // }
+    function calculate_total_ot(){
+        $("#ost_ukupno19").text(myround($("#ost_kolicina19").val() * $("#ost_iznos19").val()));
+        $("#ost_ukupno1").text(myround($("#ost_kolicina1").val() * $("#ost_iznos1").val()));
+        $("#ost_ukupno2").text(myround($("#ost_kolicina2").val() * $("#ost_iznos2").val()));
+        $("#ost_ukupno3").text(myround($("#ost_kolicina3").val() * $("#ost_iznos3").val()));
+        $("#ost_ukupno4").text(myround($("#ost_kolicina4").val() * $("#ost_iznos4").val()));
+        $("#ost_ukupno5").text(myround($("#ost_kolicina5").val() * $("#ost_iznos5").val()));
+        $("#ost_ukupno6").text(myround($("#ost_kolicina6").val() * $("#ost_iznos6").val()));
+    }
 
     let php_data = JSON.parse($(".tabledata").text());
     let row_data = JSON.parse(php_data.data);
