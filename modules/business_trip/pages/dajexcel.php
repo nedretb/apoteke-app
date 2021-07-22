@@ -1,6 +1,10 @@
 <?php
 error_reporting(1);
 
+ini_set("xdebug.var_display_max_children", '-1');
+ini_set("xdebug.var_display_max_data", '-1');
+ini_set("xdebug.var_display_max_depth", '-1');
+
 function secondsToTime($inputSeconds)
 {
 
@@ -189,6 +193,7 @@ try{
     $sheet->SetCellValue('O11', $drzava['wage']);
     $sheet->SetCellValue('J12', $drzava['wage']);
     $sheet->SetCellValue('I13', $data['odredisni_grad'].", ".$drzava['name']);
+    $sheet->SetCellValue('J14', $data['svrha']);
     $sheet->SetCellValue('K15', $dana_na_putu);
     $sheet->SetCellValue('N15', $sati);
     $sheet->SetCellValue('K17', $data['vrsta_transporta']);
