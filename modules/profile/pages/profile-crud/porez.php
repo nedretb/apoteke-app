@@ -20,21 +20,27 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="poreska_kartica"> <?= ___('Poreska kartica') ?> </label>
-                            <?= Form::select('poreska_kartica', ['Ne' => 'Ne', 'Da' => 'Da'], $porez['poreska_kartica'] ?? '', ['id' => 'poreska_kartica', 'class' => 'form-control']) ?>
+                            <?= Form::select('poreska_kartica', ['Ne' => 'Ne', 'Da' => 'Da'], $porez['poreska_kartica'] ?? '', ['id' => 'poreska_kartica', 'class' => 'form-control', 'disabled'=>'true']) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="koeficijent_olaksice"> <?= ___('Koeficijent olakšice') ?></label>
-                            <?= Form::number('koeficijent_olaksice',isset($porez) ? number_format((float)$porez['koeficijent_olaksice'], 2, '.', '') : '', ['id' => 'clan_sindikata', 'class' => 'form-control', 'min' => '0', 'max' => '1', 'step' => '0.01']) ?>
+                            <?= Form::number('koeficijent_olaksice',isset($porez) ? number_format((float)$porez['koeficijent_olaksice'], 2, '.', '') : '', ['id' => 'clan_sindikata', 'class' => 'form-control', 'min' => '0', 'max' => '1', 'step' => '0.01', 'readonly' => 'true']) ?>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="prevoz_na_odobrenoj_lokaciji"> <?= ___('Prevoz na odobrenoj relaciji') ?></label>
-                            <?= Form::text('prevoz_na_odobrenoj_lokaciji',isset($porez) ? number_format((float)$porez['prevoz_na_odobrenoj_lokaciji'], 2, '.', '') : '', ['id' => 'prevoz_na_odobrenoj_lokaciji', 'class' => 'form-control', 'min' => '0', 'max' => '1000', 'step' => '0.01']) ?>
+                            <label for="koeficijent_slozenosti_poslova"><?= ___('Koeficijent složenosti posla') ?></label>
+                            <?= Form::number('koeficijent_slozenosti_poslova',isset($porez) ? number_format((float)$porez['koeficijent_slozenosti_poslova'], 2, '.', '') : '', ['id' => 'clan_sindikata', 'class' => 'form-control', 'min' => '0', 'max' => '10', 'step' => '0.01']) ?>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="demobilizirani_borac"> <?= ___('Demobilizirani borac') ?></label>
+                            <?= Form::select('demobilizirani_borac', ['Ne' => 'Ne', 'Da' => 'Da'], $porez['demobilizirani_borac'] ?? '', ['id' => 'demobilizirani_borac', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                 </div>

@@ -15,7 +15,7 @@
 <!-- START - Main section -->
 <section class="full">
 <div class="alert alert-info" role="alert" style="margin-top:15px;" id="alert"><b>
-Nazivi država se moraju poklapati sa nazivima istih u kartici Države. Uprotivnom poruka o višem unosu akontacije na nalogu neće biti funkcionalna.
+Nazivi država se moraju poklapati sa nazivima istih u kartici Države. U protivnom poruka o višem unosu akontacije na nalogu neće biti funkcionalna.
 </b></div>
 
 <div class="alert alert-success" role="alert" style="display:none;margin-top:15px;" id="alert">
