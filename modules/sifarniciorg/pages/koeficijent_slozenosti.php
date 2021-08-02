@@ -1,9 +1,8 @@
 <?php
 _pagePermission(4, false);
-//$name = $_GET['name'];
 
-$data = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go] where Active = 1");
-$datao = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go] where Active = 0");
+$data = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_slozenosti_poslova] where Active = 1");
+$datao = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_slozenosti_poslova] where Active = 0");
 
 ?>
 <style>
@@ -93,45 +92,45 @@ $datao = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina
     }
     .nazad {
 
-background-color:  #006595 ;
-border-radius:10px;
-border-color: #46b8da;
-display:inline-block;
-color:#ffffff;
-font-family:Arial;
-font-size:12px !important;
-padding: 10px 29px;
-margin: 0px 10px 0px 0px;
-text-decoration:none !important;
-margin-left:10px;
-height: 30px;
-font-weight: bold;
-font-size: 12px;
-text-shadow: none;
-min-width: 90px;
-border-radius: 50px;
-line-height: 13px;
-}
-.nazad:hover{
-background-color:  #006595 ;
-border-radius:10px;
-border-color: #46b8da;
-display:inline-block;
-color:#ffffff;
-font-family:Arial;
-font-size:12px !important;
-padding: 10px 29px;
-margin: 0px 10px 0px 0px;
-text-decoration:none !important;
-margin-left:10px;
-height: 30px;
-font-weight: bold;
-font-size: 12px;
-text-shadow: none;
-min-width: 90px;
-border-radius: 50px;
-line-height: 13px;
-}
+        background-color:  #006595 ;
+        border-radius:10px;
+        border-color: #46b8da;
+        display:inline-block;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:12px !important;
+        padding: 10px 29px;
+        margin: 0px 10px 0px 0px;
+        text-decoration:none !important;
+        margin-left:10px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 12px;
+        text-shadow: none;
+        min-width: 90px;
+        border-radius: 50px;
+        line-height: 13px;
+    }
+    .nazad:hover{
+        background-color:  #006595 ;
+        border-radius:10px;
+        border-color: #46b8da;
+        display:inline-block;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:12px !important;
+        padding: 10px 29px;
+        margin: 0px 10px 0px 0px;
+        text-decoration:none !important;
+        margin-left:10px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 12px;
+        text-shadow: none;
+        min-width: 90px;
+        border-radius: 50px;
+        line-height: 13px;
+    }
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -143,12 +142,12 @@ line-height: 13px;
 <body>
 
 <div class="container" style="width:100%;">
-    <h2 style="display:flex; justify-content:center; padding:10px 0px 10px 0px;">Broj dana godišnjeg odmora na osnovu radnog staža</h2>
+    <h2 style="display:flex; justify-content:center; padding:10px 0px 10px 0px;">Broj dana godišnjeg odmora na osnovu složenosti posla</h2>
     <div class="table-wrapper">
         <div class="table-title">
             <div style="display:flex; margin-right:1px; flex-flow: row-reverse;" class="row">
 
-            <a href="/apoteke-app/?m=sifarniciorg&p=all" style="text-decoration:none;"class=" nazad">Nazad</a>   
+                <a href="/apoteke-app/?m=sifarniciorg&p=all" style="text-decoration:none;"class=" nazad">Nazad</a>
 
                 <button type="button" class="btn btn-info add-new">Dodaj novi</button>
 
@@ -158,8 +157,8 @@ line-height: 13px;
 
             <thead>
             <tr>
-                <th>Minimalni broj godina</th>
-                <th>Maksimalni broj godina</th>
+                <th>Donja granica</th>
+                <th>Gornja granica</th>
                 <th>Broj dana</th>
                 <th>Akcije</th>
 
@@ -170,10 +169,10 @@ line-height: 13px;
             foreach ($data as $d){
                 echo '<tr>';
                 if ($d['min']){
-                    echo '<td>'.$d['min'].'</td>';
+                    echo '<td>'.intval($d['min']).'</td>';
                 }
                 if ($d['max']){
-                    echo '<td>'.$d['max'].'</td>';
+                    echo '<td>'.intval($d['max']).'</td>';
                 }
                 if ($d['number_of_days']){
                     echo '<td>'.$d['number_of_days'].'</td>';
@@ -354,7 +353,7 @@ line-height: 13px;
     function addAjax(){
         $.ajax({
             type: 'POST',
-            url: "<?php echo $url . '/modules/sifarniciorg/pages/godina_rada_req.php'; ?>",
+            url: "<?php echo $url . '/modules/sifarniciorg/pages/koeficijent_slozenosti_req.php'; ?>",
             data: {type: 'add',
                 min_god: $('#regija').val(),
                 max_god: $('#broj_dana').val(),
@@ -387,7 +386,7 @@ line-height: 13px;
     function delAjax(x){
         $.ajax({
             type: 'POST',
-            url: "<?php echo $url . '/modules/sifarniciorg/pages/godina_rada_req.php'; ?>",
+            url: "<?php echo $url . '/modules/sifarniciorg/pages/koeficijent_slozenosti_req.php'; ?>",
             data: { type: 'del',
                 id: x},
             complete: function (r) {
@@ -402,7 +401,7 @@ line-height: 13px;
 
         $.ajax({
             type: 'POST',
-            url: "<?php echo $url . '/modules/sifarniciorg/pages/godina_rada_req.php'; ?>",
+            url: "<?php echo $url . '/modules/sifarniciorg/pages/koeficijent_slozenosti_req.php'; ?>",
             data: {type: 'edit',
                 id: $('#contid').val(),
                 min_god: $('#min').val(),

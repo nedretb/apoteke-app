@@ -5720,17 +5720,6 @@ join c0_intranet2_apoteke.dbo.hourlyrate_year as y on u.user_id = y.user_id wher
         $month_to= $pieces[4];
         $year_id =  $pieces[5];
 
-        // Kreiraj zahtjev za korištenje godišnjeg odmora, spremi PDF i kreiraj api call na eGOP
-        $curl = curl_init();
-        curl_setopt_array(
-            $curl, array(
-            CURLOPT_URL => "http://localhost/apoteke-app/modules/default/pages/zahtjevZaGo.php",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => "user=".$_user['employee_no']."&df=".$day_from."&mf=".$month_from."&dt=".$day_to."&mt=".$month_to."&year_id=".$year_id
-        ));
-        $output = curl_exec($curl);
-
         $get_count=$db->query("SELECT count(*) as countReq FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE (change_req='1') and (
    (day >= ".$day_from." and month_id = ".$month_from." and (".$month_from." <> ".$month_to."))  OR
    (day <= ".$day_to." and month_id = ".$month_to." and (".$month_to." <> ".$month_from.")) OR

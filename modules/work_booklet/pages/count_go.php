@@ -46,41 +46,21 @@ foreach ($radni_staz as $rs){
 
     /*** Na osnovu ucesca u ratu 92-95 ***/
     if($demo_borac['demobilizirani_borac'] == 'Da'){
-        $mjsc = $demo_borac['demobilizirani_borac_m'];
-
-        if ($mjsc >= 12 and $mjsc < 18){
-            $total_go_days += 1;
-        }
-        elseif ($mjsc >= 18 and $mjsc < 30){
-            $total_go_days += 2;
-        }
-        elseif ($mjsc >= 30){
-            $total_go_days += 3;
-        }
+        $demo_borac_br_mjeseci = $demo_borac['demobilizirani_borac_m'];
+        $demo_borac_br_dana = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_demobilizirani_borac] where ".$demo_borac_br_mjeseci.">= min and ".$demo_borac_br_mjeseci." <max")->fetch()['number_of_days'];
+        $total_go_days += $demo_borac_br_dana;
     }
 
     /*** Na osnovu koeficijenta slozenosti poslova ***/
-    if ($koeficijent_slozenosti == 1){
-        $total_go_days += 1;
+    if($koeficijent_slozenosti == null){
+        $koeficijent_slozenosti = 0;
     }
-    elseif ($koeficijent_slozenosti > 1 and $koeficijent_slozenosti <= 2){
-        $total_go_days += 2;
-    }
-    elseif ($koeficijent_slozenosti > 2 and $koeficijent_slozenosti <= 3){
-        $total_go_days += 3;
-    }
-    elseif ($koeficijent_slozenosti > 3 and $koeficijent_slozenosti <= 4){
-        $total_go_days += 4;
-    }
-    elseif ($koeficijent_slozenosti > 4){
-        $total_go_days += 5;
-    }
+    $koeficijent_slozenosti_br_dana = $db->query("select number_of_days from [c0_intranet2_apoteke].[dbo].[sifarnik_slozenosti_poslova] where min < ".$koeficijent_slozenosti." and ".$koeficijent_slozenosti." <=max")->fetch()['number_of_days'];
+    $total_go_days += $koeficijent_slozenosti_br_dana;
 
     try {
-        $vac_stat = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where employee_no=".$rs['employee_no']);
-        $statement = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_Dana=".$total_go_days." where employee_no=".$rs['employee_no']. " and year=".date('Y');
-        $sql = $db->query($statement);
-
+        $updateVacationStatistics = $db->query("update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_Dana=".$total_go_days." where employee_no=".$rs['employee_no']. " and year=".date('Y'));
+        $vac_stat = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where employee_no=".$rs['employee_no']." and year=2021");
     }catch (Exception $e){
 
     }

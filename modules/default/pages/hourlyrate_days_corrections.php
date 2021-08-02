@@ -36,10 +36,10 @@ if ($total > 0 || $total2 > 0) {
 
     // bojiti satnice
 
-    $get_dataq = $db->query("  SELECT TOP 1000 *
-  FROM  " . $nav_work_booklet . "  
-  where [Employee No_]= " . $_user['employee_no'] . " and [Current Company] = 1 ");
-    $get_data = $get_dataq->fetchAll(PDO::FETCH_ASSOC);
+//    $get_dataq = $db->query("  SELECT TOP 1000 *
+//  FROM  " . $nav_work_booklet . "
+//  where [Employee No_]= " . $_user['employee_no'] . " and [Current Company] = 1 ");
+//    $get_data = $get_dataq->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
 
@@ -169,11 +169,11 @@ if ($total > 0 || $total2 > 0) {
 
                 as $day) {
 
-                $oboji = true;
+                $oboji = false;
 
-                foreach ($get_data as $one) {
-                    if ($one['Starting Date'] <= $day['Date'] and $one['Ending Date'] >= $day['Date']) $oboji = false;
-                }
+//                foreach ($get_data as $one) {
+//                    if ($one['Starting Date'] <= $day['Date'] and $one['Ending Date'] >= $day['Date']) $oboji = false;
+//                }
 
                 if (date("Y-m-d") < $day['Date']) $oboji = false;
 

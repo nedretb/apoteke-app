@@ -62,6 +62,7 @@ $result = $get_y->fetch();
 $total = $result[0];
 $result2 = $get_m->fetch();
 $total2 = $result2[0];
+
 if ($total > 0 || $total2 > 0) {
 
     $year = $get_year->fetch();

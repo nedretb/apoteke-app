@@ -4,7 +4,9 @@
 $sifrarnici = array(
     'zakonski' => "Zakonski broj dana godišnjeg odmora",
     'kategorija_invalidnosti' => "Kategorija invalidnosti",
-    'godina_rada' => "Godine rada"
+    'godina_rada' => "Godine rada",
+    'koeficijent_slozenosti' => "Koeficijent složenosti posla",
+    'demo_borac' => "Status demobiliziranog borca"
 );
 ?>
 <style>

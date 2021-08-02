@@ -84,7 +84,7 @@ if($_user['role'] == 4){
                         </small>
                     </td>
 
-                    <td class="text-center"><a class="my-btn" href="#"><?= ___('Pregled') ?></a></td>
+                    <td class="text-center"><a class="my-btn" href="<?php echo $url."/?m=profile&p=edit-profile&u=".$profile['employee_no']; ?>"><?= ___('Pregled') ?></a></td>
                 </tr>
                 <?php
             }

@@ -1,4 +1,9 @@
 <?php
+if(!empty($_GET['u'])){
+    $_user = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] where employee_no=".$_GET['u'])->fetch();
+}else{
+    $emp_no = $_user['employee_no'];
+}
     $stanovanje = Stanovanje::getData($_user['employee_no']);
     $kontakt    = Kontakt::getData($_user['employee_no']);
     $roditelji  = Roditelji::getData($_user['employee_no']);

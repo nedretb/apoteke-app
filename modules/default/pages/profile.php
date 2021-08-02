@@ -8,6 +8,8 @@ foreach (glob($root . '/modules/profile/pages/classes/*.php') as $filename) requ
 $kontakt    = Kontakt::getData($_user['employee_no']);
 $kontakt = isset($kontakt[0]['users__kontakt_informacije']) ? $kontakt[0]['users__kontakt_informacije'][0] : null;
 
+$orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematization] where id=".$_user['egop_ustrojstvena_jedinica'])->fetch();
+
 //$sys = Sistematizacija::getIDs(1);
 //foreach ($sys as $s ){
 //
@@ -241,7 +243,7 @@ $kontakt = isset($kontakt[0]['users__kontakt_informacije']) ? $kontakt[0]['users
                         <h3><?= $_user['fname'] . ' ' . $_user['lname']; ?></h3>
                         <h4>
                             <p> <?= ___('Personalni broj') ?> </p>
-                            <span>Z<?= $_user['employee_no'] ?></span>
+                            <span><?= $_user['employee_no'] ?></span>
                         </h4>
                         <h4>
                             <p> <?= ___('Jedinstveni matični broj') ?> </p>
@@ -302,15 +304,7 @@ $kontakt = isset($kontakt[0]['users__kontakt_informacije']) ? $kontakt[0]['users
                         <p><?= ___('Organizaciona jedinica') ?></p>
                     </div>
                     <div class="pb-right">
-                        <h4><?= $_user['egop_ustrojstvena_jedinica']; ?></h4>
-                    </div>
-                </div>
-                <div class="profile-basic pb-row">
-                    <div class="pb-left">
-                        <p><?= ___('Organ državne službe') ?></p>
-                    </div>
-                    <div class="pb-right">
-                        <h4> <?= ___('Ministarstvo komunikacija i transporta') ?> </h4>
+                        <h4><?= $orgJed['s_title']; ?></h4>
                     </div>
                 </div>
 
