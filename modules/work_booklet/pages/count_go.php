@@ -4,156 +4,86 @@ require 'vendor/autoload.php';
 
 use Carbon\Carbon;
 
-global $db;
-$current_year = date('Y');
+$radni_staz = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users__radni_staz]");
 
-//array pocetnih datuma
-$starting_dates = [];
 
-//array zavrsnih datuma
-$ending_dates = [];
 
-//array broja dana izmedju datuma
-$days_number_between_dates = [];
+foreach ($radni_staz as $rs){
+    $total_go_days = 0;
 
-//ukupan broj dana iskustva
-$total_experience_days = 0;
 
-//ukupan broj dana iskustva za go
-$go_days_exp = 0;
+    $year = $rs['ukupan_radni_staz_g'];
+    $months = $rs['ukupan_radni_staz_m'];
+    $days = $rs['ukupan_radni_staz_d'];
 
-//$x = Carbon::parse('1988-07-15');
-//var_dump($x->diffInDays('2021-04-28'));
-//var_dump($x->diffInMonths('2021-04-28'));
-//var_dump($x->diffInYears('2021-04-28'));
-//var_dump($x->diff('2021-04-28'));
-//$datetime1 = new DateTime('1988-07-15');
-//$datetime2 = new DateTime('2021-04-28');
-//$interval = $datetime1->diff($datetime2);
-//var_dump($interval);
-//var_dump($interval->format('%y years %m months %d days'));
-//die();
-//broj dana go
-$go_days = 0;
-$go_days_baseq = $db->query("Select * from [c0_intranet2_apoteke].[dbo].[sifarnik_zakonski_go] where region='FBIH' and year =".$current_year)->fetch();
-$go_days_base = $go_days_baseq['number_of_days'];
+    /*** Parametri za broj dana GO ***/
 
-$employees = $db->query("select * from [c0_intranet2_apoteke].[dbo].[work_booklet] where Active=1");
-$invalidity_categories = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_kategorije_invalidnosti_go]")->fetchAll();
-$year_exp_go = $db->query("select * from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go]")->fetchAll();
-var_dump($employees->fetchAll());
-foreach ($employees as $employee){
-    $d = Carbon::parse($employee['Starting Date']);
-    $total_experience_days = $total_experience_days + $d->diffInDays($employee['Ending Date']);
-    array_push($days_number_between_dates, $d->diffInDays($employee['Ending Date']));
+    $zakonski = $db->query("select number_of_days from [c0_intranet2_apoteke].[dbo].[sifarnik_zakonski_go] where region='FBIH'")->fetch()['number_of_days'];
+    $godina_rada = $db->query("select number_of_days from [c0_intranet2_apoteke].[dbo].[sifarnik_godina_rada_go] where min < ".$year." and max >=".$year." ")->fetch()['number_of_days'];
+    $dezurstva = $db->query("select dezurstva from [c0_intranet2_apoteke].[dbo].[users] where employee_no=".$rs['employee_no'])->fetch()['dezurstva'];
+    $koeficijent_slozenosti = $db->query("select koeficijent_slozenosti_poslova from [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$rs['employee_no'])->fetch()['koeficijent_slozenosti_poslova'];
+    $demo_borac = $db->query("select demobilizirani_borac, demobilizirani_borac_m from [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$rs['employee_no'])->fetch();
 
-    array_push($starting_dates, $employee['Starting Date']);
-    array_push($ending_dates, $employee['Ending Date']);
-    $previous_companies = $db->query("select * from [c0_intranet2_apoteke].[dbo].[work_booklet] where Active=0 and [Employee No_]=".$employee['Employee No_']);
+    /*** ***/
 
-    var_dump($employee['Employee No_']);
-    if($previous_companies->rowCount() < 0){
-
-        foreach ($previous_companies as $previous_exp){
-            $dt = Carbon::parse($previous_exp['Starting Date']);
-            $total_experience_days = $total_experience_days + $dt->diffInDays($previous_exp['Ending Date']);
-
-            array_push($days_number_between_dates, $dt->diffInDays($previous_exp['Ending Date']));
-            array_push($starting_dates, $previous_exp['Starting Date']);
-            array_push($ending_dates, $previous_exp['Ending Date']);
-        }
-
-        $count=1;
-        for($i = 0; $i < count($starting_dates)-1; $i++){
-            $date = Carbon::parse($starting_dates[$i]);
-
-            if($date->diffInDays($ending_dates[$i+1]) > 15){
-                continue;
-            }
-            else{
-                $count++;
-            }
-        }
-
-        $go_days_exp = array_sum(array_slice($days_number_between_dates, 0, $count));
-
-        if($employee['child_disabled'] == 'DA'){
-            $go_days_base = $go_days_base + 2;
-        }
-
-        if($employee['invalid'] == 'DA'){
-            foreach ($invalidity_categories as $a){
-                if($a['category'] == $employee['invalid_category']){
-                    $go_days_base = $go_days_base + $a['number_of_days'];
-                }
-            }
-        }
-
-        $year_exp = floor($total_experience_days/365);
-
-        foreach ($year_exp_go as $y){
-            if($year_exp > $y['min'] and $year_exp < $y['max']){
-                $go_days_base = $go_days_base + $y['number_of_days'];
-            }
-        }
-
-        //update tabelu sa brojem GO dana
-        try{
-            $sql = "UPDATE [c0_intranet2_apoteke].[dbo].[vacation_days] set [vacation_days_no]=".$go_days_base. "where [Employee No_]=".$employee['Employee No_'];
-            $dbq = $db->query($sql);
-
-            $sql2 = "UPDATE [c0_intranet2_apoteke].[dbo].[total_experience] set [total_days]=".$total_experience_days. "where [Employee No_]=".$employee['Employee No_'];
-            $dbq2 = $db->query($sql2);
-
-            $sql3 = "UPDATE [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_dana=".$go_days_base. " where employee_no=".$employee['Employee No_']." and year=2021";
-            $dbq3 = $db->query($sql3);
-
-        }catch(Exception $e){
-            var_dump($e);
-            die();
-        }
-
-        $go_days_base=20;
-        $go_days_exp = 0;
-        $total_experience_days = 0;
-        $starting_dates = [];
-        $ending_dates = [];
-        $days_number_between_dates = [];
-        $year_exp = 0;
+    /*** Zakonska osnova ***/
+    if($year > 0 or $months >=6){
+        $total_go_days += $zakonski;
     }
-    else{
 
-        die();
-        try {
-            $sql2 = "UPDATE [c0_intranet2_apoteke].[dbo].[total_experience] set [total_days]=".$total_experience_days. " where [Employee No_]=".$employee['Employee No_'];
-            $dbq2 = $db->query($sql2);
-        }catch (Exception $e){
-            var_dump($e);
-            die();
+
+    /*** Na osnovu godina radnog iskustva ***/
+    if($year > 20){
+        $total_go_days += 5;
+    }
+
+    $total_go_days += $godina_rada;
+
+    /*** Na osnovu dezurstva ***/
+    if ($dezurstva == 'Da'){
+        $total_go_days += 1;
+    }
+
+    /*** Na osnovu ucesca u ratu 92-95 ***/
+    if($demo_borac['demobilizirani_borac'] == 'Da'){
+        $mjsc = $demo_borac['demobilizirani_borac_m'];
+
+        if ($mjsc >= 12 and $mjsc < 18){
+            $total_go_days += 1;
         }
-
-        if ($total_experience_days % 30 === 0 and round($total_experience_days/30) < 6){
-
-            $current_days = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_days] where [Employee No_]=".$employee['Employee No_'])->fetch();
-            try{
-                $sql = "UPDATE [c0_intranet2_apoteke].[dbo].[vacation_days] set [vacation_days_no]=".($current_days['vacation_days_no'] + 1);
-                $dbq = $db->query($sql);
-
-
-            }catch(Exception $e){
-                var_dump($e);
-                die();
-            }
+        elseif ($mjsc >= 18 and $mjsc < 30){
+            $total_go_days += 2;
         }
-        $go_days_base=20;
-        $go_days_exp = 0;
-        $total_experience_days = 0;
-        $starting_dates = [];
-        $ending_dates = [];
-        $days_number_between_dates = [];
+        elseif ($mjsc >= 30){
+            $total_go_days += 3;
+        }
+    }
+
+    /*** Na osnovu koeficijenta slozenosti poslova ***/
+    if ($koeficijent_slozenosti == 1){
+        $total_go_days += 1;
+    }
+    elseif ($koeficijent_slozenosti > 1 and $koeficijent_slozenosti <= 2){
+        $total_go_days += 2;
+    }
+    elseif ($koeficijent_slozenosti > 2 and $koeficijent_slozenosti <= 3){
+        $total_go_days += 3;
+    }
+    elseif ($koeficijent_slozenosti > 3 and $koeficijent_slozenosti <= 4){
+        $total_go_days += 4;
+    }
+    elseif ($koeficijent_slozenosti > 4){
+        $total_go_days += 5;
+    }
+
+    try {
+        $vac_stat = $db->query("select * from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where employee_no=".$rs['employee_no']);
+        $statement = "update [c0_intranet2_apoteke].[dbo].[vacation_statistics] set Br_Dana=".$total_go_days." where employee_no=".$rs['employee_no']. " and year=".date('Y');
+        $sql = $db->query($statement);
+
+    }catch (Exception $e){
+
     }
 }
-echo 'done';
-die();
-header('Location: ?m=work_booklet&p=all');
+
 ?>

@@ -460,7 +460,7 @@ function pageMenu()
                     if ($_user['role'] == 4 and $slug_sub == 'odsustva_radnici_corrections') {
                         global $url;
                         $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=admin">HR Administratori</a></li>';
-                        $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=work_booklet&p=all">Postava GO</a></li>';
+                        //$menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=work_booklet&p=all">Postava GO</a></li>';
                         $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=sifarniciorg&p=all">Šifarnici</a></li>';
                         // $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="'.$url . '/modules/' . 'default' . '/pages/popup_plan_go.php'.'">Plan GO</a></li>';
                         // $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=default&p=all_employees'.'">Pregled radnika</a></li>';

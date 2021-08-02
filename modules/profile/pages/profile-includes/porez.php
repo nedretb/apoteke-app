@@ -53,6 +53,15 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="demobilizirani_borac_m"> <?= ___('Broj mjeseci u odbrambeno-oslobodilačkom/domovinskom ratu') ?></label>
+                        <input type="text" value="<?= $por['demobilizirani_borac_m'] ?>" class="form-control form-control-sm" id="demobilizirani_borac_m" readonly>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <?php
     }
