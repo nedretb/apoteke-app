@@ -115,7 +115,7 @@ if ($pg_max == 0) {
                 <h2 style="display:inline-block;"><?php echo __('Rješenja o korištenju godišnjeg odmora za zaposlenike'); ?></h2>
             </div>
             <div class="col-md-3" style="position: relative; margin-top: 20px;">
-                <button onclick="kreirajRjesenja();" style="width:auto;" class="btn btn-red pull-left btn-sm"><?php echo __('Kreiraj rješenja za godišnji odmor'); ?><i class="create-outline"></i></button><br/><br/>
+                <button onclick="kreirajRjesenja();" style="width:auto;" class="btn btn-red pull-left btn-sm"><?php echo __('Kreiraj rješenja za godišnji odmor'); ?><i style="color: white;" class="ion-ios-download-outline"></i></button><br/><br/>
             </div>
         </div>
     </div>
