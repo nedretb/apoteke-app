@@ -6975,14 +6975,14 @@ function _statsDaysFreeReifUsers4Corrections($year, $datumOD, $datumDO, $offset,
                 $optionOdobriOtkazi .
                 '</select></td>' . $detalji . $satnice;
 
-            $dokument_input = '<td><input id="dokument-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" type="checkbox" ' . $dokument_checked . ' value="1" name="dokument-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" style=""></td>';
+//            $dokument_input = '<td><input id="dokument-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" type="checkbox" ' . $dokument_checked . ' value="1" name="dokument-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" style=""></td>';
 
             if ($_user['role'] == 4)
-                $items .= $dokument_input;
+//                $items .= $dokument_input;
 
 
             if (checkifAdmin() == true) {
-                $items .= '<td><input type="text" style="max-width: 50px;height: 46px;" id="disease_code-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" value="' . $value['disease_code'] . '" name="disease_code-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '"></td>';
+//                $items .= '<td><input type="text" style="max-width: 50px;height: 46px;" id="disease_code-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" value="' . $value['disease_code'] . '" name="disease_code-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '"></td>';
             }
 
             $items .= '<td><textarea data-comment-id="' . $value['start_id'] . '$#' . $value['end_id'] . '" maxlength="250" style="max-width: 110px;" id="komentar-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name=id="komentar-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" spellcheck="false">' . $value['komentar'] . '</textarea></td>' .

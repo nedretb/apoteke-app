@@ -244,7 +244,7 @@ if ($total > 0 || $total2 > 0) {
                     <input type="hidden" name="get_year" value="<?php echo $godina; ?>"/>
 
 
-                    <div class="row col-sm-12" style="margin-left:-0.2%;">
+                    <div class="row col-sm-12" style="margin-left:-0.2%; display: flex; justify-content: space-evenly;">
                         <div class="col-sm-1" style="padding: 0 3px;">
                             <input type="text" name="dateFrom" class="form-control" style="height:35px;" id="dateOD1"
                                    placeholder="dd.mm.yyyy" title="" value="<?php if (isset($_POST['dateFrom'])) {
@@ -279,7 +279,7 @@ if ($total > 0 || $total2 > 0) {
                         </div>
                         <div class="col-sm-1" style="margin-top: -25px;overflow:hidden;    padding: 0 3px;">
                             <label><?php echo __('Ime'); ?></label>
-                            <select id="ime_prezime" name="ime_prezime" class="rcorners1" style="outline:none"
+                            <select id="ime_prezime" name="ime_prezime" style="outline:none"
                                     class="form-control" onchange="this.form.submit();">
                                 <?php echo _optionName('', '', '', '', $ime_prezime, '') ?>
                             </select><br/>
@@ -626,7 +626,7 @@ if ($total > 0 || $total2 > 0) {
                 this.value = '';
                 return;
             }
-            $('[data-row-id="' + datarowid + '"]').css("background-color", "blue");
+            $('[data-row-id="' + datarowid + '"]').css("background-color", "#04FEE5");
 
 
             $.post("<?php echo $url . '/modules/' . $_mod . '/ajax.php'; ?>", {

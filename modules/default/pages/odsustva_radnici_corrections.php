@@ -262,7 +262,7 @@ if ($total > 0 || $total2 > 0) {
                     <input type="hidden" name="get_year" value="<?php echo $godina; ?>"/>
 
 
-                    <div class="row col-sm-12" style="margin-left:-2%;">
+                    <div class="row col-sm-12" style="margin-left:-2%; display: flex; justify-content: space-evenly;">
                         <div class="col-sm-1" style="padding-right:0px;">
                             <input type="text" name="dateFrom" class="form-control" style="height:35px;" id="dateOD1"
                                    placeholder="dd.mm.yyyy" title="" value="<?php if (isset($_POST['dateFrom'])) {
@@ -301,7 +301,7 @@ if ($total > 0 || $total2 > 0) {
                         </div>
                         <div class="col-sm-1" style="margin-top: -25px;padding-right:0px;height:35px;">
                             <label><?php echo __('Ime'); ?></label>
-                            <select id="ime_prezime" name="ime_prezime" class="rcorners1"
+                            <select id="ime_prezime" name="ime_prezime"
                                     style="outline:none; height:35px;" class="form-control"
                                     onchange="this.form.submit();">
                                 <?php echo _optionName('','', '', '', '', $ime_prezime) ?>
@@ -349,20 +349,23 @@ if ($total > 0 || $total2 > 0) {
                         </div>
 
                         <?php if ($_user['role'] == 4) { ?>
-                            <div class="col-sm-2" style="    font-size: 0.8vw;    width: 10%;">
-                                <input id="filter_neodobreno" type="checkbox" <?php if ($filter_neodobreno) {
-                                    echo 'checked="checked"';
-                                } ?> value="1" name="filter_neodobreno" style="margin-bottom:10px;">
-                                <span class="">Neodobreni</span><br/>
-
-                                <input id="filter_neodobreno" type="checkbox" <?php if ($filter_zahtjevi) {
-                                    echo 'checked="checked"';
-                                } ?> value="1" name="filter_zahtjevi" style="margin-bottom:10px;margin-top:3px;">
-                                <span class="">Otkazivanje</span>
-
+                            <div class="col-sm-1" style="max-width: 97px;text-align: center;padding: 0px 3px;">
+                                <div style="float:right;">
+                                    <input id="filter_neodobreno" type="checkbox" <?php if ($filter_neodobreno) {
+                                        echo 'checked="checked"';
+                                    } ?> value="1" name="filter_neodobreno" style="margin-bottom:10px;">
+                                    <span class="">Neodobreni</span>
+                                </div>
                             </div>
 
-                            <div class="col-sm-2" style="    font-size: 0.8vw;    width: 13%;">
+                            <div class="col-sm-1" style="max-width: 70px;text-align: center;padding: 0px 3px;">
+                                <input id="filter_neodobreno" type="checkbox" <?php if ($filter_zahtjevi) {
+                                    echo 'checked="checked"';
+                                } ?> value="1" name="filter_zahtjevi" style="margin-bottom:10px;">
+                                <span class="">Otkazivanje</span>
+                            </div>
+
+                            <div class="col-sm-2" style="    font-size: 0.8vw;    width: 13%; display: none;">
                                 <input id="filter_neodobreno" type="checkbox" <?php if ($filter_praznici) {
                                     echo 'checked="checked"';
                                 } ?> value="1" name="filter_praznici" style="margin-bottom:10px;">
@@ -630,7 +633,7 @@ if ($total > 0 || $total2 > 0) {
                 return;
             }
 
-            $('[data-row-id="' + datarowid + '"]').css("background-color", "blue");
+            $('[data-row-id="' + datarowid + '"]').css("background-color", "#04FEE5");
 
             $.post("<?php echo $url . '/modules/' . $_mod . '/ajax.php'; ?>", {
                     request: "change-odobreno_corrections",
