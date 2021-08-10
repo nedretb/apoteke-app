@@ -120,7 +120,7 @@ _pagePermission(5, false);
 
             <br/>
             <a href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_holiday_add.php' ?>" data-widget="ajax"
-               data-id="opt2" data-width="1500" class="btn btn-sm btn-red"
+               data-id="opt2" data-width="1500" class="btn btn-sm btn-red" onclick="destroySelect()"
                style="margin-bottom:5px; line-height: 28px;   width: 100%;display:<?php if (isset($_GET['u'])) {
                    echo 'none';
                } else {
@@ -128,7 +128,7 @@ _pagePermission(5, false);
                } ?>">Novi unos <i style="    padding-top: 5px;" class="ion-ios-plus-empty"></i></a>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" style="display: none;">
             <label><?php echo __('Područje primjene'); ?></label>
             <select style="padding:0px !important; " name="pod_primjene" id="pod_primjene" class="form-control">
                 <?php echo _optionStreamTeamWithGF($pod_primjene); ?>
@@ -154,14 +154,14 @@ _pagePermission(5, false);
                 <?php echo _optionNazivPraznika($naz_praznik); ?>
             </select>
         </div>
-        <div class="col-md-1" style="width:10%!important;">
+        <div class="col-md-1" style="display: none !important; width:10%!important;">
             <label><?php echo __('Pomični'); ?></label>
             <select style="padding:0px !important; " name="pomicni" id="pomicni" class="form-control">
                 <?php echo _OptionPomicni($pomicni); ?>
             </select>
         </div>
 
-        <div class="col-md-2" style="width:14%!important;">
+        <div class="col-md-2" style="display: none !important;width:14%!important;">
             <label class=""><?php echo __('Entitet:'); ?></label>
             <select style="padding:0px !important; " name="naz_entiteta" id="entity"
                     class="form-control " data-placeholder="Odaberi">
@@ -194,14 +194,14 @@ _pagePermission(5, false);
                 <option value="..">Odaberi...</option>
                 <?php
 
-                $d = $db->prepare('SELECT Code, Description FROM ' . $_conf['nav_database'] . '.[RAIFFAISEN BANK$ORG Dijelovi] WHERE Active = 1');
+                $d = $db->prepare('SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization]');
                 $d->execute();
                 $f = $d->fetchAll();
 
                 foreach ($f as $k => $v) {
 
                     ?>
-                    <option value="<?php echo $v['Description']; ?>"><?php echo $v['Description']; ?></option>
+                    <option value="<?php echo $v['s_title']; ?>"><?php echo $v['s_title']; ?></option>
                     <?php
                 }
                 ?>
@@ -226,10 +226,10 @@ _pagePermission(5, false);
         <table class="alt col-sm-12 sortable">
             <thead>
             <tr>
-                <th style="height:20px; background: #c7bebe;color: black;width: 600px;">Područje primjene</th>
+                <th style="height:20px; background: #c7bebe;color: black;width: 600px;">Organizaciona jedinica</th>
                 <th style="height:20px; background: #c7bebe;color: black;width: 300px;">Datum</th>
                 <th style="height:20px; background: #c7bebe;color: black;width: 500px;">Naziv praznika</th>
-                <th style="height:20px; background: #c7bebe;color: black;width: 200px;">Pomični</th>
+                <th style="display: none; height:20px; background: #c7bebe;color: black;width: 200px;">Pomični</th>
                 <th style="height:20px; background: #c7bebe;color: black;width: 20px;"></th>
                 <th style="height:20px; background: #c7bebe;color: black;width: 20px;"></th>
             </tr>
@@ -246,7 +246,7 @@ _pagePermission(5, false);
                     <td><?php echo $dep; ?></td>
                     <td sorttable_customkey="<?php echo date('d/m/Y', strtotime($item['date'])); ?>"><?php echo date('d.m.Y', strtotime($item['date'])); ?></td>
                     <td><?php echo $item['holiday_name']; ?></td>
-                    <td><?php if ($item['Pomicni'] == '1') {
+                    <td style="display: none;"><?php if ($item['Pomicni'] == '1') {
                             echo 'DA';
                         } else {
                             echo 'NE';
@@ -283,6 +283,11 @@ _pagePermission(5, false);
 include $_themeRoot . '/footer.php';
 ?>
 <script>
+
+    function destroySelect() {
+        $("#org_jed").select2('destroy');
+    }
+
 
     var today = new Date();
     var startDate = new Date();

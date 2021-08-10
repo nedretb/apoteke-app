@@ -56,8 +56,8 @@ include_once $root . '/modules/default/functions.php';
                     <br/><br/>
                 </div>
 
-                <label><?php echo __('Pomični:'); ?></label>
-                <select style="padding:0px !important; " name="pomicni" id="pomicni" class="form-control">
+                <label style="display: none;"><?php echo __('Pomični:'); ?></label>
+                <select style="display:none; padding:0px !important; " name="pomicni" id="pomicni" class="form-control">
                     <?php echo _OptionPomicni($row['Pomicni']); ?>
                 </select><br/>
 

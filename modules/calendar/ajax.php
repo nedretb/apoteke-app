@@ -142,42 +142,9 @@ if (isset($_POST['request'])) {
 
         $_user = _user(_decrypt($_SESSION['SESSION_USER']));
 
-        $department_name = array();
-
-        if (isset($_POST['department_name']) and $_POST['department_name'] != '')
-            $department_name = $_POST['department_name'];
-        elseif (isset($_POST['department_name_free']) and $_POST['department_name_free'] != '') {
-            if ($_POST['department_name_free'] == '1')
-                $department_name[] = 'CENTRALA';
-            elseif ($_POST['department_name_free'] == '2')
-                $department_name[] = '';
-        }
-
-
-        $processing_data = array(
-            "tip" => $_POST['field_type'],
-            "entitet" => @$_POST['entity'],
-            "orgjed" => @$_POST['orgjed']
-        );
-
-
         $date = date("Y/m/d", strtotime(str_replace("/", "-", $_POST['date'])));
 
-
-        if ($processing_data['tip'] == 'entitet') {
-            $entitet_name = "";
-
-            switch ($processing_data['entitet']) {
-                case 'BD':
-                    $entitet_name = 'Brčko Distrikt';
-                    break;
-                case 'FBIH':
-                    $entitet_name = 'Federacija BiH';
-                    break;
-                case 'RS':
-                    $entitet_name = 'Republika Srpska';
-                    break;
-            }
+        if (in_array('all', $_POST['orgjed'])){
 
             $data = "INSERT INTO  " . $portal_holidays_per_department . "  (
     [department name],[date],[holiday_type],[holiday_name],[Hr_status],[Pomicni],[tip]) VALUES (?,?,?,?,?,?,?)";
@@ -186,96 +153,47 @@ if (isset($_POST['request'])) {
             $res = $db->prepare($data);
             $res->execute(
                 array(
-                    $entitet_name,
+                    'MKT',
                     $date,
                     'BHOLIDAY',
                     $_POST['holiday_name'],
                     'PR_1',
                     $_POST['pomicni'],
-                    $processing_data['tip']
+                    'all'
                 )
             );
+        }
+        else{
+            foreach ($_POST['orgjed'] as $key => $value){
 
-            if ($res->rowCount() == 1) {
-                _addHoliday($_POST['holiday_name'], $processing_data['entitet'], $_POST['date'], $_POST['pomicni'], $processing_data);
+                try {
 
-            }
+                    $orgJedName = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematization] where id=".$value)->fetch()['s_title'];
 
-
-        } else if ($processing_data['tip'] == 'orgjed') {
-
-            $department_name = $_POST['orgjed'];
-
-            foreach ($department_name as $department) {
-                $query = $db->query("SELECT * FROM  " . $portal_holidays_per_department . "  WHERE ([department name] = '" . $department . "' and [date] = '" . $date . "') or ([department name] = '' and [date] = '" . $date . "')");
-                if ($query->rowCount() < 0) {
-                    echo '<div class="alert alert-danger text-center">' . __('Za izabrani datum i izabrano područje primjene postoji unesen praznik.') . '</div>';
-                    return;
-                }
-            }
-
-            foreach ($department_name as $department) {
-
-                $data = "INSERT INTO  " . $portal_holidays_per_department . "  (
+                    $data = "INSERT INTO  " . $portal_holidays_per_department . "  (
     [department name],[date],[holiday_type],[holiday_name],[Hr_status],[Pomicni],[tip]) VALUES (?,?,?,?,?,?,?)";
 
 
-                $res = $db->prepare($data);
-                $res->execute(
-                    array(
-                        $department,
-                        $date,
-                        'BHOLIDAY',
-                        $_POST['holiday_name'],
-                        'PR_1',
-                        $_POST['pomicni'],
-                        $processing_data['tip']
-                    )
-                );
-
-                if ($res->rowCount() == 1) {
-                    _addHoliday($_POST['holiday_name'], $department, $_POST['date'], $_POST['pomicni'], $processing_data);
-
-                }
-            }
-
-
-        } else {
-
-
-            foreach ($department_name as $department) {
-                $query = $db->query("SELECT * FROM  " . $portal_holidays_per_department . "  WHERE ([department name] = '" . $department . "' and [date] = '" . $date . "') or ([department name] = '' and [date] = '" . $date . "')");
-                if ($query->rowCount() < 0) {
-                    echo '<div class="alert alert-danger text-center">' . __('Za izabrani datum i izabrano područje primjene postoji unesen praznik.') . '</div>';
-                    return;
-                }
-            }
-
-            foreach ($department_name as $department) {
-
-                $data = "INSERT INTO  " . $portal_holidays_per_department . "  (
-    [department name],[date],[holiday_type],[holiday_name],[Hr_status],[Pomicni],[tip]) VALUES (?,?,?,?,?,?,?)";
-
-
-                $res = $db->prepare($data);
-                $res->execute(
-                    array(
-                        $department,
-                        $date,
-                        'BHOLIDAY',
-                        $_POST['holiday_name'],
-                        'PR_1',
-                        $_POST['pomicni'],
-                        $processing_data['tip']
-                    )
-                );
-
-                if ($res->rowCount() == 1) {
-                    _addHoliday($_POST['holiday_name'], $department, $_POST['date'], $_POST['pomicni'], $processing_data);
-
-                }
+                    $res = $db->prepare($data);
+                    $res->execute(
+                        array(
+                            $orgJedName,
+                            $date,
+                            'BHOLIDAY',
+                            $_POST['holiday_name'],
+                            'PR_1',
+                            $_POST['pomicni'],
+                            'orgjed'
+                        )
+                    );
+                } catch (Exception $e){}
             }
         }
+
+        if ($res->rowCount() == 1){
+            _addHoliday($_POST['holiday_name'], $orgJedName, $_POST['date']);
+        }
+
 
 
         echo '<div class="alert alert-success text-center">' . __('Informacije su uspješno spašene!') . '</div>';
@@ -399,6 +317,7 @@ if (isset($_POST['request'])) {
     }
 
     if ($_POST['request'] == 'remove-holiday_remove') {
+
         $this_id = $_POST['request_id'];
         _removeHoliday($this_id);
         $data = "DELETE FROM  " . $portal_holidays_per_department . "  WHERE id = ?";
@@ -2915,7 +2834,7 @@ set @status = 'potpisao_radnik;'
 
         $_user = _user(_decrypt($_SESSION['SESSION_USER']));
         $this_id = $_POST['request_id'];
-
+        _updateHoliday($_POST['holiday_name'], $_POST['department_name'], $_POST['date'], $_POST['pomicni'], $_POST['old_date'], $this_id);
         $date = date("Y/m/d", strtotime(str_replace("/", "-", $_POST['date'])));
 
         date_default_timezone_set('Europe/Sarajevo');

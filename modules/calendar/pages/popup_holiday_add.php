@@ -51,63 +51,28 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
                     width: 100% !important;
                 }
             </style>
-            <label><?php echo __('Tip područja primjene:'); ?></label>
-            <select required style="padding:0px !important; " name="field_type" id="field_type" class="form-control "
-                    data-placeholder="Odaberi">
-                <option value="entitet">Entitet</option>
-                <option value="orgjed">Organizaciona jedinica</option>
-                <option selected="selected" value="filijala-agencija">Filijala ili Agencija</option>
-                <option value="centrala">Centrala/Svi</option>
 
-            </select>
-
-
-            <div class="entitet collapsable" style="display:none">
-                <br/>
-                <label class=""><?php echo __('Entitet:'); ?></label>
-                <select style="padding:0px !important; " name="entity" id="entity"
-                        class="form-control " data-placeholder="Odaberi">
-                    <option value="FBIH">Federacija BiH</option>
-                    <option value="RS">Republika Srpska</option>
-                    <option value="BD">Brčko Distrikt</option>
-                </select>
-
-            </div>
-
-            <div class="orgjed collapsable" style="display:none;">
-                <br/>
-                <label class="" style=""><?php echo __('Organizaciona jedinica:'); ?></label>
+            <div class="filijala-agencija collapsable">
                 <br/>
 
-
+                <label><?php echo __('Organizaciona jedinica'); ?></label>
                 <select style="padding:0px !important; " name="orgjed[]" id="orgjed"
                         class="form-control orgajed" multiple="multiple" data-placeholder="Odaberi">
+                    <option value="all">Svi..</option>
                     <?php
 
-                    $d = $db->prepare('SELECT Code, Description FROM ' . $_conf['nav_database'] . '.[RAIFFAISEN BANK$ORG Dijelovi] WHERE Active = 1');
+                    $d = $db->prepare("SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization]");
                     $d->execute();
                     $f = $d->fetchAll();
 
                     foreach ($f as $k => $v) {
 
                         ?>
-                        <option value="<?php echo $v['Description']; ?>"><?php echo $v['Description']; ?></option>
+                        <option value="<?php echo $v['id']; ?>"><?php echo $v['s_title']; ?></option>
                         <?php
                     }
                     ?>
                 </select>
-            </div>
-
-
-            <div class="filijala-agencija collapsable">
-                <br/>
-
-                <label><?php echo __('Filijala ili agencija:'); ?></label>
-                <select style="padding:0px !important; " name="department_name[]" id="department_name"
-                        class="form-control filijala" multiple="multiple" data-placeholder="Odaberi">
-                    <?php echo str_replace('<option value="">Odaberi...</option><', '', _optionStreamTeamWithGF('')); ?>
-                </select>
-
             </div>
 
 
@@ -126,7 +91,7 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
 
             <label><?php echo __('Datum praznika:'); ?></label>
             <div id="dt1">
-                <input type="text" name="date" class="form-control" id="date1" required placeholder="dd.mm.yyyy">
+                <input autocomplete="off" type="text" name="date" class="form-control" id="date1" required placeholder="dd.mm.yyyy">
             </div>
             <br/>
 
@@ -136,8 +101,7 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
                        placeholder="<?php echo __('Ime praznika'); ?>" <br/><br/>
             </div>
 
-            <label><?php echo __('Pomični:'); ?></label>
-            <select style="padding:0px !important; " name="pomicni" id="pomicni" required class="form-control">
+            <select style="padding:0px !important; display: none;" name="pomicni" id="pomicni" required class="form-control">
                 <?php echo _OptionPomicni('0'); ?>
             </select><br/>
 

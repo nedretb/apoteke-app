@@ -7258,93 +7258,31 @@ function _addAllMonths($year)
 
 
 //citav kalendar stavljen u array, korekcije i obicne u istom insertu
-function _addHoliday($holiday_name, $department_name, $holiday_date, $pomicni, $processing_data = array())
+function _addHoliday($holidayName, $orgJed, $holidayDate)
 {
     session_write_close();
     global $db, $_conf, $nav_employee, $portal_users, $portal_hourlyrate_year, $portal_hourlyrate_day;
 
-    $day = date("j", strtotime(str_replace("/", "-", $holiday_date)));
-    $month = date("n", strtotime(str_replace("/", "-", $holiday_date)));
-    $year = date("Y", strtotime(str_replace("/", "-", $holiday_date)));
+    $orgJedId = $db->query("select id from [c0_intranet2_apoteke].[dbo].[systematization] where s_title=N'".$orgJed."' or s_title='".$orgJed."'")->fetch()['id'];
+    $orgJedUsers = $db->query("select employee_no, user_id from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$orgJedId);
 
-    if ($processing_data['tip'] == 'entitet') {
-
-        $entitet = $processing_data['entitet'];
-
-        if ($entitet == 'BD') {
-            $query_entitet = "[Org Entity Code] = 'BDFBIH' or  [Org Entity Code] = 'BDRS' or [Org Entity Code] = 'BD' ";
-        } else {
-            $query_entitet = "[Org Entity Code] = '$processing_data[entitet]' ";
-        }
-
-        $d = $db->prepare("SELECT [No_] FROM  " . $nav_employee . "  WHERE $query_entitet ");
-        $d->execute();
-        $f = $d->fetchAll();
-
-        $query_emp_nos = "(";
-        foreach ($f as $k => $v) {
-            $query_emp_nos .= "" . $v['No_'] . ", ";
-        }
-        $query_emp_nos = substr($query_emp_nos, 0, -2);
-        $query_emp_nos .= ")";
-
-
-        $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where employee_no in $query_emp_nos");
-
-    } else if ($processing_data['tip'] == 'orgjed') {
-
-        $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where [Stream_description]=N'" . $department_name . "' or [B_1_description]=N'" . $department_name . "' or [B_1_regions_description]=N'" . $department_name . "' or [Team_description]=N'" . $department_name . "'")->fetchAll();
-
-    } else {
-
-
-        if ($department_name == 'CENTRALA')
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where centrala=1");
-        elseif ($department_name == '')
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . " ");
-        else
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where [Stream_description]=N'" . $department_name . "' or [B_1_description]=N'" . $department_name . "' or [B_1_regions_description]=N'" . $department_name . "' or [Team_description]=N'" . $department_name . "'");
-
-    }
-
-
-    foreach ($query_calendar_users as $item) {
-
-        if ($pomicni == 0) {
-            $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year >= " . $year . ") ";
-        } elseif ($pomicni == 1) {
-            $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year = " . $year . ")";
-        }
-
-        $year_id_get = $db->query("SELECT [id] FROM  " . $portal_hourlyrate_year . "  where [user_id]='" . $item['user_id'] . "' and year='" . $year . "'");
-
-        if ($year_id_get->rowCount() < 0) {
-
-
-            $year_id1 = $year_id_get->fetch();
-            $year_id = $year_id1['id'];
-
-
-            $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status_bh = status
-      where day =" . $day . " and month_id =" . $month . $year_id_query;
-
-            $data1 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 83, corr_status = 83, KindOfDay = 'BHOLIDAY', review_status=1, corr_review_status = 1, Description = N'" . $holiday_name . "'
-      where day =" . $day . " and month_id =" . $month . $year_id_query . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
-
-
-            $res = $db->prepare($data2);
-            $res->execute(
-                array()
-            );
-
-            $res = $db->prepare($data1);
-            $res->execute(
-                array()
-            );
-
-
+    foreach ($orgJedUsers as $user){
+        try {
+            $sqlQuery = "update [c0_intranet2_apoteke].[dbo].[hourlyrate_day] set
+                    status=83,
+                    KindofDay='BHOLIDAY',
+                    corr_status=83,
+                    review_status=1,
+                    corr_review_status=1,                                                     
+                    Description='".$holidayName."' where employee_no='".$user['employee_no']."' and Date='".date('Y-m-d', strtotime($holidayDate))."'
+                    and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
+            $sql = $db->prepare($sqlQuery);
+            $sql->execute();
+        }catch (Exception $e){
+            var_dump($e);
         }
     }
+
     // if($res->rowCount()<0) {
     return '<div class="alert alert-success text-center">' . __('Informacije su uspješno spašene!') . '</div>';
     // }
@@ -7355,369 +7293,52 @@ function _updateHoliday($holiday_name, $department_name, $holiday_date, $pomicni
     session_write_close();
     global $db, $_conf, $portal_hourlyrate_year, $portal_holidays_per_department, $nav_employee, $portal_users, $portal_hourlyrate_day;
 
-    $day = date("j", strtotime(str_replace("/", "-", $holiday_date)));
-    $month = date("n", strtotime(str_replace("/", "-", $holiday_date)));
-    $year = date("Y", strtotime(str_replace("/", "-", $holiday_date)));
-
-    $day_old = date("j", strtotime(str_replace("/", "-", $old_date)));
-    $month_old = date("n", strtotime(str_replace("/", "-", $old_date)));
-    $year_old = date("Y", strtotime(str_replace("/", "-", $old_date)));
-
-
-    if ($pomicni == 1 and $year == $year_old) {
-        $yr = 2018;
-        $latest_year = $db->query("select top 1 * from  " . $portal_hourlyrate_year . "  order by id desc")->fetch();
-        //var_dump($yr);
-        while ($yr <= $latest_year['year']) {
-            $check_holidays = $db->query(" SELECT * FROM  " . $portal_holidays_per_department . "  where 
- (datepart(yy, date)=" . $yr . " and datepart(mm, date)=" . $month . " and datepart(dd, date)=" . $day . ") AND ([department name]='" . $department_name . "' or [department name]=N'" . $department_name . "')")->fetch();
-            //var_dump($yr);
-            //var_dump($check_holidays['Pomicni']);
-
-            if ($check_holidays['Pomicni'] === '0') {
-                //var_dump("dwa");
-                return '<div class="alert alert-success text-center">hnbibnib</div>';
-            } elseif ($check_holidays['Pomicni'] === '1') {
-                $year = $yr;
-                $year_old = $yr;
-            }
-
-            //die();
-            $yr++;
-        }
-
-    }
-
-
-    $query_holiday = $db->query("SELECT * FROM  " . $portal_holidays_per_department . "  where id=" . $this_id);
-    $holiday = $query_holiday->fetch();
-
-
-    if ($holiday['department name'] == 'Federacija BiH' or $holiday['department name'] == 'Republika Srpska' or $holiday['department name'] == 'Brčko Distrikt') {
-
-
-        switch ($holiday['department name']) {
-            case "Federacija BiH":
-                $entitet = "FBIH";
-                break;
-            case "Republika Srpska":
-                $entitet = "RS";
-                break;
-            case "Brčko Distrikt":
-                $entitet = "BD";
-                break;
-        }
-
-        if ($entitet == 'BD') {
-            $query_entitet = "[Org Entity Code] = 'BDFBIH' or  [Org Entity Code] = 'BDRS' or [Org Entity Code] = 'BD' ";
-        } else {
-            $query_entitet = "[Org Entity Code] = '$entitet' ";
-        }
-
-        $d = $db->prepare("SELECT [No_] FROM  " . $nav_employee . "  WHERE $query_entitet ");
-        $d->execute();
-        $f = $d->fetchAll();
-
-        $query_emp_nos = "(";
-        foreach ($f as $k => $v) {
-            $query_emp_nos .= "" . $v['No_'] . ", ";
-        }
-        $query_emp_nos = substr($query_emp_nos, 0, -2);
-        $query_emp_nos .= ")";
-
-
-        $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where employee_no in $query_emp_nos");
-
-
-    } else if ($holiday['tip'] == 'orgjed' or $holiday['tip'] == 'filijala-agencija') {
-
-        $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where [Stream_description]=N'" . $department_name . "' or [Team_description]=N'" . $department_name . "'");
-
-
-    } else {
-        if ($department_name == 'CENTRALA')
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where centrala=1");
-        elseif ($department_name == '')
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . " ");
-        else
-            $query_calendar_users = $db->query("SELECT user_id FROM  " . $portal_users . "  where [Stream_description]=N'" . $department_name . "' or [Team_description]=N'" . $department_name . "'");
-
-
-    }
-
-    foreach ($query_calendar_users as $item) {
-
-        if ($year != $year_old and $pomicni == 1) {
-            $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year = " . $year . ") ";
-            $year_id_query_old = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year = " . $year_old . ") ";
-            var_dump($year_id_query);
-
-            $data1 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 83, corr_status = 83, KindOfDay = 'BHOLIDAY', review_status=1, corr_review_status = 1, Description = N'" . $holiday_name . "' 
-  where day =" . $day . " and month_id =" . $month . $year_id_query . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108) and user_id=" . $item['user_id'];
-
-            $res = $db->prepare($data1);
-            $res->execute(
-                array()
-            );
-
-            $year_id_get = $db->query("SELECT [id] FROM  " . $portal_hourlyrate_year . "  where [user_id]='" . $item['user_id'] . "' and year='" . $year_old . "'");
-
-            if ($year_id_get->rowCount() < 0) {
-                $year_id1 = $year_id_get->fetch();
-                $year_id = $year_id1['id'];
-
-                $check = $db->query("SELECT status_bh FROM  " . $portal_hourlyrate_day . "  where KindOfDay = 'BHOLIDAY' and Description = N'" . $holiday_name . "' and year_id =" . $year_id . "  and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)");
-                foreach ($check as $checkvalue) {
-                    $status_before_holiday = $checkvalue['status_bh'];
-                }
-
-                if (isset($status_before_holiday)) {
-                    $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = " . $status_before_holiday . ", corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, corr_review_status = 0, Description =''
-   where day =" . $day_old . " and month_id =" . $month_old . $year_id_query_old . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)
-   ";
-                    $res = $db->prepare($data2);
-                    $res->execute(
-                        array()
-                    );
-
-
-                    $data4 = "UPDATE  " . $portal_hourlyrate_day . "  SET status_bh = " . $status_before_holiday . "
-    where day =" . $day . " and month_id =" . $month . " and year_id =" . $year_id . " and user_id=" . $item['user_id'];
-
-                    $res = $db->prepare($data4);
-                    $res->execute(
-                        array()
-                    );
-
-
-                } else {
-
-
-                    $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, corr_review_status = 0, Description =''
-   where day =" . $day_old . " and month_id =" . $month_old . $year_id_query_old . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108) and user_id=" . $item['user_id'];
-                    $res = $db->prepare($data2);
-                    $res->execute(
-                        array()
-                    );
-                }
-            } else {
-                $status_before_holiday = 5;
-
-                $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, corr_review_status = 0, Description =''
-   where day =" . $day_old . " and month_id =" . $month_old . $year_id_query_old . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
-                $res = $db->prepare($data2);
-                $res->execute(
-                    array()
-                );
-
-            }
-
-        } else {
-            if ($pomicni == 0) {
-                $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year >= " . $year . ") ";
-                $year_id_query_old = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year >= " . $year_old . ") ";
-
-                $data1 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 83, corr_status = 83, KindOfDay = 'BHOLIDAY', review_status=1, corr_review_status = 1, Description = N'" . $holiday_name . "' 
-  where day =" . $day . " and month_id =" . $month . $year_id_query . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108) and user_id=" . $item['user_id'];
-
-                $res = $db->prepare($data1);
-                $res->execute(
-                    array()
-                );
-
-
-            } elseif ($pomicni == 1) {
-
-                $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year > " . $year . ")";
-                $year_id_query_old = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year > " . $year_old . ") ";
-
-                $year_id_get = $db->query("SELECT [id] FROM  " . $portal_hourlyrate_year . "  where [user_id]='" . $item['user_id'] . "' and year='" . $year . "'");
-
-                if ($year_id_get->rowCount() < 0) {
-                    $year_id1 = $year_id_get->fetch();
-                    $year_id = $year_id1['id'];
-
-                    $check = $db->query("SELECT status_bh FROM  " . $portal_hourlyrate_day . "  where KindOfDay = 'BHOLIDAY' and Description = N'" . $holiday_name . "' and year_id =" . $year_id . "  and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)");
-                    foreach ($check as $checkvalue) {
-                        $status_before_holiday = $checkvalue['status_bh'];
-                    }
-
-                    if (isset($status_before_holiday)) {
-                        $data2 = "UPDATE  " . $portal_hourlyrate_day . "  
-  SET corr_status = " . $status_before_holiday . ", KindOfDay = 'BANKDAY', review_status=0, Description ='', status = 
-   case 
-      when year_id = " . $year_id . " then " . $status_before_holiday . "
-      when year_id > " . $year_id . " then 5
-    end
-   where status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108) and day =" . $day_old . " and month_id =" . $month_old . " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year > " . $year_old . ")
-   ";
-                        $res = $db->prepare($data2);
-                        $res->execute(
-                            array()
-                        );
-
-
-                        $data4 = "UPDATE  " . $portal_hourlyrate_day . "  SET status_bh = " . $status_before_holiday . "
-    where day =" . $day . " and month_id =" . $month . " and year_id =" . $year_id . " and user_id=" . $item['user_id'];
-
-                        $res = $db->prepare($data4);
-                        $res->execute(
-                            array()
-                        );
-
-
-                    } else {
-
-
-                        $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, corr_review_status = 0, Description =''
-   where day =" . $day_old . " and month_id =" . $month_old . $year_id_query_old . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108) and user_id=" . $item['user_id'];
-                        $res = $db->prepare($data2);
-                        $res->execute(
-                            array()
-                        );
-                    }
-                } else {
-                    $status_before_holiday = 5;
-
-                    $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, corr_review_status = 0, Description =''
-   where day =" . $day_old . " and month_id =" . $month_old . $year_id_query_old . " and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
-                    $res = $db->prepare($data2);
-                    $res->execute(
-                        array()
-                    );
-
-                }
-            }
-
-
-        }
-    }
+    _removeHoliday($this_id);
+    _addHoliday($holiday_name, $department_name, $holiday_date);
 
     // if($res->rowCount()<0) {
     return '<div class="alert alert-success text-center">' . __('Informacije su uspješno spašene!') . '</div>';
     // }
 }
 
-function _removeHoliday($this_id)
-{
+function _removeHoliday($this_id){
     session_write_close();
     global $db, $_conf, $portal_holidays_per_department, $nav_employee, $portal_users, $portal_hourlyrate_year, $portal_hourlyrate_day, $nav_employee_contract_ledger;
 
-    $query_holiday = $db->query("SELECT * FROM  " . $portal_holidays_per_department . "  where id=" . $this_id);
-    $holiday = $query_holiday->fetch();
+    $holidayInfo = $db->query("SELECT * FROM  [c0_intranet2_apoteke].[dbo].[holidays_per_department]  where id=" . $this_id)->fetch();
+    $orgJedId = $db->query("select id from [c0_intranet2_apoteke].[dbo].[systematization] where s_title=N'".$holidayInfo['department name']."' or s_title='".$holidayInfo['department name']."'")->fetch()['id'];
+    $orgJedUsers = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$orgJedId);
 
+    $day = date('D', strtotime('2021-07-31'));
 
-    $pieces = explode(' ', $holiday['date']);
-    $year = date("Y", strtotime($pieces[1]));
-
-
-    if ($holiday['department name'] == 'Federacija BiH' or $holiday['department name'] == 'Republika Srpska' or $holiday['department name'] == 'Brčko Distrikt') {
-
-
-        switch ($holiday['department name']) {
-            case "Federacija BiH":
-                $entitet = "FBIH";
-                break;
-            case "Republika Srpska":
-                $entitet = "RS";
-                break;
-            case "Brčko Distrikt":
-                $entitet = "BD";
-                break;
-        }
-
-        if ($entitet == 'BD') {
-            $query_entitet = "[Org Entity Code] = 'BDFBIH' or  [Org Entity Code] = 'BDRS' or [Org Entity Code] = 'BD' ";
-        } else {
-            $query_entitet = "[Org Entity Code] = '$entitet' ";
-        }
-
-        $d = $db->prepare("SELECT [No_] FROM  " . $nav_employee . "  WHERE $query_entitet ");
-        $d->execute();
-        $f = $d->fetchAll();
-
-        $query_emp_nos = "(";
-        foreach ($f as $k => $v) {
-            $query_emp_nos .= "" . $v['No_'] . ", ";
-        }
-        $query_emp_nos = substr($query_emp_nos, 0, -2);
-        $query_emp_nos .= ")";
-
-
-        $query_calendar_users = $db->query("SELECT * FROM  " . $portal_users . "  where employee_no in $query_emp_nos");
-
-
-    } else if ($holiday['tip'] == 'orgjed') {
-
-
-        $d = $db->prepare("SELECT [Employee No_] FROM  " . $nav_employee_contract_ledger . "  WHERE [Active] = 1 and ([Org Unit Name] = ? or [GF of work Description] = ? ) ");
-        $d->execute(array($holiday['department name'], $holiday['department name']));
-
-        $f = $d->fetchAll();
-
-
-        $query_emp_nos = "(";
-        foreach ($f as $k => $v) {
-            $query_emp_nos .= "" . $v['Employee No_'] . ", ";
-        }
-        $query_emp_nos = substr($query_emp_nos, 0, -2);
-        $query_emp_nos .= ")";
-
-
-        $query_calendar_users = $db->query("SELECT * FROM  " . $portal_users . "  where employee_no in $query_emp_nos");
-
-
-    } else {
-
-        if ($holiday['department name'] == 'CENTRALA')
-            $query_calendar_users = $db->query("SELECT * FROM  " . $portal_users . "  where centrala=1");
-        elseif ($holiday['department name'] == '')
-            $query_calendar_users = $db->query("SELECT * FROM  " . $portal_users . " ");
-        else
-            $query_calendar_users = $db->query("SELECT * FROM  " . $portal_users . "  where [Stream_description]=N'" . $holiday['department name'] . "' or [B_1_description]=N'" . $holiday['department name'] . "' or [B_1_regions_description]=N'" . $holiday['department name'] . "' or [Team_description]=N'" . $holiday['department name'] . "'");
-
+    //Sun, Sat
+    switch ($day){
+        case 'Sat':
+            $kindOfDay = 'SATURDAY';
+            break;
+        case 'Sun':
+            $kindOfDay = 'SUNDAY';
+            break;
+        default:
+            $kindOfDay = 'BANKDAY';
     }
 
-
-    foreach ($query_calendar_users as $item) {
-        if ($pomicni == 0) {
-            $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year >= " . $year . ") ";
-        } elseif ($pomicni == 1) {
-            $year_id_query = " and year_id in ( select id from  " . $portal_hourlyrate_year . "  where user_id = " . $item['user_id'] . " and year = " . $year . ")";
-        }
-
-        $year_id_get = $db->query("SELECT [id] FROM  " . $portal_hourlyrate_year . "  where [user_id]='" . $item['user_id'] . "' and year='" . $year . "'");
-        if ($year_id_get->rowCount() < 0) {
-            $year_id1 = $year_id_get->fetch();
-            $year_id = $year_id1['id'];
-
-
-            $check = $db->query("SELECT status_bh FROM  " . $portal_hourlyrate_day . "  where KindOfDay = 'BHOLIDAY' and Description = N'" . $holiday['holiday_name'] . "' and year_id =" . $year_id . "  and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)");
-            foreach ($check as $checkvalue) {
-                $status_before_holiday = $checkvalue['status_bh'];;
-            }
-
-            if (isset($status_before_holiday)) {
-                $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, Description ='', status_bh = NULL
-      where KindOfDay = 'BHOLIDAY' and Description = N'" . $holiday['holiday_name'] . "' " . $year_id_query . "  and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
-
-
-                $res = $db->prepare($data2);
-                $res->execute(
-                    array()
-                );
-            } else {
-                $data2 = "UPDATE  " . $portal_hourlyrate_day . "  SET status = 5, corr_status = 5, KindOfDay = 'BANKDAY', review_status=0, Description =''
-      where KindOfDay = 'BHOLIDAY' and Description = N'" . $holiday['holiday_name'] . "' and year_id =" . $year_id . "  and status not in (43,44,45,61,62,65,67,68,69,74,75,76,77,78,73,81,107,108)";
-
-
-                $res = $db->prepare($data2);
-                $res->execute(
-                    array()
-                );
-            }
+    foreach ($orgJedUsers as $user){
+        try {
+            $sqlQuery = "update [c0_intranet2_apoteke].[dbo].[hourlyrate_day] set
+                    status=5,
+                    KindofDay='".$kindOfDay."',
+                    corr_status=5,
+                    review_status=0,
+                    corr_review_status=0,                                                     
+                    Description='' where employee_no='".$user['employee_no']."' and Date='".date('Y-m-d', strtotime($holidayInfo['date']))."'";
+            $sql = $db->prepare($sqlQuery);
+            $sql->execute();
+        }catch (Exception $e){
+            var_dump($e);
         }
     }
+
 }
 
 function insertMonth1($m, $user_id, $year_id)
