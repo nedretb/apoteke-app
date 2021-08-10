@@ -40,8 +40,9 @@ if (!empty($_POST['pg'])) {
 $offset = ($page - 1) * $limit;
 
 $fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq." order by v.employee_no offset ".$offset. " rows fetch next ".$limit." rows only");
+$total = $db->query("select count(*) from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq);
 
-$pg_max = ceil($total[0] / $limit);
+$pg_max = ceil($total->fetch()[0] / $limit);
 if ($pg_max == 0) {
     $pg_max = 1;
 }
@@ -141,7 +142,7 @@ if ($pg_max == 0) {
                                 <?php echo _optionB_1($orgJed) ?>
                             </select><br/><br/>
 
-                            <label style="width: 100%"  class="lable-admin1"><?php echo __('Ime državnog službenika'); ?></label>
+                            <label style="width: 100%"  class="lable-admin1"><?php echo __('Ime zaposlenika'); ?></label>
                             <select id="ime_prezime" name="ime_prezime" class="rcorners1" style="outline:none;width:200px; background-color:#6DACC9 ; color:white;"
                                     class="form-control" onchange="this.form.submit();">
                                 <?php echo _optionName('', '', '', $orgJed, $ime_prezime, $filtertdate) ?>
@@ -173,7 +174,7 @@ if ($pg_max == 0) {
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Ime i prezime državnog službenika</th>
+                        <th scope="col">Ime i prezime zaposlenika</th>
                         <th scope="col">Datum kreiranja rješenja</th>
                         <th scope="col">Period korištenja GO</th>
                         <th scope="col">Preuzimanje rješenja</th>
