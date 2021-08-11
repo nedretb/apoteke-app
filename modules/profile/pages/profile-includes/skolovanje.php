@@ -13,14 +13,14 @@
     foreach ($skolovanje[0]['users__skolovanje'] as $skol){
         ?>
         <div class="mp-i-row">
-            <div class="edit-delete-row">
+<!--            <div class="edit-delete-row">-->
 <!--                <div class="edr-w" title="--><?//= ___('Uredite') ?><!--">-->
 <!--                    <a href="?m=profile&p=insert-data&what=skolovanje&id=--><?//= $skol['id'] ?><!--"><i class="far text-success fa-edit"></i></a>-->
 <!--                </div>-->
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
 <!--                </div>-->
-            </div>
+<!--            </div>-->
 
             <div class="row">
                 <div class="col-md-6">

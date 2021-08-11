@@ -2,11 +2,13 @@
 
     <div class="mp-i-h">
         <h4><?= ___('Podaci o porodičnom stanju') ?></h4>
+        <?php if ($_user['role'] == 4){ ?>
         <a href="?m=profile&p=insert-data&what=porodicno-stanje">
             <div class="icon-w">
                 <i class="fas fa-plus"></i>
             </div>
         </a>
+        <?php }?>
     </div>
 
     <?php
