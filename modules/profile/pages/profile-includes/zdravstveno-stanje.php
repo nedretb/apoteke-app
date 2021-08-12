@@ -43,7 +43,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="dijete_sa_posebnim_potrebama"> <?= ___('Socijalni uslovi') ?></label>
-                        <input type="text" value="<?= $zdr['socijalni_status'] ?>" class="form-control form-control-sm" id="dijete_sa_posebnim_potrebama" readonly>
+                        <input type="text" value="<?php if ($zdr['socijalni_status'] == 'bez'){ echo 'Bez';} elseif ($zdr['socijalni_status'] == 'roditelj_malodobno'){ echo 'Roditelj, staratelj ili usvojitelj sa malodobnim djetetom/djecom';} else{ echo 'Roditelj, staratelj ili usvojitelj hendikepiranog djeteta';} ?>" class="form-control form-control-sm" id="dijete_sa_posebnim_potrebama" readonly>
                     </div>
                 </div>
                 <div class="col-md-6">
