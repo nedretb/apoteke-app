@@ -74,6 +74,7 @@ if (isset($_GET['what'])) {
                     PorodicnoStanje::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
                 }
+                echo '<div id="respons" class="alert alert-success">Podaci uspješno sačuvani</div>';
             }
             $porodica = PorodicnoStanje::where('id = ' . $_GET['id'])->first();
         } else {
