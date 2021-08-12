@@ -366,8 +366,11 @@ if (isset($_POST['request'])) {
         if ($status == 67) {
 
 
-            $get_entity = DB::select("SELECT [Org Entity Code] FROM  " . $nav_employee . "  WHERE [No_] =  '" . $empid . "'");
-            $get_entity = $get_entity->{'Org Entity Code'};
+//            $get_entity = DB::select("SELECT [Org Entity Code] FROM  " . $nav_employee . "  WHERE [No_] =  '" . $empid . "'");
+//            $get_entity = $get_entity->{'Org Entity Code'};
+
+            //TODO dodat entitet korisnika
+            $get_entity = 'FBIH';
 
             /*
                 Bolovanje u Federaciji BiH
