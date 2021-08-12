@@ -9,10 +9,13 @@ class LicniDokumenti extends MainModel{
         'Srbija' => 'Srbija',
     ];
     protected static $_kategorija = [
-        'A1' => 'A1',
         'A' => 'A',
-        'B1' => 'B',
+        'B' => 'B',
+        'BE' => 'BE',
         'C' => 'C',
+        'CE' => 'CE',
+        'D' => 'D',
+        'DE' => 'DE',
     ];
 
     public static function drzavljanstvo(){return self::$_drzavljanstvo; }

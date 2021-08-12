@@ -28,13 +28,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="invalid_"><?= ___('Invalid') ?></label>
-                        <input type="text" value="<?= $zdr['invalid_'] ?>" class="form-control form-control-sm" id="invalid_" readonly>
+                        <input type="text" value="<?= $zdr['invalid_'] ?>" class="form-control form-control-sm" id="invalid_" disabled="disabled">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="stepen_invalidnosti"><?= ___('Stepen invalidnosti') ?></label>
-                        <input type="text" value="<?= $stepen['category'] ?>" class="form-control form-control-sm" id="stepen_invalidnosti" readonly>
+                        <input type="text" value="<?= $stepen['category'] ?>" class="form-control form-control-sm" id="stepen_invalidnosti" disabled="disabled">
                     </div>
                 </div>
             </div>

@@ -5,6 +5,15 @@ try{
 }catch (\Exception $e){
 
 }
+$srodstvo = ['' => 'Odaberi..',
+             'Dijete' => 'Dijete',
+             'Majka' => 'Majka',
+             'Otac' => 'Otac',
+             'Pastorak/Patorka' => 'Pastorak/Patorka',
+             'Srodnici u MKT' => 'Srodnici u MKT',
+             'Supružnik' => 'Supružnik',
+             'Svekar' => 'Svekar',
+             'Svekrva' => 'Svekrva'];
 ?>
 
 <div class="simple-header">
@@ -27,20 +36,20 @@ try{
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="kucni_telefonski_broj"><?= ___('Kućni telefonski broj') ?></label>
-                            <?= Form::select('kucni_telefonski_broj', ['+387' => '+387'], $kontakt['kucni_telefonski_broj'] ?? '', ['id' => 'kucni_telefonski_broj', 'class' => 'form-control', 'required' => 'required']) ?>
+                            <label for="pozivni_broj"><?= ___('Kućni telefonski broj') ?></label>
+                            <?= Form::select('pozivni_broj', ['+387' => '+387'], $kontakt['pozivni_broj'] ?? '', ['id' => 'pozivni_broj', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="kucni_regionalni_kod"><?= ___('Regionalni kod') ?></label>
-                            <?= Form::select('kucni_regionalni_kod', Kontakt::range(30, 77), $kontakt['kucni_regionalni_kod'] ?? '', ['id' => 'kucni_regionalni_kod', 'class' => 'form-control', 'required' => 'required']) ?>
+                            <label for="kucni_regionalni_broj"><?= ___('Regionalni kod') ?></label>
+                            <?= Form::select('kucni_regionalni_broj', Kontakt::range(30, 77), $kontakt['kucni_regionalni_broj'] ?? '', ['id' => 'kucni_regionalni_broj', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="kucni_broj"><?= ___('Broj') ?></label>
-                            <?= Form::number('kucni_broj', $kontakt['kucni_broj'] ?? '', ['id' => 'kucni_broj', 'class' => 'form-control', 'step' => 1, 'required' => 'required', 'max' => '10000000']) ?>
+                            <?= Form::number('kucni_broj', $kontakt['kucni_broj'] ?? '', ['id' => 'kucni_broj', 'class' => 'form-control', 'step' => 1, 'max' => '10000000']) ?>
                         </div>
                     </div>
                 </div>
@@ -48,19 +57,19 @@ try{
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="privatni_mobitel_broj"><?= ___('Broj privatnog mobitela') ?></label>
-                            <?= Form::select('privatni_mobitel_broj', ['+387' => '+387'], $kontakt['privatni_mobitel_broj'] ?? '', ['id' => 'privatni_mobitel_broj', 'class' => 'form-control', 'required' => 'required']) ?>
+                            <?= Form::select('privatni_mobitel_broj', ['+387' => '+387'], $kontakt['privatni_mobitel_broj'] ?? '', ['id' => 'privatni_mobitel_broj', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="mobitel_regionalni_kod"><?= ___('Regionalni kod') ?></label>
-                            <?= Form::select('mobitel_regionalni_kod', Kontakt::range(30, 77), $kontakt['mobitel_regionalni_kod'] ?? '', ['id' => 'mobitel_regionalni_kod', 'class' => 'form-control', 'required' => 'required', 'min' => '100000']) ?>
+                            <?= Form::select('mobitel_regionalni_kod', Kontakt::range(30, 77), $kontakt['mobitel_regionalni_kod'] ?? '', ['id' => 'mobitel_regionalni_kod', 'class' => 'form-control', 'min' => '100000']) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="mobitel_broj"><?= ___('Broj') ?></label>
-                            <?= Form::number('mobitel_broj', $kontakt['mobitel_broj'] ?? '', ['id' => 'mobitel_broj', 'class' => 'form-control', 'step' => 1, 'required' => 'required', 'max' => '10000000', 'min' => '100000']) ?>
+                            <?= Form::number('mobitel_broj', $kontakt['mobitel_broj'] ?? '', ['id' => 'mobitel_broj', 'class' => 'form-control', 'step' => 1, 'max' => '10000000', 'min' => '100000']) ?>
                         </div>
                     </div>
                 </div>
@@ -87,7 +96,7 @@ try{
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="odnos_sa_kontakt_osobe"> <?= ___('Srodstvo') ?></label>
-                            <?= Form::select('odnos_sa_kontakt_osobe', [], $kontakt['odnos_sa_kontakt_osobe'] ?? '', ['id' => 'odnos_sa_kontakt_osobe', 'class' => 'form-control']) ?>
+                            <?= Form::select('odnos_sa_kontakt_osobe', $srodstvo, $kontakt['odnos_sa_kontakt_osobe'] ?? '', ['id' => 'odnos_sa_kontakt_osobe', 'class' => 'form-control']) ?>
                             <small class="form-text text-muted"> <?= ___('U kakvom je odnosu radnik sa kontakt osobom za hitni slučaj') ?> </small>
                         </div>
                     </div>
@@ -99,19 +108,19 @@ try{
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="kontakt_osoba_broj_telefona"><?= ___('Broj telefona kontakt osobe') ?></label>
-                            <?= Form::select('kontakt_osoba_broj_telefona', ['+387' => '+387'], $kontakt['kontakt_osoba_broj_telefona'] ?? '', ['id' => 'kontakt_osoba_broj_telefona', 'class' => 'form-control', 'required' => 'required']) ?>
+                            <?= Form::select('kontakt_osoba_broj_telefona', ['+387' => '+387'], $kontakt['kontakt_osoba_broj_telefona'] ?? '', ['id' => 'kontakt_osoba_broj_telefona', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="kontakt_osoba_regionalni_kod"><?= ___('Regionalni kod') ?></label>
-                            <?= Form::select('kontakt_osoba_regionalni_kod', Kontakt::range(30, 77), $kontakt['kontakt_osoba_regionalni_kod'] ?? '', ['id' => 'kontakt_osoba_regionalni_kod', 'class' => 'form-control', 'required' => 'required']) ?>
+                            <?= Form::select('kontakt_osoba_regionalni_kod', Kontakt::range(30, 77), $kontakt['kontakt_osoba_regionalni_kod'] ?? '', ['id' => 'kontakt_osoba_regionalni_kod', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="kontakt_osoba_broj"><?= ___('Broj') ?></label>
-                            <?= Form::number('kontakt_osoba_broj', $kontakt['kontakt_osoba_broj'] ?? '', ['id' => 'kontakt_osoba_broj', 'class' => 'form-control', 'step' => 1, 'required' => 'required', 'max' => '10000000', 'min' => '100000']) ?>
+                            <?= Form::number('kontakt_osoba_broj', $kontakt['kontakt_osoba_broj'] ?? '', ['id' => 'kontakt_osoba_broj', 'class' => 'form-control', 'step' => 1, 'max' => '10000000', 'min' => '100000']) ?>
                         </div>
                     </div>
                 </div>

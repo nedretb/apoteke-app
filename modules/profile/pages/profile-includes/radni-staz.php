@@ -12,19 +12,19 @@
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-3 col-form-label mt-2"><?= ___('Doneseni radni staž: ') ?></label>
             <div class="col-sm-9">
-                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['doneseni_radni_staz_g']."g ".$rs['doneseni_radni_staz_m']."m ".$rs['doneseni_radni_staz_d']."d" ?>" readonly>
+                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['doneseni_radni_staz_g']."g ".$rs['doneseni_radni_staz_m']."m ".$rs['doneseni_radni_staz_d']."d" ?>" disabled="disabled">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-3 col-form-label mt-2"><?= ___('Radni staž u kompaniji: ') ?></label>
             <div class="col-sm-9">
-                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['radni_staz_u_kompaniji_g']."g ".$rs['radni_staz_u_kompaniji_m']."m ".$rs['radni_staz_u_kompaniji_d']."d" ?>" readonly>
+                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['radni_staz_u_kompaniji_g']."g ".$rs['radni_staz_u_kompaniji_m']."m ".$rs['radni_staz_u_kompaniji_d']."d" ?>" disabled="disabled">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-3 col-form-label mt-2"><?= ___('Ukupan radni staž: ') ?></label>
             <div class="col-sm-9">
-                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['ukupan_radni_staz_g']."g ".$rs['ukupan_radni_staz_m']."m ".$rs['ukupan_radni_staz_d']."d" ?>" readonlysa>
+                <input type="email" class="form-control form-control-sm" id="inputEmail3" value="<?php echo $rs['ukupan_radni_staz_g']."g ".$rs['ukupan_radni_staz_m']."m ".$rs['ukupan_radni_staz_d']."d" ?>" disabled="disabled">
             </div>
         </div>
 

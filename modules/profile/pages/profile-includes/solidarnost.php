@@ -26,13 +26,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="clan_internog_fonda_solidarnosti"><?= ___('Član internog fonda solidarnosti') ?></label>
-                        <input type="text" value="<?= $solidarnost['clan_internog_fonda_solidarnosti'] ?>" class="form-control form-control-sm" id="clan_internog_fonda_solidarnosti" readonly>
+                        <input type="text" value="<?= $solidarnost['clan_internog_fonda_solidarnosti'] ?>" class="form-control form-control-sm" id="clan_internog_fonda_solidarnosti" disabled="disabled">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="clan_sindikata"> <?= ___('Član sindikata') ?></label>
-                        <input type="text" value="<?= $solidarnost['clan_sindikata'] ?>" class="form-control form-control-sm" id="clan_sindikata" readonly>
+                        <input type="text" value="<?= $solidarnost['clan_sindikata'] ?>" class="form-control form-control-sm" id="clan_sindikata" disabled="disabled">
                     </div>
                 </div>
             </div>

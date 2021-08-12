@@ -4,6 +4,15 @@ try{
     $srodnici = Profile::select('fname, lname, employee_no')->orderBy('lname', 'ASC')->pluck("employee_no", "fname", "lname");
 }catch (\Exception $e) {}
 
+$krvneGrupe = [ '' => 'Odaberi..',
+                '0-'=>__('0-'),
+                '0+'=>__('0+'),
+                'A-'=>__('A-'),
+                'A+'=>__('A+'),
+                'B-'=>__('B-'),
+                'B+'=>__('B+'),
+                'AB-'=>__('AB-'),
+                'AB+'=>__('AB+'),];
 ?>
 
 <div class="simple-header">
@@ -28,7 +37,7 @@ try{
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broj_licne_karte"> <?= ___('Broj lične karte') ?> </label>
-                            <?= Form::text('broj_licne_karte', $dokumenti['broj_licne_karte'] ?? '', ['id' => 'broj_licne_karte', 'class' => 'form-control', 'readonly'=>'true']) ?>
+                            <?= Form::text('broj_licne_karte', $dokumenti['broj_licne_karte'] ?? '', ['id' => 'broj_licne_karte', 'class' => 'form-control', 'disabled'=>'disabled']) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -48,7 +57,7 @@ try{
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="krvna_grupa"> <?= ___('Krvna grupa') ?> </label>
-                            <?= Form::text('krvna_grupa',$dokumenti['krvna_grupa'] ?? '', ['id' => 'krvna_grupa', 'class' => 'form-control']) ?>
+                            <?= Form::select('krvna_grupa', $krvneGrupe, $dokumenti['krvna_grupa'] ?? '', ['id' => 'krvna_grupa', 'class' => 'form-control']) ?>
                         </div>
                     </div>
                 </div>

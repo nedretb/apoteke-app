@@ -29,13 +29,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="broj_licne_karte"><?= ___('Broj lične karte') ?></label>
-                        <input type="text" value="<?= $ld['broj_licne_karte'] ?>" class="form-control form-control-sm" id="broj_licne_karte" readonly>
+                        <input type="text" value="<?= $ld['broj_licne_karte'] ?>" class="form-control form-control-sm" id="broj_licne_karte" disabled="disabled">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="drzavljanstvo"> <?= ___('Državljanstvo ') ?></label>
-                        <input type="text" value="<?= $ld['drzavljanstvo'] ?>" class="form-control form-control-sm" id="drzavljanstvo" readonly>
+                        <input type="text" value="<?= $ld['drzavljanstvo'] ?>" class="form-control form-control-sm" id="drzavljanstvo" disabled="disabled">
                     </div>
                 </div>
             </div>

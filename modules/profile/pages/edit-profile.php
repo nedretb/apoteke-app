@@ -148,31 +148,31 @@ if(!empty($_GET['u'])){
                 <div class="form-group row">
                     <label for="naziv_opstine_rodjenja" class="col-sm-4 col-form-label mt-2"><?= ___('Država rođenja') ?></label>
                     <div class="col-sm-8">
-                        <input readonly type="text" value="<?= $rodjenje['sifra_drzave_rodjenja'] ?>" class="form-control form-control-sm" id="naziv_opstine_rodjenja" >
+                        <input type="text" value="<?= $rodjenje['sifra_drzave_rodjenja'] ?>" class="form-control form-control-sm" id="naziv_opstine_rodjenja" disabled="disabled" >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="naziv_opstine_rodjenja" class="col-sm-4 col-form-label mt-2"><?= ___('Naziv općine rođenja') ?></label>
                     <div class="col-sm-8">
-                        <input readonly type="text" value="<?= $rodjenje['naziv_opstine_rodjenja'] ?>" class="form-control form-control-sm" id="naziv_opstine_rodjenja" >
+                        <input type="text" value="<?= $rodjenje['naziv_opstine_rodjenja'] ?>" class="form-control form-control-sm" id="naziv_opstine_rodjenja" disabled="disabled">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="mjesto_rodjenja" class="col-sm-4 col-form-label mt-2"><?= ___('Mjesto rođenja') ?></label>
                     <div class="col-sm-8">
-                        <input readonly type="text" value="<?= $rodjenje['mjesto_rodjenja'] ?>" class="form-control form-control-sm" id="mjesto_rodjenja" >
+                        <input type="text" value="<?= $rodjenje['mjesto_rodjenja'] ?>" class="form-control form-control-sm" id="mjesto_rodjenja" disabled="disabled" >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="datum_rodjena" class="col-sm-4 col-form-label mt-2"><?= ___('Datum rođenja') ?></label>
                     <div class="col-sm-8">
-                        <input readonly type="text" value="<?= isset($rodjenje) ? ___formatDate($rodjenje['datum_rodjena']) : '' ?>" class="form-control form-control-sm" id="datum_rodjena" >
+                        <input  type="text" value="<?= isset($rodjenje) ? ___formatDate($rodjenje['datum_rodjena']) : '' ?>" class="form-control form-control-sm" id="datum_rodjena" disabled="disabled">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="grad_rodjenja" class="col-sm-4 col-form-label mt-2"><?= ___('Grad rođenja') ?></label>
                     <div class="col-sm-8">
-                        <input readonly type="text"  value="<?= $rodjenje['grad_rodjenja'] ?>"class="form-control form-control-sm" id="grad_rodjenja" >
+                        <input type="text"  value="<?= $rodjenje['grad_rodjenja'] ?>"class="form-control form-control-sm" id="grad_rodjenja" disabled="disabled" >
                     </div>
                 </div>
             </div>

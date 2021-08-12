@@ -1,7 +1,6 @@
 <?php
 
 use Carbon\Carbon as Carbon;
-
 if(isset($_GET['what'])){
     $what = $_GET['what'];
 
@@ -30,6 +29,32 @@ if(isset($_GET['what'])){
             if(isset($request)){
                 $request->employee_no = $_user['employee_no']; // ADD Employee no
                 try{
+//                    $sqlStatement = "UPDATE [c0_intranet2_apoteke].[dbo].[users__kontakt_informacije] SET [kucni_telefonski_broj] = ?,
+//                                     [kucni_regionalni_kod] = ?,
+//                                     [kucni_broj] = ? ,
+//                                     [privatni_mobitel_broj] = ? ,
+//                                     [mobitel_regionalni_kod] = ? ,
+//                                     [mobitel_broj] = ? ,
+//                                     [privatna_email_adresa] = ? ,
+//                                     [ime_prezime_kontakt_osobe] = ? ,
+//                                     [kontakt_osoba_broj_telefona] = ? ,
+//                                     [kontakt_osoba_regionalni_kod] = ? ,
+//                                     [kontakt_osoba_broj] = ?   WHERE id = ?";
+//                    $injection = $db->prepare($sqlStatement)->execute([
+//                        $request->get()['kucni_telefonski_broj'],
+//                        $request->get()['kucni_regionalni_kod'],
+//                        $request->get()['kucni_broj'],
+//                        $request->get()['privatni_mobitel_broj'],
+//                        $request->get()['mobitel_regionalni_kod'],
+//                        $request->get()['mobitel_broj'],
+//                        $request->get()['privatna_email_adresa'],
+//                        $request->get()['ime_prezime_kontakt_osobe'],
+//                        $request->get()['kontakt_osoba_broj_telefona'],
+//                        $request->get()['kontakt_osoba_regionalni_kod'],
+//                        $request->get()['kontakt_osoba_broj'],
+//                        $_GET['id']
+//                    ]);
+//                    var_dump($injection = $db->prepare($sqlStatement));
                     Kontakt::where('id = '.$_GET['id'])->update($request->get());
                 }catch (\Exception $e){}
             }

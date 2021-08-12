@@ -93,7 +93,9 @@
 input[readonly]{
     background-color:#fff !important;
 }
-
+input{
+    cursor: initial !important;
+}
 
 /*** All employees ***/
 

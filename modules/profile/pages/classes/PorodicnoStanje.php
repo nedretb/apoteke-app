@@ -5,7 +5,7 @@ class PorodicnoStanje extends MainModel{
     protected static $new_table = 'users__podaci_o_porodicnom_stanju';
     protected static $_porodicno_stanje = [
         'Oženjen / Udata' => 'Oženjen / Udata',
-        'Neoženjen / Udata' => 'Neoženjen / Udata',
+        'Neoženjen / Neudata' => 'Neoženjen / Neudata',
         'Razveden / Razvedena' => 'Razveden / Razvedena',
         'Udovac / Udovica' => 'Udovac / Udovica',
         'Vanbračna zajednica' => 'Vanbračna zajednica'
