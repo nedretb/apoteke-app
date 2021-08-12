@@ -110,6 +110,7 @@ if (isset($_GET['what'])) {
                     LicniDokumenti::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
                 }
+                echo '<div id="respons" class="alert alert-success">Podaci uspješno sačuvani</div>';
             }
             $dokumenti = LicniDokumenti::where('id = ' . $_GET['id'])->first();
         } else {
@@ -128,6 +129,7 @@ if (isset($_GET['what'])) {
                     ZdravstvenoStanje::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
                 }
+                echo '<div id="respons" class="alert alert-success">Podaci uspješno sačuvani</div>';
             }
             $zdravstv = ZdravstvenoStanje::where('id = ' . $_GET['id'])->first();
         } else {
@@ -182,6 +184,7 @@ if (isset($_GET['what'])) {
                     Porez::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
                 }
+                echo '<div id="respons" class="alert alert-success">Podaci uspješno sačuvani</div>';
             }
             $porez = Porez::where('id = ' . $_GET['id'])->first();
         } else {
