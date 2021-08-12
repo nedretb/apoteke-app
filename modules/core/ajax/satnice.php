@@ -12,9 +12,9 @@ error_reporting(E_ALL);
 
 function kreirajZahtjevZaGO($year_id, $date_from, $date_to){
     global $db;
-    $user_data = $db->query('select v.user_id, b.fname, b.lname, b.parent from [c0_intranet2_apoteke].[dbo].[hourlyrate_year] as v 
-join [c0_intranet2_apoteke].[dbo].[users] as b on v.user_id=b.user_id where v.id='.$year_id)->fetch();
-    $parent_data = $db->prepare("select fname, lname from [c0_intranet2_apoteke].[dbo].[users] where employee_no='".$user_data['parent']."'");
+    $user_data = $db->query('SELECT v.user_id, b.fname, b.lname, b.parent FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_year] AS v 
+                                      JOIN [c0_intranet2_apoteke].[dbo].[users] AS b ON v.user_id=b.user_id WHERE v.id='.$year_id)->fetch();
+    $parent_data = $db->prepare("SELECT fname, lname FROM [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no='".$user_data['parent']."'");
     //generatepdf($user_data, $parent_data, $date_from, $date_to);
 }
 if (isset($_POST['request'])) {
@@ -384,10 +384,11 @@ if (isset($_POST['request'])) {
 
         if ($status == 67) {
 
+//            $get_entity = DB::select("SELECT [Org Entity Code] FROM  " . $nav_employee . "  WHERE [No_] =  '" . $empid . "'");
+//            $get_entity = $get_entity->{'Org Entity Code'};
 
-            $get_entity = DB::select("SELECT [Org Entity Code] FROM  " . $nav_employee . "  WHERE [No_] =  '" . $empid . "'");
-            $get_entity = $get_entity->{'Org Entity Code'};
-
+            //TODO dodati entitet korisnika
+            $get_entity = 'FBIH';
             /*
                 Bolovanje u Federaciji BiH
             */
