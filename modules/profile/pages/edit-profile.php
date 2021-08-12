@@ -201,9 +201,6 @@ if(!empty($_GET['u'])){
         <?php include $root . '/modules/' . $_mod . '/pages/profile-includes/porez.php'; ?>
     </div>
 
-    <?php
-        //TODO dodati unos koeficijenta složenosti poslova i status demobiliziranog borca
-    ?>
 
     <script src="<?= 'theme/js/upload-images.js'; ?>"></script>
 </div>
