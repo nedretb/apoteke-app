@@ -26,7 +26,7 @@ if(isset($_POST['razlog'])){
   ");
   $podaci_mail = $podaci_mailq->fetch();
 
-  $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parentMBO2']." ");
+  $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parent']." ");
   $parent = $parentq ->fetch(); 
 
   require 'lib/PHPMailer/PHPMailer.php';
