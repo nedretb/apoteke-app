@@ -1091,7 +1091,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
     <?php } ?>
     <div class='container row box' style='text-align:center;padding:10px;margin-top:15px;height:50px;'>
         <h3 style='margin:20px;display:inline;padding:20px;'>ZAHTJEV ZA SLUŽBENO PUTOVANJE</h3>
-        <div style="display:inline;float:right;"><a href="/apoteke-app/?m=business_trip&p=all&pg=1" style="background-color:#f5f5f5" class="btn box-head-btn">X</a></div>
+        <div style="display:inline;float:right;"><a href="/apoteke-app/?m=business_trip&p=all&pg=1" style="background-color:#f5f5f5; color: white; font-weight: bold;" class="btn box-head-btn">X</a></div>
     </div>
 
     <!-- odrediste putovanja -->
@@ -1229,11 +1229,11 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-6">
                         <label>Razlog putovanja:</label>
-                        <textarea  name="razlog_putovanja" id='razlog_putovanja' value="<?php if(isset($put)) echo $put['razlog_putovanja']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 541px;"  name="razlog_putovanja" id='razlog_putovanja' value="<?php if(isset($put)) echo $put['razlog_putovanja']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                     <div class="col-sm-6">
                         <label>Napomena:</label>
-                        <textarea  name="napomena" id='napomena' value="<?php if(isset($put)) echo $put['napomena']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 541px;" name="napomena" id='napomena' value="<?php if(isset($put)) echo $put['napomena']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1315,7 +1315,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Napomena:</label>
-                        <textarea  name="akontacija_napomena" id='akontacija_napomena' value="<?php if(isset($put)) echo $put['akontacija_napomena']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 1111px;" name="akontacija_napomena" id='akontacija_napomena' value="<?php if(isset($put)) echo $put['akontacija_napomena']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1408,7 +1408,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Napomena:</label>
-                        <textarea name="transport_napomena" id='transport_napomena' value="<?php if(isset($put)) echo $put['transport_napomena']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 1111px;" name="transport_napomena" id='transport_napomena' value="<?php if(isset($put)) echo $put['transport_napomena']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1498,7 +1498,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Napomena:</label>
-                        <textarea  name="smjestaj_napomena" id='smjestaj_napomena' value="<?php  echo $put['smjestaj_napomena']; ?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 1111px;" name="smjestaj_napomena" id='smjestaj_napomena' value="<?php  echo $put['smjestaj_napomena']; ?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1864,7 +1864,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Upišite kratki opis:</label>
-                        <textarea  name="ost_kratkiopis" id='ost_kratkiopis' value="<?php if(isset($putt)) echo $putt['ost_kratkiopis']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 1111px;" name="ost_kratkiopis" id='ost_kratkiopis' value="<?php if(isset($putt)) echo $putt['ost_kratkiopis']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1906,13 +1906,14 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col=sm-12">
                     <div class="col-sm-12">
                         <label>Odaberite postotak na dnevnicu</label>
+                        <?php $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0]; ?>
                         <select class="form-control" id="dnevnica_postotak" name="dnevnica_postotak">
-                            <option value="110">110%</option>
-                            <option value="100">100%</option>
-                            <option value="90">90%</option>
-                            <option value="80">80%</option>
-                            <option value="70">70%</option>
-                            <option value="60">60%</option>
+                            <option value="110" <?=$postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
+                            <option value="100" <?=$postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
+                            <option value="90" <?=$postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
+                            <option value="80" <?=$postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
+                            <option value="70" <?=$postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
+                            <option value="60" <?=$postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
                         </select>
                     </div>
                 </div>
@@ -1934,7 +1935,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Navesti specifikaciju nastalih troškova koja sadrži naziv, vrstu i iznos troškova nastalih u svrhu službenog putovanja za koje se prilažu računi:</label>
-                        <textarea  name="ost_specopis" id='ost_specopis' value="<?php if(isset($putt)) echo $putt['ost_specopis']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 1111px;" name="ost_specopis" id='ost_specopis' value="<?php if(isset($putt)) echo $putt['ost_specopis']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -1955,7 +1956,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
             }
 
             #ck-button:hover {
-                background: #fff75f;
+                background: rgba(0, 101, 149, 0.5);
                 color: black;
             }
 
@@ -1977,8 +1978,8 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
             }
 
             #ck-button input:checked + span {
-                background-color:#fcf000;
-                color: black;
+                background-color:#006595 ;
+                color: white;
             }
             .da_ne{
                 margin:4px;
@@ -2282,7 +2283,7 @@ function prebaciDatumBih($datum){
             });
         }
 
-        console.log(get_date_from_bos($("#pocetak_datum").val()));
+        // console.log(get_date_from_bos($("#pocetak_datum").val()));
 
         if(get_date_from_bos($("#pocetak_datum").val()) >=  new Date(date.getFullYear(), date.getMonth(), 1) ){
             if($("#kraj_datum2").val() != '') $('#kraj_datum2').datepicker('setStartDate', get_date_from_bos($("#pocetak_datum").val()) );
@@ -2579,7 +2580,7 @@ function prebaciDatumBih($datum){
     //dinamicko dodavanje polja
     function showHideButtons(){
         var counter = $(".ultimate_class").length;
-        console.log(counter);
+        // console.log(counter);
 
         if(counter > 1) $("#removeButton").show();
         else $("#removeButton").hide();
@@ -2775,7 +2776,7 @@ function prebaciDatumBih($datum){
             let column_data = row_data[i];
 
             if(column_data[0] == odrediste){
-                max_iznos_prva = column_data[duration];
+                max_iznos_prva = column_data[1];
             }
         }
 
@@ -2931,8 +2932,6 @@ function prebaciDatumBih($datum){
             $("#iznos_akontacije").attr('readonly', false);
         }
     })
-
-
 
 </script>
 </body>
