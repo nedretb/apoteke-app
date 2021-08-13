@@ -2,7 +2,7 @@
 
     <div class="mp-i-h">
         <h4><?= ___('Zdravstveno stanje') ?></h4>
-        <a href="?m=profile&p=insert-data&what=zdravstveno-stanje">
+        <a href="?m=profile&p=insert-data&what=zdravstveno-stanje&u=<?php echo $_user['employee_no']; ?>">
 <!--            <div class="icon-w">-->
 <!--                <i class="fas fa-plus"></i>-->
 <!--            </div>-->
@@ -15,14 +15,16 @@
 
         ?>
         <div class="mp-i-row">
+            <?php if ($userRole == 4){?>
             <div class="edit-delete-row">
                 <div class="edr-w" title="<?= ___('Uredite') ?>">
-                    <a href="?m=profile&p=insert-data&what=zdravstveno-stanje&id=<?= $zdr['id'] ?>"><i class="far text-success fa-edit"></i></a>
+                    <a href="?m=profile&p=insert-data&what=zdravstveno-stanje&u=<?php echo $_user['employee_no']; ?>&id=<?= $zdr['id'] ?>"><i class="far text-success fa-edit"></i></a>
                 </div>
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
 <!--                </div>-->
             </div>
+            <?php }?>
 
             <div class="row">
                 <div class="col-md-6">

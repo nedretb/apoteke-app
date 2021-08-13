@@ -13,10 +13,10 @@
     foreach ($porez[0]['users__poreska_olaksica_i_prevoz'] as $por){
         ?>
         <div class="mp-i-row">
-            <?php if ($_user['role'] == 4){ ?>
+            <?php if ($userRole == 4){ ?>
             <div class="edit-delete-row">
                 <div class="edr-w" title="<?= ___('Uredite') ?>">
-                    <a href="?m=profile&p=insert-data&what=porez&id=<?= $por['id'] ?>"><i class="far text-success fa-edit"></i></a>
+                    <a href="?m=profile&p=insert-data&what=porez&u=<?php echo $_user['employee_no']; ?>&id=<?= $por['id'] ?>"><i class="far text-success fa-edit"></i></a>
                 </div>
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->

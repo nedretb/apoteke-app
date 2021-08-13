@@ -15,10 +15,10 @@
     foreach ($kontakt[0]['users__kontakt_informacije'] as $kont) {
         ?>
         <div class="mp-i-row">
-            <?php if ($_user['role'] == 4) {?>
+            <?php if ($userRole == 4) {?>
             <div class="edit-delete-row">
                 <div class="edr-w" title="<?= ___('Uredite') ?>">
-                    <a href="?m=profile&p=insert-data&what=kontakt&id=<?= $kont['id'] ?>"><i class="far text-success fa-edit"></i></a>
+                    <a href="?m=profile&p=insert-data&what=kontakt&u=<?php echo $_user['employee_no']; ?>&id=<?= $kont['id'] ?>"><i class="far text-success fa-edit"></i></a>
                 </div>
 
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label for="kucni_telefonski_broj"><?= ___('Kućni telefonski broj') ?></label>
                         <input type="text" value="<?= $kont['kucni_telefonski_broj'].' '.$kont['kucni_regionalni_kod'].' '.$kont['kucni_broj'] ?>" class="form-control form-control-sm" id="kucni_telefonski_broj" readonly>
-                        <small class="form-text text-muted"> <?= ___('+387 33 XXX-XXX') ?> </small>
+                        <small class="form-text text-muted"> <?= ___('+387 3X XXX-XXX') ?> </small>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -48,7 +48,7 @@
                     <div class="form-group">
                         <label for="privatna_email_adresa"> <?= ___('Privatna email adresa') ?></label>
                         <input type="text" value="<?= $kont['privatna_email_adresa'] ?>" class="form-control form-control-sm" id="privatna_email_adresa" readonly>
-                        <small class="form-text text-muted"> <?= ___('Naziv općine (CIPS)') ?> </small>
+                        <small class="form-text text-muted"> <?= ___('') ?> </small>
                     </div>
                 </div>
                 <div class="col-md-6">

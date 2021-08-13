@@ -1,4 +1,5 @@
 <?php
+$userRole = $_user['role'];
 if(!empty($_GET['u'])){
     $_user = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] where employee_no=".$_GET['u'])->fetch();
 }else{

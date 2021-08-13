@@ -1,13 +1,15 @@
+<?php $provjera = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users__podaci_o_porodicnom_stanju] where employee_no=".$_user['employee_no']);
+?>
 <div class="mp-inside">
 
     <div class="mp-i-h">
         <h4><?= ___('Podaci o porodičnom stanju') ?></h4>
-        <?php if ($_user['role'] == 4){ ?>
-<!--        <a href="?m=profile&p=insert-data&what=porodicno-stanje">-->
-<!--            <div class="icon-w">-->
-<!--                <i class="fas fa-plus"></i>-->
-<!--            </div>-->
-<!--        </a>-->
+        <?php if ($userRole == 4 and !($provjera->rowCount() < 0)){ ?>
+            <a href="?m=profile&p=insert-data&what=porodicno-stanje&u=<?php echo $_user['employee_no']; ?>">
+                <div class="icon-w">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
         <?php }?>
     </div>
 
@@ -17,11 +19,11 @@
         <div class="mp-i-row">
             <div class="edit-delete-row">
                 <div class="edr-w" title="<?= ___('Uredite') ?>">
-                    <a href="?m=profile&p=insert-data&what=porodicno-stanje&id=<?= $por['id'] ?>"><i class="far text-success fa-edit"></i></a>
+                    <a href="?m=profile&p=insert-data&what=porodicno-stanje&u=<?php echo $_user['employee_no']; ?>&id=<?= $por['id'] ?>"><i class="far text-success fa-edit"></i></a>
                 </div>
-<!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
-<!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
-<!--                </div>-->
+                <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
+                <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
+                <!--                </div>-->
             </div>
 
             <div class="row">

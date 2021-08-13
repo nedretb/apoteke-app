@@ -22,7 +22,7 @@ $srodstvo = ['' => 'Odaberi..',
     </div>
     <div class="sh-right">
         <div class="inside-link">
-            <a href="?m=profile&p=edit-profile">
+            <a href="?m=profile&p=edit-profile&u=<?php echo $_user['employee_no'];?>">
                 <p> <i class="fas fa-chevron-left"></i> <?= ___('Nazad') ?> </p>
             </a>
         </div>
@@ -31,7 +31,7 @@ $srodstvo = ['' => 'Odaberi..',
 
 <div class="container mp-shadow pt-2">
     <div class="mp-inside my-container">
-        <form action="?m=profile&p=insert-data&what=kontakt<?= isset($_GET['id']) ? '&id='.$_GET['id'] : '' ?>" method="post">
+        <form action="?m=profile&p=insert-data&what=kontakt<?= isset($_GET['id']) ? '&id='.$_GET['id'].'&u='.$_user['employee_no'] : '&u='.$_user['employee_no'] ?>" method="post">
             <div class="mp-i-row">
                 <div class="row">
                     <div class="col-md-3">

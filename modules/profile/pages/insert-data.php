@@ -1,6 +1,11 @@
 <?php
 
 use Carbon\Carbon as Carbon;
+if(!empty($_GET['u'])){
+    $_user = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] where employee_no=".$_GET['u'])->fetch();
+}else{
+    $emp_no = $_user['employee_no'];
+}
 
 if (isset($_GET['what'])) {
     $what = $_GET['what'];
@@ -19,7 +24,7 @@ if (isset($_GET['what'])) {
             if (isset($request)) {
                 $request->employee_no = $_user['employee_no']; // ADD Employee no
 
-                var_dump($request->get());
+//                var_dump($request->get());
 
                 Stanovanje::create($request);
             }
@@ -66,9 +71,10 @@ if (isset($_GET['what'])) {
         }
         include $root . '/modules/' . $_mod . '/pages/profile-crud/roditelji.php';
     } else if ($what == 'porodicno-stanje') {
+
         if (isset($_GET['id'])) {
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 try {
                     $request->supruznik_datum_rodjenja = Carbon::parse($request->supruznik_datum_rodjenja)->format('Y-m-d');
                     PorodicnoStanje::where('id = ' . $_GET['id'])->update($request->get());
@@ -79,10 +85,11 @@ if (isset($_GET['what'])) {
             $porodica = PorodicnoStanje::where('id = ' . $_GET['id'])->first();
         } else {
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 PorodicnoStanje::create($request);
             }
         }
+//        header('http://127.0.0.1:8080/apoteke-app/?m=profile&p=insert-data&what=porodicno-stanje&u='.$_user['employee_no']);
 
         include $root . '/modules/' . $_mod . '/pages/profile-crud/porodicno-stanje.php';
     } else if ($what == 'rodbina') {
@@ -124,8 +131,9 @@ if (isset($_GET['what'])) {
         include $root . '/modules/' . $_mod . '/pages/profile-crud/licni-dokumenti.php';
     } else if ($what == 'zdravstveno-stanje') {
         if (isset($_GET['id'])) {
+
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 try {
                     ZdravstvenoStanje::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
@@ -135,7 +143,7 @@ if (isset($_GET['what'])) {
             $zdravstv = ZdravstvenoStanje::where('id = ' . $_GET['id'])->first();
         } else {
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 ZdravstvenoStanje::create($request);
             }
         }
@@ -180,7 +188,7 @@ if (isset($_GET['what'])) {
     } else if ($what == 'porez') {
         if (isset($_GET['id'])) {
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 try {
                     Porez::where('id = ' . $_GET['id'])->update($request->get());
                 } catch (\Exception $e) {
@@ -190,7 +198,7 @@ if (isset($_GET['what'])) {
             $porez = Porez::where('id = ' . $_GET['id'])->first();
         } else {
             if (isset($request)) {
-                $request->employee_no = $_user['employee_no']; // ADD Employee no
+                $request->employee_no = $_GET['u']; // ADD Employee no
                 Porez::create($request);
             }
         }
