@@ -7264,7 +7264,14 @@ function _addHoliday($holidayName, $orgJed, $holidayDate)
     global $db, $_conf, $nav_employee, $portal_users, $portal_hourlyrate_year, $portal_hourlyrate_day;
 
     $orgJedId = $db->query("select id from [c0_intranet2_apoteke].[dbo].[systematization] where s_title=N'".$orgJed."' or s_title='".$orgJed."'")->fetch()['id'];
-    $orgJedUsers = $db->query("select employee_no, user_id from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$orgJedId);
+
+    if ($orgJed == 'Apoteke Sarajevo'){
+        $condition  = '';
+    }
+    else{
+        $condition = " where egop_ustrojstvena_jedinica=".$orgJedId;
+    }
+    $orgJedUsers = $db->query("select employee_no, user_id from [c0_intranet2_apoteke].[dbo].[users] ".$condition);
 
     foreach ($orgJedUsers as $user){
         try {
@@ -7307,7 +7314,14 @@ function _removeHoliday($this_id){
 
     $holidayInfo = $db->query("SELECT * FROM  [c0_intranet2_apoteke].[dbo].[holidays_per_department]  where id=" . $this_id)->fetch();
     $orgJedId = $db->query("select id from [c0_intranet2_apoteke].[dbo].[systematization] where s_title=N'".$holidayInfo['department name']."' or s_title='".$holidayInfo['department name']."'")->fetch()['id'];
-    $orgJedUsers = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$orgJedId);
+
+    if($orgJedId == 1){
+        $condition = "";
+    }
+    else{
+        $condition = " where egop_ustrojstvena_jedinica=".$orgJedId;
+    }
+    $orgJedUsers = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] ".$condition);
 
     $day = date('D', strtotime('2021-07-31'));
 

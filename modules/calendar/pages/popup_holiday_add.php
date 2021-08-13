@@ -58,7 +58,6 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
                 <label><?php echo __('Organizaciona jedinica'); ?></label>
                 <select style="padding:0px !important; " name="orgjed[]" id="orgjed"
                         class="form-control orgajed" multiple="multiple" data-placeholder="Odaberi">
-                    <option value="all">Svi..</option>
                     <?php
 
                     $d = $db->prepare("SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization]");
@@ -200,7 +199,7 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
                         buttons: {
                             da: {
                                 text: 'Da',
-                                btnClass: 'btn-blue',
+                                btnClass: 'btn-red',
                                 keys: ['enter', 'shift'],
                                 action: function () {
                                     $('.dialog-loader').show();

@@ -144,7 +144,9 @@ if (isset($_POST['request'])) {
 
         $date = date("Y/m/d", strtotime(str_replace("/", "-", $_POST['date'])));
 
-        if (in_array('all', $_POST['orgjed'])){
+        if (in_array(1, $_POST['orgjed'])){
+
+            $orgJedName = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematization] where id=1")->fetch()['s_title'];
 
             $data = "INSERT INTO  " . $portal_holidays_per_department . "  (
     [department name],[date],[holiday_type],[holiday_name],[Hr_status],[Pomicni],[tip]) VALUES (?,?,?,?,?,?,?)";
@@ -153,7 +155,7 @@ if (isset($_POST['request'])) {
             $res = $db->prepare($data);
             $res->execute(
                 array(
-                    'MKT',
+                    $orgJedName,
                     $date,
                     'BHOLIDAY',
                     $_POST['holiday_name'],

@@ -127,7 +127,7 @@ include_once $root . '/modules/default/functions.php';
 
                                 da: {
                                     text: 'Da',
-                                    btnClass: 'btn-blue',
+                                    btnClass: 'btn-red',
                                     keys: ['enter', 'shift'],
                                     action: function () {
                                         $('.dialog-loader').show();

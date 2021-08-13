@@ -1952,7 +1952,7 @@ a[disabled] {
 
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-green {
     background-color: #2e9e12;
-    color: #FFF;
+    color: white;
     text-shadow: none;
     -webkit-transition: background .2s;
     transition: background .2s;
@@ -1960,7 +1960,7 @@ a[disabled] {
 
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-blue {
     background-color: #006595;
-    color: black;
+    color: white !important;
     text-shadow: none;
     -webkit-transition: background .2s;
     transition: background .2s;
