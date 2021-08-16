@@ -1906,14 +1906,21 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col=sm-12">
                     <div class="col-sm-12">
                         <label>Odaberite postotak na dnevnicu</label>
-                        <?php $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0]; ?>
+                        <?php
+                        if (isset($_GET['sl_put_id'])){
+                            $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0];
+                        }
+                        else{
+                            $postotak = "ww";
+                        }
+                            ?>
                         <select class="form-control" id="dnevnica_postotak" name="dnevnica_postotak">
-                            <option value="110" <?=$postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
-                            <option value="100" <?=$postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
-                            <option value="90" <?=$postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
-                            <option value="80" <?=$postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
-                            <option value="70" <?=$postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
-                            <option value="60" <?=$postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
+                            <option value="110" <?= isset($postotak) and $postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
+                            <option value="100" <?= isset($postotak) and $postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
+                            <option value="90" <?= isset($postotak) and$postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
+                            <option value="80" <?= isset($postotak) and $postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
+                            <option value="70" <?= isset($postotak) and $postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
+                            <option value="60" <?= isset($postotak) and$postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
                         </select>
                     </div>
                 </div>
