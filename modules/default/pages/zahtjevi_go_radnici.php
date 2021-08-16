@@ -268,13 +268,23 @@ include $_themeRoot . '/footer.php';
     });
 
     function kreirajRjesenja(){
-        console.log('wwwwwww');
+
+        var wait = $.alert({
+            title: 'Generisanje!',
+            content: '<div style="text-align:center"><br /><img src="theme/images/5.gif" width="32"  /><br /><br />Sistem kreira rješenja. Molimo pričekajte!</div>',
+            buttons: {
+                ok: {
+                    btnClass: 'hide',
+                }
+            }
+        });
 
         $.ajax({
             url: 'modules/default/pages/kreirajRjesenjaGo.php',
             method: 'POST',
             data: {},
             success: function success(response){
+                wait.close();
                 console.log(response);
                 location.reload();
 

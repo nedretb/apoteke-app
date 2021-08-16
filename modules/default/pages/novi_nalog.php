@@ -1192,7 +1192,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                     </div>
                 </div>
 
-                <div class="col-sm-12" >
+                <div style="display: none;" class="col-sm-12" >
                     <div class="col-sm-3">
                         <label>Odredišna država 2:</label>
                         <select name="odredisna_drzava2" class="form-control"  id="odredisna_drzava2" onchange="change_date(this); ">
