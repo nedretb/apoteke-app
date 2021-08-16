@@ -1293,7 +1293,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                         <input type="text" name="datum_akontacije" id='akontacija_datum' value="<?php
                         echo $datum_akontacije;
                         ?>"
-                               class="form-control">
+                               class="form-control" readonly>
                     </div>
                     <div class="col-sm-6">
                         <label>Način uplate akontacije:</label>

@@ -29,19 +29,14 @@
 			$update_admin_number = $db->prepare("UPDATE ".$portal_users." set ".$_POST['admin']."=".$_POST['user_id']);
 			$update_admin_number->execute();
 
+            $users = $db->query("SELECT user_id, employee_no, admin1, admin2, admin3, admin4, admin5, admin6, admin7, admin8, fname, lname from ".$portal_users." where role=2")->fetchAll();
 				?>
 		<div class="alert alert-success">
 				HR Administrator uspješno unesen!
 			</div>
 		<?php
 		}
-
-
-
-
-		
-
-	}
+}
 	
 
 	if(isset($_POST['delete'])){
@@ -51,6 +46,7 @@
 		$admin_num_update = $db->prepare("update ".$portal_users."  set ".$_POST['admin_no']."=null");
 		$admin_num_update->execute();
 
+        $users = $db->query("SELECT user_id, employee_no, admin1, admin2, admin3, admin4, admin5, admin6, admin7, admin8, fname, lname from ".$portal_users." where role=2")->fetchAll();
 		?>
 		<div class="alert alert-success">
 				HR Administrator uspješno izbrisan!
@@ -73,9 +69,8 @@
               ?>
            </select>
 		   <br><br>
-		   <label class="lable-admin1"><?php echo __('Admin broj'); ?></label>
-		   <select  id="admin_num" name="admin" class="form-control admin" required>
-            <option style=" color:black; border:solid 1px #6DACC9;" selected disabled>Odaberi..</option>
+		   <label style="display: none;" class="lable-admin1"><?php echo __('Admin broj'); ?></label>
+		   <select style="display: none;" id="admin_num" name="admin" class="form-control admin" required>
               <?php
               //foreach($adm in_no_list as $user){
 				  if($user['admin1'] == null){
@@ -212,9 +207,9 @@
  ?>
 
 <script>
+    console.log($("#admin_num").val())
 	$(document).ready(function(){
 		$("#name_surname").select2();
-		$("#admin_num").select2();
 	});
 
   $(function(){
