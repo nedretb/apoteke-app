@@ -194,7 +194,7 @@ function pageMenu()
                     'role' => array('4')
                 ),
                 'admins' => array(
-                    'name' => ___('Administrator finansija'),
+                    'name' => ___('Administrator službenog puta'),
                     'role' => array('4')
                 ),
                 'sifrarnici' => array(
