@@ -131,7 +131,6 @@
 		<thead>
 			<th>Ime</th>
 			<th>Prezime</th>
-			<th>Admin broj</th>
 			<th>Akcije</th>
 		</thead>
 		<?php 
@@ -144,7 +143,7 @@
 					<tr>
 						<td><?php echo $value['fname']; ?></td>
 						<td><?php echo $value['lname']; ?></td>
-						<td>
+						<td style="display: none;">
 							<?php
 								if($value['employee_no'] == $value['admin1']){
 									$admin = 'admin1';

@@ -1,4 +1,5 @@
 <?php
+
 _pagePermission([2,4], false);
 $user_id = _decrypt($_SESSION['SESSION_USER']);
 $ts=time();$user=$_user['user_id'];
@@ -14,7 +15,7 @@ else {$admin=false;}
 $canSendMail = $db->query("SELECT value
   FROM [c0_intranet2_apoteke].[dbo].[settings]
   where name = 'hr_notifications'");
-$canSendMail = $canSendMail->fetch();
+$canSendMail = false;
 
 include 'lib/PHPMailer/PHPMailer.php';
 include 'lib/PHPMailer/SMTP.php';
@@ -599,11 +600,10 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
     inner join [c0_intranet2_apoteke].[dbo].[users] as table3
     ON table1.user_id = table3.user_id
     where table2.id = ".$_GET['sl_put_id']."
-    ");
-                    $podaci_mail = $podaci_mail->fetch();
+    ")->fetch();
 
 
-                    $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parentMBO2']." ");
+                    $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parent']." ");
                     $parent = $parentq ->fetch();
 
                     $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -816,7 +816,7 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
             $podaci_mail = $podaci_mail->fetch();
 
             if($podaci_mail['status_hr'] == 2){
-                $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parentMBO2']." ");
+                $parentq = $db->query("SELECT email_company, fname, lname from [c0_intranet2_apoteke].[dbo].[users] WHERE employee_no = ".$podaci_mail['parent']." ");
                 $parent = $parentq ->fetch();
 
                 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -1911,16 +1911,16 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                             $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0];
                         }
                         else{
-                            $postotak = "ww";
+                            $postotak = 'ww';
                         }
                             ?>
                         <select class="form-control" id="dnevnica_postotak" name="dnevnica_postotak">
-                            <option value="110" <?= isset($postotak) and $postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
-                            <option value="100" <?= isset($postotak) and $postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
-                            <option value="90" <?= isset($postotak) and$postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
-                            <option value="80" <?= isset($postotak) and $postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
-                            <option value="70" <?= isset($postotak) and $postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
-                            <option value="60" <?= isset($postotak) and$postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
+                            <option value="110" <?= $postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
+                            <option value="100" <?= $postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
+                            <option value="90" <?= $postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
+                            <option value="80" <?= $postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
+                            <option value="70" <?= $postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
+                            <option value="60" <?= $postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
                         </select>
                     </div>
                 </div>
