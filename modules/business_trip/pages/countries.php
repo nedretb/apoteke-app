@@ -66,10 +66,6 @@
 
         <div class="box" id="c1">
 					<div class="head">
-						<div class="box-head-btn">
-							<a href="#" class="ion-ios-arrow-up" data-widget="collapse" data-id="c1a"></a>
-							<a href="#" class="ion-arrow-expand" data-widget="fullscreen" data-id="c1"></a>
-						</div>
 						<h3><?php echo __('Novi unos'); ?></h3>
 					</div>
 					<div class="content clear" id="c1a" style="display: block;">
