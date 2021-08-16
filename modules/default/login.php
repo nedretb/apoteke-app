@@ -12,7 +12,7 @@ if (@$_POST['login']) {
                 @session_start();
                 $_SESSION['SESSION_USER'] = _encrypt($row['user_id']);
                 $_SESSION['SESSION_TYPE'] = _encrypt($row['role']);
-                header("Location: " . $url . "/");
+                header("Location: " . $url . "/?m=default&p=profile&w=gg");
             } else {
                 header("Location: " . $url . "/modules/default/login.php?action=logindeactivated");
             }

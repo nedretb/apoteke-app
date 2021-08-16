@@ -3,6 +3,9 @@ _pagePermission(5, false);
 
 error_reporting(0);
 
+if (isset($_GET['w'])){
+
+}
 foreach (glob($root . '/modules/profile/pages/classes/*.php') as $filename) require_once $filename;
 
 $kontakt    = Kontakt::getData($_user['employee_no']);
@@ -341,6 +344,18 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
         </div>
     </div>
 
+    <?php if (isset($_GET['w'])){ ?>
+        <div class="modal custom show" id="trackModal">
+            <div class="modal-dialog" id="realModal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p>Uspješno ste se logovali!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php }?>
+
 </section>
 <!-- END - Main section -->
 
@@ -358,7 +373,19 @@ if ($x_user['user_id'] != $_user['user_id']) {
 }
 ?>
 
+
+
 <script>
+    $( document ).ready(function() {
+        setTimeout(function (){
+            $('#realModal').fadeOut(1000);
+        }, 1000);
+        setTimeout(function() {
+            $('#trackModal').removeClass('modal');
+        }, 2000);
+    });
+
+
 
     var dtl = $("input");
     dtl.tooltip();
