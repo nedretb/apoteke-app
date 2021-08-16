@@ -492,31 +492,32 @@ else if (isset($lock_req)){
       </div>
     </div>
 <!-- OVDJE POCINJU FILTERI -->
-<div class="row">
+<div style="margin-left: 15%;">
+    <div class="row">
 
 
-      <div class="col-sm-12 ">
-<!--filter za ime i prezime i Person ID -->
-          <div class="col-sm-2 col-md-offset-1">
+        <!--      <div class="col-sm-12 ">-->
+        <!--filter za ime i prezime i Person ID -->
+        <div class="col-sm-2">
             <label> Zaposlenik</label>
             <select class="filter_form_SL form-control" id="korisnici_filter" name="korisnici_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-              <option value="">Odaberi...</option>
-              <?php
-                  /*
-                  $neki_sql=$db->query("
-                    SELECT DISTINCT table3.employee_no, table3.fname, table3.lname 
-                    FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
-                     where role <> 0");*/
+                <option value="">Odaberi...</option>
+                <?php
+                /*
+                $neki_sql=$db->query("
+                  SELECT DISTINCT table3.employee_no, table3.fname, table3.lname
+                  FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
+                   where role <> 0");*/
 
-                  if($_user['role'] == 4 or $admin){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
+                if($_user['role'] == 4 or $admin){
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
 
-                  } 
-                  elseif($_user['role'] == 2){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
+                }
+                elseif($_user['role'] == 2){
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
 
-                  }
-                  foreach ($neki_sql as $podatakID) {
+                }
+                foreach ($neki_sql as $podatakID) {
                     /*$selected =  "";
                     if (isset($_GET['kid'])){
                       if($_GET['kid'] == $podatakID['employee_no']){
@@ -525,188 +526,195 @@ else if (isset($lock_req)){
                     $selected =  "";
                     }
                     }*/
-                    
-                      echo "<option ".$selected." value=".$podatakID['employee_no'].">".$podatakID['fname'].' '.$podatakID['lname']." - ".$podatakID['employee_no']."</option>";
-                  }
-              ?>
-          </select>
-          </div>
-    
-<!--filter za JMBG -->
-       <div class="col-sm-2">
+
+                    echo "<option ".$selected." value=".$podatakID['employee_no'].">".$podatakID['fname'].' '.$podatakID['lname']." - ".$podatakID['employee_no']."</option>";
+                }
+                ?>
+            </select>
+        </div>
+
+        <!--filter za JMBG -->
+        <div style="display: none;" class="col-sm-2">
             <label>JMBG broj </label>
-               <p id="jmbhid" style="display: none;"><?php if (isset($_GET['jmb'])) {echo $_GET['jmb'];}else{echo "";} ?> </p>
-            
-             <select class="filter_form_SL form-control" id="jmbg_filter" name="jmbg_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg1">
-              <option value="">Odaberi...</option>
-              <?php
-              /*
-              if ($admin==true){
-                  $neki_sql=$db->query("
-                    SELECT DISTINCT table3.employee_no, table3.JMB
-                    from [c0_intranet2_apoteke].[dbo].[users] as table3
-                    ");
-                  }else{
-                  $neki_sql=$db->query("
-                    SELECT DISTINCT table3.employee_no, table3.JMB
-                    FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
-                    ");
-                  }*/
+            <p id="jmbhid" style="display: none;"><?php if (isset($_GET['jmb'])) {echo $_GET['jmb'];}else{echo "";} ?> </p>
 
-                   if($_user['role'] == 4 or $admin){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
-
-                  } 
-                  elseif($_user['role'] == 2){
-                     $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
-
-                  }
-
-                  foreach ($neki_sql as $podatakJMB) {
-                    
-                    $selected =  "";
-                    $vrijednost = $podatakJMB['JMB'];
-
-                 if (isset($_GET['jmb'])) {
-
-
-                  if($_GET['kid'] == $podatakJMB['employee_no']){
-                      $selected =  "selected";
-                      $vrijednost = "";
-                      echo "<div style='display:none;' id='jmbkorisnika'>".$podatakJMB['JMB']."</div>";
+            <select class="filter_form_SL form-control" id="jmbg_filter" name="jmbg_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg1">
+                <option value="">Odaberi...</option>
+                <?php
+                /*
+                if ($admin==true){
+                    $neki_sql=$db->query("
+                      SELECT DISTINCT table3.employee_no, table3.JMB
+                      from [c0_intranet2_apoteke].[dbo].[users] as table3
+                      ");
                     }else{
+                    $neki_sql=$db->query("
+                      SELECT DISTINCT table3.employee_no, table3.JMB
+                      FROM  [c0_intranet2_apoteke].[dbo].[users] as table3
+                      ");
+                    }*/
+
+                if($_user['role'] == 4 or $admin){
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
+
+                }
+                elseif($_user['role'] == 2){
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
+
+                }
+
+                foreach ($neki_sql as $podatakJMB) {
 
                     $selected =  "";
                     $vrijednost = $podatakJMB['JMB'];
 
-                    }
-              if ($_GET['jmb']!=0) {
-                    if($_GET['jmb'] == $podatakJMB['JMB']){
-                      $selected =  "selected";
-                      $vrijednost = $podatakJMB['JMB'];
-                    }
-                     }
+                    if (isset($_GET['jmb'])) {
+
+
+                        if($_GET['kid'] == $podatakJMB['employee_no']){
+                            $selected =  "selected";
+                            $vrijednost = "";
+                            echo "<div style='display:none;' id='jmbkorisnika'>".$podatakJMB['JMB']."</div>";
+                        }else{
+
+                            $selected =  "";
+                            $vrijednost = $podatakJMB['JMB'];
+
+                        }
+                        if ($_GET['jmb']!=0) {
+                            if($_GET['jmb'] == $podatakJMB['JMB']){
+                                $selected =  "selected";
+                                $vrijednost = $podatakJMB['JMB'];
+                            }
+                        }
 
                     }
 
 
 
-                      echo "<option ".$selected." id='jmb".$vrijednost."' value=".$vrijednost.">".$podatakJMB['JMB']."</option>";
-                  }
-              ?>
-          </select></div>
+                    echo "<option ".$selected." id='jmb".$vrijednost."' value=".$vrijednost.">".$podatakJMB['JMB']."</option>";
+                }
+                ?>
+            </select></div>
 
-<!--filter za Mjesto odredista -->
-       <div class="col-sm-2">
+        <!--filter za Mjesto odredista -->
+        <div class="col-sm-2">
             <label> Mjesto odredišta </label>
-    <select class="filter_form_SL form-control" id="mjesto_filter" name="mjesto_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-              <option value="">Odaberi...</option>
-              <?php
-              if ($admin==true){
-                  $neki_sql=$db->query("
+            <select class="filter_form_SL form-control" id="mjesto_filter" name="mjesto_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+                <option value="">Odaberi...</option>
+                <?php
+                if ($admin==true){
+                    $neki_sql=$db->query("
                     SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries]
                     ");
-                  }else{
-                  $neki_sql=$db->query("
+                }else{
+                    $neki_sql=$db->query("
                     SELECT * FROM [c0_intranet2_apoteke].[dbo].[countries]
                     ");
 
-                  }
+                }
 
-                  foreach ($neki_sql as $podatakMjesto) {
+                foreach ($neki_sql as $podatakMjesto) {
                     $selected =  "";
                     if (isset($_GET['mjesto'])) {
-                      if($_GET['mjesto'] == $podatakMjesto['country_id']){
-                      $selected =  "selected";
-                      }
+                        if($_GET['mjesto'] == $podatakMjesto['country_id']){
+                            $selected =  "selected";
+                        }
                     }
-                    
 
-                      echo "<option ".$selected." value=".$podatakMjesto['country_id'].">".$podatakMjesto['name']."</option>";
-                    
-                  }
-              ?>
-          </select></div>
-<!--filter za trn -->
-       <div class="col-sm-2">
+
+                    echo "<option ".$selected." value=".$podatakMjesto['country_id'].">".$podatakMjesto['name']."</option>";
+
+                }
+                ?>
+            </select></div>
+        <!--filter za trn -->
+        <div style="display: none;" class="col-sm-2">
             <label>TRN broj</label>
-    <select class="filter_form_SL form-control" id="trn_filter" name="trn_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-              <option value="">Odaberi...</option>
+            <select class="filter_form_SL form-control" id="trn_filter" name="trn_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+                <option value="">Odaberi...</option>
 
-          </select></div>
+            </select></div>
 
-<!--filter za status -->
-       <div class="col-sm-2">
+        <!--filter za status -->
+        <div class="col-sm-2">
             <label>Status naloga </label>
-    <select class="filter_form_SL form-control" id="status_filter" name="status_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
- 
-              <option  value=''>Odaberi...</option>
-              <option <?php if($_GET['status'] == 1) echo 'selected'; else echo ''; ?> value='1'>Na obradi</option>
-              <option <?php if($_GET['status'] == 2) echo 'selected'; ?> value='2'>Poslano na korekciju</option>
-              <option <?php if($_GET['status'] == 111) echo 'selected'; ?> value='111'>Zaključano</option>
-              <option <?php if($_GET['status'] == 69) echo 'selected'; ?> value='69'>Otkazano</option>
-          </select>
+            <select class="filter_form_SL form-control" id="status_filter" name="status_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+
+                <option  value=''>Odaberi...</option>
+                <option <?php if($_GET['status'] == 1) echo 'selected'; else echo ''; ?> value='1'>Na obradi</option>
+                <option <?php if($_GET['status'] == 2) echo 'selected'; ?> value='2'>Poslano na korekciju</option>
+                <option <?php if($_GET['status'] == 111) echo 'selected'; ?> value='111'>Zaključano</option>
+                <option <?php if($_GET['status'] == 69) echo 'selected'; ?> value='69'>Otkazano</option>
+            </select>
         </div>
-       
-<!-- Filter za datum kreiranja -->
-       <div class="col-sm-2 col-md-offset-1" style="margin-top: 4px;">
+
+        <br>
+
+        <!--</div>-->
+    </div>
+
+    <div class="row" style="margin-top: 10px;">
+        <!-- Filter za datum kreiranja -->
+        <div class="col-sm-2">
             <label>Datum kreiranja naloga</label>
-<input type="text" name="date_kreiranja_od" id="date_kreiranja_od" class="form-control" style="height: 39px;" placeholder="Datum od"
+            <input type="text" name="date_kreiranja_od" id="date_kreiranja_od" class="form-control" style="height: 39px;" placeholder="Datum od"
                    value="<?php echo $date_kreiranja_od; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
 
-<input type="text" name="date_kreiranja_do" id="date_kreiranja_do"  class="form-control" style="height: 39px;" placeholder="Datum do"
+            <input type="text" name="date_kreiranja_do" id="date_kreiranja_do"  class="form-control" style="height: 39px;" placeholder="Datum do"
                    value="<?php echo $date_kreiranja_do; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-                 </div>
-      
+        </div>
 
-<!--filter za datum od - do  -->
-       <div class="col-sm-2" style="margin-top: 4px;">
+
+        <!--filter za datum od - do  -->
+        <div class="col-sm-2">
             <label>Datum početka SL puta </label>
-<input type="text" name="dateod" id="dateod" style="height: 39px;" class="form-control" placeholder="Datum od"
+            <input type="text" name="dateod" id="dateod" style="height: 39px;" class="form-control" placeholder="Datum od"
                    value="<?php echo $dateod; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=">
 
-<input type="text" name="datedo" id="datedo" style="height: 39px;" class="form-control" placeholder="Datum do"
+            <input type="text" name="datedo" id="datedo" style="height: 39px;" class="form-control" placeholder="Datum do"
                    value="<?php echo $datedo; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-</div>
-<!--filter za akontaciju  -->
-   <div class="col-sm-2" style="margin-top: 4px;">
+        </div>
+        <!--filter za akontaciju  -->
+        <div class="col-sm-2">
             <label>Iznos akontacije </label>
-<input type="number" name="akonod" id="akonod" style="height: 39px;" class="form-control" placeholder="Akontacija od"
-                    value="<?php echo $akonod; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+            <input type="number" name="akonod" id="akonod" style="height: 39px;" class="form-control" placeholder="Akontacija od"
+                   value="<?php echo $akonod; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
 
-<input type="number" name="akondo" id="akondo" style="height: 39px;"  class="form-control" placeholder="Akontacija do"
-                    value="<?php echo $akondo; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+            <input type="number" name="akondo" id="akondo" style="height: 39px;"  class="form-control" placeholder="Akontacija do"
+                   value="<?php echo $akondo; ?>" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
 
+        </div>
+        <div class="col-sm-2">
+            <label style="color: white;">.</label>
+            <input type="button" style="height: 39px;text-align: center;" name="dugme_filter" class="form-control" id="dugme_filter" value="FILTRIRAJ" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
+
+            <a style="height: 39px ;text-align: center;" name="and $podatak['lock']!=1" class="form-control" href="/apoteke-app/?m=business_trip&p=all&pg=1">OBRIŠI FILTER</a>
+
+        </div>
+
+
+
+        <?php
+        if (!empty($_GET["kid"])){$dataEX1 =htmlspecialchars($_GET["kid"]);}else{$dataEX1 = '';};
+        if (!empty($_GET["jmb"])){$dataEX2 =htmlspecialchars($_GET["jmb"]);}else{$dataEX2 = '';};
+        if (!empty($_GET["dod"])){$dataEX3 =htmlspecialchars($_GET["dod"]);}else{$dataEX3 = '';};
+        if (!empty($_GET["ddo"])){$dataEX4 =htmlspecialchars($_GET["ddo"]);}else{$dataEX4 = '';};
+        if (!empty($_GET["dkod"])){$dataEX5 =htmlspecialchars($_GET["dkod"]);}else{$dataEX5 = '';};
+        if (!empty($_GET["dkdo"])){$dataEX6 =htmlspecialchars($_GET["dkdo"]);}else{$dataEX6 = '';};
+        if (!empty($_GET["mjesto"])){$dataEX7 =htmlspecialchars($_GET["mjesto"]);}else{$dataEX7 = '';};
+        if (!empty($_GET["akood"])){$dataEX8 =htmlspecialchars($_GET["akood"]);}else{$dataEX8 = '';};
+        if (!empty($_GET["akodo"])){$dataEX9 =htmlspecialchars($_GET["akodo"]);}else{$dataEX9 = '';};
+        if (!empty($_GET["trn"])){$dataEX10 =htmlspecialchars($_GET["trn"]);}else{$dataEX10 = '';};
+        if (!empty($_GET["status"])){$dataEX11 =htmlspecialchars($_GET["status"]);}else{$dataEX11 = '';};
+
+        ?>
+        <a href="<?php echo '/apoteke-app/?m=business_trip&p=dajexcelFilter&kid='.$dataEX1.'&jmb='.$dataEX2.'&dod='.$dataEX3.'&ddo='.$dataEX4.'&dkod='.$dataEX5.'&dkdo='.$dataEX6.'&mjesto='.$dataEX7.'&akood='.$dataEX8.'&akodo='.$dataEX9.'&trn='.$dataEX10.'&status='.$dataEX11.''; ?>" style="  <?php if (isset($_GET['kid'])){echo "display: inline-block;";}else{echo "display: none;";}?>padding: 0 7px;line-height: 38px;width: 183px;text-align: center;color: #777777;
+                margin: 69px 0 0px 16px;background: #fff;font-size: 15px;border-bottom: 1px solid #777777;"><i class="ion-document" title="Preuzmite excel nalog!" style="padding-right: 14px;"></i>Excell izvještaj</a>
+    </div>
 </div>
-<div class="col-sm-2">
-
-  <input type="button" style="height: 39px;text-align: center; <?php if (isset($_GET['kid'])){echo "margin-top: 31px;";}else{echo "margin-top: 31px;";}?>"name="dugme_filter" class="form-control" id="dugme_filter" value="FILTRIRAJ" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
-
-  <a style="height: 39px ;text-align: center;" name="and $podatak['lock']!=1" class="form-control" href="/apoteke-app/?m=business_trip&p=all&pg=1">OBRISI FILTER</a>
-
-      </div>
-
-
-
-   <?php
- if (!empty($_GET["kid"])){$dataEX1 =htmlspecialchars($_GET["kid"]);}else{$dataEX1 = '';};
- if (!empty($_GET["jmb"])){$dataEX2 =htmlspecialchars($_GET["jmb"]);}else{$dataEX2 = '';};
- if (!empty($_GET["dod"])){$dataEX3 =htmlspecialchars($_GET["dod"]);}else{$dataEX3 = '';};
- if (!empty($_GET["ddo"])){$dataEX4 =htmlspecialchars($_GET["ddo"]);}else{$dataEX4 = '';};
- if (!empty($_GET["dkod"])){$dataEX5 =htmlspecialchars($_GET["dkod"]);}else{$dataEX5 = '';};
- if (!empty($_GET["dkdo"])){$dataEX6 =htmlspecialchars($_GET["dkdo"]);}else{$dataEX6 = '';};
- if (!empty($_GET["mjesto"])){$dataEX7 =htmlspecialchars($_GET["mjesto"]);}else{$dataEX7 = '';};
- if (!empty($_GET["akood"])){$dataEX8 =htmlspecialchars($_GET["akood"]);}else{$dataEX8 = '';};
- if (!empty($_GET["akodo"])){$dataEX9 =htmlspecialchars($_GET["akodo"]);}else{$dataEX9 = '';};
- if (!empty($_GET["trn"])){$dataEX10 =htmlspecialchars($_GET["trn"]);}else{$dataEX10 = '';};
- if (!empty($_GET["status"])){$dataEX11 =htmlspecialchars($_GET["status"]);}else{$dataEX11 = '';};
-
-  ?>
-<a href="<?php echo '/apoteke-app/?m=business_trip&p=dajexcelFilter&kid='.$dataEX1.'&jmb='.$dataEX2.'&dod='.$dataEX3.'&ddo='.$dataEX4.'&dkod='.$dataEX5.'&dkdo='.$dataEX6.'&mjesto='.$dataEX7.'&akood='.$dataEX8.'&akodo='.$dataEX9.'&trn='.$dataEX10.'&status='.$dataEX11.''; ?>" style="  <?php if (isset($_GET['kid'])){echo "display: inline-block;";}else{echo "display: none;";}?>padding: 0 7px;line-height: 38px;width: 183px;text-align: center;color: #777777;
-margin: 69px 0 0px 16px;background: #fff;font-size: 15px;border-bottom: 1px solid #777777;"><i class="ion-document" title="Preuzmite excel nalog!" style="padding-right: 14px;"></i>Excell izvještaj</a>
-</div>
-      <div class="col-sm-12" style="height: 10px; border-top: 0px solid white; margin-top: 14px;"></div>
-</div>
+    <div class="col-sm-12" style="height: 10px; border-top: 0px solid white; margin-top: 14px;"></div>
+    </div>
 
 <!-- OVDJE ZAVRSAVAJU FILTERI -->
 <?php
@@ -857,8 +865,8 @@ foreach($podaci as $podatak){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
-        <button style="    background-image: linear-gradient(to bottom, #fff93e 0%, #ece01c 100%);"
-        type="submit" class="btn btn-pramary"><b>Spasi</b></button>
+        <button style="background-color: #006595; color: white !important;"
+        type="submit" class="btn"><b>Spasi</b></button>
       </div>
       </form>
     </div>
@@ -878,7 +886,7 @@ function dajpglink($n,$pageno,$trenutni_link){
 }
 
 ?>
-<ul class="pagination">
+<ul style="margin-left: 10% !important;" class="pagination">
     <li><a href="<?php dajpglink(1,$pageno,$trenutni_link);?>">Prva</a></li>
     <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
         <a href="<?php if($pageno <= 1){ echo '#'; } else { dajpglink($pageno-1,$pageno,$trenutni_link); } ?>">Prošla</a>
@@ -888,7 +896,7 @@ function dajpglink($n,$pageno,$trenutni_link){
     </li>
     <li><a href="<?php dajpglink($total_pages,$pageno,$trenutni_link); ?>">Zadnja</a></li>
 </ul>
-</section
+</section>
 
   <?php
 
