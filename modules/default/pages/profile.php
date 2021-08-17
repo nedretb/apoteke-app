@@ -25,7 +25,22 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
 //var_dump($sys);
 
 ?>
+<style>
+    .modal.custom .modal-dialog {
+        width:20%;
+        position:fixed;
+        bottom:0;
+        right:0;
+        margin:0;
+    }
 
+    .modal-body{
+        background: rgba(0, 101, 149, 0.7);
+        color: white;
+        font-weight: bold;
+        font-size: large;
+    }
+</style>
 <!-- START - Main section -->
 <body class="bg-rf notable">
 <section class="full" style="margin-top:15px;">

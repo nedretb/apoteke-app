@@ -18,6 +18,10 @@ if(!empty($_GET['u'])){
     $porez      = Porez::getData($_user['employee_no']);
 
     $rodjenje   = Rodjenje::getData($_user['employee_no']);
+
+    $podredjeni = $db->query("SELECT fname, lname, employee_no, rukovodioc FROM [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$_user['egop_ustrojstvena_jedinica']." and employee_no<>".$_user['employee_no']);
+    $rukovodiocOdjela = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization] where id=".$_user['egop_ustrojstvena_jedinica'])->fetch()['rukovodioc_emp_no'];
+
 ?>
 
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -125,14 +129,29 @@ if(!empty($_GET['u'])){
                     <h5><?php echo $_user['dezurstva']; ?></h5>
                 </div>
             </div>
+            <?php if ($_user['employee_no'] == $rukovodiocOdjela or $_user['role'] == 4){ ?>
             <div class="mp-l-rest">
                 <div class="mp-lr-l">
                     <?= ___('Zamjenik') ?>
                 </div>
-                <div class="mp-lr-r">
-                    <h5><?php echo $_user['zamjenik']; ?></h5>
+                <div class="mp-lr-r" style="display: flex;">
+                    <select style="width: 60%;margin-right: 5px;" id="zamjenik" class="form-control">
+                        <option value="null">Odaberi..</option>
+                        <?php
+                            foreach ($podredjeni as $p){
+                                if ($p['rukovodioc'] == 'DA'){
+                                    echo '<option selected="selected" value="'.$p['employee_no'].'">'.$p['fname'].' '.$p['lname'].'</option>';
+                                }
+                                else{
+                                    echo '<option value="'.$p['employee_no'].'">'.$p['fname'].' '.$p['lname'].'</option>';
+                                }
+                            }
+                        ?>
+                    </select>
+                    <button class="my-btn" style="top: 10% !important; color: white !important; width: auto !important; height: 30px;" onclick="ukloniZamjenika();" title="Ukloni zamjenika">Briši</button>
                 </div>
             </div>
+            <?php }?>
         </div>
 
         <div class="mp-inside">
@@ -202,6 +221,54 @@ if(!empty($_GET['u'])){
         <?php include $root . '/modules/' . $_mod . '/pages/profile-includes/porez.php'; ?>
     </div>
 
-
     <script src="<?= 'theme/js/upload-images.js'; ?>"></script>
 </div>
+
+<?php
+
+include $_themeRoot . '/footer.php';
+
+?>
+
+<!--<script src="<?php echo $_pluginUrl; ?>/jquery/jquery.js"></script> -->
+<script src="<?php echo $_pluginUrl; ?>/validation/jquery.validate.min.js"></script>
+<script src="<?php echo $_pluginUrl; ?>/validation/jquery.form.js"></script>
+<script src="<?php echo $_pluginUrl; ?>/jquery-cookie-master/src/jquery.cookie.js"></script>
+
+<script>
+
+    function ukloniZamjenika() {
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo $url . '/modules/profile/pages/zamjenik.php'; ?>",
+            data: {type: 'remove',
+                glavni_lik: <?php echo $_user['employee_no']; ?>,
+                org_jed: <?php echo $_user['egop_ustrojstvena_jedinica']; ?>
+            },
+            success:function (data){
+                let response = JSON.parse(data);
+                if (response == 'removed'){
+                    window.location.replace('?m=profile&p=edit-profile');
+                }
+            }
+        });
+    }
+
+
+    $('#zamjenik').on('change', function (){
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo $url . '/modules/profile/pages/zamjenik.php'; ?>",
+            data: {
+                type: 'add',
+                employee_no: $('#zamjenik').val(),
+                org_jed: <?php echo $_user['egop_ustrojstvena_jedinica']; ?>
+            },
+            success:function (data){
+                let response = JSON.parse(data);
+                console.log(response);
+            }
+        });
+    });
+
+</script>
