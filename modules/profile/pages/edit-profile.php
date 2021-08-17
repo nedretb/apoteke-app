@@ -82,7 +82,7 @@ if(!empty($_GET['u'])){
 
             <div class="mp-l-rest">
                 <div class="mp-lr-l">
-                    <?= ___('Pozicija') ?>
+                    <?= ___('Šifra pozicije') ?>
                 </div>
                 <div class="mp-lr-r">
                     <h5><?= $_user['position_code'] ?></h5>
