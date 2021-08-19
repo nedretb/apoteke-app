@@ -792,9 +792,9 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                     }
 
 
-                    if (substr(_nameHRstatusName($day['corr_status']), 0, 1) == 'B' and $day['corr_review_status'] == '1')
+                    if (rtrim(_nameHRstatusGroup($day['corr_status'])) == 'Bolovanje' and $day['corr_review_status'] == '1')
                         $additional_background = 'background-color:yellow';
-                    elseif (substr(_nameHRstatusName($day['corr_status']), 0, 1) == 'G' and $day['corr_review_status'] == '1')
+                    elseif (rtrim(_nameHRstatusGroup($day['corr_status'])) == 'Godišnji odmor' and $day['corr_review_status'] == '1')
                         $additional_background = 'background-color:lightblue';
                     //novi kod
                     elseif (($day['corr_status'] == '83') and $day['corr_review_status'] == '1')

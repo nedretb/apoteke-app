@@ -249,7 +249,7 @@ if ($total > 0 || $total2 > 0) {
 
 
         if (rtrim(_nameHRstatusGroup($day['corr_status'])) == 'Bolovanje' and $day['corr_review_status'] == '1')
-            $additional_background = 'background-color:blue';
+            $additional_background = 'background-color:yellow';
         elseif (rtrim(_nameHRstatusGroup($day['corr_status'])) == 'Godišnji odmor' and $day['corr_review_status'] == '1')
             $additional_background = 'background-color:lightblue';
         //novi kod

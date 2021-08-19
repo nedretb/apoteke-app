@@ -250,7 +250,7 @@ if ($total > 0 || $total2 > 0) {
         }
 
         if (rtrim(_nameHRstatusGroup($day['status'])) == 'Bolovanje' and $day['review_status'] == '1')
-            $additional_background = 'background-color:blue';
+            $additional_background = 'background-color:yellow';
         elseif (rtrim(_nameHRstatusGroup($day['status'])) == 'Godišnji odmor' and $day['review_status'] == '1')
             $additional_background = 'background-color:lightblue';
         //novi kod

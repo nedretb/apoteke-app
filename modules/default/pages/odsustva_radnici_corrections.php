@@ -642,7 +642,6 @@ if ($total > 0 || $total2 > 0) {
 
             }
 
-            $('[data-row-id="' + datarowid + '"]').css("background-color", "#04FEE5");
 
             $.post("<?php echo $url . '/modules/' . $_mod . '/ajax.php'; ?>", {
                     request: "change-odobreno_corrections",

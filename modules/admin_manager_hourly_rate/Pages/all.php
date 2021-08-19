@@ -619,9 +619,9 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
 
                         }
                     }
-                    if (substr(_nameHRstatusName($day['status']), 0, 1) == 'B' and $day['review_status'] == '1')
+                    if (rtrim(_nameHRstatusGroup($day['status'])) == 'Bolovanje' and $day['review_status'] == '1')
                         $additional_background = 'background-color:yellow';
-                    elseif (substr(_nameHRstatusName($day['status']), 0, 1) == 'G' and $day['review_status'] == '1')
+                    elseif (rtrim(_nameHRstatusGroup($day['status'])) == 'Godišnji odmor' and $day['review_status'] == '1')
                         $additional_background = 'background-color:lightblue';
                     //novi kod
                     elseif (($day['status'] == '83') and $day['review_status'] == '1')
