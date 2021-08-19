@@ -626,7 +626,16 @@ if ($total > 0 || $total2 > 0) {
                 this.value = '';
                 return;
             }
-            $('[data-row-id="' + datarowid + '"]').css("background-color", "#04FEE5");
+            else {
+                if ($(this).find("option:selected").text() == 'NE' && $('#' + komentar_id).val() != '') {
+                    $('[data-row-id="' + datarowid + '"]').css("background-color", "rgba(255, 0 ,0 ,0.8);");
+                }
+                else {
+                    $('[data-row-id="' + datarowid + '"]').css("background-color", "rgba(0, 101 ,149 ,0.5);");
+                }
+
+            }
+
 
 
             $.post("<?php echo $url . '/modules/' . $_mod . '/ajax.php'; ?>", {
