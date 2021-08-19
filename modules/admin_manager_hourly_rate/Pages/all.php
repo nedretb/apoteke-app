@@ -413,7 +413,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                         <tr>
                             <?php foreach ($queryg as $itemg) {
                                 $department = $itemg['egop_ustrojstvena_jedinica'];
-                                echo '<optgroup label="' . $department . '">';
+//                                echo '<optgroup label="' . $department . '">';
                             } ?>
 
                             <th width="40" style="display:block;" class="hidden-xs"><?php echo __('Per. br.'); ?></th>
