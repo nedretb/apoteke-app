@@ -185,7 +185,7 @@ require_once '../../../configuration.php';
                 $("#popup_form").validate({
                     rules: {
                         hour: {
-                            digits: true
+                            digits: false
                         }
                     },
                     focusCleanup: true,

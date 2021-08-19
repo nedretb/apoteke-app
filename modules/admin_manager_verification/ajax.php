@@ -37,6 +37,7 @@ if (isset($_POST['request'])) {
     if($_POST['request']=='generate-satnice'){
         global $db;
 
+
         $org 		= $_POST['org'];
         $month 		= $_POST['month'];
         $year 		= $_POST['year'];
@@ -63,7 +64,7 @@ if (isset($_POST['request'])) {
             $query = $db->prepare("			
 		  SELECT s1.user_id, s1.fname, s1.lname, s1.termination_date, s3.id
 		  FROM [c0_intranet2_apoteke].[dbo].[users] s1
-		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id and s2.[B_1_description] = ?
+		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id and s2.[egop_ustrojstvena_jedinica] = ?
 		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'
 		");
 

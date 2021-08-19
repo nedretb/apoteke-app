@@ -53,7 +53,7 @@ require_once '../../../configuration.php';
                     </div>
                     <div class="col-sm-4">
                         <label><?php echo __('Broj sati'); ?></label>
-                        <input type="number" name="hour" id="hour" value="<?php echo $br_sati; ?>" min="0" max="24"
+                        <input type="number" name="hour" id="hour" value="<?php echo $br_sati; ?>" min="0" max="24" step="0.5"
                                class="form-control">
                     </div>
                     <div class="col-sm-5">
@@ -183,7 +183,7 @@ require_once '../../../configuration.php';
                 $("#popup_form").validate({
                     rules: {
                         hour: {
-                            digits: true
+                            digits: false
                         }
                     },
                     focusCleanup: true,
