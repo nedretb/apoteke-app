@@ -32,13 +32,21 @@ if (!empty($profiles)) {
     foreach ($profiles as $e) {
         $go_dana = $db->query('select Br_dana from [c0_intranet2_apoteke].[dbo].[vacation_statistics] where year = 2021 and employee_no=' . $e['employee_no'])->fetch();
         $used_go = $db->query("select Date, weekday from [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=" . $e['employee_no'] . " 
-            and Date between '2021-01-01' and '2021-12-31' and status = 18")->fetchAll();
+            and Date between '".date('Y')."-01-01' and '".date('Y')."-12-31' and status = 18")->fetchAll();
 
-        if (count($used_go) > 0) {
+        $imaRjesenje = $db->query("SELECT count(*) FROM [c0_intranet2_apoteke].[dbo].[rjesenja_go] WHERE godina=".date('Y')." and employee_no=".$e['employee_no'])->fetch();
 
-            $starting_date_go = $used_go[0]['Date'];
+        if (count($used_go) > 0 and $imaRjesenje[0] == 0) {
 
-            $ending_date_go = '';
+            if (count($used_go) > 1){
+                $starting_date_go = $used_go[0]['Date'];
+                $ending_date_go = '';
+            }
+            else{
+                $starting_date_go = $used_go[0]['Date'];
+                $ending_date_go = $used_go[0]['Date'];
+            }
+
             $total_days = 1;
             $from_to = '';
             for ($i = 0; $i < count($used_go) - 1; $i++) {
@@ -64,7 +72,7 @@ if (!empty($profiles)) {
                 }
 
             }
-            $sql_statement = "insert into [c0_intranet2_apoteke].[dbo].[rjesenja_go] 
+            $sql_statement = "insert into [c0_intranet2_apoteke].[dbo].[rjesenja_go]
 	  ([employee_no]
       ,[godina]
       ,[datum_od]
@@ -118,7 +126,7 @@ foreach ($rjesenja as $r) {
 
     try {
 
-        $sqlq = "update [c0_intranet2_apoteke].[dbo].[rjesenja_go] set 
+        $sqlq = "update [c0_intranet2_apoteke].[dbo].[rjesenja_go] set
       [dani_zakonski]=?
       ,[dani_radno_iskustvo]=?
       ,[dani_invalidnost]=?
