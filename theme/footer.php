@@ -137,8 +137,10 @@
         color: <?php echo _settings('color_button_bg'); ?>;
       }
 	  .tasks-page span{
-		   background:<?php echo _settings('color_span_bg'); ?>;
-        color:<?php echo _settings('color_span_fg'); ?>;
+          background: #006595;
+          color: white;
+		/*   background:*/<?php //echo _settings('color_span_bg'); ?>/*;*/
+        /*color:*/<?php //echo _settings('color_span_fg'); ?>/*;*/
 	  }
 	  .tasks-page th{
 		   background:<?php echo _settings('color_header_bg'); ?>;
