@@ -6,7 +6,7 @@ $orgJedinice = Sistematizacija::where('id = 2')->get();
 
 <div class="simple-header">
     <div class="sh-left">
-        <p> <?= ___('Sistematizacija - Ministarstvo komunikacija i prometa') ?> </p>
+        <p> <?= ___('Sistematizacija - Apoteke Sarajevo') ?> </p>
     </div>
     <div class="sh-right">
         <div class="inside-link">
