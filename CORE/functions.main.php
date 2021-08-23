@@ -6592,7 +6592,7 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
 
                 if ($odobreno == '1' and $_user['role'] == 2)
                     $dis_nad = 'disabled';
-                $optionOdobriOtkazi = ' <td> <select ' . $dis_nad . ' data-user-id="' . $value['employee_no'] . '" id="odobreno-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="odobreno" class="rcorners1" class="form-control" style="width:78px;outline:none;">' . _optionOdobreno($odobreno);
+                $optionOdobriOtkazi = ' <td> <select ' . $dis_nad . ' data-user-id="' . $value['employee_no'] . '" id="odobreno-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="odobreno" class="rcorners1" class="form-control" style="width:100px;outline:none;">' . _optionOdobreno($odobreno);
             }
 
             if ($_user['role'] == 4)
