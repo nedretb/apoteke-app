@@ -72,8 +72,8 @@ require_once '../../../configuration.php';
                     </div>
                     <div class="col-sm-4">
                         <label style="font-size:12px;"><?php echo __('Broj sati pre.'); ?></label>
-                        <input type="text" name="hour_pre" id="hour_pre" value="<?php echo $row['hour_pre']; ?>"
-                               class="form-control">
+                        <input type="text" name="hour_pre" id="hour_pre" value="<?php echo number_format($row['hour_pre']); ?>"
+                               class="form-control" min="0" max="24" step="0.5">
                     </div>
                     <div class="col-sm-5">
                         <label><?php echo __('Status pre.'); ?></label>
@@ -109,6 +109,8 @@ require_once '../../../configuration.php';
             <script src="<?php echo $_pluginUrl; ?>/validation/jquery.validate.min.js"></script>
             <script src="<?php echo $_pluginUrl; ?>/validation/jquery.form.js"></script>
             <script>
+
+
 
                 $("#status").change(function () {
                     status = $(this).val();

@@ -248,7 +248,7 @@ if (isset($_POST['request'])) {
         if (isset($_POST['status_pre'])) {
             $status_pre = $_POST['status_pre'];
             $hour_pre = $_POST['hour_pre'];
-
+            $sum_hour = $hour + $hour_pre;
             if (!empty($status_pre)) {
                 if (!empty($hour_pre)) {
 
@@ -258,6 +258,10 @@ if (isset($_POST['request'])) {
 
                     if ($status_pre == $status) {
                         return Helper::Message('alert-danger', 'Ne možete unijeti istu vrstu odsustva!');
+                    }
+
+                    if ($sum_hour > 24){
+                        return Helper::Message('alert-danger', 'Suma broj sati i broj sati prekovremeno ne može biti veća od 24h!');
                     }
 
                     foreach ($dt_kalendarski_dani as $k => $v) {
