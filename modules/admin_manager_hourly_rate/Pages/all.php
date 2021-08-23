@@ -22,7 +22,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
         <?php
         //$_user = Profile::where('employee_no = '.$_user)->first();
 
-        $data = ($_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($_user);
+//        $data = ($_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($_user);
 
         if (isset($_POST['IDEmp'])) {
             $idemp = $_POST['IDEmp'];
@@ -886,54 +886,56 @@ include $_themeRoot . '/footer.php';
         echo $_POST['ime_prezime'];
     }?>';
 
-    window.onload = function () {
-        var str = '<?php if (isset($_POST['ime_prezime'])) {
-            echo $_POST['ime_prezime'];
-        }?>';
+    //window.onload = function () {
+    //    var str = '<?php //if (isset($_POST['ime_prezime'])) {
+    //        echo $_POST['ime_prezime'];
+    //    }?>//';
+    //
+    //    if ($("#B1").val() != '') {
+    //        console.log($("#B1").val());
+    //        $.post("<?php //echo $url . '/modules/admin_manager_verification/ajax.php'; ?>//", {
+    //                request: "get-regions",
+    //                B_1: $("#B1").val()
+    //            },
+    //            function (returnedData) {
+    //                $('#regije').html(returnedData);
+    //                $("#regije").select2();
+    //            });
+    //        $.post("<?php //echo $url . '/modules/admin_manager_verification/ajax.php'; ?>//", {
+    //                request: "get-streams",
+    //                region: ''
+    //            },
+    //            function (returnedData) {
+    //                $('#streams').html(returnedData);
+    //                $("#streams").select2();
+    //            });
+    //        $.post("<?php //echo $url . '/modules/admin_manager_verification/ajax.php'; ?>//", {
+    //                request: "get-teams",
+    //                stream: ''
+    //            },
+    //            function (returnedData) {
+    //                $('#teams').html(returnedData);
+    //                $("#teams").select2();
+    //            });
+    //        $.post("<?php //echo $url . '/modules/admin_manager_verification/ajax.php'; ?>//", {
+    //                request: "get-users",
+    //                b1: $("#B1").val(),
+    //                'year': year,
+    //                'month': month,
+    //                'username': username
+    //            },
+    //            function (returnedData) {
+    //                $('#ime_prezime').html(returnedData);
+    //                $("#ime_prezime").select2();
+    //                $("#org_jed").select2();
+    //            });
+    //    }
+    //
+    //};
 
-        if ($("#B1").val() != '') {
-            console.log($("#B1").val());
-            $.post("<?php echo $url . '/modules/admin_manager_verification/ajax.php'; ?>", {
-                    request: "get-regions",
-                    B_1: $("#B1").val()
-                },
-                function (returnedData) {
-                    $('#regije').html(returnedData);
-                    $("#regije").select2();
-                });
-            $.post("<?php echo $url . '/modules/admin_manager_verification/ajax.php'; ?>", {
-                    request: "get-streams",
-                    region: ''
-                },
-                function (returnedData) {
-                    $('#streams').html(returnedData);
-                    $("#streams").select2();
-                });
-            $.post("<?php echo $url . '/modules/admin_manager_verification/ajax.php'; ?>", {
-                    request: "get-teams",
-                    stream: ''
-                },
-                function (returnedData) {
-                    $('#teams').html(returnedData);
-                    $("#teams").select2();
-                });
-            $.post("<?php echo $url . '/modules/admin_manager_verification/ajax.php'; ?>", {
-                    request: "get-users",
-                    b1: $("#B1").val(),
-                    'year': year,
-                    'month': month,
-                    'username': username
-                },
-                function (returnedData) {
-                    $('#ime_prezime').html(returnedData);
-                    $("#ime_prezime").select2();
-                    $("#org_jed").select2();
-                });
-        }
 
-    };
-
-
+    $("#ime_prezime").select2();
+    $("#org_jed").select2();
     $("#odustani").click(function (e) {
         e.preventDefault();
 

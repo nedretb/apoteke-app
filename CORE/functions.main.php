@@ -1264,16 +1264,15 @@ function _optionUser2($current)
 
 }
 
-function _optionB_1($current, $notadmin = 0)
-{
+function _optionB_1($current, $notadmin = 0){
     global $db, $_conf, $admin_management, $nav_employee, $nav_employee_contract_ledger, $portal_users;
     $x_user = _user(_decrypt($_SESSION['SESSION_USER']));
+
 
     $opt = '<option value="">' . __('Odaberi...') . '</option>';
 
 
     $data = ($x_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($x_user);
-
 
         foreach ($data as $item) {
             if ($current == $item['id']) {
