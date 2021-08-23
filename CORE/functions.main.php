@@ -6406,7 +6406,7 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
 //        $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Šifra bolesti</th>';
 //    }
     $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar</th>';
-    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar radnika</th>';
+    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar podnosioca zahtjeva</th>';
 
     $items .= '</tr>';
 
@@ -6770,7 +6770,7 @@ function _statsDaysFreeReifUsers4Corrections($year, $datumOD, $datumDO, $offset,
 //        $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Šifra bolesti</th>';
 //    }
     $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar</th>';
-    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar radnika</th>';
+    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Komentar podnosioca zahtjeva</th>';
     $items .= '</tr>';
 
     $arr = array();
