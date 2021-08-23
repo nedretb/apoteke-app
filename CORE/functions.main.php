@@ -5802,7 +5802,7 @@ function _statsDaysFreeReif($year, $month_from, $month_to, $day_from, $day_to, $
     else
         $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Odbijeni izostanak</th>';
     $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar</th>';
-    $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar radnika</th>';
+    $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar podnosioca zahtjeva</th>';
     $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 100px;" >Br. Dana</th>';
     $items .= '</tr>';
     $arr = array();
@@ -6070,7 +6070,7 @@ function _statsDaysFreeReifCorrections($year, $month_from, $month_to, $day_from,
     else
         $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Odbijeni izostanak</th>';
     $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar</th>';
-    $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar radnika</th>';
+    $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 300px;" >Komentar podnosioca zahtjevagit</th>';
     $items .= '<th style="height:20px; background: #c7bebe;color: black;width: 100px;" >Br. Dana</th>';
     $items .= '</tr>';
     $arr = array();
