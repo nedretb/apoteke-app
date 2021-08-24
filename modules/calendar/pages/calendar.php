@@ -239,12 +239,12 @@ _pagePermission(5, false);
         <table class="alt col-sm-12 sortable">
             <thead>
             <tr>
-                <th style="height:20px; background: #c7bebe;color: black;width: 600px;">Organizaciona jedinica</th>
-                <th style="height:20px; background: #c7bebe;color: black;width: 300px;">Datum</th>
-                <th style="height:20px; background: #c7bebe;color: black;width: 500px;">Naziv praznika</th>
-                <th style="display: none; height:20px; background: #c7bebe;color: black;width: 200px;">Pomični</th>
-                <th style="height:20px; background: #c7bebe;color: black;width: 20px;"></th>
-                <th style="height:20px; background: #c7bebe;color: black;width: 20px;"></th>
+                <th style="height:20px; background: rgba(0, 101, 149, 0.5) !important;color: black;width: 600px;">Organizaciona jedinica</th>
+                <th style="height:20px; background: rgba(0, 101, 149, 0.5) !important;color: black;width: 300px;">Datum</th>
+                <th style="height:20px; background: rgba(0, 101, 149, 0.5) !important;color: black;width: 500px;">Naziv praznika</th>
+                <th style="display: none; height:20px; background: rgba(0, 101, 149, 0.5) !important;color: black;width: 200px;">Pomični</th>
+                <th style="height:20px; background: rgba(0, 101, 149, 0.5) !important;color: black;width: 20px;"></th>
+                <th style="height:20px; background: rgba(0, 101, 149, 0.5) !important; color: black;width: 20px;"></th>
             </tr>
             </thead>
             <tbody>

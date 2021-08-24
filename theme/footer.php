@@ -137,7 +137,7 @@
         color: <?php echo _settings('color_button_bg'); ?>;
       }
 	  .tasks-page span{
-          background: #006595;
+          background: rgba(0, 101, 149, 0);
           color: white;
 		/*   background:*/<?php //echo _settings('color_span_bg'); ?>/*;*/
         /*color:*/<?php //echo _settings('color_span_fg'); ?>/*;*/
