@@ -36,7 +36,7 @@ include_once $root . '/modules/default/functions.php';
                 }
                 ?>
 
-                <label><?php echo __('Područje primjene'); ?></label>
+                <label><?php echo __('Organizaciona jedinica:'); ?></label>
                 <input type="text" value="<?php echo $dep_name; ?>" readonly class="form-control"/>
                 <input type="text" name="department_name" class="form-control" style="display: none;" readonly
                        value="<?php echo $row['department name']; ?>"/>
@@ -49,7 +49,7 @@ include_once $root . '/modules/default/functions.php';
                 </div>
 
 
-                <label><?php echo __('Ime Praznika'); ?></label>
+                <label><?php echo __('Ime praznika:'); ?></label>
                 <div id="holiday_name">
                     <input type="text" name="holiday_name" class="form-control" spellcheck="false"
                            placeholder="<?php echo __('Ime praznika'); ?>" value="<?php echo $row['holiday_name']; ?>"

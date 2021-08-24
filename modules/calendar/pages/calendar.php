@@ -128,6 +128,19 @@ _pagePermission(5, false);
                } ?>">Novi unos <i style="    padding-top: 5px;" class="ion-ios-plus-empty"></i></a>
 
         </div>
+        <div class="col-md-1" style="width:14%; padding-top: 4px;">
+
+
+            <br/>
+            <a href="<?php echo $url . '/?m=calendar&p=calendar'; ?>"
+               data-width="1500" class="btn btn-sm btn-red"
+               style="margin-bottom:5px; line-height: 28px;   width: 100%;display:<?php if (isset($_GET['u'])) {
+                   echo 'none';
+               } else {
+                   echo '';
+               } ?>">Očisti filter <i style="    padding-top: 5px;" class="ion-android-close"></i></a>
+
+        </div>
         <div class="col-md-2" style="display: none;">
             <label><?php echo __('Područje primjene'); ?></label>
             <select style="padding:0px !important; " name="pod_primjene" id="pod_primjene" class="form-control">
@@ -141,7 +154,7 @@ _pagePermission(5, false);
             </select>
         </div>
         <div class="col-md-2" style="width:14%!important;">
-            <label><?php echo __('Datum'); ?></label>
+            <label><?php echo __('Datum:'); ?></label>
             <div id="dt">
                 <input type="text" name="date" class="form-control" id="date" style="height: 39px;"
                        placeholder="dd.mm.yyyy"
@@ -149,7 +162,7 @@ _pagePermission(5, false);
             </div>
         </div>
         <div class="col-md-2" style="width:14%!important;">
-            <label><?php echo __('Naziv praznika'); ?></label>
+            <label><?php echo __('Naziv praznika:'); ?></label>
             <select style="padding:0px !important; " name="naz_praznik" id="naz_praznik" class="form-control">
                 <?php echo _optionNazivPraznika($naz_praznik); ?>
             </select>

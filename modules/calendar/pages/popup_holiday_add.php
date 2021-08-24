@@ -55,7 +55,7 @@ $_user = _user(_decrypt($_SESSION['SESSION_USER']));
             <div class="filijala-agencija collapsable">
                 <br/>
 
-                <label><?php echo __('Organizaciona jedinica'); ?></label>
+                <label><?php echo __('Organizaciona jedinica:'); ?></label>
                 <select style="padding:0px !important; " name="orgjed[]" id="orgjed"
                         class="form-control orgajed" multiple="multiple" data-placeholder="Odaberi">
                     <?php
