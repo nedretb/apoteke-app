@@ -193,7 +193,7 @@
         },
 		  ne: {
             text: 'Ne',
-            btnClass: 'btn-red',
+            btnClass: 'btn-blue',
 			action: function(){
                  return;
             }

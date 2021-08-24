@@ -258,7 +258,7 @@ _pagePermission(5, false);
                     </td>
                     <td><a href="<?php echo $url . '/modules/' . $_mod . '/ajax.php'; ?>" class="table-btn1"
                            data-widget="remove-praznik" data-id="holiday_remove:<?php echo $item['id']; ?>"
-                           data-text="<?php echo __('Dali ste sigurni da želite obrisati praznik (brisanje će uticati na kreirane satnice)?'); ?>"
+                           data-text="<?php echo __('Da li ste sigurni da želite obrisati praznik (brisanje će uticati na kreirane satnice)?'); ?>"
                            title="Obriši" style="display:<?php if (isset($_GET['u'])) {
                             echo 'none';
                         } else {
