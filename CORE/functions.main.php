@@ -1269,7 +1269,7 @@ function _optionB_1($current, $notadmin = 0){
     $x_user = _user(_decrypt($_SESSION['SESSION_USER']));
 
 
-    $opt = '<option value="">' . __('Odaberi...') . '</option>';
+    $opt = '';
 
 
     $data = ($x_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($x_user);
@@ -1281,7 +1281,7 @@ function _optionB_1($current, $notadmin = 0){
                 $sel = '';
             }
             if ($item['id'] != 1){
-                $opt .= '<option value="'.$item['id'].'"'.$sel.'>'.$item['no'].' '.$item['title'].'</option>';
+                $opt .= '<option value="'.$item['id'].'"'.$sel.'>'.$item['title'].'</option>';
             }
     }
 

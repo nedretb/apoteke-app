@@ -139,6 +139,7 @@ if ($pg_max == 0) {
                             <label style="width: 100%" class="lable-admin1"><?php echo __('Organizaciona jedinica'); ?></label>
                             <select id="org_jed" name="org_jed" class="rcorners1" style="outline:none;width:200px;"
                                     class="form-control">
+                                <option value=""><?= __('Odaberi...')  ?></option>
                                 <?php echo _optionB_1($orgJed) ?>
                             </select><br/><br/>
 

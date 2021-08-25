@@ -123,6 +123,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                                 <label class="lable-admin1" style="width: 100%;"><?php echo __('Organizaciona jedinica'); ?></label>
                                 <select id="org_jed" name="org_jed" class="rcorners1" style="outline:none;width:100%;"
                                         class="form-control">
+                                    <option value=""><?= __('Odaberi...')  ?></option>
                                     <?php echo _optionB_1($orgJed) ?>
                                 </select><br/><br/>
 
