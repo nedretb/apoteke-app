@@ -148,8 +148,8 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                                        style="width: 150px;"><?php echo __('Organizacioni dio:'); ?></label>
                                 <select id="org-export" name="IDVer" class="rcorners1" class="form-control"
                                         style="float:right;">
-                                    <?php echo _optionB_1(isset($_POST['org_jed']) ? $_POST['org_jed'] : ''); ?>
                                     <option>Svi radnici</option>
+                                    <?php echo _optionB_1(isset($_POST['org_jed']) ? $_POST['org_jed'] : ''); ?>
                                 </select>
 
                                 <br style="clear:both"/>
