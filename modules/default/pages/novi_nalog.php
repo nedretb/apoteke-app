@@ -2208,11 +2208,11 @@ function prebaciDatumBih($datum){
 
 
 
-        $('#akontacija_datum').datepicker({
-            todayBtn: "linked",
-            format: 'dd.mm.yyyy',
-            language: 'bs',
-        });
+        // $('#akontacija_datum').datepicker({
+        //     todayBtn: "linked",
+        //     format: 'dd.mm.yyyy',
+        //     language: 'bs',
+        // });
 
         $('#transport_pocetak').datepicker({
             todayBtn: "linked",
@@ -2796,7 +2796,6 @@ function prebaciDatumBih($datum){
             let odrediste = $('#odredisna_drzava2').find("option:selected" ).text();
 
             duration2 = datediff(parseDate(pocetak_datum2), parseDate(kraj_datum2));
-
             //svaki red
             for(let i = 1; i<=row_data.length -1; i++){
                 let column_data = row_data[i];
@@ -2808,7 +2807,8 @@ function prebaciDatumBih($datum){
         }
 
         // console.log(max_iznos_prva,max_iznos_druga,pocetak_datum2,kraj_datum2,duration);
-        let max = parseInt(max_iznos_prva) + parseInt(max_iznos_druga);
+        let max = parseInt(max_iznos_prva) * duration;
+
         if(parseInt($('#iznos_akontacije').val()) > max) $('#myModal').modal('show');
     });
 
