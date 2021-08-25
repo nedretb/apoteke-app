@@ -198,11 +198,11 @@ function pageMenu()
                     'role' => array('4')
                 ),
                 'sifrarnici' => array(
-                    'name' => ___('Šifrarnici'),
+                    'name' => ___('Šifarnici'),
                     'role' => array('4')
                 ),
                 'akontacije_sifrarnik' => array(
-                    'name' => ___('Šifrarnik akontacija'),
+                    'name' => ___('Šifarnik akontacija'),
                     'role' => array('4')
                 ),
             ),
@@ -475,7 +475,7 @@ function pageMenu()
                     if ($_user['role'] == 4 and $_user['employee_no'] == 989 and $slug_sub == 'odsustva_radnici_corrections') {
                         $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=logout">Podešavanja</a></li>';
                     }
-                    if (($pages_sub['name'] == 'Šifrarnik akontacija' or $pages_sub['name'] == 'Šifrarnici' or $pages_sub['name'] == 'Države') and $_user['role'] != 4 and $sl_put_admin) {
+                    if (($pages_sub['name'] == 'Šifarnik akontacija' or $pages_sub['name'] == 'Šifarnici' or $pages_sub['name'] == 'Države') and $_user['role'] != 4 and $sl_put_admin) {
                         $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=' . $slug . '&p=' . $slug_sub . '">' . $pages_sub['name'] . '</a></li>';
                     }
 

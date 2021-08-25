@@ -54,7 +54,7 @@ color:white !important;
 
             <div class="col-sm-12 text-center">
                 <h2>
-                    <?php echo __('Šifrarnici'); ?>
+                    <?php echo __('Šifarnici'); ?>
 
                 </h2>
             </div>

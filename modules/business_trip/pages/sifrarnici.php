@@ -27,7 +27,7 @@
 
       <div class="col-sm-12 text-center">
         <h2>
-          <?php echo __('Šifrarnici'); ?>
+          <?php echo __('Šifarnici'); ?>
          
         </h2>
       </div>
@@ -50,7 +50,7 @@
       <div class='col-6' style='width:auto;display:inline;'>
         <table class="table table-hover">
         <thead>
-        <th>Naziv šifrarnika</th>
+        <th>Naziv šifarnika</th>
         <th style='text-align:center;'>Akcije</th>
         </thead>
         <tbody>

@@ -26,7 +26,7 @@ Uspješno spremljeni podaci!
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2>
-          <?php echo __('Šifrarnik akontacija'); ?>
+          <?php echo __('Šifarnik akontacija'); ?>
         </h2>
       </div>
       <div class="col-sm-4 text-right"><br/>

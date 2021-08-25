@@ -1280,7 +1280,9 @@ function _optionB_1($current, $notadmin = 0){
             } else {
                 $sel = '';
             }
-        $opt .= '<option value="'.$item['id'].'"'.$sel.'>'.$item['no'].' '.$item['title'].'</option>';
+            if ($item['id'] != 1){
+                $opt .= '<option value="'.$item['id'].'"'.$sel.'>'.$item['no'].' '.$item['title'].'</option>';
+            }
     }
 
     return $opt;

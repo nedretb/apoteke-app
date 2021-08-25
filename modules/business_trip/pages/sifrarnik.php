@@ -101,7 +101,7 @@ try{
 
             <div class="col-sm-12 text-center">
                 <h2>
-                    <?php echo __('Šifrarnik - ').$sifrarnici[$name]; ?>
+                    <?php echo __('Šifarnik - ').$sifrarnici[$name]; ?>
                 </h2>
 
                 <!-- <div class="btn btn-red btn-lg pull-right">Dodaj novu opciju!
