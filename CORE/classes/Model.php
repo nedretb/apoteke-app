@@ -104,13 +104,22 @@ class MainModel {
         foreach ($arr as $key => $val){
             if(!empty($val)){
                 if (self::$where != ''){
-                    self::$where .= " AND ".$key." LIKE N'%".$val."%'";
+                    if ($key == 'egop_ustrojstvena_jedinica'){
+                        self::$where .= " AND ".$key." ='".$val."'";
+                    }
+                    else{
+                        self::$where .= " AND ".$key." LIKE N'%".$val."%'";
+                    }
                 } else{
-                    self::$where = " WHERE ".$key." LIKE N'%".$val."%'";
+                    if ($key == 'egop_ustrojstvena_jedinica'){
+                        self::$where = " WHERE ".$key."='".$val."'";
+                    }
+                    else{
+                        self::$where = " WHERE ".$key." LIKE N'%".$val."%'";
+                    }
                 }
             }
         }
-
         return new static();
     }
 

@@ -7272,7 +7272,8 @@ function _addHoliday($holidayName, $orgJed, $holidayDate)
     else{
         $condition = " where egop_ustrojstvena_jedinica=".$orgJedId;
     }
-    $orgJedUsers = $db->query("select employee_no, user_id from [c0_intranet2_apoteke].[dbo].[users] ".$condition);
+
+    $orgJedUsers = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] ".$condition);
 
     foreach ($orgJedUsers as $user){
         try {
