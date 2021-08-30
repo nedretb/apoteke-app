@@ -24,7 +24,8 @@ require_once '../../../configuration.php';
 
             if ($row['weekday'] == '6' or $row['weekday'] == '7') {
                 if ($row['hour'] == 0)
-                    $br_sati = $_user1['br_sati'];
+                    $br_sati = 0;
+//                    $br_sati = $_user1['br_sati'];
                 else
                     $br_sati = $row['hour'];
             } else {
