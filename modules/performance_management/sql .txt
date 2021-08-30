@@ -1,0 +1,12 @@
+SELECT *  FROM ".$_conf['nav_database'].".[dbo].[RAIFFAISEN BANK\$Head Of_s] as  h
+join ".$_conf['nav_database'].".[dbo].[RAIFFAISEN BANK\$ORG Shema] as o on  h.[ORG Shema]=o.Code
+join [c0_intranet2_raiff].[dbo].[users] as u on h.[Position Code]= u.position_code COLLATE SQL_Latin1_General_CP1_CI_AS
+where o.Active=1 
+
+
+
+
+SELECT *  FROM [NAV RAIFFEISEN].[dbo].[RAIFFAISEN BANK$Head Of_s] as  h
+join [NAV RAIFFEISEN].[dbo].[RAIFFAISEN BANK$ORG Shema] as o on  h.[ORG Shema]=o.Code
+join [c0_intranet2_raiff].[dbo].[users] as u on h.[Position Code]= u.position_code COLLATE SQL_Latin1_General_CP1_CI_AS
+where o.Active=1 

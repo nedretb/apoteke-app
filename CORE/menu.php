@@ -183,6 +183,27 @@ function pageMenu()
             'subpages' => array(),
             'hidden' => $tab_hidden['trainings']
         ),
+        'performance_management'=>array(
+            'name'=>__($tab_name['performance_management']),
+            'icon'=>$tab_icon['performance_management'],
+            'page'=>'mbo',
+            'role'=>array('4','2'),
+            'subpages'=>array(
+                'impersonation'=>array(
+                    'name'=>__('Administracija - Impersonacija'),
+                    'role'=>array('4', '2')
+                ),
+                'mbo'=>array(
+                    'name'=>__('Planiranje sporazuma'),
+                    'role'=>array('4', '2')
+                ),
+                'administrator_dodaj'=>array(
+                    'name'=>__('Administratori'),
+                    'role'=>array('12')
+                )
+            ),
+            'hidden'=>$tab_hidden['performance_management']
+        ),
         'business_trip' => array(
             'name' => ___($tab_name['business_trip']),
             'icon' => $tab_icon['business_trip'],
@@ -365,12 +386,12 @@ function pageMenu()
     $menu = '<ul>';
     $i = 0;
 
-//    $pm_adminq = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[pm_lista_korisnika] where user_id = " . $_user['user_id']);
-//    $pm_admin = $pm_adminq->fetch();
-//
-//    $pm_admin = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[pm_administratori] where user_id = " . $_user['user_id'])->fetchAll();
-//    if (count($pm_admin)) $pm_admin = true;
-//    else $pm_admin = false;
+    $pm_adminq = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[pm_lista_korisnika] where user_id = " . $_user['user_id']);
+    $pm_admin = $pm_adminq->fetch();
+
+    $pm_admin = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[pm_administratori] where user_id = " . $_user['user_id'])->fetchAll();
+    if (count($pm_admin)) $pm_admin = true;
+    else $pm_admin = false;
 
     $sl_put_admin = $db->query("SELECT user_id, fname, lname from  " . $portal_users . "  WHERE sl_put_admin = 1 and user_id = " . $_user['user_id']);
     $sl_put_admin = $sl_put_admin->fetch();
