@@ -15,7 +15,6 @@
     foreach ($kontakt[0]['users__kontakt_informacije'] as $kont) {
         ?>
         <div class="mp-i-row">
-            <?php if ($userRole == 4) {?>
             <div class="edit-delete-row">
                 <div class="edr-w" title="<?= ___('Uredite') ?>">
                     <a href="?m=profile&p=insert-data&what=kontakt&u=<?php echo $_user['employee_no']; ?>&id=<?= $kont['id'] ?>"><i class="far text-success fa-edit"></i></a>
@@ -25,7 +24,6 @@
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
 <!--                </div>-->
             </div>
-            <?php } ?>
 
             <div class="row">
                 <div class="col-md-6">

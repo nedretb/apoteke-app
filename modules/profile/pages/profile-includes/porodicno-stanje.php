@@ -4,7 +4,7 @@
 
     <div class="mp-i-h">
         <h4><?= ___('Podaci o porodičnom stanju') ?></h4>
-        <?php if ($userRole == 4 and !($provjera->rowCount() < 0)){ ?>
+        <?php if (!($provjera->rowCount() < 0)){ ?>
             <a href="?m=profile&p=insert-data&what=porodicno-stanje&u=<?php echo $_user['employee_no']; ?>">
                 <div class="icon-w">
                     <i class="fas fa-plus"></i>

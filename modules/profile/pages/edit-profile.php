@@ -143,7 +143,12 @@ if(!empty($_GET['u'])){
                             }
                             elseif ($_user['zdravstveni_radnik'] == 'Ne'){
                                 echo '<option value="Da">Da</option>';
-                                echo '<option selected="selected" value="Ne">Ne</option>';}
+                                echo '<option selected="selected" value="Ne">Ne</option>';
+                            }
+                            else{
+                                echo '<option value="Da">Da</option>';
+                                echo '<option value="Ne">Ne</option>';
+                            }
                         ?>
                     </select>
                 </div>
