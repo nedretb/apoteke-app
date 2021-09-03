@@ -44,21 +44,6 @@ $socijalniStatus = [
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="socijalni_status"> <?= ___('Socijalni status') ?> </label>
-                            <?= Form::select('socijalni_status', $socijalniStatus, $zdravstv['socijalni_status'] ?? '', ['id' => 'socijalni_status', 'class' => 'form-control']) ?>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broj_djece"> <?= ___('Broj djece') ?> </label>
-                            <?= Form::number('broj_djece', $zdravstv['broj_djece'] ?? '0', ['id' => 'broj_djece', 'class' => 'form-control', 'min' => 0 ]) ?>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row text-right">
                     <button type="submit" class="my-submit"><?= ___('Ažurirajte podatke') ?></button>
                 </div>

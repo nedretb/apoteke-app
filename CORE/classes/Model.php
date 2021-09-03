@@ -107,11 +107,17 @@ class MainModel {
                     if ($key == 'egop_ustrojstvena_jedinica'){
                         self::$where .= " AND ".$key." ='".$val."'";
                     }
+                    elseif ($key == 'employee_no'){
+                        self::$where .= " AND ".$key." ='".$val."'";
+                    }
                     else{
                         self::$where .= " AND ".$key." LIKE N'%".$val."%'";
                     }
                 } else{
                     if ($key == 'egop_ustrojstvena_jedinica'){
+                        self::$where = " WHERE ".$key."='".$val."'";
+                    }
+                    elseif ($key == 'employee_no'){
                         self::$where = " WHERE ".$key."='".$val."'";
                     }
                     else{

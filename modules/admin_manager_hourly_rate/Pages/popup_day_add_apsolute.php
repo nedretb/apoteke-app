@@ -6,7 +6,7 @@ include_once $root.'/modules/default/functions.php';
 
 <div class="header">
     <a class="btn close" data-widget="close-ajax" data-siht="true" data-id="opt2"><i class="ion-android-close"></i></a>
-    <h4><span><?php echo __('Ažuriraj satnice'); ?></span></h4>
+    <h4><span><?php echo __('Registruj odsustvo'); ?></span></h4>
 </div>
 
 <section>

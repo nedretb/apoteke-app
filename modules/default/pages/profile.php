@@ -172,7 +172,7 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
 
             </div>
         <?php } ?>
-            <div class="col-sm-14" style="    margin-top: 25px;">
+            <div class="col-sm-14" style="display: none;    margin-top: 25px;">
                 <div class="box" show=tr>
 
                     <div class="head">
@@ -277,7 +277,7 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
                     <!-- TODO : Pozivni broj telefona !? -->
                     <div class="pb-right">
                         <h4>
-                            <?= isset($kontakt) ? ($kontakt['kucni_telefonski_broj'].' '.$kontakt['kucni_regionalni_kod'].' '.$kontakt['kucni_broj']) : '' ?>
+                            <?= isset($kontakt) ? ($kontakt['pozivni_broj'].' '.$kontakt['kucni_regionalni_broj'].' '.$kontakt['kucni_broj']) : '' ?>
                         </h4>
                     </div>
                 </div>
@@ -323,17 +323,6 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
                     </div>
                     <div class="pb-right">
                         <h4><?= $orgJed['s_title']; ?></h4>
-                    </div>
-                </div>
-
-                <!---------------------------------------------------------------------------------------------------->
-
-                <div class="profile-basic pb-row">
-                    <div class="pb-left">
-                        <p><?= ___('Mjesto rada') ?></p>
-                    </div>
-                    <div class="pb-right">
-                        <h4> Trg BiH 1, 71000 Sarajevo </h4>
                     </div>
                 </div>
 

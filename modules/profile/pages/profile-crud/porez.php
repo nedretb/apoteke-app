@@ -30,28 +30,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="koeficijent_slozenosti_poslova"><?= ___('Koeficijent složenosti posla') ?></label>
-                            <?= Form::number('koeficijent_slozenosti_poslova',isset($porez) ? number_format((float)$porez['koeficijent_slozenosti_poslova'], 2, '.', '') : '', ['id' => 'clan_sindikata', 'class' => 'form-control', 'min' => '0', 'max' => '10', 'step' => '0.01']) ?>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="demobilizirani_borac"> <?= ___('Demobilizirani borac') ?></label>
-                            <?= Form::select('demobilizirani_borac', ['Ne' => 'Ne', 'Da' => 'Da'], $porez['demobilizirani_borac'] ?? '', ['id' => 'demobilizirani_borac', 'class' => 'form-control']) ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="demobilizirani_borac_m"><?= ___('Broj mjeseci u odbrambeno-oslobodilačkom/domovinskom ratu') ?></label>
-                            <?= Form::number('demobilizirani_borac_m',isset($porez) ? $porez['demobilizirani_borac_m'] : '', ['id' => 'demobilizirani_borac_m', 'class' => 'form-control', 'min' => '0', 'max' => '44']) ?>
-                        </div>
-                    </div>
-                </div>
                 <div class="row text-right">
                     <button type="submit" class="my-submit"><?= ___('Ažurirajte podatke') ?></button>
                 </div>
@@ -59,23 +37,3 @@
         </form>
     </div>
 </div>
-
-<script>
-    if ($('#demobilizirani_borac').val() == 'Da'){
-        $('#demobilizirani_borac_m').prop('disabled', false);
-    }
-    else{
-        $('#demobilizirani_borac_m').prop('disabled', true);
-        $('#demobilizirani_borac_m').val(0);
-    }
-
-    $('#demobilizirani_borac').on('change', function (){
-        if($('#demobilizirani_borac').val() == 'Da'){
-            $('#demobilizirani_borac_m').prop('disabled', false);
-        }
-        else{
-            $('#demobilizirani_borac_m').prop('disabled', true);
-            $('#demobilizirani_borac_m').val(0);
-        }
-    });
-</script>

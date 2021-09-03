@@ -530,7 +530,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                                 <a style="margin-top:10px;"
                                    href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_add_apsolute.php?year=' . $absence_year . '&month=' . $month['id']; ?>"
                                    data-widget="ajax" data-id="opt2" data-width="500"
-                                   class="btn btn-red btn-md"><?php echo __('Ažuriraj satnice'); ?> <i
+                                   class="btn btn-red btn-md"><?php echo __('Registruj odsustvo'); ?> <i
                                             class="ion-ios-plus-empty"></i></a>
                                 <a style="margin-top:10px;"
                                    href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_cancel_apsolute.php?year=' . $absence_year . '&month=' . $month['id']; ?>"

@@ -5,7 +5,7 @@ require_once '../../../configuration.php';
 ?>
 <div class="header">
     <a class="btn close" data-widget="close-ajax" data-siht="true" data-id="opt2"><i class="ion-android-close"></i></a>
-    <h4><span><?php echo __('Ažuriraj satnice'); ?></span></h4>
+    <h4><span><?php echo __('Registruj odsustvo'); ?></span></h4>
 </div>
 
 <section>
@@ -72,12 +72,12 @@ require_once '../../../configuration.php';
           <input type="text" name="day" class="form-control" value="<?php echo $row['day']; ?>" readonly/>-->
                     </div>
                     <div class="col-sm-4">
-                        <label style="font-size:12px;"><?php echo __('Broj sati pre.'); ?></label>
+                        <label style="font-size:12px;"><?php echo __('Broj sati'); ?></label>
                         <input type="text" name="hour_pre" id="hour_pre" value="<?php echo number_format($row['hour_pre']); ?>"
                                class="form-control" min="0" max="24" step="0.5">
                     </div>
                     <div class="col-sm-5">
-                        <label><?php echo __('Status pre.'); ?></label>
+                        <label><?php echo __('Status'); ?></label>
                         <select style="padding:0px !important; " name="status_pre" id="status_pre" class="form-control">
                             <?php echo _optionHRstatusPre($row['status_pre']); ?>
                         </select>

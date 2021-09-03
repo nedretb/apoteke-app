@@ -13,7 +13,7 @@ if(isset($request)){ // Search systematisation by name while there is only an ID
 }
 
 if($_user['role'] == 4){
-    $profiles = Profile::select('employee_no, fname, lname, egop_radno_mjesto, egop_ustrojstvena_jedinica, nadredjeni')->whereArr(isset($request) ? $request->get() : [])->get();
+    $profiles = Profile::select('employee_no, fname, lname, egop_radno_mjesto, egop_ustrojstvena_jedinica, nadredjeni')->whereArr(isset($request) ? $request->get() : [])->orderby('employee_no', 'ASC')->get();
 }else{
     $profiles = Profile::getEmployees($_user, isset($request) ? $request->get() : []);
 }
@@ -22,7 +22,7 @@ if($_user['role'] == 4){
 
 <div class="simple-header">
     <div class="sh-left">
-        <p> <?= ___('Pregled svih državnih službenika') ?> </p>
+        <p> <?= ___('Pregled svih radnika') ?> </p>
     </div>
     <div class="sh-right">
         <div class="inside-link">
@@ -65,10 +65,20 @@ if($_user['role'] == 4){
         <?php
             $counter = 1;
             foreach ($profiles as $profile){
+                $empNo = '';
+                if(strlen($profile['employee_no']) == 1){
+                    $empNo = '00'.$profile['employee_no'];
+                }
+                elseif (strlen($profile['employee_no']) == 2){
+                    $empNo = '0'.$profile['employee_no'];
+                }
+                else{
+                    $empNo = $profile['employee_no'];
+                }
                 ?>
                 <tr>
                     <td class="text-center"><small><?= $counter++ ?></small></td>
-                    <td><small><?= $profile['employee_no'] ?></small></td>
+                    <td><small><?= $empNo ?></small></td>
                     <td><small><?= $profile['fname'] ?> <?= $profile['lname'] ?></small></td>
                     <td><small><?= $profile['egop_radno_mjesto'] ?></small></td>
                     <td>

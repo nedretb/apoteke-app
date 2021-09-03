@@ -135,14 +135,14 @@ function pageMenu()
                     'hidden' => $tab_hidden['admin_hourly_rate']
                 ),
 
-                'admin_hourly_rate_corrections' => array(
-                    'name' => ___($tab_name['admin_hourly_rate_corrections']),
-                    'icon' => $tab_icon['admin_hourly_rate_corrections'],
-                    'page' => 'all',
-                    'role' => $tab_roles['admin_hourly_rate_corrections'],
-                    'subpages' => array(),
-                    'hidden' => $tab_hidden['admin_hourly_rate_corrections']
-                ),
+//                'admin_hourly_rate_corrections' => array(
+//                    'name' => ___($tab_name['admin_hourly_rate_corrections']),
+//                    'icon' => $tab_icon['admin_hourly_rate_corrections'],
+//                    'page' => 'all',
+//                    'role' => $tab_roles['admin_hourly_rate_corrections'],
+//                    'subpages' => array(),
+//                    'hidden' => $tab_hidden['admin_hourly_rate_corrections']
+//                ),
 
                 'admin_manager_hourly_rate' => array(
                     'name' => ___($tab_name['admin_manager_hourly_rate']),
@@ -154,14 +154,14 @@ function pageMenu()
                 ),
 
 
-                'admin_manager_hourly_rate_corrections' => array(
-                    'name' => ___($tab_name['admin_manager_hourly_rate_corrections']),
-                    'icon' => $tab_icon['admin_manager_hourly_rate_corrections'],
-                    'page' => 'all',
-                    'role' => $tab_roles['admin_manager_hourly_rate_corrections'],
-                    'subpages' => array(),
-                    'hidden' => $tab_hidden['admin_manager_hourly_rate_corrections']
-                ),
+//                'admin_manager_hourly_rate_corrections' => array(
+//                    'name' => ___($tab_name['admin_manager_hourly_rate_corrections']),
+//                    'icon' => $tab_icon['admin_manager_hourly_rate_corrections'],
+//                    'page' => 'all',
+//                    'role' => $tab_roles['admin_manager_hourly_rate_corrections'],
+//                    'subpages' => array(),
+//                    'hidden' => $tab_hidden['admin_manager_hourly_rate_corrections']
+//                ),
             ),
             'hidden' => $tab_hidden['impersonalizacija']
         ),
@@ -218,10 +218,10 @@ function pageMenu()
                     'name' => ___('Administrator službenog puta'),
                     'role' => array('4')
                 ),
-                'sifrarnici' => array(
-                    'name' => ___('Šifarnici'),
-                    'role' => array('4')
-                ),
+//                'sifrarnici' => array(
+//                    'name' => ___('Šifarnici'),
+//                    'role' => array('4')
+//                ),
                 'akontacije_sifrarnik' => array(
                     'name' => ___('Šifarnik akontacija'),
                     'role' => array('4')
@@ -428,8 +428,8 @@ function pageMenu()
                 $menu .= '<ul class="sub-menu-ul" id="ul' . $i . '">';
                 $menu .= '<li id="absence_count1" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black; margin-right:12%;">Moji odobreni zahtjevi</span><div id="noti_Counter10">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count2" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno=false" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moji neodobreni zahtjevi</span><div id="noti_Counter11">&nbsp;</div></a></li>';
-                $menu .= '<li id="absence_count3" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva_corrections&odobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moje odobrene korekcije</span><div id="noti_Counter100">&nbsp;</div></a></li>';
-                $menu .= '<li id="absence_count4" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva_corrections&odobreno=false" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moje neodobrene korekcije</span><div id="noti_Counter110">&nbsp;</div></a></li>';
+                //$menu .= '<li id="absence_count3" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva_corrections&odobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moje odobrene korekcije</span><div id="noti_Counter100">&nbsp;</div></a></li>';
+//                $menu .= '<li id="absence_count4" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva_corrections&odobreno=false" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moje neodobrene korekcije</span><div id="noti_Counter110">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count5" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno=rejected" style="text-decoration:none;line-height:38px;"><i class="ion-close-circled"></i> <span style="color:black;margin-right:12%;">Moji odbijeni zahtjevi</span><div id="noti_Counter12">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count6" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moja odobrena otkazivanja</span><div id="noti_Counter13">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count7" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=false" style="text-decoration:none;line-height:38px;"><i class="ion-close-circled"></i> <span style="color:black;margin-right:12%;">Moja neodobrena otkazivanja</span><div id="noti_Counter14">&nbsp;</div></a></li>';
@@ -442,9 +442,9 @@ function pageMenu()
                     $menu .= '<ul class="sub-menu-ul" id="ul' . $i . '">';
 
                     $menu .= '<li id="absence_count8" style="color:white;font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici&neodobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-ios-people"></i> <span style="color:black;margin-right:12%;">Nova odsustva</span><div id="noti_Counter1">&nbsp;</div></a></li>';
-                    $menu .= '<li id="absence_count9" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&neodobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-ios-people"></i> <span style="color:black;margin-right:12%;">Nova odsustva korekcije</span><div id="noti_Counter6">&nbsp;</div></a></li>';
+//                    $menu .= '<li id="absence_count9" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&neodobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-ios-people"></i> <span style="color:black;margin-right:12%;">Nova odsustva korekcije</span><div id="noti_Counter6">&nbsp;</div></a></li>';
                     $menu .= '<li id="absence_count10" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici&zahtjevi=true" style="text-decoration:none;line-height:38px;"><i class="ion-android-cancel"></i> <span style="color:black;margin-right:12%;">Zahtjevi otkazivanje</span><div id="noti_Counter2">&nbsp;</div></a></li>';
-                    $menu .= '<li id="absence_count11" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&zahtjevi=true" style="text-decoration:none;color:white;line-height:38px;"><i class="ion-android-cancel"></i> <span style="color:black;margin-right:12%;">Zahtjevi otkazivanje korekcije</span><div id="noti_Counter5">&nbsp;</div></a></li>';
+                    //$menu .= '<li id="absence_count11" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&zahtjevi=true" style="text-decoration:none;color:white;line-height:38px;"><i class="ion-android-cancel"></i> <span style="color:black;margin-right:12%;">Zahtjevi otkazivanje korekcije</span><div id="noti_Counter5">&nbsp;</div></a></li>';
                     //$menu .= '<li id="absence_count9" style="font-weight: bold;margin-left: 0px;"><a href="?m=default&p=otkazani_zahtjevi&admin=true" style="text-decoration:none;line-height:38px;"><i class="ion-android-cancel"></i> <span style="margin-right:12%;">Otkazani zahtjevi radnika</span><div id="noti_Counter5">&nbsp;</div></a></li>';
 
                     $menu .= '</ul>';
@@ -482,7 +482,7 @@ function pageMenu()
                         global $url;
                         $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=admin">HR Administratori</a></li>';
                         //$menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=work_booklet&p=all">Postava GO</a></li>';
-                        $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=sifarniciorg&p=all">Šifarnici</a></li>';
+//                        $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=sifarniciorg&p=all">Šifarnici</a></li>';
                         // $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="'.$url . '/modules/' . 'default' . '/pages/popup_plan_go.php'.'">Plan GO</a></li>';
                         // $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=default&p=all_employees'.'">Pregled radnika</a></li>';
                     } elseif (in_array($_user['role'], $pages_sub['role']) or (($slug_sub == 'absences' or $slug_sub == 'vacations') and $vacation_visible) or ($slug_sub == 'odsustva_radnici' and $show_odsustva) or ($slug_sub == 'odsustva_radnici_corrections' and $show_odsustva)) {

@@ -16,14 +16,14 @@
         ?>
         <div class="mp-i-row">
             <?php if ($userRole == 4){?>
-            <div class="edit-delete-row">
-                <div class="edr-w" title="<?= ___('Uredite') ?>">
-                    <a href="?m=profile&p=insert-data&what=zdravstveno-stanje&u=<?php echo $_user['employee_no']; ?>&id=<?= $zdr['id'] ?>"><i class="far text-success fa-edit"></i></a>
-                </div>
+<!--            <div class="edit-delete-row">-->
+<!--                <div class="edr-w" title="--><?//= ___('Uredite') ?><!--">-->
+<!--                    <a href="?m=profile&p=insert-data&what=zdravstveno-stanje&u=--><?php //echo $_user['employee_no']; ?><!--&id=--><?//= $zdr['id'] ?><!--"><i class="far text-success fa-edit"></i></a>-->
+<!--                </div>-->
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
 <!--                </div>-->
-            </div>
+<!--            </div>-->
             <?php }?>
 
             <div class="row">
@@ -37,21 +37,6 @@
                     <div class="form-group">
                         <label for="stepen_invalidnosti"><?= ___('Stepen invalidnosti') ?></label>
                         <input type="text" value="<?= $stepen['category'] ?>" class="form-control form-control-sm" id="stepen_invalidnosti" disabled="disabled">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="dijete_sa_posebnim_potrebama"> <?= ___('Socijalni uslovi') ?></label>
-                        <input type="text" value="<?php if ($zdr['socijalni_status'] == 'bez'){ echo 'Bez';} elseif ($zdr['socijalni_status'] == 'roditelj_malodobno'){ echo 'Roditelj, staratelj ili usvojitelj sa malodobnim djetetom/djecom';} else{ echo 'Roditelj, staratelj ili usvojitelj hendikepiranog djeteta';} ?>" class="form-control form-control-sm" id="dijete_sa_posebnim_potrebama" readonly>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="broj_djece"> <?= ___('Broj djece') ?></label>
-                        <input type="text" value="<?= $zdr['broj_djece'] ?>" class="form-control form-control-sm" id="broj_djece" readonly>
                     </div>
                 </div>
             </div>

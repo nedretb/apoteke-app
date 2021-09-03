@@ -39,3 +39,12 @@ if ($_POST['type'] == 'remove') {
 
     echo json_encode('removed');
 }
+
+if ($_POST['type'] == 'zdravstveni_radnik'){
+    try {
+        $zdravstveniRadnikstmt = "UPDATE [c0_intranet2_apoteke].[dbo].[users] SET zdravstveni_radnik=? where employee_no=?";
+        $zdravstveniRadnik = $db->prepare($zdravstveniRadnikstmt);
+        $zdravstveniRadnik->execute([$_POST['val'], $_POST['employee_no']]);
+    } catch (Exception $e){}
+    echo json_encode('added');
+}

@@ -79,10 +79,10 @@ if ($total > 0 || $total2 > 0) {
                 <div class="col-sm-9"><br/>
                     <div class="pull-right">
                         <?php if (($visible != 'N')) { ?>
-                            <!--<a href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_add.php?year=' . $year['id'] . '&month=' . $month['id']; ?>" data-widget="ajax" data-id="opt2" data-width="500" class="btn btn-red btn-lg"><?php echo __('Ažuriraj satnice'); ?> <i class="ion-ios-plus-empty"></i></a>-->
+                            <!--<a href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_add.php?year=' . $year['id'] . '&month=' . $month['id']; ?>" data-widget="ajax" data-id="opt2" data-width="500" class="btn btn-red btn-lg"><?php echo __('Registruj odsustvo'); ?> <i class="ion-ios-plus-empty"></i></a>-->
                             <a href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_add_apsolute.php?year=' . $year['id'] . '&month=' . $month['id']; ?>"
                                data-widget="ajax" data-id="opt2" data-width="500"
-                               class="btn btn-red btn-lg"><?php echo __('Ažuriraj satnice'); ?> <i
+                               class="btn btn-red btn-lg"><?php echo __('Registruj odsustvo'); ?> <i
                                         class="ion-ios-plus-empty"></i></a>
                             <a href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_day_cancel_apsolute.php?year=' . $year['id'] . '&month=' . $month['id']; ?>"
                                data-widget="ajax" data-id="opt2" data-width="500"

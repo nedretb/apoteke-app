@@ -33,7 +33,7 @@ try{
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="zavrsena_obrazovna_ustanova"> <?= ___('Završena obrazovna ustanova') ?> </label>
+                            <label for="zavrsena_obrazovna_ustanova"> <?= ___('Naziv stručnog zvanja') ?> </label>
                             <?= Form::text('zavrsena_obrazovna_ustanova', $skolovanje['zavrsena_obrazovna_ustanova'] ?? '', ['id' => 'zavrsena_obrazovna_ustanova', 'class' => 'form-control']) ?>
                         </div>
                     </div>

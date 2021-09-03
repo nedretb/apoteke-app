@@ -129,6 +129,25 @@ if(!empty($_GET['u'])){
                     <h5><?php echo $_user['dezurstva']; ?></h5>
                 </div>
             </div>
+            <div class="mp-l-rest">
+                <div class="mp-lr-l">
+                    <?= ___('Zdravstveni radnik') ?>
+                </div>
+                <div class="mp-lr-r">
+                    <select style="width: 60%;margin-right: 5px;" id="zdravstveni_radnik" class="form-control">
+                        <option value="null">Odaberi..</option>
+                        <?php
+                            if($_user['zdravstveni_radnik'] == 'Da'){
+                                echo '<option selected="selected" value="Da">Da</option>';
+                                echo '<option value="Ne">Ne</option>';
+                            }
+                            elseif ($_user['zdravstveni_radnik'] == 'Ne'){
+                                echo '<option value="Da">Da</option>';
+                                echo '<option selected="selected" value="Ne">Ne</option>';}
+                        ?>
+                    </select>
+                </div>
+            </div>
             <?php if ($_user['employee_no'] == $rukovodiocOdjela or $_user['role'] == 4){ ?>
             <div class="mp-l-rest">
                 <div class="mp-lr-l">
@@ -263,6 +282,23 @@ include $_themeRoot . '/footer.php';
                 type: 'add',
                 employee_no: $('#zamjenik').val(),
                 org_jed: <?php echo $_user['egop_ustrojstvena_jedinica']; ?>
+            },
+            success:function (data){
+                let response = JSON.parse(data);
+                console.log(response);
+            }
+        });
+    });
+
+    $('#zdravstveni_radnik').on('change', function (){
+        console.log($('#zdravstveni_radnik').val());
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo $url . '/modules/profile/pages/zamjenik.php'; ?>",
+            data: {
+                type: 'zdravstveni_radnik',
+                employee_no: <?php echo $_user['employee_no']; ?>,
+                val: $('#zdravstveni_radnik').val()
             },
             success:function (data){
                 let response = JSON.parse(data);

@@ -9,11 +9,9 @@ $srodstvo = ['' => 'Odaberi..',
              'Dijete' => 'Dijete',
              'Majka' => 'Majka',
              'Otac' => 'Otac',
-             'Pastorak/Patorka' => 'Pastorak/Patorka',
-             'Srodnici u MKT' => 'Srodnici u MKT',
              'Supružnik' => 'Supružnik',
-             'Svekar' => 'Svekar',
-             'Svekrva' => 'Svekrva'];
+             'Brat' => 'Brat',
+             'Sestra' => 'Sestra'];
 ?>
 
 <div class="simple-header">

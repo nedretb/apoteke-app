@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="strucna_sprema"><?= ___('Završena obrazovna ustanova') ?></label>
+                        <label for="strucna_sprema"><?= ___('Naziv stručnog zvanja') ?></label>
                         <input type="text" value="<?= $skol['zvanje'] ?>" class="form-control form-control-sm" id="strucna_sprema" disabled="disabled">
                     </div>
                 </div>
