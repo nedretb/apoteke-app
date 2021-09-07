@@ -73,7 +73,7 @@ function pageMenu()
                     'role' => array('0', '1', '2', '3', '4', '5')
                 ),
                 'zahtjevi_go_radnici' => array(
-                    'name' => ___('Godišnji odmor - radnici'),
+                    'name' => ___('Rješenja o godišnjem odmoru'),
                     'role' => array($zahtjevi_go_radnici_role)
                 ),
                 'otkazani_zahtjevi' => array(

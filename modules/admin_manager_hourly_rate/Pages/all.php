@@ -291,27 +291,41 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
 
             </div>
 
-
-            <div class="row" style="display:block;">
-
+            <div class="row">
                 <div class="col-sm-12">
                     <label>Legenda:</label>
 
-                    <div style="display:block;">
-                        <div class="small-circle"
-                             style="background:#fff;border:1px solid gray;"></div> <?php echo __('Redovan rad'); ?>
-                        <!-- <div class="small-circle" style="background:#ccffcc;border:1px solid gray;margin-left:40px;"></div> <?php echo __('Vjerski praznici'); ?>-->
-
-
-                        <div class="small-circle"
-                             style="background:#ccc;border:1px solid gray;margin-left: 37px;"></div> <?php echo __('Vikendi'); ?>
-
+                    <div style="display: flex;">
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style="background:#fff;border:1px solid gray;"></div> <?php echo __('Redovan rad'); ?>
+                        </div>
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style="background:#ccc;border:1px solid gray;"></div> <?php echo __('Vikendi'); ?>
+                        </div>
                     </div>
-                    <div style="display:block;">
-                        <div class="small-circle"
-                             style="background:lightblue;border:1px solid gray;"></div> <?php echo __('Godišnji'); ?>
-                        <div class="small-circle"
-                             style="background:#d94f4f;border:1px solid gray;margin-left:65px;"></div> <?php echo __('Prekid'); ?>
+
+                    <div style="display: flex;">
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style=" background:lightblue;border:1px solid gray;"></div> <?php echo __('Godišnji odmor'); ?>
+                        </div>
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style="background:#d94f4f;border:1px solid gray;"></div> <?php echo __('Prekid'); ?>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style="background:yellow;border:1px solid gray;"></div> <?php echo __('Bolovanje'); ?>
+                        </div>
+                        <div style="width: 50%;">
+                            <div class="small-circle"
+                                 style="background:#ccffcc;border:1px solid gray;"></div> <?php echo __('Praznik'); ?>
+                        </div>
                     </div>
 
                 </div>

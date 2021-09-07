@@ -38,6 +38,698 @@ if (isset($_POST['request'])) {
         global $db;
 
 
+        $vrstaInsert = [
+            "5" => "Redovan rad",
+            "2011" => "Redovan rad noću",
+            "2010" => "Rad praznikom",
+            "2012" => "Noćni rad praznikom",
+            "2013" => "Rad nedjeljom",
+            "2015" => "Rad vikendom",
+            "2014" => "Noćni rad vikendom"
+        ];
+
+        $org 		= $_POST['org'];
+        $month 		= $_POST['month'];
+        $year 		= $_POST['year'];
+        $verifiedal = $_POST['verifiedal'];
+
+        $month_bosnian = monthBosnian($month);
+
+        $dana_u_mjesecu = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+        $kolona_max = $dana_u_mjesecu+2;
+
+
+
+        // Podaci
+        if ($org == 'Svi radnici'){
+            $orgJedIme = "Svi radnici";
+            $query = $db->prepare("			
+		  SELECT s1.user_id, s1.fname, s1.lname, s1.termination_date, s3.id
+		  FROM [c0_intranet2_apoteke].[dbo].[users] s1
+		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id
+		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'
+		");
+
+            $query->execute();
+            $fetch_users = $query->fetchAll();
+        }
+        else{
+            $orgJedIme = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization] WHERE id=".$org)->fetch()['s_title'];
+            $query = $db->prepare("			
+		  SELECT s1.user_id, s1.fname, s1.lname, s1.termination_date, s3.id
+		  FROM [c0_intranet2_apoteke].[dbo].[users] s1
+		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id and s2.[egop_ustrojstvena_jedinica] = ?
+		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'
+		");
+
+            $query->execute(array($org));
+            $fetch_users = $query->fetchAll();
+        }
+
+        $data_array = array();
+        $user_stats_array = array();
+        $userEmpNo = [];
+
+        $user_row_id = 1;
+        foreach($fetch_users as $key => $value){
+            if ($value['termination_date'] != null){ continue;}
+            $data_array[$user_row_id][0] = $value['fname'] . " " . $value['lname'];
+
+            $get_days = $db->prepare("SELECT id, status, hour, hour_pre, day, weekday, employee_no FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE
+			user_id = '$value[user_id]' and year_id = '$value[id]' and month_id = '$month'
+			");
+            $get_days->execute();
+            $days_user = $get_days->fetchAll();
+
+
+            $count_hourz = 0;
+            foreach($days_user as $k => $v){
+                if($k == 'employee_no'){
+                    array_push($userEmpNo, $v['employee_no']);
+                }
+
+
+
+                $get_day_data = getHourlyrateData($v['status'], $v['hour'], $v['hour_pre'], $v['weekday']);
+
+                if(empty($user_stats_array[$user_row_id][_shortcode($v['status'])])){
+                    $user_stats_array[$user_row_id][_shortcode($v['status'])] = 0;
+                }
+
+                $user_stats_array[$user_row_id][_shortcode($v['status'])] += $get_day_data[1];
+
+                $data_array[$user_row_id][$v['day']] = $get_day_data[0];
+
+                $count_hourz += $get_day_data[1];
+            }
+
+            $data_array[$user_row_id][$kolona_max-1] = $count_hourz;
+
+            $user_row_id++;
+        }
+
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        $styleArray = [
+            'borders' => [
+                'outline' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                    'color' => ['argb' => '00000000'],
+                ],
+            ],
+        ];
+
+        $styleArrayBorderTop = [
+            'borders' => [
+                'top' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+            ],
+        ];
+
+        $styleArrayBorderBottom = [
+            'borders' => [
+                'bottom' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+            ],
+        ];
+
+        $styleArrayCornerLeftTop = [
+            'font' => [
+                'bold' => true,
+            ],
+            'alingment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+                'color' => ['argb' => 'FF32CD32']
+            ]
+        ];
+
+        $styleArrayCornerLeftBottom = [
+            'font' => [
+                'bold' => true,
+            ],
+            'alingment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'bottom' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+                'color' => ['argb' => 'FF32CD32']
+            ]
+        ];
+
+        $styleArrayLeft = [
+            'font' => [
+                'bold' => true,
+            ],
+            'alingment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'left' => [
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+                'color' => ['argb' => 'FF32CD32']
+            ]
+        ];
+
+        $styleArrayRight = [
+            'alingment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+        ];
+
+
+        $sheet->setCellValue('A2', $orgJedIme);
+        $sheet->setCellValue('A3', strtoupper($month_bosnian).' '. $year);
+
+        $sheet->getStyle("A2")->getFont()->setBold(true);
+
+        $sheet->mergeCells('F2:L2' );
+        $sheet->mergeCells('F3:L3' );
+        $sheet->mergeCells('F4:L4' );
+        $sheet->mergeCells('F5:L5' );
+        $sheet->mergeCells('F6:L6' );
+        $sheet->mergeCells('F7:L7' );
+        $sheet->mergeCells('F8:L8' );
+        $sheet->mergeCells('F9:L9' );
+
+        $sheet->mergeCells('N2:T2' );
+        $sheet->mergeCells('N3:T3' );
+        $sheet->mergeCells('N4:T4' );
+        $sheet->mergeCells('N5:T5' );
+        $sheet->mergeCells('N6:T6' );
+        $sheet->mergeCells('N7:T7' );
+        $sheet->mergeCells('N8:T8' );
+        $sheet->mergeCells('N9:T9' );
+
+        $sheet->mergeCells('V2:AB2' );
+        $sheet->mergeCells('V3:AB3' );
+        $sheet->mergeCells('V4:AB4' );
+        $sheet->mergeCells('V5:AB5' );
+        $sheet->mergeCells('V6:AB6' );
+        $sheet->mergeCells('V7:AB7' );
+        $sheet->mergeCells('V8:AB8' );
+        $sheet->mergeCells('V9:AB9' );
+
+        $sheet->getColumnDimension('B')->setWidth(15);
+        $sheet->getColumnDimension('D')->setWidth(20);
+        $sheet->getColumnDimension('E')->setWidth(5);
+        $sheet->getColumnDimension('F')->setWidth(5);
+        $sheet->getColumnDimension('G')->setWidth(5);
+        $sheet->getColumnDimension('H')->setWidth(5);
+        $sheet->getColumnDimension('I')->setWidth(5);
+        $sheet->getColumnDimension('J')->setWidth(5);
+        $sheet->getColumnDimension('K')->setWidth(5);
+        $sheet->getColumnDimension('L')->setWidth(5);
+
+        $sheet->getColumnDimension('M')->setWidth(5);
+        $sheet->getColumnDimension('N')->setWidth(5);
+        $sheet->getColumnDimension('O')->setWidth(5);
+        $sheet->getColumnDimension('P')->setWidth(5);
+        $sheet->getColumnDimension('Q')->setWidth(5);
+        $sheet->getColumnDimension('R')->setWidth(5);
+        $sheet->getColumnDimension('S')->setWidth(5);
+        $sheet->getColumnDimension('T')->setWidth(5);
+
+        $sheet->getColumnDimension('U')->setWidth(5);
+        $sheet->getColumnDimension('V')->setWidth(5);
+        $sheet->getColumnDimension('W')->setWidth(5);
+        $sheet->getColumnDimension('X')->setWidth(5);
+        $sheet->getColumnDimension('Y')->setWidth(5);
+        $sheet->getColumnDimension('Z')->setWidth(5);
+        $sheet->getColumnDimension('AA')->setWidth(5);
+        $sheet->getColumnDimension('AB')->setWidth(5);
+
+        $sheet->setCellValue('E2', '1030');
+        $sheet->setCellValue('F2', 'Bolovanje do 42 dana');
+
+        $sheet->setCellValue('E3', '1036');
+        $sheet->setCellValue('F3', 'Bolovanje povreda van rada');
+
+        $sheet->setCellValue('E4', '1037');
+        $sheet->setCellValue('F4', 'Bolovanje povreda van rada preko 42 dana');
+
+        $sheet->setCellValue('E5', '1031');
+        $sheet->setCellValue('F5', 'Bolovanje preko 42 dana');
+
+        $sheet->setCellValue('E6', '1033');
+        $sheet->setCellValue('F6', 'Bolovanje povreda na radu');
+
+        $sheet->setCellValue('E7', '1034');
+        $sheet->setCellValue('F7', 'Bolovanje povreda na radu preko 42 dana');
+
+        $sheet->setCellValue('E8', '1026');
+        $sheet->setCellValue('F8', 'Državni/Vjerski praynik');
+
+        $sheet->setCellValue('E9', '1022');
+        $sheet->setCellValue('F9', 'Godišnji odmor');
+
+        $sheet->setCellValue('M2', '1023');
+        $sheet->setCellValue('N2', 'Stari godišnji odmor');
+
+        $sheet->setCellValue('M3', '1024');
+        $sheet->setCellValue('N3', 'Službeni put');
+
+        $sheet->setCellValue('M4', '1040');
+        $sheet->setCellValue('N4', 'Porodiljsko odsustvo');
+
+        $sheet->setCellValue('M5', '2020');
+        $sheet->setCellValue('N5', 'Prekovremeni rad');
+
+        $sheet->setCellValue('M6', '2022');
+        $sheet->setCellValue('N6', 'Prekovremeni rad vikendom');
+
+        $sheet->setCellValue('M7', '1020');
+        $sheet->setCellValue('N7', 'Plaćeno odsustvo');
+
+        $sheet->setCellValue('M8', '1042');
+        $sheet->setCellValue('N8', 'Trudničko bolovanje do 42 dana');
+
+        $sheet->setCellValue('M9', '1043');
+        $sheet->setCellValue('N9', 'Trudničko bolovanje preko 42 dana');
+
+        $sheet->setCellValue('U2', '2010');
+        $sheet->setCellValue('V2', 'Rad praznikom');
+
+        $sheet->setCellValue('U3', '2012');
+        $sheet->setCellValue('V3', 'Noćni rad praznikom');
+
+        $sheet->setCellValue('U4', '1010');
+        $sheet->setCellValue('V4', 'Redovan rad');
+
+        $sheet->setCellValue('U5', '2011');
+        $sheet->setCellValue('V5', 'Redovan noćni rad');
+
+        $sheet->setCellValue('U6', '1021');
+        $sheet->setCellValue('V6', 'Neplaćeno odsustvo');
+
+        $sheet->getStyle('E2')->applyFromArray($styleArrayCornerLeftTop);
+        $sheet->getStyle('E3:E8')->applyFromArray($styleArrayLeft);
+        $sheet->getStyle('E9')->applyFromArray($styleArrayCornerLeftBottom);
+
+        $sheet->getStyle('M2')->applyFromArray($styleArrayCornerLeftTop);
+        $sheet->getStyle('M3:M8')->applyFromArray($styleArrayLeft);
+        $sheet->getStyle('M9')->applyFromArray($styleArrayCornerLeftBottom);
+
+        $sheet->getStyle('U2')->applyFromArray($styleArrayCornerLeftTop);
+        $sheet->getStyle('U3:U8')->applyFromArray($styleArrayLeft);
+        $sheet->getStyle('U9')->applyFromArray($styleArrayCornerLeftBottom);
+
+
+        $sheet->getStyle('F2:L2')->applyFromArray($styleArrayBorderTop);
+        $sheet->getStyle('N2:T2')->applyFromArray($styleArrayBorderTop);
+        $sheet->getStyle('V2:AB2')->applyFromArray($styleArrayBorderTop);
+        $sheet->getStyle('F9:L9')->applyFromArray($styleArrayBorderBottom);
+        $sheet->getStyle('V9:AB9')->applyFromArray($styleArrayBorderBottom);
+        $sheet->getStyle('N9:T9')->applyFromArray($styleArrayBorderBottom);
+        $sheet->getStyle('AB2:AB9')->applyFromArray($styleArrayRight);
+
+
+        $styleArrayLabel = [
+            'alingment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+        ];
+        $sheet->setCellValue('A13', 'Šifra');
+        $sheet->setCellValue('B13', 'Ime i prezime');
+        $sheet->setCellValue('C13', 'Vrsta');
+        $sheet->setCellValue('D13', 'Opis');
+        $sheet->getStyle('A13:D13')->applyFromArray($styleArrayLabel);
+
+
+        $styleArrayNameEmpNo = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+                'vertical' => \PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ],
+        ];
+
+        $styleArrayLabel = [
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $styleArrayLabel2 = [
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+
+        $styleArrayWeekendLabel = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                'color' => ['argb' => 'FFA9A9A9']
+            ],'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+
+        $styleArrayWeekendLabel2 = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                'color' => ['argb' => 'FFA9A9A9']
+            ],'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $styleArrayWeekend = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                'color' => ['argb' => 'FFF5F5F5']
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $styleArrayWeekendLastRow = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'fill' => [
+                'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                'color' => ['argb' => 'FFF5F5F5']
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $styleArrayWorkDays = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $styleArrayWorkDaysLastRow = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN
+                ]
+            ]
+        ];
+        $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+        $dayOfWeek = date('l', strtotime('2021-09-01'));
+        $column = 'E';
+        for($i = 1; $i<=$numberOfDaysInMonth; $i++){
+            $dayOfWeek = date('l', strtotime('2021-09-'.$i));
+            $dayOfWeekInsert = '';
+            switch ($dayOfWeek){
+                case 'Friday':
+                case 'Monday':
+                    $dayOfWeekInsert = 'P';
+                    break;
+                case 'Tuesday':
+                    $dayOfWeekInsert = 'U';
+                    break;
+                case 'Saturday':
+                case 'Wednesday':
+                    $dayOfWeekInsert = 'S';
+                    break;
+                case 'Thursday':
+                    $dayOfWeekInsert = 'Č';
+                    break;
+                case 'Sunday':
+                    $dayOfWeekInsert = 'N';
+                    break;
+            }
+
+            $sheet->setCellValue($column.'12', $dayOfWeekInsert);
+            if($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday'){
+                $sheet->getStyle($column.'12')->applyFromArray($styleArrayWeekendLabel);
+                $sheet->getStyle($column.'13')->applyFromArray($styleArrayWeekendLabel2);
+                $sheet->getStyle($column.'13')->getFont()->setBold(true);
+            }
+            else{
+                $sheet->getStyle($column.'12')->applyFromArray($styleArrayLabel);
+                $sheet->getStyle($column.'13')->applyFromArray($styleArrayLabel2);
+                $sheet->getStyle($column.'13')->getFont()->setBold(true);
+            }
+
+            $sheet->setCellValue($column.'13', $i);
+            if($column != 'AB'){
+                $sheet->getColumnDimension($column)->setWidth(5);
+            }
+            $column++;
+        }
+
+        $count = 0;
+        $row = 14;
+        foreach ($data_array as $data){
+            $sheet->mergeCells('A'.$row.':A'.($row+6));
+            $sheet->setCellValue('A'.$row, $userEmpNo[$count]);
+            $sheet->mergeCells('B'.$row.':B'.($row+6));
+            $sheet->setCellValue('B'.$row, $data[0]);
+            $sheet->getStyle('A'.$row.':A'.($row+6))->applyFromArray($styleArrayNameEmpNo);
+            $sheet->getStyle('B'.$row.':B'.($row+6))->applyFromArray($styleArrayNameEmpNo);
+            $status = $db->query("SELECT status, hour FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." order by day")->fetchAll();
+
+            $column = 'E';
+            for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
+
+                $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
+                if(!in_array($status[$i]['status'], ['5', '2011', '2010', '2012', '2013', '2015', '2014'])){
+                    $sheet->setCellValue($column.$row, $status[$i]['status']);
+                }
+                else{
+                    $increaseRow = 0;
+                    switch ($status[$i]['status']){
+                        case '2011':
+                            $increaseRow = 1;
+                            break;
+                        case '2010':
+                            $increaseRow = 2;
+                            break;
+                        case '2012':
+                            $increaseRow = 3;
+                            break;
+                        case '2013':
+                            $increaseRow = 4;
+                            break;
+                        case '2015':
+                            $increaseRow = 5;
+                            break;
+                        case '2014':
+                            $increaseRow = 6;
+                            break;
+                    }
+
+                    if(($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday') and $increaseRow == 0){
+                            $sheet->setCellValue($column.($row + $increaseRow), '');
+                    }
+                    else{
+                        $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
+                    }
+                }
+                for ($j = 0; $j < 7; $j++){
+                    if($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday'){
+                        ($j == 6) ? $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekendLastRow) : $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekend);;
+//                        if($j == 6){
+//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekendLastRow);
+//                        }
+//                        else{
+//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekend);
+//                        }
+                    }
+                    else{
+                        ($j == 6) ? $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDaysLastRow) : $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDays);
+//                        if($j == 6){
+//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDaysLastRow);
+//                        }
+//                        else{
+//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDays);
+//                        }
+                    }
+                }
+                $column++;
+            }
+
+            foreach ($vrstaInsert as $key => $value){
+                $sheet->setCellValue('C'.$row, $key);
+                $sheet->setCellValue('D'.$row, $value);
+                $sheet->getStyle('C'.$row)->applyFromArray($styleArrayNameEmpNo);
+                $sheet->getStyle('D'.$row)->applyFromArray($styleArrayNameEmpNo);
+                $sheet->getStyle('C'.$row.':D'.$row)->getFont()->setBold(true);
+                $row++;
+            }
+
+            $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+            $dayOfWeek = date('l', strtotime('2021-09-01'));
+
+            $count++;
+        }
+
+        $writer = new Xlsx($spreadsheet);
+        $clean_org = cleanSuskavac(strtolower (str_replace(" ", "-", $org)));
+        $fname = date("d-m-Y") . '-'.$clean_org.'.xlsx';
+        $filename = "../../uploads/". $fname;
+        $writer->save($filename);
+
+        echo $fname;
+    }
+
+    if($_POST['request']=='generate-satnice-old'){
+        global $db;
+
+
         $org 		= $_POST['org'];
         $month 		= $_POST['month'];
         $year 		= $_POST['year'];
