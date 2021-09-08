@@ -248,7 +248,20 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
     ?>
     </div>
     <?php
-} ?>
+}
+
+$emp_id = '';
+if(strlen($_user['employee_no']) == 1){
+    $emp_id = '00'.$_user['employee_no'];
+}
+elseif (strlen($_user['employee_no']) == 2){
+    $emp_id = '0'.$_user['employee_no'];
+}
+else{
+    $emp_id = $_user['employee_no'];
+}
+
+?>
 
     <div class="col-sm-6" style="float: left">
         <div class="box">
@@ -261,7 +274,7 @@ $orgJed = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematizatio
                         <h3><?= $_user['fname'] . ' ' . $_user['lname']; ?></h3>
                         <h4>
                             <p> <?= ___('Personalni broj') ?> </p>
-                            <span><?= $_user['employee_no'] ?></span>
+                            <span><?= $emp_id ?></span>
                         </h4>
                         <h4>
                             <p> <?= ___('Jedinstveni matični broj') ?> </p>
