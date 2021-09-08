@@ -4779,15 +4779,15 @@ function _nameHRstatus($id)
 {
     if ($id == null)
         return '';
-    global $db, $_conf, $hr_fill;
-    /*
-  $query = $db->query("SELECT TOP 1 * FROM  ".$portal_hourlyrate_status."  WHERE id='$id'");
-  if($query){
+    global $db, $_conf, $hr_fill, $portal_hourlyrate_status;
 
-    $row = $query->fetch();
-    return __($row['description']);
+    $query = $db->query("SELECT TOP 1 * FROM  ".$portal_hourlyrate_status."  WHERE id='$id'");
+    if($query){
 
-  } */
+        $row = $query->fetch();
+        return __($row['description']);
+
+    }
 
     return $hr_fill[$id];
 
@@ -6417,7 +6417,8 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
 
     $where_period = " and c.Date between CONVERT(datetime,'" . $datumOD . "',103) and CONVERT(datetime,'" . $datumDO . "',103)";
 
-    $get = $db->query("SELECT h.id, h.day, h.month_id, h.status, h.year_id, h.Date, h.timest_edit, h.employee_timest_edit, h.dokument, h.review_comment, h.disease_code, h.request_id, h.review_status, h.employee_no, h.weekday, h.employee_comment, h.Description FROM  " . $portal_hourlyrate_day . "  h with(nolock)
+    $get = $db->query("SELECT h.id, h.day, h.month_id, h.status, h.year_id, h.Date, h.timest_edit, h.employee_timest_edit, h.dokument, h.review_comment, h.disease_code, h.request_id, h.review_status, h.employee_no, h.weekday, h.employee_comment, h.Description 
+FROM  " . $portal_hourlyrate_day . "  h with(nolock)
   join  " . $portal_hourlyrate_year . "  y with(nolock)
   on h.year_id = y.id
   join  " . $portal_calendar . "  c with(nolock)
