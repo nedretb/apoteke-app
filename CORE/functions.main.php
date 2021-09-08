@@ -1,13 +1,10 @@
 <?php
-//require __DIR__ . '/../../../vendor/autoload.php';
+
 use Carbon\Carbon;
 require 'config-urls.php';
 global $db, $nav_human_resource_setup;
 require_once $root.'/CORE/classes/Model.php';
 foreach (glob($root . '/CORE/classes/Models/*.php') as $filename) require_once $filename;
-
-//$admin_managementq = $db->query("SELECT [Chief Executive Administrator] from  ".$nav_human_resource_setup."  ");
-//$admin_management = $admin_managementq->fetch();
 
 function userList($post_type, $post_value, $limit, $offset, $user_employee_no, $filtertdate){
     global $db, $portal_users;
@@ -27,11 +24,11 @@ function userList($post_type, $post_value, $limit, $offset, $user_employee_no, $
     else{
         if($_user['role'] == 4){
             $sistematizacije = Sistematizacija::getIDs(1);
-            $order = " order by user_id asc offset $offset rows fetch next ".$limit. "rows only";
+            $order = " order by employee_no asc offset $offset rows fetch next ".$limit. "rows only";
             $condition = "egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).")";
         }else{
             $sistematizacije = Sistematizacija::getIDs($_user['egop_ustrojstvena_jedinica']);
-            $order = " order by user_id asc offset $offset rows fetch next ".$limit. "rows only";
+            $order = " order by employee_no asc offset $offset rows fetch next ".$limit. "rows only";
             $condition = "egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).")";
         }
     }
@@ -1495,7 +1492,7 @@ function _optionName($team, $stream, $region, $b1, $current, $filtertdate)
 
 
 
-    $query = $db->query("select fname +' '+ lname as ime from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).") order by user_id");
+    $query = $db->query("select fname +' '+ lname as ime from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).") order by employee_no desc");
     if ($query->rowCount() < 0) {
 
         $sel = '';
