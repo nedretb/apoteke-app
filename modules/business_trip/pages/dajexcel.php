@@ -181,6 +181,42 @@ require_once($root . '\CORE\PHPExcel-1.8\Classes\PHPExcel.php');
 use Carbon\Carbon;
 $dana_na_putu = Carbon::parse($data['pocetak_datum'])->diffInDays($data['kraj_datum']);
 
+$prevoznaSredstva = '';
+if($data['ost_trosak1']){
+    $prevoznaSredstva.= $data['ost_trosak1'].', ';
+}
+if($data['ost_trosak2']){
+    $prevoznaSredstva.= $data['ost_trosak2'].', ';
+}
+if($data['ost_trosak3']){
+    $prevoznaSredstva.= $data['ost_trosak3'].', ';
+}
+if($data['ost_trosak4']){
+    $prevoznaSredstva.= $data['ost_trosak4'].', ';
+}
+if($data['ost_trosak5']){
+    $prevoznaSredstva.= $data['ost_trosak5'].', ';
+}
+if($data['ost_trosak6']){
+    $prevoznaSredstva.= $data['ost_trosak6'].', ';
+}
+$prevoznaSredstva = rtrim($prevoznaSredstva, ', ');
+
+if($data['dacheck'] == 'DA'){
+    $dnevnicaPostotak = 70;
+}else{
+    $dnevnicaPostotak = $data['postotak_na_dnevnicu'];
+}
+
+$mjestoPutovanja = '';
+
+if (!empty($data['odredisni_grad'])){
+    $mjestoPutovanja = $data['odredisni_grad'];
+}
+if (!empty($drzava['name'])){
+    $mjestoPutovanja = ', '.$drzava['name'];
+}
+
 try{
     $fileName = 'C:\wamp64\www\apoteke-app\CORE\files\excel\slp.xlsx';
     $phpExcel = PHPExcel_IOFactory::load($fileName);
@@ -197,7 +233,8 @@ try{
     $sheet->SetCellValue('J14', $data['svrha']);
     $sheet->SetCellValue('K15', $dana_na_putu);
     $sheet->SetCellValue('N15', $sati);
-    $sheet->SetCellValue('K17', $data['vrsta_transporta']);
+    $sheet->SetCellValue('M16', $data['troskovi_putovanja']);
+    $sheet->SetCellValue('K17', $prevoznaSredstva);
     $sheet->SetCellValue('K18', $data['grad_polaska']." - ".$data['odredisni_grad']);
 
 
@@ -263,8 +300,8 @@ try{
 
     $sheet->SetCellValue('L17', $data['postotak_na_dnevnicu']);
 
-    $sheet->SetCellValue('P15', $dnevnica*$drzava['wage']*($data['postotak_na_dnevnicu']/100));
-    $sheet->SetCellValue('P16', $dnevnica*$drzava['wage']*($data['postotak_na_dnevnicu']/100)/2);
+    $sheet->SetCellValue('P15', $dnevnica*$drzava['wage']*($dnevnicaPostotak/100));
+    $sheet->SetCellValue('P16', $dnevnica*$drzava['wage']*($dnevnicaPostotak/100)/2);
 
     /***** ostali izdaci ******/
     $sheet->SetCellValue('I19', $data['trosak1']);
