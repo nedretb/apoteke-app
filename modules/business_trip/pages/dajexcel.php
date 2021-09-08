@@ -180,17 +180,18 @@ $created_at = date("Y-m-d", $data['created_at']);
 require_once($root . '\CORE\PHPExcel-1.8\Classes\PHPExcel.php');
 use Carbon\Carbon;
 $dana_na_putu = Carbon::parse($data['pocetak_datum'])->diffInDays($data['kraj_datum']);
+
 try{
     $fileName = 'C:\wamp64\www\apoteke-app\CORE\files\excel\slp.xlsx';
     $phpExcel = PHPExcel_IOFactory::load($fileName);
     $sheet = $phpExcel->setActiveSheetIndex(0);
 
     // -------------------------------------------------------------------------------------------------------------- //
-    $sheet->SetCellValue('J4', "Sarajevo, ".date('d.m.Y'));
+    $sheet->SetCellValue('J4', date('d.m.Y'));
 
     $sheet->SetCellValue('I9', $data['fname'].' '.$data['lname']);
     $sheet->SetCellValue('K11', $data['egop_radno_mjesto']);
-    $sheet->SetCellValue('O11', $drzava['wage']);
+    $sheet->SetCellValue('O11', $data['postotak_na_dnevnicu']."%");
     $sheet->SetCellValue('J12', $drzava['wage']);
     $sheet->SetCellValue('I13', $data['odredisni_grad'].", ".$drzava['name']);
     $sheet->SetCellValue('J14', $data['svrha']);
@@ -226,23 +227,32 @@ try{
     $datum_i_v_p = Carbon::parse($data['pocetak_datum'].' '.$data['pocetak_vrijeme']);
     $datum_i_v_k = Carbon::parse($datum_do_.' '.$datum_do_v);
 
+    $sheet->SetCellValue('L3', date('d.m.Y', strtotime($data['pocetak_datum'])));
+    $sheet->SetCellValue('O3', $data['pocetak_vrijeme']);
+
+    $sheet->SetCellValue('L4', date('d.m.Y', strtotime($data['kraj_datum'])));
+    $sheet->SetCellValue('O4', $data['kraj_vrijeme']);
+
+    $sheet->SetCellValue('L5', $dana_na_putu);
+    $sheet->SetCellValue('O5', $sati);
+
     $razlika = $datum_i_v_p->diff($datum_i_v_k);
 
     /***** troskovi prevoza ******/
     $sheet->SetCellValue('I9', $data['ost_trosak1']);
-    $sheet->SetCellValue('N9', $data['ost_kolicina1']*$data['ost_iznos1']);
+    $sheet->SetCellValue('N9', $data['ost_ukupno19']);
 
     $sheet->SetCellValue('I10', $data['ost_trosak2']);
-    $sheet->SetCellValue('N10', $data['ost_kolicina2']*$data['ost_iznos2']);
+    $sheet->SetCellValue('N10', $data['ost_ukupno2']);
 
     $sheet->SetCellValue('I11', $data['ost_trosak3']);
-    $sheet->SetCellValue('N11', $data['ost_kolicina3']*$data['ost_iznos3']);
+    $sheet->SetCellValue('N11', $data['ost_ukupno3']);
 
     $sheet->SetCellValue('I12', $data['ost_trosak4']);
-    $sheet->SetCellValue('N12', $data['ost_kolicina4']*$data['ost_iznos4']);
+    $sheet->SetCellValue('N12', $data['ost_ukupno4']);
 
     $sheet->SetCellValue('I13', $data['ost_trosak5']);
-    $sheet->SetCellValue('N13', $data['ost_kolicina5']*$data['ost_iznos5']);
+    $sheet->SetCellValue('N13', $data['ost_ukupno5']);
 
     /***** dnevnice ******/
     $sheet->SetCellValue('I15', $dnevnica);
@@ -257,14 +267,14 @@ try{
     $sheet->SetCellValue('P16', $dnevnica*$drzava['wage']*($data['postotak_na_dnevnicu']/100)/2);
 
     /***** ostali izdaci ******/
-    $sheet->SetCellValue('I19', $data['ost_trosak1']);
-    $sheet->SetCellValue('N19', $data['ost_kolicina1']*$data['ost_iznos1']);
+    $sheet->SetCellValue('I19', $data['trosak1']);
+    $sheet->SetCellValue('N19', $data['iznos1']);
 
-    $sheet->SetCellValue('I20', $data['ost_trosak2']);
-    $sheet->SetCellValue('N20', $data['ost_kolicina2']*$data['ost_iznos2']);
+    $sheet->SetCellValue('I20', $data['trosak2']);
+    $sheet->SetCellValue('N20', $data['iznos2']);
 
-    $sheet->SetCellValue('I21', $data['ost_trosak3']);
-    $sheet->SetCellValue('N21', $data['ost_kolicina3']*$data['ost_iznos3']);
+    $sheet->SetCellValue('I21', $data['trosak3']);
+    $sheet->SetCellValue('N21', $data['iznos3']);
 
     /***** akontacija ******/
     $sheet->SetCellValue('P24', $data['iznos_akontacije']);
