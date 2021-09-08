@@ -67,8 +67,7 @@ if (isset($_POST['request'])) {
 		  SELECT s1.user_id, s1.fname, s1.lname, s1.termination_date, s3.id
 		  FROM [c0_intranet2_apoteke].[dbo].[users] s1
 		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id
-		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'
-		");
+		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year' order by s1.employee_no");
 
             $query->execute();
             $fetch_users = $query->fetchAll();
@@ -79,8 +78,7 @@ if (isset($_POST['request'])) {
 		  SELECT s1.user_id, s1.fname, s1.lname, s1.termination_date, s3.id
 		  FROM [c0_intranet2_apoteke].[dbo].[users] s1
 		  JOIN [c0_intranet2_apoteke].[dbo].[users] s2 ON s1.user_id = s2.user_id and s2.[egop_ustrojstvena_jedinica] = ?
-		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'
-		");
+		  JOIN [c0_intranet2_apoteke].[dbo].[hourlyrate_year] s3 ON s3.user_id = s1.user_id and year = '$year'  order by s1.employee_no");
 
             $query->execute(array($org));
             $fetch_users = $query->fetchAll();
