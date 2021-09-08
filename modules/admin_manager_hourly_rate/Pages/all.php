@@ -483,6 +483,15 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
 
                         $data = $rowim['image_no'];
 
+                        if(strlen($item['employee_no']) == 1){
+                            $emp_id = '00'.$item['employee_no'];
+                        }
+                        elseif (strlen($item['employee_no']) == 2){
+                            $emp_id = '0'.$item['employee_no'];
+                        }
+                        else{
+                            $emp_id = $item['employee_no'];
+                        }
                         ?>
 
                         <div style="float:left;">
