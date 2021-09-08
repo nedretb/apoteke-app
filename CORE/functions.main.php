@@ -4508,7 +4508,7 @@ function _optionHRstatusLevelKontakCentarRadnik($current)
         $opt .= '</optgroup>';
     }
 
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='SL- SLUŽBENI PUT' and level =3 ORDER BY name ASC");
+    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='SL- SLUŽBENI PUT' and level =3 and id=73 ORDER BY name ASC");
 
     if ($query->rowCount() < 0) {
         $opt .= '<optgroup label="' . __('SL- SLUŽBENI PUT') . '">';
@@ -4713,7 +4713,7 @@ function _optionHRstatusLevel3($current)
         $opt .= '</optgroup>';
     }
 
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='SL- SLUŽBENI PUT' and level =3 ORDER BY name ASC");
+    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='SL- SLUŽBENI PUT' and id=73 and level =3 ORDER BY name ASC");
 
     if ($query->rowCount() < 0) {
         $opt .= '<optgroup label="' . __('SL- SLUŽBENI PUT') . '">';

@@ -218,10 +218,10 @@ function pageMenu()
                     'name' => ___('Administrator službenog puta'),
                     'role' => array('4')
                 ),
-//                'sifrarnici' => array(
-//                    'name' => ___('Šifarnici'),
-//                    'role' => array('4')
-//                ),
+                'sifrarnici' => array(
+                    'name' => ___('Šifarnici'),
+                    'role' => array('4')
+                ),
                 'akontacije_sifrarnik' => array(
                     'name' => ___('Šifarnik akontacija'),
                     'role' => array('4')

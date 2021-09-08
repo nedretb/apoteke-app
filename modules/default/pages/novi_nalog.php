@@ -1,5 +1,6 @@
 <?php
 
+
 _pagePermission([2,4], false);
 $user_id = _decrypt($_SESSION['SESSION_USER']);
 $ts=time();$user=$_user['user_id'];
@@ -387,10 +388,13 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
         [request_id],
         [trosak1],
         [trosak2],
+        [trosak3],
         [kolicina1],
         [kolicina2],
+        [kolicina3],
         [iznos1],
         [iznos2],
+        [iznos3],
         [ost_trosak1],
         [ost_trosak2],
         [ost_trosak3],
@@ -425,15 +429,25 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
         [necheck],
         [ost_specopis],
         [sl_put_id_fk],
-        [postotak_na_dnevnicu]   
+        [postotak_na_dnevnicu],
+        [ost_ukupno19],
+        [ost_ukupno2],
+        [ost_ukupno3],
+        [ost_ukupno4],
+        [ost_ukupno5],
+        [ost_ukupno6],
+        [troskovi_putovanja]
         )VALUES(
         '".$_POST['request_id'] ."',
         '".$_POST['trosak1'] ."',
         '".$_POST['trosak2'] ."',
+        '".$_POST['trosak3'] ."',
         '".$_POST['kolicina1'] ."',
         '".$_POST['kolicina2'] ."',
+        '".$_POST['kolicina3'] ."',
         '".$_POST['iznos1'] ."',
         '".$_POST['iznos2'] ."',
+        '".$_POST['iznos3'] ."',
         '".$_POST['ost_trosak1'] ."',
         '".$_POST['ost_trosak2'] ."',
         '".$_POST['ost_trosak3'] ."',
@@ -468,7 +482,14 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
         '".$_POST['necheck'] ."',
         '".$_POST['ost_specopis'] ."',
         ".$db->lastInsertId().",
-        '".$_POST['dnevnica_postotak'] ."'
+        '".$_POST['dnevnica_postotak'] ."',
+        '".$_POST['ost_ukupno19'] ."',
+        '".$_POST['ost_ukupno2'] ."',
+        '".$_POST['ost_ukupno3'] ."',
+        '".$_POST['ost_ukupno4'] ."',
+        '".$_POST['ost_ukupno5'] ."',
+        '".$_POST['ost_ukupno6'] ."',
+        '".$_POST['troskovi_putovanja'] ."'
         )");
                 $sl_put_last_id = $db->lastInsertId();
             } else {
@@ -478,10 +499,13 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
         [request_id]='".$_POST['request_id'] ."',
         [trosak1]='".$_POST['trosak1'] ."',
         [trosak2]='".$_POST['trosak2'] ."',
+        [trosak3]='".$_POST['trosak3'] ."',
         [kolicina1]='".$_POST['kolicina1'] ."',
         [kolicina2]='".$_POST['kolicina2'] ."',
+        [kolicina3]='".$_POST['kolicina3'] ."',
         [iznos1]='".$_POST['iznos1'] ."',
         [iznos2]='".$_POST['iznos2'] ."',
+        [iznos3]='".$_POST['iznos3'] ."',
         [ost_trosak1]='".$_POST['ost_trosak1'] ."',
         [ost_trosak2]='".$_POST['ost_trosak2'] ."',
         [ost_trosak3]='".$_POST['ost_trosak3'] ."',
@@ -515,7 +539,14 @@ employee_no = ".$_POST['employee_no']." and editable ='N' ");
         [dacheck]='".$_POST['dacheck'] ."',
         [necheck]='".$_POST['necheck'] ."',
         [ost_specopis]='".$_POST['ost_specopis'] ."',
-        [postotak_na_dnevnicu]='".$_POST['dnevnica_postotak'] ."'
+        [postotak_na_dnevnicu]='".$_POST['dnevnica_postotak'] ."',
+        [ost_ukupno19]='".$_POST['ost_ukupno19'] ."',
+        [ost_ukupno2]='".$_POST['ost_ukupno2'] ."',
+        [ost_ukupno3]='".$_POST['ost_ukupno3'] ."',
+        [ost_ukupno4]='".$_POST['ost_ukupno4'] ."',
+        [ost_ukupno5]='".$_POST['ost_ukupno5'] ."',
+        [ost_ukupno6]='".$_POST['ost_ukupno6'] ."',
+        [troskovi_putovanja]='".$_POST['troskovi_putovanja'] ."'
         WHERE sl_put_id_fk ='".$_POST['sl_put_id'] ."'
         ");
 
@@ -1323,7 +1354,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
 
         <!-- transport -->
 
-        <div class="container row box">
+        <div style="display: none;" class="container row box">
             <div class='head col-sm-12'>
                 <div class='naslov_holder'><h4>Dodavanje transporta</h4></div>
                 <div style="display: none;" class="box-head-btn">
@@ -1416,7 +1447,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
 
         <!-- smjestaj -->
 
-        <div class="container row box">
+        <div style="display: none;" class="container row box">
             <div class='head col-sm-12'>
                 <div class='naslov_holder'><h4>Dodavanje smještaja</h4></div>
                 <div style="display: none;" class="box-head-btn">
@@ -1613,59 +1644,128 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                     <div  class="col-sm-12 ultimate_class" id="TextBoxDiv">
                         <div class="col-sm-3">
                             <label>Prevozno sredstvo:</label>
-                            <input type="text" name="ost_trosak1" id='ost_trosak1' value="<?php if(isset($putt)) echo $putt['ost_trosak1']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
+                            <select class="form-control" name="ost_trosak1" id="ost_trosak1">
+                                <option value="">Odaberi..</option>
+                                <?php
+                                $sifrarnik_vrsta_transporta= $db->query("SELECT * from [c0_intranet2_apoteke].[dbo].[sifrarnici] where active = 1 and name ='vrsta_transporta'");
+                                foreach($sifrarnik_vrsta_transporta as $one){
+                                    $selected = null;
+                                    if ($one['naziv_instance'] == $putt['ost_trosak1']) $selected = 'selected';
+                                    ?>
+                                    <option <?php echo $selected; ?> value="<?php echo $one['naziv_instance'] ?>"><?php echo $one['naziv_instance'] ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                             <br>
-                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak2" id="ost_trosak2" value="<?php if(isset($putt)) echo $putt['ost_trosak2']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
+                            <select class="form-control" name="ost_trosak2" id="ost_trosak2">
+                                <option value="">Odaberi..</option>
+                                <?php
+                                $sifrarnik_vrsta_transporta= $db->query("SELECT * from [c0_intranet2_apoteke].[dbo].[sifrarnici] where active = 1 and name ='vrsta_transporta'");
+                                foreach($sifrarnik_vrsta_transporta as $one){
+                                    $selected = null;
+                                    if ($one['naziv_instance'] == $putt['ost_trosak2']) $selected = 'selected';
+                                    ?>
+                                    <option <?php echo $selected; ?> value="<?php echo $one['naziv_instance'] ?>"><?php echo $one['naziv_instance'] ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                             <br>
-                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak3" id="ost_trosak3" value="<?php if(isset($putt)) echo $putt['ost_trosak3']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
+                            <select class="form-control" name="ost_trosak3" id="ost_trosak3">
+                                <option value="">Odaberi..</option>
+                                <?php
+                                $sifrarnik_vrsta_transporta= $db->query("SELECT * from [c0_intranet2_apoteke].[dbo].[sifrarnici] where active = 1 and name ='vrsta_transporta'");
+                                foreach($sifrarnik_vrsta_transporta as $one){
+                                    $selected = null;
+                                    if ($one['naziv_instance'] == $putt['ost_trosak3']) $selected = 'selected';
+                                    ?>
+                                    <option <?php echo $selected; ?> value="<?php echo $one['naziv_instance'] ?>"><?php echo $one['naziv_instance'] ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                             <br>
-                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak4" id="ost_trosak4" value="<?php if(isset($putt)) echo $putt['ost_trosak4']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
+                            <select class="form-control" name="ost_trosak4" id="ost_trosak4">
+                                <option value="">Odaberi..</option>
+                                <?php
+                                $sifrarnik_vrsta_transporta= $db->query("SELECT * from [c0_intranet2_apoteke].[dbo].[sifrarnici] where active = 1 and name ='vrsta_transporta'");
+                                foreach($sifrarnik_vrsta_transporta as $one){
+                                    $selected = null;
+                                    if ($one['naziv_instance'] == $putt['ost_trosak4']) $selected = 'selected';
+                                    ?>
+                                    <option <?php echo $selected; ?> value="<?php echo $one['naziv_instance'] ?>"><?php echo $one['naziv_instance'] ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                             <br>
-                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak5" id="ost_trosak5" value="<?php if(isset($putt)) echo $putt['ost_trosak5']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
-                            <br>
-                            <input style="display:none;" type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak6" id="ost_trosak6" value="<?php if(isset($putt)) echo $putt['ost_trosak6']; else echo '';?>" placeholder='Unesite naziv troška prevoza' class="form-control">
+                            <select class="form-control" name="ost_trosak5" id="ost_trosak5">
+                                <option value="">Odaberi..</option>
+                                <?php
+                                $sifrarnik_vrsta_transporta= $db->query("SELECT * from [c0_intranet2_apoteke].[dbo].[sifrarnici] where active = 1 and name ='vrsta_transporta'");
+                                foreach($sifrarnik_vrsta_transporta as $one){
+                                    $selected = null;
+                                    if ($one['naziv_instance'] == $putt['ost_trosak5']) $selected = 'selected';
+                                    ?>
+                                    <option <?php echo $selected; ?> value="<?php echo $one['naziv_instance'] ?>"><?php echo $one['naziv_instance'] ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+<!--                            <input type="text" name="ost_trosak1" id='ost_trosak1' value="--><?php //if(isset($putt)) echo $putt['ost_trosak1']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
+<!--                            <br>-->
+<!--                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak2" id="ost_trosak2" value="--><?php //if(isset($putt)) echo $putt['ost_trosak2']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
+<!--                            <br>-->
+<!--                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak3" id="ost_trosak3" value="--><?php //if(isset($putt)) echo $putt['ost_trosak3']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
+<!--                            <br>-->
+<!--                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak4" id="ost_trosak4" value="--><?php //if(isset($putt)) echo $putt['ost_trosak4']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
+<!--                            <br>-->
+<!--                            <input type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak5" id="ost_trosak5" value="--><?php //if(isset($putt)) echo $putt['ost_trosak5']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
+<!--                            <br>-->
+<!--                            <input style="display:none;" type="text" onkeyup="forceInputUppercase(event);" name="ost_trosak6" id="ost_trosak6" value="--><?php //if(isset($putt)) echo $putt['ost_trosak6']; else echo '';?><!--" placeholder='Unesite naziv troška prevoza' class="form-control">-->
                         </div>
                         <div class="col-sm-3">
-                            <label>Količina:</label>
-                            <input step="any" type="number" min="0" name="ost_kolicina1" id='ost_kolicina19' value="<?php if(isset($putt)) echo $putt['ost_kolicina1']; else echo '';?>" onchange="calculate_total_ot();" placeholder='Unesite količinu' class="form-control">
+                            <label>Početna destinacija:</label>
+                            <input type="text" name="ost_kolicina1" id='ost_kolicina19' value="<?php if(isset($putt)) echo $putt['ost_kolicina1']; else echo '';?>" onchange="calculate_total_ot();" placeholder='Unesite početnu destinaciju' class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_kolicina2" id="ost_kolicina2" value="<?php if(isset($putt)) echo $putt['ost_kolicina2']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite količinu" class="form-control">
+                            <input type="text" name="ost_kolicina2" id="ost_kolicina2" value="<?php if(isset($putt)) echo $putt['ost_kolicina2']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite početnu destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_kolicina3" id="ost_kolicina3" value="<?php if(isset($putt)) echo $putt['ost_kolicina3']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite količinu" class="form-control">
+                            <input type="text" name="ost_kolicina3" id="ost_kolicina3" value="<?php if(isset($putt)) echo $putt['ost_kolicina3']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite početnu destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_kolicina4" id="ost_kolicina4" value="<?php if(isset($putt)) echo $putt['ost_kolicina4']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite količinu" class="form-control">
+                            <input type="text" name="ost_kolicina4" id="ost_kolicina4" value="<?php if(isset($putt)) echo $putt['ost_kolicina4']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite početnu destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_kolicina5" id="ost_kolicina5" value="<?php if(isset($putt)) echo $putt['ost_kolicina5']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite količinu" class="form-control">
+                            <input type="text" name="ost_kolicina5" id="ost_kolicina5" value="<?php if(isset($putt)) echo $putt['ost_kolicina5']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite početnu destinaciju" class="form-control">
                             <br>
-                            <input style="display:none;" step="any" type="number" min="0" name="ost_kolicina6" id="ost_kolicina6" value="<?php if(isset($putt)) echo $putt['ost_kolicina6']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite količinu" class="form-control">
+                            <input style="display:none;" type="text" name="ost_kolicina6" id="ost_kolicina6" value="<?php if(isset($putt)) echo $putt['ost_kolicina6']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite početnu destinaciju" class="form-control">
                         </div>
                         <div class="col-sm-3">
-                            <label>Iznos KM:</label>
-                            <input step="any" type="number" min="0" name="ost_iznos1" id='ost_iznos19' value="<?php if(isset($putt)) echo $putt['ost_iznos1']; else echo '';?>" onchange="calculate_total_ot();" placeholder='Unesite iznos' class="form-control">
+                            <label>Krajnja destinacija:</label>
+                            <input type="text" name="ost_iznos1" id='ost_iznos19' value="<?php if(isset($putt)) echo $putt['ost_iznos1']; else echo '';?>" onchange="calculate_total_ot();" placeholder='Unesite krajnju destinaciju' class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_iznos2" id="ost_iznos2" value="<?php if(isset($putt)) echo $putt['ost_iznos2']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite iznos" class="form-control">
+                            <input type="text" name="ost_iznos2" id="ost_iznos2" value="<?php if(isset($putt)) echo $putt['ost_iznos2']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite krajnju destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_iznos3" id="ost_iznos3" value="<?php if(isset($putt)) echo $putt['ost_iznos3']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite iznos" class="form-control">
+                            <input type="text" name="ost_iznos3" id="ost_iznos3" value="<?php if(isset($putt)) echo $putt['ost_iznos3']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite krajnju destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_iznos4" id="ost_iznos4" value="<?php if(isset($putt)) echo $putt['ost_iznos4']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite iznos" class="form-control">
+                            <input type="text" name="ost_iznos4" id="ost_iznos4" value="<?php if(isset($putt)) echo $putt['ost_iznos4']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite krajnju destinaciju" class="form-control">
                             <br>
-                            <input step="any" type="number" min="0" name="ost_iznos5" id="ost_iznos5" value="<?php if(isset($putt)) echo $putt['ost_iznos5']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite iznos" class="form-control">
+                            <input type="text" name="ost_iznos5" id="ost_iznos5" value="<?php if(isset($putt)) echo $putt['ost_iznos5']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite krajnju destinaciju" class="form-control">
                             <br>
-                            <input style="display:none;" step="any" type="number" min="0" name="ost_iznos6" id="ost_iznos6" value="<?php if(isset($putt)) echo $putt['ost_iznos6']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite iznos" class="form-control">
+                            <input style="display:none;" type="text" name="ost_iznos6" id="ost_iznos6" value="<?php if(isset($putt)) echo $putt['ost_iznos6']; else echo '';?>" onchange="calculate_total_ot();" placeholder="Unesite krajnju destinaciju" class="form-control">
                         </div>
                         <div class="col-sm-3">
-                            <label>Ukupno KM:</label>
-                            <div id="ost_ukupno19"></div>
-                            <br><br>
-                            <div id="ost_ukupno2"></div>
-                            <br><br>
-                            <div id="ost_ukupno3"></div>
-                            <br><br>
-                            <div id="ost_ukupno4"></div>
-                            <br><br>
-                            <div id="ost_ukupno5"></div>
-                            <br><br>
-                            <div style="display:none;" id="ost_ukupno6"></div>
+                            <label>Iznos u KM:</label>
+                            <input type="number" min="0" class="form-control" name="ost_ukupno19" id="ost_ukupno19" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno19']; else echo '';?>">
+                            <br>
+                            <input type="number" min="0" class="form-control" name="ost_ukupno2" id="ost_ukupno2" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno2']; else echo '';?>">
+                            <br>
+                            <input type="number" min="0" class="form-control" name="ost_ukupno3" id="ost_ukupno3" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno3']; else echo '';?>">
+                            <br>
+                            <input type="number" min="0" class="form-control" name="ost_ukupno4" id="ost_ukupno4" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno4']; else echo '';?>">
+                            <br>
+                            <input type="number" min="0" class="form-control" name="ost_ukupno5" id="ost_ukupno5" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno5']; else echo '';?>">
+                            <br>
+                            <input type="number" min="0" class="form-control"  style="display:none;" name="ost_ukupno6" id="ost_ukupno6" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno6']; else echo '';?>">
                         </div>
                         </div>
 
@@ -1797,7 +1897,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
         <!-- Troskovi prevoza -->
         <div class="container row box">
             <div class='head col-sm-12'>
-                <div class='naslov_holder'><h4>Ostali troškovi</h4></div>
+                <div class='naslov_holder'><h4>Ostali izdaci</h4></div>
                 <div style="display: none;" class="box-head-btn">
                     <a href="javascript:;" class="ion-ios-arrow-up" data-widget="collapse" data-id="c31"></a>
                 </div>
@@ -1843,6 +1943,26 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                         </div>
                         <div class="col-sm-3">
                             <div id="total_prevoz2"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" id="prevoz_red3">
+                        <div class="col-sm-3">
+
+                            <input type="text" name="trosak3" id='trosak3' value="<?php if(isset($putt)) echo $putt['trosak3']; else echo '';?>" placeholder='Unesite naziv troška' class="form-control">
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            <input step="any" type="number" min="0" name="kolicina3" id='kolicina3' onchange="calculate_total_nocenja2();" value="<?php if(isset($putt)) echo $putt['kolicina3']; else echo '';?>" placeholder='Unesite količinu' class="form-control">
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            <input step="any" type="number" min="0" name="iznos3" id='iznos3' onchange="calculate_total_nocenja2();" value="<?php if(isset($putt)) echo $putt['iznos3']; else echo '';?>" placeholder='Unesite iznos' class="form-control">
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div id="total_prevoz3"></div>
                         </div>
                     </div>
                 </div>
@@ -1943,6 +2063,23 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                     <div class="col-sm-12">
                         <label>Navesti specifikaciju nastalih troškova koja sadrži naziv, vrstu i iznos troškova nastalih u svrhu službenog putovanja za koje se prilažu računi:</label>
                         <textarea style="max-width: 1111px;" name="ost_specopis" id='ost_specopis' value="<?php if(isset($putt)) echo $putt['ost_specopis']; else echo '';?>"  class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container row box">
+            <div class='head col-sm-12'>
+                <div class='naslov_holder'><h4>Troškovi putovanja padaju na teret</h4></div>
+                <div style="display: none;" class="box-head-btn">
+                    <a href="javascript:;" class="ion-ios-arrow-up" data-widget="collapse" data-id="c382"></a>
+                </div>
+            </div>
+            <div class='content' id='c382'>
+                <div class="col-sm-12" >
+                    <div class="col-sm-12">
+                        <label>Unesite ko snosi troškove putovanja</label>
+                        <input type="text" style="max-width: 1111px;" name="troskovi_putovanja" id='troskovi_putovanja' value="<?php if(isset($putt)) echo $putt['troskovi_putovanja']; else echo '';?>"  class="form-control"></input>
                     </div>
                 </div>
             </div>
@@ -2349,29 +2486,29 @@ function prebaciDatumBih($datum){
 
 
     //when the window has been completed loaded, we search for all textbox with time-input CSS class
-    // window.onload = function(e){
-    //     console.log($("odredisna_drzava2").val());
-    //
-    //     if($("odredisna_drzava2").val() !== undefined){
-    //         $("#kraj_vrijeme2").attr('readonly', false);
-    //         $("#kraj_vrijeme2").addClass('timepicker time-input');
-    //     }
-    //
-    //     //perform a for loop to add the event handler
-    //     Array.from(document.getElementsByClassName("timepicker")).forEach(
-    //         function(element, index, array) {
-    //             //Add the event handler to the time input
-    //             element.addEventListener("blur", inputTimeBlurEvent);
-    //         }
-    //     );
-    //     //perform a for loop to add the event handler
-    //     Array.from(document.getElementsByClassName("time-input")).forEach(
-    //         function(element, index, array) {
-    //             //Add the event handler to the time input
-    //             element.addEventListener("blur", inputTimeBlurEvent);
-    //         }
-    //     );
-    // }
+    window.onload = function(e){
+        console.log($("odredisna_drzava2").val());
+
+        if($("odredisna_drzava2").val() !== undefined){
+            $("#kraj_vrijeme2").attr('readonly', false);
+            $("#kraj_vrijeme2").addClass('timepicker time-input');
+        }
+
+        //perform a for loop to add the event handler
+        Array.from(document.getElementsByClassName("timepicker")).forEach(
+            function(element, index, array) {
+                //Add the event handler to the time input
+                element.addEventListener("blur", inputTimeBlurEvent);
+            }
+        );
+        //perform a for loop to add the event handler
+        Array.from(document.getElementsByClassName("time-input")).forEach(
+            function(element, index, array) {
+                //Add the event handler to the time input
+                element.addEventListener("blur", inputTimeBlurEvent);
+            }
+        );
+    }
 
     inputTimeBlurEvent = function(e){
         var newTime = "";
@@ -2564,6 +2701,7 @@ function prebaciDatumBih($datum){
     function calculate_total_nocenja2(){
         $("#total_prevoz1").text($("#iznos1").val() * $("#kolicina1").val());
         $("#total_prevoz2").text($("#iznos2").val() * $("#kolicina2").val());
+        $("#total_prevoz3").text($("#iznos3").val() * $("#kolicina3").val());
     }
 
     $("#iznos_gorivo").change(function(){
