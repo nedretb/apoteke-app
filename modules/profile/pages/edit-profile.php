@@ -22,6 +22,16 @@ if(!empty($_GET['u'])){
     $podredjeni = $db->query("SELECT fname, lname, employee_no, rukovodioc FROM [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica=".$_user['egop_ustrojstvena_jedinica']." and employee_no<>".$_user['employee_no']);
     $rukovodiocOdjela = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[systematization] where id=".$_user['egop_ustrojstvena_jedinica'])->fetch()['rukovodioc_emp_no'];
 
+$emp_id = '';
+if(strlen($_user['employee_no']) == 1){
+    $emp_id = '00'.$_user['employee_no'];
+}
+elseif (strlen($_user['employee_no']) == 2){
+    $emp_id = '0'.$_user['employee_no'];
+}
+else{
+    $emp_id = $_user['employee_no'];
+}
 ?>
 
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -66,7 +76,7 @@ if(!empty($_GET['u'])){
                     <?= ___('Personalni broj') ?>
                 </div>
                 <div class="mp-lr-r">
-                    <h5><?= $_user['employee_no'] ?></h5>
+                    <h5><?= $emp_id ?></h5>
                 </div>
             </div>
             <div class="mp-l-rest">
