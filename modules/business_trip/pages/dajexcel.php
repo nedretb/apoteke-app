@@ -210,11 +210,17 @@ if($data['dacheck'] == 'DA'){
 
 $mjestoPutovanja = '';
 
-if (!empty($data['odredisni_grad'])){
+if(!empty($data['odredisni_grad']) and !empty($drzava['name'])){
+    $mjestoPutovanja = $data['odredisni_grad']. ', '.$drzava['name'];
+}
+elseif (!empty($data['odredisni_grad']) and empty($drzava['name'])){
     $mjestoPutovanja = $data['odredisni_grad'];
 }
-if (!empty($drzava['name'])){
-    $mjestoPutovanja = ', '.$drzava['name'];
+elseif (!empty($drzava['name']) and empty($drzava['odredisni_grad'])){
+    $mjestoPutovanja = $drzava['name'];
+}
+else{
+    $mjestoPutovanja = '';
 }
 
 try{
@@ -229,7 +235,7 @@ try{
     $sheet->SetCellValue('K11', $data['egop_radno_mjesto']);
     $sheet->SetCellValue('O11', $data['postotak_na_dnevnicu']."%");
     $sheet->SetCellValue('J12', $drzava['wage']);
-    $sheet->SetCellValue('I13', $data['odredisni_grad'].", ".$drzava['name']);
+    $sheet->SetCellValue('I13', $mjestoPutovanja);
     $sheet->SetCellValue('J14', $data['svrha']);
     $sheet->SetCellValue('K15', $dana_na_putu);
     $sheet->SetCellValue('N15', $sati);

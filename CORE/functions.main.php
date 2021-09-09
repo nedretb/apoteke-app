@@ -3373,7 +3373,7 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'1022 ' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -3493,22 +3493,22 @@ function _optionHRstatus($current)
     }
 
 
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
-
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-
-
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJE NJEGA CLANA OBITELJI' and level >=3 ORDER BY id ASC");
 
     if ($query->rowCount() < 0) {
@@ -4339,7 +4339,7 @@ function _optionHRstatusLevelKontakCentarRadnik($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>'  . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -4544,7 +4544,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -4559,7 +4559,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>'  . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -4574,7 +4574,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . __(' ') . '' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -4590,7 +4590,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
@@ -4654,7 +4654,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . '' . $item['description'] . '</option>';
         }
 
 
@@ -4669,7 +4669,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'' . $item['description'] . '</option>';
         }
 
 
@@ -4687,7 +4687,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . '' . $item['description'] . '</option>';
         }
 
 
@@ -4703,7 +4703,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . '' . $item['description'] . '</option>';
         }
 
 
@@ -4720,7 +4720,7 @@ function _optionHRstatusLevel3($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . '' . $item['description'] . '</option>';
         }
 
 

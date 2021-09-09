@@ -39,7 +39,7 @@ if (isset($_POST['request'])) {
 
 
         $vrstaInsert = [
-            "5" => "Redovan rad",
+            "1010" => "Redovan rad",
             "2011" => "Redovan rad noću",
             "2010" => "Rad praznikom",
             "2012" => "Noćni rad praznikom",
@@ -94,8 +94,8 @@ if (isset($_POST['request'])) {
             $data_array[$user_row_id][0] = $value['fname'] . " " . $value['lname'];
 
             $get_days = $db->prepare("SELECT id, status, hour, hour_pre, day, weekday, employee_no FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE
-			user_id = '$value[user_id]' and year_id = '$value[id]' and month_id = '$month'
-			");
+			user_id = '$value[user_id]' and year_id = '$value[id]' and month_id = '$month'");
+
             $get_days->execute();
             $days_user = $get_days->fetchAll();
 
@@ -642,14 +642,16 @@ if (isset($_POST['request'])) {
 
             $column = 'E';
             for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
-
                 $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
-                if(!in_array($status[$i]['status'], ['5', '2011', '2010', '2012', '2013', '2015', '2014'])){
-                    $sheet->setCellValue($column.$row, $status[$i]['status']);
+
+                $realStatus = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] where id=".$status[$i]['status'])->fetch()['name'];
+                if(!in_array($realStatus, ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
+                    $sheet->setCellValue($column.$row, $realStatus);
                 }
                 else{
+
                     $increaseRow = 0;
-                    switch ($status[$i]['status']){
+                    switch ($realStatus){
                         case '2011':
                             $increaseRow = 1;
                             break;
