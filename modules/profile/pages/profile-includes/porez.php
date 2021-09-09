@@ -14,14 +14,14 @@
         ?>
         <div class="mp-i-row">
             <?php if ($userRole == 4){ ?>
-<!--            <div class="edit-delete-row">-->
-<!--                <div class="edr-w" title="--><?//= ___('Uredite') ?><!--">-->
-<!--                    <a href="?m=profile&p=insert-data&what=porez&u=--><?php //echo $_user['employee_no']; ?><!--&id=--><?//= $por['id'] ?><!--"><i class="far text-success fa-edit"></i></a>-->
-<!--                </div>-->
+            <div class="edit-delete-row">
+                <div class="edr-w" title="<?= ___('Uredite') ?>">
+                    <a href="?m=profile&p=insert-data&what=porez&u=<?php echo $_user['employee_no']; ?>&id=<?= $por['id'] ?>"><i class="far text-success fa-edit"></i></a>
+                </div>
 <!--                <div class="edr-w" title="--><?//= ___('Obrišite') ?><!--">-->
 <!--                    <a href=""><i class="fas fa-trash text-danger"></i></a>-->
 <!--                </div>-->
-<!--            </div>-->
+            </div>
             <?php }?>
 
 
@@ -36,6 +36,21 @@
                     <div class="form-group">
                         <label for="koeficijent_olaksice"> <?= ___('Koeficijent olakšice') ?></label>
                         <input type="text" value="<?= number_format((float)$por['koeficijent_olaksice'], 2, '.', '') ?>" class="form-control form-control-sm" id="koeficijent_olaksice" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="prevoz"><?= ___('Prevoz') ?></label>
+                        <input type="text" value="<?= $por['prevoz'] ?>" class="form-control form-control-sm" id="prevoz" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nacin_placanja"> <?= ___('Način isplate') ?></label>
+                        <input type="text" value="<?= $por['nacin_placanja'] ?>" class="form-control form-control-sm" id="nacin_placanja" readonly>
                     </div>
                 </div>
             </div>

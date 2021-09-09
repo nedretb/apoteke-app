@@ -30,6 +30,22 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="prevoz"> <?= ___('Prevoz') ?> </label>
+                            <?= Form::select('prevoz', ['Ne' => 'Ne', 'Da' => 'Da'], $porez['prevoz'] ?? '', ['id' => 'prevoz', 'class' => 'form-control']) ?>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nacin_placanja"> <?= ___('Način isplate') ?> </label>
+                            <?= Form::select('nacin_placanja', ['' => 'Odaberi..', 'Kupon' => 'Kupon', 'Novac' => 'Novac'], $porez['nacin_placanja'] ?? '', ['id' => 'nacin_placanja', 'class' => 'form-control']) ?>
+                            <input id="hidden_input" type="hidden" name="nacin_placanja" value="" class="form-control">
+                        </div>
+                    </div>
+                </div>
                 <div class="row text-right">
                     <button type="submit" class="my-submit"><?= ___('Ažurirajte podatke') ?></button>
                 </div>
@@ -37,3 +53,28 @@
         </form>
     </div>
 </div>
+
+<script>
+    $( document ).ready(function() {
+        if ($('#prevoz').val() == 'Ne'){
+            $('#nacin_placanja').val('').attr('disabled', 'true');
+            $('#hidden_input').removeAttr('disabled');
+        }
+        else {
+            $('#nacin_placanja').removeAttr('disabled');
+            $('#hidden_input').val('').attr('disabled', 'true');
+        }
+    });
+
+    $('#prevoz').on('change', function (){
+        if ($('#prevoz').val() == 'Ne'){
+            $('#nacin_placanja').attr('disabled', 'true');
+            $('#hidden_input').removeAttr('disabled');
+        }
+        else {
+            $('#nacin_placanja').removeAttr('disabled');
+            $('#hidden_input').attr('disabled', 'true');
+        }
+    });
+
+</script>
