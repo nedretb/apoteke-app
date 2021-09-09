@@ -243,7 +243,7 @@ class MainModel {
         }
 
         if ($set_data != ''){
-            $raw = "UPDATE ". self::$table . " SET " . $set_data . self::$where;
+            $raw = "UPDATE ". self::$table . " SET " . $set_data .' '. self::$where;
 
             return DataBase::rowsChanged($raw, $values);
         }
@@ -311,6 +311,13 @@ class MainModel {
     public static function like($where){
         if(self::$where_with == ''){
             self::$where_with = 'WHERE LIKE %'.$where.'%';
+        }
+        return new static();
+    }
+
+    public static function imageUplad($where_with){
+        if(self::$where == ''){
+            self::$where = 'WHERE '.$where_with.'';
         }
         return new static();
     }

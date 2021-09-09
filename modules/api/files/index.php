@@ -13,18 +13,17 @@ if(isset($_FILES['photo-input'])){
     $name = md5($_FILES['photo-input']['name']);
     $uploadfile = $uploaddir . basename($name.'.'.pathinfo($_FILES['photo-input']['name'], PATHINFO_EXTENSION));
 
-
     if(move_uploaded_file($_FILES['photo-input']['tmp_name'], $uploadfile)){
         echo json_encode([
             'code' => '0000',
             'name' => $name,
-            'user' => Profile::like('employee_no = '.$_user['employee_no'])->update([
+            'user' => Profile::imageUplad('employee_no = '.$_user['employee_no'])->update([
                 'image' => $name
             ])
         ]);
 
         try{
-            $profile = Profile::like('employee_no = '.$_user['employee_no'])->first();
+            $profile = Profile::imageUplad('employee_no = '.$_user['employee_no'])->first();
         }catch (\Exception $e){}
     }else{
         echo json_encode([
