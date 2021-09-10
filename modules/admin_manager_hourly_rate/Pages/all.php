@@ -958,6 +958,21 @@ include $_themeRoot . '/footer.php';
     //
     //};
 
+    $('#org_jed').on('change', function (){
+        console.log($('#org_jed').val());
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo $url . '/modules/admin_manager_verification/ajax.php'; ?>",
+            data: {request: 'get-organization',
+                org_jed: $('#org_jed').val(), },
+            success:function (data){
+                let response = JSON.parse(data);
+                $("#ime_prezime").html(response);
+                $("#ime_prezime").select2();
+            }
+        });
+    });
+
 
     $("#ime_prezime").select2();
     $("#org_jed").select2();

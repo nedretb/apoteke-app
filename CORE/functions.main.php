@@ -3493,22 +3493,22 @@ function _optionHRstatus($current)
     }
 
 
-//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
-//
-//    if ($query->rowCount() < 0) {
-//        $opt .= '<optgroup label="' . __('PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE') . '">';
-//        foreach ($query as $item) {
-//            if ($current == $item['id']) {
-//                $sel = 'selected="selected"';
-//            } else {
-//                $sel = '';
-//            }
-//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-//        }
-//
-//
-//        $opt .= '</optgroup>';
-//    }
+    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
+
+    if ($query->rowCount() < 0) {
+        $opt .= '<optgroup label="' . __('PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE') . '">';
+        foreach ($query as $item) {
+            if ($current == $item['id']) {
+                $sel = 'selected="selected"';
+            } else {
+                $sel = '';
+            }
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+        }
+
+
+        $opt .= '</optgroup>';
+    }
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJE NJEGA CLANA OBITELJI' and level >=3 ORDER BY id ASC");
 
     if ($query->rowCount() < 0) {
@@ -3623,22 +3623,22 @@ function _optionHRstatus($current)
 
         $opt .= '</optgroup>';
     }
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='P – PRAZNIK' and level >=3 ORDER BY id ASC");
-
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('P – PRAZNIK') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-
-
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='P – PRAZNIK' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('P – PRAZNIK') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='R – DODATNO' and level >=3 ORDER BY name ASC");
 
