@@ -144,14 +144,14 @@ function pageMenu()
 //                    'hidden' => $tab_hidden['admin_hourly_rate_corrections']
 //                ),
 
-                'admin_manager_hourly_rate' => array(
-                    'name' => ___($tab_name['admin_manager_hourly_rate']),
-                    'icon' => $tab_icon['admin_manager_hourly_rate'],
-                    'page' => 'all',
-                    'role' => $tab_roles['admin_manager_hourly_rate'],
-                    'subpages' => array(),
-                    'hidden' => $tab_hidden['admin_manager_hourly_rate']
-                ),
+//                'admin_manager_hourly_rate' => array(
+//                    'name' => ___($tab_name['admin_manager_hourly_rate']),
+//                    'icon' => $tab_icon['admin_manager_hourly_rate'],
+//                    'page' => 'all',
+//                    'role' => $tab_roles['admin_manager_hourly_rate'],
+//                    'subpages' => array(),
+//                    'hidden' => $tab_hidden['admin_manager_hourly_rate']
+//                ),
 
 
 //                'admin_manager_hourly_rate_corrections' => array(

@@ -777,7 +777,7 @@ if (isset($_POST['request'])) {
             for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
                 $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
 
-                $status[$i]['apoteke_status'] = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] where id=".$status[$i]['status'])->fetch()['name'];
+
                 if(!in_array($status[$i]['apoteke_status'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
                     $sheet->setCellValue($column.$row, $status[$i]['apoteke_status']);
                 }

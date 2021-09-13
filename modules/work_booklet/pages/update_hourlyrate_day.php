@@ -30,7 +30,7 @@ foreach ($hourlyDayStatus as $singleStatus){
     }
 
     //praznik drzavni
-    if (in_array($singleStatus['status'], array(84, 21, 22))){
+    if (in_array($singleStatus['status'], array(84, 21, 22, 83))){
         $updateStatus = 1026;
     }
 
@@ -86,6 +86,7 @@ foreach ($hourlyDayStatus as $singleStatus){
 
     //Plaćeno odsustvo
     if (in_array($singleStatus['status'], array(28, 29, 30, 31, 32, 79, 80))){
+        var_dump('wwwwww');
         $updateStatus = 1020;
     }
 
@@ -119,6 +120,7 @@ foreach ($hourlyDayStatus as $singleStatus){
         $updateStatus = 1021;
     }
 
+    var_dump($updateStatus);
     try {
         $sqlStmt = "UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status=? where id=?";
         $prep = $db->prepare($sqlStmt);
