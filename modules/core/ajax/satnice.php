@@ -34,6 +34,7 @@ if (isset($_POST['request'])) {
             }
 
         }
+        
         $_user = _user(_decrypt($_SESSION['SESSION_USER']));
 
         $status = $_POST['status'];
@@ -534,7 +535,7 @@ if (isset($_POST['request'])) {
         */
 
 
-        if (in_array(intval($status), array(5, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96))) {
+        if (in_array(intval($status), array(5, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 138))) {
 
             if (intval($status) == 5) {
 

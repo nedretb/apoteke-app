@@ -746,7 +746,10 @@ if (isset($_POST['request'])) {
         $row = 14;
 
         foreach ($data_array as $data){
-            $sumHour = $db->query("SELECT sum(hour)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
+            $sumHourRe = $db->query("SELECT sum(hour)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
+            $sumHourPre = $db->query("SELECT sum(hour_pre)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
+            $sumHour = $sumHourRe + $sumHourPre;
+
             $prevozData = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$userEmpNo[$count])->fetch();
             $sheet->setCellValue($columnSati.$row, $sumHour[0]);
             $sheet->setCellValue($columnPrevoz.$row, $prevozData['prevoz']);
