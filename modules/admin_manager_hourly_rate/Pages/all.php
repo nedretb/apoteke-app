@@ -324,7 +324,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                         </div>
                         <div style="width: 50%;">
                             <div class="small-circle"
-                                 style="background:#ccffcc;border:1px solid gray;"></div> <?php echo __('Praznik'); ?>
+                                 style="background:#ffb366;border:1px solid gray;"></div> <?php echo __('Praznik'); ?>
                         </div>
                     </div>
 
