@@ -111,9 +111,69 @@ require_once '../../../configuration.php';
             <script src="<?php echo $_pluginUrl; ?>/validation/jquery.form.js"></script>
             <script>
 
-
+//
+//                $('#status').val().on('change');
+//
 
                 $("#status").change(function () {
+                    console.log($('#status').val());
+                    if($('#status').val() == 88){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 85){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 89){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status').val() == 138){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status').val() == 87){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 86){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
                     status = $(this).val();
                     if (status == 5 || (status >= 85 && status <= 90)) {
                         stat_pre = $("#status_pre").val();
@@ -134,6 +194,63 @@ require_once '../../../configuration.php';
                 });
 
                 $("#status_pre").change(function () {
+                    if($('#status_pre').val() == 88){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 85){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 89){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status_pre').val() == 138){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status_pre').val() == 87){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 86){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
                     status_prex = $(this).val();
                     status = $("#status").val();
                     if (status == 5 || (status >= 85 && status <= 90)) {
