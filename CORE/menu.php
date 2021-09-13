@@ -416,7 +416,7 @@ function pageMenu()
             elseif ($slug == 'impersonalizacija' and $_user['role'] == 4)
                 $menu .= '<li style="font-weight: bold;color:white; "' . $sel1 . '><a href="?m=admin_manager_hourly_rate&p=all"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
             elseif ($slug == 'zahtjevi')
-                $menu .= '<li id="requests" style="background-color:#006595;font-weight: bold;color:white; "' . $sel1 . '><a style="color:white;" href="?m=default&p=odsustva&odobreno=true"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
+                $menu .= '<li id="requests" style="font-weight: bold;"' . $sel1 . '><a style="color:white;" href="?m=default&p=odsustva&odobreno=true"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
             elseif ($slug == 'zahtjevi_radnika') {
                 if ($show_odsustva)
                     $menu .= '<li id="requests_workers" style="font-weight: bold; "' . $sel1 . '><a href="?m=default&p=odsustva_radnici&neodobreno=true"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
