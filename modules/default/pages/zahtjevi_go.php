@@ -87,7 +87,7 @@
 
         $path .= '&pg=';
 
-        $queryq = $db->query("select *  from ".$nav_vacation_ground2." where [Employee No_]=" . $_user['employee_no']);
+        $queryq = $db->query("select *  from [c0_intranet2_apoteke].[dbo].[rjesenja_go] where [employee_no]=" . $_user['employee_no']);
         $query = $queryq->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -156,7 +156,6 @@
         if ($query) {
 
             foreach ($query as $item) {
-                if ($item['Duration'] > 0) {
                     ?>
 
                     <div class="box box-lborder box-lborder-<?php echo $border; ?>">
@@ -170,10 +169,10 @@
                                     <br/>
 
                                     <?php echo __('Od:'); ?>
-                                    <b><?php echo date('d.m.Y', strtotime($item['Starting Date of I part'])); ?></b>
+                                    <b><?php echo date('d.m.Y', strtotime($item['datum_od'])); ?></b>
                                     &nbsp;
                                     <?php echo __('Do:'); ?>
-                                    <b><?php echo date('d.m.Y', strtotime($item['Ending Date of I part'])); ?></b>
+                                    <b><?php echo date('d.m.Y', strtotime($item['datum_do'])); ?></b>
 
                                 </div>
                                 <div class="col-sm-2">
@@ -182,40 +181,19 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <?php echo __('Rješenje kreirano:'); ?></b><br/>
-                                    <?php echo date('d.m.Y', strtotime($item['Insert Date'])); ?>
+                                    <?php echo date('d.m.Y', strtotime($item['datum_kreiranja_rjesenja'])); ?>
                                 </div>
-                                <div class="col-sm-3 text-right">
-
-
-                                    <?php
-                                    if ($item['Year'] == 2018) { ?>
-                                        <a target="_blank"
-                                           href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_vacation_request_pdf2018_new.php?id=' . $item['id']; ?>"
-                                           style="width:180px;" class="table-btn"><i style="font-size:16px;"
-                                                                                     class="ion-ios-copy-outline"></i>
+                                <div class="col-sm-3">
+                                        <a target="_blank" style=" width: 100% !important;"
+                                           href="<?php echo $url . '/modules/' . $_mod . '/pages/rjesenjeGo.php?employee_no=' . $item['employee_no'].'&year='.$item['godina']; ?>"
+                                           class="table-btn"><i style="font-size:16px;" class="ion-ios-copy-outline"></i>
                                             Preuzmite rješenje </a>
-                                    <?php } else if ($item['Year'] == 2019) { ?>
-                                        <a target="_blank"
-                                           href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_vacation_request_pdf_new.php?id=' . $item['id']; ?>"
-                                           style="width:180px;" class="table-btn"><i style="font-size:16px;"
-                                                                                     class="ion-ios-copy-outline"></i>
-                                            Preuzmite rješenje </a>
-                                    <?php } else if ($item['Year'] == 2020) { ?>
-                                        <a target="_blank"
-                                           href="<?php echo $url . '/modules/' . $_mod . '/pages/popup_vacation_request_pdf_new2020.php?id=' . $item['id']; ?>"
-                                           style="width:180px;" class="table-btn"><i style="font-size:16px;"
-                                                                                     class="ion-ios-copy-outline"></i>
-                                            Preuzmite rješenje </a>
-                                    <?php }
-
-
-                                    ?>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                <?php }
+                <?php
             }
         } else { ?>
             <div class="text-center">
