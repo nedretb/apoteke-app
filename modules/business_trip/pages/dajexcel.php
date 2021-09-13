@@ -325,10 +325,10 @@ try{
 
 
     $writer = PHPExcel_IOFactory::createWriter($phpExcel, "Excel2007");
-    $writer->save('C:\wamp64\www\apoteke-app\CORE\files\excel\slp2.xlsx');
+    $writer->save('C:\wamp64\www\apoteke-app\CORE\files\excel\SL put zahtjev broj-'.$data['id'].'.xlsx');
 
 
-    header('Location: CORE/files/excel/slp2.xlsx');
+    header('Location: CORE/files/excel/SL put zahtjev broj-'.$data['id'].'.xlsx');
 
 //    var_dump($data);
 //
