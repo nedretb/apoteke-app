@@ -35,6 +35,16 @@ function unique_multidim_array($array, $key)
 if (isset($_POST['request'])) {
 
     if($_POST['request']=='generate-satnice'){
+
+        $curl = curl_init();
+        curl_setopt_array(
+            $curl, array(
+            CURLOPT_URL => "http://127.0.0.1:8080/apoteke-app/modules/work_booklet/pages/update_hourlyrate_day.php",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+        ));
+        $output = curl_exec($curl);
+
         global $db;
 
 
@@ -87,11 +97,14 @@ if (isset($_POST['request'])) {
         $data_array = array();
         $user_stats_array = array();
         $userEmpNo = [];
+        $yearId = [];
 
         $user_row_id = 1;
         foreach($fetch_users as $key => $value){
             if ($value['termination_date'] != null){ continue;}
             $data_array[$user_row_id][0] = $value['fname'] . " " . $value['lname'];
+
+            array_push($yearId, $value['id']);
 
             $get_days = $db->prepare("SELECT id, status, hour, hour_pre, day, weekday, employee_no FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE
 			user_id = '$value[user_id]' and year_id = '$value[id]' and month_id = '$month'");
@@ -126,8 +139,10 @@ if (isset($_POST['request'])) {
             $user_row_id++;
         }
 
+
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
+
 
         $styleArray = [
             'borders' => [
@@ -584,6 +599,84 @@ if (isset($_POST['request'])) {
                 ]
             ]
         ];
+
+        $styleArrayNoBorders = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ]
+            ]
+        ];
+        $styleArrayNoBordersButRight = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ]
+        ];
+        $styleArrayNoBordersButBottom = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ]
+            ]
+        ];
+        $styleArrayNoBordersButBottomAndRight = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT,
+            ],
+            'borders' => [
+                'top' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'bottom' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ],
+                'left' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_NONE
+                ],
+                'right' =>[
+                    'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM
+                ]
+            ]
+        ];
+
         $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
         $dayOfWeek = date('l', strtotime('2021-09-01'));
         $column = 'E';
@@ -629,29 +722,66 @@ if (isset($_POST['request'])) {
             $column++;
         }
 
+        $columnPrevoz = $column;
+        $sheet->mergeCells($columnPrevoz.'12:'.$columnPrevoz.'13');
+        $sheet->setCellValue($columnPrevoz.'12', 'Prevoz (da/ne)');
+        $sheet->getStyle($columnPrevoz.'12:'.$columnPrevoz.'13')->applyFromArray($styleArrayNameEmpNo);
+        $sheet->getStyle($columnPrevoz.'12:'.$columnPrevoz.'13')->getFont()->setBold(true);
+
+        $columnKupn = $columnPrevoz ;
+        $columnKupn++;
+        $sheet->mergeCells($columnKupn.'12:'.$columnKupn.'13');
+        $sheet->setCellValue($columnKupn.'12', 'Kupon/Novac');
+        $sheet->getStyle($columnKupn.'12:'.$columnKupn.'13')->applyFromArray($styleArrayNameEmpNo);
+        $sheet->getStyle($columnKupn.'12:'.$columnKupn.'13')->getFont()->setBold(true);
+
+        $columnSati= $columnKupn;
+        $columnSati++;
+        $sheet->mergeCells($columnSati.'12:'.$columnSati.'13');
+        $sheet->setCellValue($columnSati.'12', 'Ukupno sati');
+        $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->applyFromArray($styleArrayNameEmpNo);
+        $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->getFont()->setBold(true);
+
         $count = 0;
         $row = 14;
+
         foreach ($data_array as $data){
+            $sumHour = $db->query("SELECT sum(hour)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
+            $prevozData = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$userEmpNo[$count])->fetch();
+            $sheet->setCellValue($columnSati.$row, $sumHour[0]);
+            $sheet->setCellValue($columnPrevoz.$row, $prevozData['prevoz']);
+            $sheet->setCellValue($columnKupn.$row, $prevozData['nacin_placanja']);
+
+            $sheet->getStyle($columnPrevoz.$row.':'.$columnPrevoz.($row+5))->applyFromArray($styleArrayNoBorders);
+            $sheet->getStyle($columnSati.$row.':'.$columnSati.($row+5))->applyFromArray($styleArrayNoBordersButRight);
+            $sheet->getStyle($columnKupn.$row.':'.$columnKupn.($row+5))->applyFromArray($styleArrayNoBorders);
+
+
+            $sheet->getStyle($columnPrevoz.($row+6))->applyFromArray($styleArrayNoBordersButBottom);
+            $sheet->getStyle($columnSati.($row+6))->applyFromArray($styleArrayNoBordersButBottomAndRight);
+            $sheet->getStyle($columnKupn.($row+6))->applyFromArray($styleArrayNoBordersButBottom);
+
             $sheet->mergeCells('A'.$row.':A'.($row+6));
             $sheet->setCellValue('A'.$row, $userEmpNo[$count]);
             $sheet->mergeCells('B'.$row.':B'.($row+6));
             $sheet->setCellValue('B'.$row, $data[0]);
             $sheet->getStyle('A'.$row.':A'.($row+6))->applyFromArray($styleArrayNameEmpNo);
             $sheet->getStyle('B'.$row.':B'.($row+6))->applyFromArray($styleArrayNameEmpNo);
-            $status = $db->query("SELECT status, hour FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." order by day")->fetchAll();
+            $status = $db->query("SELECT status, hour, apoteke_status FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." order by day")->fetchAll();
+
 
             $column = 'E';
             for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
                 $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
 
-                $realStatus = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] where id=".$status[$i]['status'])->fetch()['name'];
-                if(!in_array($realStatus, ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
-                    $sheet->setCellValue($column.$row, $realStatus);
+                $status[$i]['apoteke_status'] = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] where id=".$status[$i]['status'])->fetch()['name'];
+                if(!in_array($status[$i]['apoteke_status'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
+                    $sheet->setCellValue($column.$row, $status[$i]['apoteke_status']);
                 }
                 else{
 
                     $increaseRow = 0;
-                    switch ($realStatus){
+                    switch ($status[$i]['apoteke_status']){
                         case '2011':
                             $increaseRow = 1;
                             break;

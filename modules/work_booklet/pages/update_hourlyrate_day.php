@@ -5,7 +5,7 @@ $year = date('Y');
 $month = date('m');
 
 //try {
-//    $sqlStmt = $db->prepare ("UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_sifra='1010' WHERE status=5");
+//    $sqlStmt = $db->prepare ("UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status='1010' WHERE status=5");
 //    $sqlStmt->execute();
 //}catch (Exception $e){}
 
@@ -33,7 +33,6 @@ foreach ($hourlyDayStatus as $singleStatus){
     if (in_array($singleStatus['status'], array(84, 21, 22))){
         $updateStatus = 1026;
     }
-
 
     //bolovanje do 42 dana
     if (in_array($singleStatus['status'], array(43, 107))){
@@ -120,6 +119,9 @@ foreach ($hourlyDayStatus as $singleStatus){
         $updateStatus = 1021;
     }
 
-
-
+    try {
+        $sqlStmt = "UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status=? where id=?";
+        $prep = $db->prepare($sqlStmt);
+        $prep->execute([$updateStatus, $singleStatus['id']]);
+    }catch (Exception $e){}
 }
