@@ -106,7 +106,7 @@ if (isset($_POST['request'])) {
 
             array_push($yearId, $value['id']);
 
-            $get_days = $db->prepare("SELECT id, status, hour, hour_pre, day, weekday, employee_no FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE
+            $get_days = $db->prepare("SELECT id, status, hour, hour_pre, status_pre, day, weekday, employee_no FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE
 			user_id = '$value[user_id]' and year_id = '$value[id]' and month_id = '$month'");
 
             $get_days->execute();
@@ -748,10 +748,10 @@ if (isset($_POST['request'])) {
         foreach ($data_array as $data){
             $sumHourRe = $db->query("SELECT sum(hour)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
             $sumHourPre = $db->query("SELECT sum(hour_pre)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
-            $sumHour = $sumHourRe + $sumHourPre;
+            $sumHour = $sumHourRe[0] + $sumHourPre[0];
 
             $prevozData = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$userEmpNo[$count])->fetch();
-            $sheet->setCellValue($columnSati.$row, $sumHour[0]);
+            $sheet->setCellValue($columnSati.$row, $sumHour);
             $sheet->setCellValue($columnPrevoz.$row, $prevozData['prevoz']);
             $sheet->setCellValue($columnKupn.$row, $prevozData['nacin_placanja']);
 
@@ -770,13 +770,44 @@ if (isset($_POST['request'])) {
             $sheet->setCellValue('B'.$row, $data[0]);
             $sheet->getStyle('A'.$row.':A'.($row+6))->applyFromArray($styleArrayNameEmpNo);
             $sheet->getStyle('B'.$row.':B'.($row+6))->applyFromArray($styleArrayNameEmpNo);
-            $status = $db->query("SELECT status, hour, apoteke_status FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." order by day")->fetchAll();
+            $status = $db->query("SELECT status, hour, apoteke_status, status_pre, hour_pre, apoteke_status_pre FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." order by day")->fetchAll();
 
 
             $column = 'E';
             for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
                 $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
 
+                if(!in_array($status[$i]['apoteke_status_pre'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
+                    $sheet->setCellValue($column.$row, $status[$i]['apoteke_status_pre']);
+                }else {
+                    $increaseRowPre = 0;
+                    switch ($status[$i]['apoteke_status_pre']) {
+                        case '2011':
+                            $increaseRowPre = 1;
+                            break;
+                        case '2010':
+                            $increaseRowPre = 2;
+                            break;
+                        case '2012':
+                            $increaseRowPre = 3;
+                            break;
+                        case '2013':
+                            $increaseRowPre = 4;
+                            break;
+                        case '2015':
+                            $increaseRowPre = 5;
+                            break;
+                        case '2014':
+                            $increaseRowPre = 6;
+                            break;
+                    }
+
+                    if (($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday') and $increaseRowPre == 0) {
+                        $sheet->setCellValue($column . ($row + $increaseRowPre), '');
+                    } else {
+                        $sheet->setCellValue($column . ($row + $increaseRowPre), $status[$i]['hour_pre']);
+                    }
+                }
 
                 if(!in_array($status[$i]['apoteke_status'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
                     $sheet->setCellValue($column.$row, $status[$i]['apoteke_status']);
@@ -811,6 +842,7 @@ if (isset($_POST['request'])) {
                     else{
                         $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
                     }
+
                 }
                 for ($j = 0; $j < 7; $j++){
                     if($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday'){
