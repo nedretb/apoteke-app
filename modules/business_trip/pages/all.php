@@ -498,6 +498,7 @@ else if (isset($lock_req)){
 
         <!--      <div class="col-sm-12 ">-->
         <!--filter za ime i prezime i Person ID -->
+        <?php if($_user['rukovodioc'] == 'DA' ){ ?>
         <div class="col-sm-2">
             <label> Zaposlenik</label>
             <select class="filter_form_SL form-control" id="korisnici_filter" name="korisnici_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
@@ -532,6 +533,7 @@ else if (isset($lock_req)){
                 ?>
             </select>
         </div>
+        <?php } ?>
 
         <!--filter za JMBG -->
         <div style="display: none;" class="col-sm-2">
