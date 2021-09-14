@@ -38,9 +38,9 @@ Uspješno spremljeni podaci!
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <th style="width: 150px;">#</th>
-              <th style='text-align:center;'>Akontacija u KM</th>
-              <th id="colspan" style='text-align:center;' colspan="1">Trajanje službenog puta</th>
+              <th style="width: 160px;">Označi za brisanje</th>
+              <th style='text-align:center;'>Država</th>
+              <th id="colspan" style='text-align:center;' colspan="1">Akontacija u KM(1 dan)</th>
             </tr>
             
           </thead>
@@ -89,11 +89,7 @@ for(let i = 0; i<=row_data.length -1; i++){
 
   let append_html = "";
   if(i == 0){
-    append_html = `
-  <tr id="prvi_red">
-  <td>Označi za brisanje</td>
-  ` + dynamic_rows + `
-  </tr>`;
+
   }else{
     append_html = `
   <tr>
