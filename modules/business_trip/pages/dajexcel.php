@@ -322,7 +322,6 @@ try{
     /***** akontacija ******/
     $sheet->SetCellValue('P24', $data['iznos_akontacije']);
     $sheet->SetCellValue('P25', number_format(($data['iznos_akontacije']/1.95), 2, '.', ''));
-    $sheet->SetCellValue('P25', number_format(($data['iznos_akontacije']/1.95), 2, '.', ''));
 
 
     $writer = PHPExcel_IOFactory::createWriter($phpExcel, "Excel2007");
