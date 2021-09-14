@@ -302,12 +302,12 @@ try{
     $sheet->SetCellValue('M15', $dnevnica*$drzava['wage']);
 
     $sheet->SetCellValue('I16', $dnevnica);
-    $sheet->SetCellValue('M16', $dnevnica*$drzava['wage']/2);
+    $sheet->SetCellValue('M16', number_format(($dnevnica*$drzava['wage']/1.95), 2, '.', ''));
 
     $sheet->SetCellValue('L17', $data['postotak_na_dnevnicu']);
 
     $sheet->SetCellValue('P15', $dnevnica*$drzava['wage']*($dnevnicaPostotak/100));
-    $sheet->SetCellValue('P16', $dnevnica*$drzava['wage']*($dnevnicaPostotak/100)/2);
+    $sheet->SetCellValue('P16', number_format(($dnevnica*$drzava['wage']*($dnevnicaPostotak/100)/1.95), 2, '.', ''));
 
     /***** ostali izdaci ******/
     $sheet->SetCellValue('I19', $data['trosak1']);
@@ -321,7 +321,8 @@ try{
 
     /***** akontacija ******/
     $sheet->SetCellValue('P24', $data['iznos_akontacije']);
-    $sheet->SetCellValue('P25', $data['iznos_akontacije']/2);
+    $sheet->SetCellValue('P25', number_format(($data['iznos_akontacije']/1.95), 2, '.', ''));
+    $sheet->SetCellValue('P25', number_format(($data['iznos_akontacije']/1.95), 2, '.', ''));
 
 
     $writer = PHPExcel_IOFactory::createWriter($phpExcel, "Excel2007");

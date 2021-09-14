@@ -1641,7 +1641,6 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
             </div>
             <div class='content' id='c334'>
                 <div class="col-sm-12" id="TextBoxesGroup">
-                    <div  class="col-sm-12 ultimate_class" id="TextBoxDiv">
                         <div class="col-sm-3">
                             <label>Prevozno sredstvo:</label>
                             <select class="form-control" name="ost_trosak1" id="ost_trosak1">
@@ -1767,7 +1766,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                             <br>
                             <input type="number" min="0" class="form-control"  style="display:none;" name="ost_ukupno6" id="ost_ukupno6" placeholder="Unesite iznos u KM" value="<?php if(isset($putt)) echo $putt['ost_ukupno6']; else echo '';?>">
                         </div>
-                        </div>
+
 
                 <div class="col-sm-12" style="display:none;">
                     <div class=" btn-sm btn-info mybtn" id='addButton' style="margin-left:30px;">Dodaj red +</div>
@@ -1903,7 +1902,6 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 </div>
             </div>
             <div class='content' id='c31'>
-                <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <div class="col-sm-3">
                             <label>Naziv troška:</label>
@@ -1965,7 +1963,6 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                             <div id="total_prevoz3"></div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
@@ -1984,7 +1981,7 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                 <div class="col-sm-12" >
                     <div class="col-sm-12">
                         <label>Upišite kratki opis:</label>
-                        <textarea style="max-width: 1111px;" name="ost_kratkiopis" id='ost_kratkiopis' value="<?php if(isset($putt)) echo $putt['ost_kratkiopis']; else echo '';?>"  class="form-control"></textarea>
+                        <textarea style="max-width: 100%;" name="ost_kratkiopis" id='ost_kratkiopis' value="<?php if(isset($putt)) echo $putt['ost_kratkiopis']; else echo '';?>"  class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -2004,8 +2001,10 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
             <div class='content' id='c3284'>
                 <div class="col=sm-12">
                     <div class="col-sm-12">
-                        <label>Plaćeno biznis karticom (u KM)</label>
-                        <input class="form-control" step="any" type="number"  min="0" id="placeno_biznis_karticom" name="placeno_biznis_karticom" value="<?php echo  $put['placeno_biznis_karticom']; ?>">
+                        <div class="col-sm-12">
+                            <label>Plaćeno biznis karticom (u KM)</label>
+                            <input class="form-control" step="any" type="number"  min="0" id="placeno_biznis_karticom" name="placeno_biznis_karticom" value="<?php echo  $put['placeno_biznis_karticom']; ?>">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2025,23 +2024,25 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
             <div class='content' id='c3284'>
                 <div class="col=sm-12">
                     <div class="col-sm-12">
-                        <label>Odaberite postotak na dnevnicu</label>
-                        <?php
-                        if (isset($_GET['sl_put_id'])){
-                            $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0];
-                        }
-                        else{
-                            $postotak = 'ww';
-                        }
+                        <div class="col-sm-12">
+                            <label>Odaberite postotak na dnevnicu</label>
+                            <?php
+                            if (isset($_GET['sl_put_id'])){
+                                $postotak = $db->query("SELECT postotak_na_dnevnicu FROM [c0_intranet2_apoteke].[dbo].[sl_put_ostali_info] where sl_put_id_fk=".$_GET['sl_put_id'])->fetch()[0];
+                            }
+                            else{
+                                $postotak = 'ww';
+                            }
                             ?>
-                        <select class="form-control" id="dnevnica_postotak" name="dnevnica_postotak">
-                            <option value="110" <?= $postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
-                            <option value="100" <?= $postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
-                            <option value="90" <?= $postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
-                            <option value="80" <?= $postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
-                            <option value="70" <?= $postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
-                            <option value="60" <?= $postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
-                        </select>
+                            <select class="form-control" id="dnevnica_postotak" name="dnevnica_postotak">
+                                <option value="110" <?= $postotak == '110' ? ' selected="selected"' : '';?>>110%</option>
+                                <option value="100" <?= $postotak == '100' ? ' selected="selected"' : '';?>>100%</option>
+                                <option value="90" <?= $postotak == '90' ? ' selected="selected"' : '';?>>90%</option>
+                                <option value="80" <?= $postotak == '80' ? ' selected="selected"' : '';?>>80%</option>
+                                <option value="70" <?= $postotak == '70' ? ' selected="selected"' : '';?>>70%</option>
+                                <option value="60" <?= $postotak == '60' ? ' selected="selected"' : '';?>>60%</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
