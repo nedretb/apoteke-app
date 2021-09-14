@@ -271,6 +271,120 @@ require_once '../../../configuration.php';
                 });
 
                 $(document).ready(function () {
+                    if($('#status_pre').val() == 88){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 85){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 89){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status_pre').val() == 138){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status_pre').val() == 87){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status_pre').val() == 86){
+                        $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status').val() == 88){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 85){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 89){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status').val() == 138){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
+                    if($('#status').val() == 87){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="5.5">5.5</option>' +
+                            '</select>');
+                    }
+                    if($('#status').val() == 86){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
+                            '<option value="8">8</option>' +
+                            '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+
                     $('.dialog-loader').hide();
                     $('#nalog').hide();
                     $('#sa_troskom').hide();

@@ -3388,44 +3388,44 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>1025' . __(' ') . '' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }
 
 
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group=N'P – OSTALA PLAĆENA ODSUSTVA' and level >=3 ORDER BY id ASC");
-
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('P – OSTALA PLAĆENA ODSUSTVA') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-        $opt .= '</optgroup>';
-    }
-
-
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='NE – NEOPRAVDANO ODSUSTVO' and level >=3 ORDER BY id ASC");
-
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('NE – NEOPRAVDANO ODSUSTVO') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group=N'P – OSTALA PLAĆENA ODSUSTVA' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('P – OSTALA PLAĆENA ODSUSTVA') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//        $opt .= '</optgroup>';
+//    }
 
 
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='NE – NEOPRAVDANO ODSUSTVO' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('NE – NEOPRAVDANO ODSUSTVO') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJE - BOLEST' and level >=3 ORDER BY id ASC");
 
@@ -3437,7 +3437,9 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            if($item['name'] != 'B_3'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
         }
 
 
@@ -3469,28 +3471,30 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-
-
-        $opt .= '</optgroup>';
-    }
-
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level >=3 ORDER BY id ASC");
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
+            if($item['name'] != 'B_7'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
         }
 
 
         $opt .= '</optgroup>';
     }
+
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level >=3 ORDER BY id ASC");
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='PU - PLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
@@ -3509,10 +3513,28 @@ function _optionHRstatus($current)
 
         $opt .= '</optgroup>';
     }
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJE NJEGA CLANA OBITELJI' and level >=3 ORDER BY id ASC");
+
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJE NJEGA CLANA OBITELJI' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('B – BOLOVANJE NJEGA ČLANA OBITELJI') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
+
+    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='NU – NEPLACENO ODSUSTVO' and level >=3 ORDER BY id ASC");
 
     if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('B – BOLOVANJE NJEGA ČLANA OBITELJI') . '">';
+        $opt .= '<optgroup label="' . __('NU – NEPLACENO ODSUSTVO') . '">';
         foreach ($query as $item) {
             if ($current == $item['id']) {
                 $sel = 'selected="selected"';
@@ -3525,22 +3547,7 @@ function _optionHRstatus($current)
 
         $opt .= '</optgroup>';
     }
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='NU – NEPLACENO ODSUSTVO UZ ODLUKU UPRAVE' and level >=3 ORDER BY id ASC");
 
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('NU – NEPLACENO ODSUSTVO UZ ODLUKU UPRAVE') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-
-
-        $opt .= '</optgroup>';
-    }
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJA' and level >=3 ORDER BY id ASC");
 
     if ($query->rowCount() < 0) {
@@ -3551,7 +3558,7 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>1030/1031' . __(' ') . '' . $item['description'] . '</option>';
         }
 
 
@@ -3583,7 +3590,7 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>1020 ' . __(' ') . '' . $item['description'] . '</option>';
         }
 
 
@@ -3607,22 +3614,22 @@ function _optionHRstatus($current)
         $opt .= '</optgroup>';
     }
 
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='S – SUSPENZIJA' and level >=3 ORDER BY id ASC");
-
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('S – SUSPENZIJA') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
-
-
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='S – SUSPENZIJA' and level >=3 ORDER BY id ASC");
+//
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('S – SUSPENZIJA') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 //    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='P – PRAZNIK' and level >=3 ORDER BY id ASC");
 //
 //    if ($query->rowCount() < 0) {
@@ -3650,7 +3657,9 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            if ($item['name'] != 'R_7'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
         }
         $opt .= '</optgroup>';
     }
@@ -4012,7 +4021,10 @@ function _optionHRstatusPre($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+
+            if($item['name'] != 'R_7'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
         }
         $opt .= '</optgroup>';
     }
@@ -4027,7 +4039,10 @@ function _optionHRstatusPre($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+
+            if($item['name'] != 'PRE_6'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
         }
         $opt .= '</optgroup>';
     }
@@ -4439,6 +4454,7 @@ function _optionHRstatusLevelKontakCentarRadnik($current)
 
         $opt .= '</optgroup>';
     }
+
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – BOLOVANJA' and level=3 ORDER BY id ASC");
 
     if ($query->rowCount() < 0) {
@@ -4455,21 +4471,22 @@ function _optionHRstatusLevelKontakCentarRadnik($current)
 
         $opt .= '</optgroup>';
     }
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level =3 ORDER BY id ASC");
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
-        }
 
-
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level =3 ORDER BY id ASC");
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='D – DRŽAVNI PRAZNIK' and level=3 ORDER BY id ASC");
@@ -4660,21 +4677,22 @@ function _optionHRstatusLevel3($current)
 
         $opt .= '</optgroup>';
     }
-    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level =3 ORDER BY id ASC");
-    if ($query->rowCount() < 0) {
-        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
-        foreach ($query as $item) {
-            if ($current == $item['id']) {
-                $sel = 'selected="selected"';
-            } else {
-                $sel = '';
-            }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'' . $item['description'] . '</option>';
-        }
 
-
-        $opt .= '</optgroup>';
-    }
+//    $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='B – PORODILJSKO ODSUSTVO' and level =3 ORDER BY id ASC");
+//    if ($query->rowCount() < 0) {
+//        $opt .= '<optgroup label="' . __('B – PORODILJSKO ODSUSTVO') . '">';
+//        foreach ($query as $item) {
+//            if ($current == $item['id']) {
+//                $sel = 'selected="selected"';
+//            } else {
+//                $sel = '';
+//            }
+//            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'' . $item['description'] . '</option>';
+//        }
+//
+//
+//        $opt .= '</optgroup>';
+//    }
 
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='D – DRŽAVNI PRAZNIK' and level=3 ORDER BY id ASC");

@@ -36,12 +36,14 @@ if (isset($_POST['request'])) {
 
     if($_POST['request']=='generate-satnice'){
 
+        $params = ['year' => $_POST['year'], 'month' => $_POST['month']];
         $curl = curl_init();
         curl_setopt_array(
             $curl, array(
-            CURLOPT_URL => $host."apoteke-app/modules/work_booklet/pages/update_hourlyrate_day.php",
+            CURLOPT_URL => $host."/modules/work_booklet/pages/update_hourlyrate_day.php",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $params
         ));
         $output = curl_exec($curl);
 
@@ -678,10 +680,10 @@ if (isset($_POST['request'])) {
         ];
 
         $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
-        $dayOfWeek = date('l', strtotime('2021-09-01'));
+        $dayOfWeek = date('l', strtotime('2021-'.$month.'-01'));
         $column = 'E';
         for($i = 1; $i<=$numberOfDaysInMonth; $i++){
-            $dayOfWeek = date('l', strtotime('2021-09-'.$i));
+            $dayOfWeek = date('l', strtotime('2021-'.$month.'-'.$i));
             $dayOfWeekInsert = '';
             switch ($dayOfWeek){
                 case 'Friday':
@@ -775,7 +777,7 @@ if (isset($_POST['request'])) {
 
             $column = 'E';
             for($i = 0; $i<=$numberOfDaysInMonth-1; $i++){
-                $dayOfWeek = date('l', strtotime('2021-09-'.($i+1)));
+                $dayOfWeek = date('l', strtotime('2021-'.$month.'-'.($i+1)));
 
                 if(!in_array($status[$i]['apoteke_status_pre'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
                     $sheet->setCellValue($column.$row, $status[$i]['apoteke_status_pre']);
@@ -877,7 +879,7 @@ if (isset($_POST['request'])) {
             }
 
             $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
-            $dayOfWeek = date('l', strtotime('2021-09-01'));
+            $dayOfWeek = date('l', strtotime('2021-'.$month.'-01'));
 
             $count++;
         }
