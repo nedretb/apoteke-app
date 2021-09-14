@@ -35,7 +35,12 @@ require_once '../../../configuration.php';
                 else
                     $br_sati = $row['hour'];
             }
-            $br_sati_pre = $row['hour_pre'];
+
+            if(empty($row['hour_pre'])){
+                $br_sati_pre = 0;
+            }else{
+                $br_sati_pre = $row['hour_pre'];
+            }
 
             ?>
 
@@ -57,6 +62,9 @@ require_once '../../../configuration.php';
                         <label><?php echo __('Broj sati'); ?></label>
                         <input type="number" name="hour" id="hour" value="<?php echo $br_sati; ?>" min="0" max="24" step="0.5"
                                class="form-control">
+                        <input type="hidden" name="hour" id="hour_hidden" value="<?php echo $br_sati; ?>" min="0" max="24" step="0.5"
+                               class="form-control">
+
                     </div>
                     <div class="col-sm-5">
                         <label><?php echo __('Status'); ?></label>
@@ -75,6 +83,8 @@ require_once '../../../configuration.php';
                     <div class="col-sm-4" id="hour_div_pre">
                         <label style="font-size:12px;"><?php echo __('Broj sati'); ?></label>
                         <input type="text" name="hour_pre" id="hour_pre" value="<?php echo number_format($row['hour_pre']); ?>"
+                               class="form-control" min="0" max="24" step="0.5">
+                        <input type="hidden" name="hour_pre" id="hour_pre_hidden" value="<?php echo number_format($row['hour_pre']); ?>"
                                class="form-control" min="0" max="24" step="0.5">
                     </div>
                     <div class="col-sm-5">
@@ -226,7 +236,8 @@ require_once '../../../configuration.php';
                         var newbr = parseFloat(broj_sati_pre).toFixed(15).replace(/0+$/, "");
                     }
                     $('#hour_pre').val(newbr).change();
-
+                    console.log(newbr);
+                    console.log(broj_sati_pre);
                     //status default
                     if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86 || $('#status').val() == 5){
                         $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
@@ -337,13 +348,18 @@ require_once '../../../configuration.php';
                     }
                     if ($.inArray($("#status option:selected").val(), ['5', '85', '86', '87', '88', '89', '90']) == -1) {
                         var br_sati = '<?php echo $br_sati; ?>';
-                        $('#hour').val(br_sati);
-                        $('#hour_pre').val('0');
-                        $("#hour").prop('readonly', true);
-                        $("#hour_pre").prop('readonly', true);
+                        var hour_sati = $("#hour").val();
+                        var hour_sati_pre = $("#hour_pre").val();
+                        $("#hour_hidden").val(hour_sati);
+                        $("#hour_pre_hidden").val(hour_sati_pre);
+
+                        // $('#hour').val(br_sati);
+                        // $('#hour_pre').val('0');
+                        $("#hour").prop('disabled', true);
+                        $("#hour_pre").prop('disabled', true);
                         $('#status_pre').val('');
                     } else {
-                        $("#hour").prop('readonly', false);
+                        $("#hour").prop('disabled', false);
                         $("#hour_pre").prop('readonly', false);
                         $("#status_pre").prop('disabled', false);
                         $('#nalog').hide();
