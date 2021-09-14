@@ -39,7 +39,7 @@ if (isset($_POST['request'])) {
         $curl = curl_init();
         curl_setopt_array(
             $curl, array(
-            CURLOPT_URL => "http://127.0.0.1:8080/apoteke-app/modules/work_booklet/pages/update_hourlyrate_day.php",
+            CURLOPT_URL => $host."apoteke-app/modules/work_booklet/pages/update_hourlyrate_day.php",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POST => true,
         ));
