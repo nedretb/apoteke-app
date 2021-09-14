@@ -87,7 +87,7 @@ if (isset($_GET['what'])) {
             if (isset($request)) {
                 $request->employee_no = $_GET['u']; // ADD Employee no
                 PorodicnoStanje::create($request);
-                header('Location: '.'http://127.0.0.1:8080/apoteke-app/?m=profile&p=edit-profile&u='.$_user['employee_no']);
+                header('Location: '.$host.'/?m=profile&p=edit-profile&u='.$_user['employee_no']);
             }
 
         }

@@ -510,11 +510,11 @@ else if (isset($lock_req)){
                    where role <> 0");*/
 
                 if($_user['role'] == 4 or $admin){
-                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null)");
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) order by employee_no");
 
                 }
                 elseif($_user['role'] == 2){
-                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d))");
+                    $neki_sql=$db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users] WHERE (termination_date>='".$filtertdate."' or termination_date is null) and (parent='".$_user['employee_no']."' or parent2='".$_user['employee_no']."' or ".$_user['employee_no']." in (parentMBO2,parentMBO3,parentMBO4,parentMBO5,parentMBO2d,parentMBO3d,parentMBO4d,parentMBO5d)) order by employee_no");
 
                 }
                 foreach ($neki_sql as $podatakID) {

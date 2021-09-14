@@ -1492,7 +1492,7 @@ function _optionName($team, $stream, $region, $b1, $current, $filtertdate)
 
 
 
-    $query = $db->query("select fname +' '+ lname as ime from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).") order by employee_no desc");
+    $query = $db->query("select fname +' '+ lname as ime from [c0_intranet2_apoteke].[dbo].[users] where egop_ustrojstvena_jedinica in (".implode(',', $sistematizacije).") order by employee_no");
     if ($query->rowCount() < 0) {
 
         $sel = '';
@@ -6310,7 +6310,7 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
     if ($employee_no == "")
         $employee_query = "";
     else
-        $employee_query = " and employee_no= '" . $employee_no . "'";
+        $employee_query = " and employee_no= " . $employee_no;
 
     if ($ime_prezime == "")
         $ime_prezime_query = "";
@@ -6413,7 +6413,9 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
 
 
     $where_period = " and c.Date between CONVERT(datetime,'" . $datumOD . "',103) and CONVERT(datetime,'" . $datumDO . "',103)";
-
+    ini_set("xdebug.var_display_max_children", '-1');
+    ini_set("xdebug.var_display_max_data", '-1');
+    ini_set("xdebug.var_display_max_depth", '-1');
     $get = $db->query("SELECT h.id, h.day, h.month_id, h.status, h.year_id, h.Date, h.timest_edit, h.employee_timest_edit, h.dokument, h.review_comment, h.disease_code, h.request_id, h.review_status, h.employee_no, h.weekday, h.employee_comment, h.Description 
 FROM  " . $portal_hourlyrate_day . "  h with(nolock)
   join  " . $portal_hourlyrate_year . "  y with(nolock)
@@ -6617,7 +6619,17 @@ FROM  " . $portal_hourlyrate_day . "  h with(nolock)
       </td>
       ';
             endif;
-            $items .= '<td>' . $value['employee_no'] . '</td>' . '<td>' . $value['ime_prezime'] . '</td>' . '<td>' . $value['datumOD'] . '</td>' . '<td>' . $value['datumDO'] . '</td>' . '<td>' . $naziv_odsustvaOpcija . '</td>' . '<td>' . $br_dana . '</td>' . '<td>' . $registrovano . '</td>' . '<td>' . $value['reg_korisnik'] . '</td>' .
+            $emp_id = '';
+            if(strlen($value['employee_no']) == 1){
+                $emp_id = '00'.$value['employee_no'];
+            }
+            elseif (strlen($value['employee_no']) == 2){
+                $emp_id = '0'.$value['employee_no'];
+            }
+            else{
+                $emp_id = $value['employee_no'];
+            }
+            $items .= '<td>' . $emp_id . '</td>' . '<td>' . $value['ime_prezime'] . '</td>' . '<td>' . $value['datumOD'] . '</td>' . '<td>' . $value['datumDO'] . '</td>' . '<td>' . $naziv_odsustvaOpcija . '</td>' . '<td>' . $br_dana . '</td>' . '<td>' . $registrovano . '</td>' . '<td>' . $value['reg_korisnik'] . '</td>' .
                 $optionOdobriOtkazi .
                 '</select></td>' . $detalji . $satnice;
 
@@ -6970,7 +6982,17 @@ function _statsDaysFreeReifUsers4Corrections($year, $datumOD, $datumDO, $offset,
       </td>
       ';
             endif;
-            $items .= '<td>' . $value['employee_no'] . '</td>' . '<td>' . $value['ime_prezime'] . '</td>' . '<td>' . $value['datumOD'] . '</td>' . '<td>' . $value['datumDO'] . '</td>' . '<td>' . $naziv_odsustvaOpcija . '</td>' . '<td>' . $br_dana . '</td>' . '<td>' . $registrovano_x . '</td>' . '<td>' . $value['reg_korisnik'] . '</td>' .
+            $emp_id = '';
+            if(strlen($value['employee_no']) == 1){
+                $emp_id = '00'.$value['employee_no'];
+            }
+            elseif (strlen($value['employee_no']) == 2){
+                $emp_id = '0'.$value['employee_no'];
+            }
+            else{
+                $emp_id = $value['employee_no'];
+            }
+            $items .= '<td>' . $emp_id . '</td>' . '<td>' . $value['ime_prezime'] . '</td>' . '<td>' . $value['datumOD'] . '</td>' . '<td>' . $value['datumDO'] . '</td>' . '<td>' . $naziv_odsustvaOpcija . '</td>' . '<td>' . $br_dana . '</td>' . '<td>' . $registrovano_x . '</td>' . '<td>' . $value['reg_korisnik'] . '</td>' .
                 $optionOdobriOtkazi .
                 '</select></td>' . $detalji . $satnice;
 

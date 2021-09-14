@@ -6,9 +6,6 @@
     'valuta'=>'Valuta',
     'primanje_sredstava'=>'Način uplate akontacije',
     'vrsta_transporta'=>'Sredstvo transporta',
-    'vrsta_smjestaja'=>'Smještaj',
-    'osiguranje'=>'Osiguranje',
-    'viza'=>'Viza',
     'cijena_goriva_postotak'=>'Cijena goriva i postotak'
   );
  ?>
