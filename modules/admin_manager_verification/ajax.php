@@ -854,8 +854,11 @@ if (isset($_POST['request'])) {
                     if(($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday') and $increaseRow == 0){
                             $sheet->setCellValue($column.($row + $increaseRow), '');
                     }
-                    else{
+                    elseif (in_array($status[$i]['apoteke_status'], ['2011', '2010', '2012', '2013', '2015', '2014'])){
                         $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
+                    }
+                    else{
+                        $sheet->setCellValue($column.($row + $increaseRow), ($status[$i]['hour'] + $status[$i]['hour_pre']));
                     }
 
                 }
