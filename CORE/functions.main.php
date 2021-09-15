@@ -3373,7 +3373,7 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'1022 ' . $item['description'] . '</option>';
+            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' .'1022/1023 ' . $item['description'] . '</option>';
         }
         $opt .= '</optgroup>';
     }

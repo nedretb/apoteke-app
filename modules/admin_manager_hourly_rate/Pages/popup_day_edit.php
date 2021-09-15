@@ -122,10 +122,6 @@ require_once '../../../configuration.php';
             <script src="<?php echo $_pluginUrl; ?>/validation/jquery.form.js"></script>
             <script>
 
-//
-//                $('#status').val().on('change');
-//
-
                 $("#hour_pre").on('change', function() {
                     $("#hour_pre_hidden").val($("#hour_pre").val());
                 });
@@ -171,8 +167,10 @@ require_once '../../../configuration.php';
                     }
                 });
 
+
+
                 $("#status_pre").change(function () {
-                    if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86){
+                    if($('#status_pre').val() == 88 || $('#status_pre').val() == 138 || $('#status_pre').val() == 86){
                         $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
                             '<option value="2">2</option>' +
                             '<option value="4.5">4.5</option>' +
@@ -190,7 +188,17 @@ require_once '../../../configuration.php';
                             '<option value="5.5">5.5</option>' +
                             '</select>');
                     }
+                    if($('#status_pre').val() == 91 || $('#status_pre').val() == 92 || $('#status_pre').val() == 93 ||
+                        $('#status_pre').val() == 94 || $('#status_pre').val() == 95 || $('#status_pre').val() == 96 ||
+                        $('#status_pre').val() == 139){
+                        $('#hour_pre').replaceWith('<input type="text" name="hour_pre" id="hour_pre" value="0" class="form-control" min="0" max="24" step="0.5">');
+                    }
+                    //<input type="text" name="hour_pre" id="hour_pre" value=""
+                    //                               class="form-control" min="0" max="24" step="0.5">
 
+                    $("#hour_pre").on('change', function() {
+                        $("#hour_pre_hidden").val($("#hour_pre").val());
+                    });
 
                     status_prex = $(this).val();
                     status = $("#status").val();
@@ -234,10 +242,15 @@ require_once '../../../configuration.php';
                             '<option value="5.5">5.5</option>' +
                             '</select>');
                     }
+
                     if(parseFloat(broj_sati_pre).toFixed(15).replace(/0+$/, "").length == 2){
                         var newbr = parseFloat(broj_sati_pre).toFixed(15).replace(/0+$/, "").slice(0, -1);
                     }else {
                         var newbr = parseFloat(broj_sati_pre).toFixed(15).replace(/0+$/, "");
+                        if (newbr[newbr.length-1] === "."){
+                            newbr = newbr.slice(0,-1);
+                        }
+
                     }
                     $('#hour_pre').val(newbr).change();
                     console.log(newbr);
@@ -268,6 +281,10 @@ require_once '../../../configuration.php';
                         var newbrstat = parseFloat(broj_sati).toFixed(15).replace(/0+$/, "");
                     }
                     $('#hour').val(newbrstat).change();
+
+                    $("#hour").on('change', function() {
+                        $("#hour_hidden").val(this.value);
+                    });
 
                     $('.dialog-loader').hide();
                     $('#nalog').hide();
@@ -364,7 +381,7 @@ require_once '../../../configuration.php';
                         $('#status_pre').val('');
                     } else {
                         $("#hour").prop('disabled', false);
-                        $("#hour_pre").prop('readonly', false);
+                        $("#hour_pre").prop('disabled', false);
                         $("#status_pre").prop('disabled', false);
                         $('#nalog').hide();
                         $('#sa_troskom').hide();
