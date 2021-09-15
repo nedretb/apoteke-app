@@ -679,6 +679,12 @@ if (isset($_POST['request'])) {
             ]
         ];
 
+        $styleArrayCenter = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+            ]
+        ];
+
         $numberOfDaysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
         $dayOfWeek = date('l', strtotime('2021-'.$month.'-01'));
         $column = 'E';
@@ -721,6 +727,13 @@ if (isset($_POST['request'])) {
             if($column != 'AB'){
                 $sheet->getColumnDimension($column)->setWidth(5);
             }
+
+            if($i == $numberOfDaysInMonth){
+                $sheet->mergeCells('E11:'.$column.'11');
+                $sheet->setCellValue('E11', $month_bosnian.'/'.$year);
+                $sheet->getStyle('E11')->applyFromArray($styleArrayCenter);
+            }
+
             $column++;
         }
 
