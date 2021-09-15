@@ -126,6 +126,10 @@ require_once '../../../configuration.php';
 //                $('#status').val().on('change');
 //
 
+                $("#hour_pre").on('change', function() {
+                    $("#hour_pre_hidden").val($("#hour_pre").val());
+                });
+
                 $("#status").change(function () {
                     console.log($('#status').val());
                     if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86){

@@ -32,7 +32,7 @@ class VS extends Model
     {
         // var_dump($corr_sat);
 
-        /*
+
         return '
             SELECT sum(hour) as sum_hour FROM [hourlyrate_day] where weekday not in(6,7)
             and (
@@ -46,14 +46,14 @@ class VS extends Model
             and YEAR(Date) = ?
             and employee_no = ?
         ';
-        */
 
-        return '
-                SELECT sum(hour) as sum_hour FROM [hourlyrate_day] where weekday not in(6,7)
-                and (date_NAV_corrections IS NULL and corr_status IN (' . $columns . '))
-                and YEAR(Date) = ?
-                and employee_no = ?
-            ';
+
+//        return '
+//                SELECT sum(hour) as sum_hour FROM [hourlyrate_day] where weekday not in(6,7)
+//                and (date_NAV_corrections IS NULL and corr_status IN (' . $columns . '))
+//                and YEAR(Date) = ?
+//                and employee_no = ?
+//            ';
 
 
     }
@@ -144,13 +144,11 @@ class VS extends Model
 
 
         $placena_odsustva_portal = DB::select(self::getPortalHours('27, 28, 29, 30, 31, 32, 79'), [$year, $employee_no]);
-        $placena_odsustva_iskoristeno = ($placena_odsustva_portal->sum_hour / $emp->br_sati) + $data->P_1_used + $data->P_2_used + $data->P_3_used + $data->P_4_used + $data->P_5_used + $data->P_6_used + $data->P_7_used;
+        $placena_odsustva_iskoristeno = ceil(($placena_odsustva_portal->sum_hour / $emp->br_sati) + $data->P_1_used + $data->P_2_used + $data->P_3_used + $data->P_4_used + $data->P_5_used + $data->P_6_used + $data->P_7_used);
         $placena_odsustva_ukupno = $data->Br_dana_PLO;
         $placena_odsustva_slobodno = $placena_odsustva_ukupno - $placena_odsustva_iskoristeno;
 
-
         $placena_odsustva_portal_1_7 = DB::select(self::getPortalHoursExtended('27, 28, 29, 30, 31, 32, 79'), [$year, $employee_no], 1);
-
 
         $placena_odsustva_portal_1_7_status = DayStatus::select('id, allowed_days')->where('id in (27, 28, 29, 30, 31, 32, 79)')->orderBy('id', 'DESC')->get();
 
@@ -213,7 +211,6 @@ class VS extends Model
         $placeno_odsustvo_7_iskoristeno = Arr::sum($placena_odsustva_portal_1_7, 79) / $emp->br_sati + $data->P_7_used;
         $placeno_odsustvo_7_ukupno = Arr::where($placena_odsustva_portal_1_7_status, 'id', 79);
         $placeno_odsustvo_7_slobodno = $placeno_odsustvo_7_ukupno - $placeno_odsustvo_7_iskoristeno;
-
 
         $kvote = [
             'go-prethodna-godina' =>
