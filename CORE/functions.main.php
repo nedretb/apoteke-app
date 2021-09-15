@@ -3506,7 +3506,7 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            if ($item['id'] == 147){
+            if ($item['id'] == 147 or $item['id'] == 148){
                 $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
             }
         }
