@@ -24,7 +24,8 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
         ini_set("xdebug.var_display_max_data", '-1');
         ini_set("xdebug.var_display_max_depth", '-1');
 
-        $odsustva = $db->query("SELECT id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] WHERE status_group IN ('B – BOLOVANJA',
+        $odsustva = $db->query("SELECT id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] WHERE status_group IN ('R_REDOVNO',
+                                            'B – BOLOVANJA',
                                             'B – BOLOVANJE - BOLEST',
                                             'B – BOLOVANJE - CUVANJE TRUDNOCE',
                                             'B – BOLOVANJE - POVREDA NA RADU',

@@ -267,6 +267,7 @@ require_once '../../../configuration.php';
                     //status default
                     if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86 || $('#status').val() == 5){
                         $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="0">0</option>' +
                             '<option value="2">2</option>' +
                             '<option value="4.5">4.5</option>' +
                             '<option value="6">6</option>' +
