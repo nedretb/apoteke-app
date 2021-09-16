@@ -25,6 +25,7 @@ require_once '../../../configuration.php';
 
             if ($row['review_status'] == '0') {
                 $css = '';
+                $status = '';
             } elseif ($row['review_status'] == '1') {
                 $css = 'style="color:#00cc00;"';
                 $status = __('ODOBRENO');

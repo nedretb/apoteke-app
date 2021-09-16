@@ -790,7 +790,8 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Nedjelja</b><br/></small>';
                     }
 
-                    if (($day['review_status'] != '0') and ($visible != 'N') and (($termination['termination_date'] == '' or ($termination['termination_date'] != '' and $day['Date'] <= $termination['termination_date'])) and ($day['Date'] >= $termination['employment_date']))) {
+
+                    if (($day['review_status'] != '0') and ($visible != 'N') and (($termination['termination_date'] == '' or ($termination['termination_date'] != '' and $day['Date'] <= $termination['termination_date'])) and ($day['Date'] >= $termination['employment_date'])) or !empty($day['status_pre'])) {
                         echo '<a href="' . $url . '/modules/' . $_mod . '/pages/popup_day_edit.php?id=' . $day['id'] . '" class="  table-btn-icons" data-widget="ajax" data-id="opt2" data-width="200" ><i class="ion-edit"></i></a>';
 //                        echo '<a href="' . $url . '/modules/' . $_mod . '/pages/popup_day_review.php?id=' . $day['id'] . '" class="  table-btn-icons " data-widget="ajax" data-id="opt2" data-width="200" ><i class="fa fa-check-square-o" aria-hidden="true"></i></a>';
 
@@ -799,7 +800,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                             echo '<a href="' . $url . '/modules/' . $_mod . '/pages/popup_day_view.php?id=' . $day['id'] . '" class="  table-btn-icons" data-widget="ajax" data-id="opt2" data-width="400"><i class="ion-eye"></i></a>';
                         }
                     }
-                    if (($day['review_status'] == '0') and ($visible != 'N') and (($termination['termination_date'] == '' or ($termination['termination_date'] != '' and $day['Date'] <= $termination['termination_date'])) and ($day['Date'] >= $termination['employment_date']))) {
+                    if (($day['review_status'] == '0') and ($visible != 'N') and (($termination['termination_date'] == '' or ($termination['termination_date'] != '' and $day['Date'] <= $termination['termination_date'])) and ($day['Date'] >= $termination['employment_date'])) and empty($day['status_pre'])) {
                         echo '<a href="' . $url . '/modules/' . $_mod . '/pages/popup_day_edit.php?id=' . $day['id'] . '" class="  table-btn-icons" data-widget="ajax" data-id="opt2" data-width="200" ><i class="ion-edit"></i></a>';
 //                        echo '<a href="' . $url . '/modules/' . $_mod . '/pages/popup_day_review.php?id=' . $day['id'] . '" class="  table-btn-icons" data-widget="ajax" data-id="opt2" data-width="200" ><i class="fa fa-check-square-o" aria-hidden="true"></i></a>';
                     }

@@ -4819,7 +4819,7 @@ function _nameHRstatus($id)
         return '';
     global $db, $_conf, $hr_fill, $portal_hourlyrate_status;
 
-    $query = $db->query("SELECT TOP 1 * FROM  ".$portal_hourlyrate_status."  WHERE id='$id'");
+    $query = $db->query("SELECT TOP 1 * FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] WHERE id='$id'");
     if($query){
 
         $row = $query->fetch();
