@@ -34,7 +34,7 @@ if (isset($_POST['request'])) {
             }
 
         }
-        
+
         $_user = _user(_decrypt($_SESSION['SESSION_USER']));
 
         $status = $_POST['status'];
@@ -132,6 +132,12 @@ if (isset($_POST['request'])) {
 
 
         if (in_array(intval($status), array(106, 18, 19))) {
+            if (isset($_POST['request_id'])){
+                $checkDay = $db->query("SELECT KindofDay FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE id=".$_POST['request_id'])->fetch()['KindofDay'];
+                if($checkDay == 'SATURDAY' or $checkDay == 'SUNDAY'){
+                    return Helper::Message('alert-danger', 'Nije moguća registracija godišnjeg odmora danima vikenda!');
+                }
+            }
 
             if ($dt_from->format('n') <= 6 and ($status == 106 or $status == 19)) {
 
