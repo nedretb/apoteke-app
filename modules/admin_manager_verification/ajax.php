@@ -851,14 +851,28 @@ if (isset($_POST['request'])) {
                             break;
                     }
 
+//                    if($i == 6 and $userEmpNo[$count] == 211){
+//                        var_dump($dayOfWeek);
+//                        var_dump($status[$i]['apoteke_status']);
+//                        if(in_array($status[$i]['apoteke_status'], ['1010, 2011', '2010', '2012', '2013', '2015', '2014'])){
+//                            var_dump('true');
+//                            var_dump('-----------------');
+//                        }
+//                        else{
+//                            var_dump('false');
+//                            var_dump('------------------------');
+//                        }
+//                    }
                     if(($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday') and $increaseRow == 0){
                             $sheet->setCellValue($column.($row + $increaseRow), '');
                     }
-                    elseif (in_array($status[$i]['apoteke_status'], ['2011', '2010', '2012', '2013', '2015', '2014'])){
+                    elseif (in_array($status[$i]['apoteke_status'], ['1010, 2011', '2010', '2012', '2013', '2015', '2014'])){
                         $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
                     }
-                    else{
+                    elseif (!in_array($status[$i]['apoteke_status'], ['1010, 2011', '2010', '2012', '2013', '2015', '2014']) and in_array($status[$i]['apoteke_status_pre'], ['2020', '2021', '2024', '2025', '2022', '2023'])){
                         $sheet->setCellValue($column.($row + $increaseRow), ($status[$i]['hour'] + $status[$i]['hour_pre']));
+                    }else{
+                        $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
                     }
 
                 }
