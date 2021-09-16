@@ -40,7 +40,7 @@ require_once '../../../configuration.php';
                 <div class="col-sm-6">
                     <big><?php echo $row['day'] . '.' . $month['month'] . '.' . $year['year']; ?></big><br/>
                     <b><?php echo _nameHRstatus($row['status']); ?></b><br/>
-                    <?php echo __('Broj sati'); ?> <b><?php echo $row['hour']; ?></b>
+                    <?php echo __('Broj sati'); ?> <b><?php echo rtrim(rtrim($row['hour'], '0'), '.'); ?></b>
                     <?php
                     if ($row['status_pre'] != '' and $row['status_pre'] != '0') {
                         ?>
@@ -50,23 +50,27 @@ require_once '../../../configuration.php';
                             $row['hour_pre'] = floor($row['hour_pre']);
                         }
                         ?>
-                        <?php echo __('Broj sati'); ?> <b><?php echo $row['hour_pre']; ?></b>
+                        <?php echo __('Broj sati'); ?> <b><?php echo rtrim(rtrim($row['hour_pre'], '0'), '.'); ?></b>
                     <?php } ?>
                 </div>
                 <div class="col-sm-6">
+                    <?php if ($row['review_status'] ==1 and $row['review_status'] == 2){ ?>
                     <big <?php echo $css; ?>><?php echo $status; ?></big><br/>
                     <small><?php echo __('Obradio:'); ?></small><br/>
                     <?php echo $parent['fname'] . ' ' . $parent['lname']; ?>
+                    <?php } ?>
                 </div>
 
             </div>
 
             <hr/>
 
+            <?php if ($row['review_status'] ==1 and $row['review_status'] == 2){ ?>
             <small><?php echo __('Komentar:'); ?></small><br/>
             <div class="comment-single">
                 <?php echo $row['review_comment']; ?>
             </div>
+            <?php } ?>
 
             <script src="<?php echo $_pluginUrl; ?>/jquery/jquery.js"></script>
             <script>
