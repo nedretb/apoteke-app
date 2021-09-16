@@ -6439,7 +6439,7 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
         $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Odobreno</th>';
     if ($_user['role'] == 4)
         $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Detalji</th>';
-    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Ažuriraj</th>';
+//    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Ažuriraj</th>';
     if ($_user['role'] == 4)
 //        $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Ima dokument</th>';
 //    if (checkifAdmin() == true) {
@@ -6643,7 +6643,8 @@ FROM  " . $portal_hourlyrate_day . "  h with(nolock)
             else
                 $detalji = '';
 
-            $satnice = '<td><a style="width: 141px;" href="' . $_conf['app_location'] . '' . $_conf['app_location_module'] . '/modules/admin_manager_hourly_rate/pages/popup_day_add_apsolute.php?year=' . $value['year_id'] . '&month=' . $value['mjesecOD'] . '" data-widget="ajax" data-id="opt2" data-width="500" class="btn btn-red btn-md">Ažuriraj satnice<i class="ion-ios-plus-empty"></i></a></td>';
+//            $satnice = '<td><a style="width: 141px;" href="' . $_conf['app_location'] . '' . $_conf['app_location_module'] . '/modules/admin_manager_hourly_rate/pages/popup_day_add_apsolute.php?year=' . $value['year_id'] . '&month=' . $value['mjesecOD'] . '" data-widget="ajax" data-id="opt2" data-width="500" class="btn btn-red btn-md">Ažuriraj satnice<i class="ion-ios-plus-empty"></i></a></td>';
+            $satnice = '';
 
             $pieces = explode(" ", $value['registrovano']);
             $registrovano = $pieces[0];

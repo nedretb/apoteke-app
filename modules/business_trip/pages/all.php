@@ -498,7 +498,7 @@ else if (isset($lock_req)){
 
         <!--      <div class="col-sm-12 ">-->
         <!--filter za ime i prezime i Person ID -->
-        <?php if($_user['rukovodioc'] == 'DA' ){ ?>
+        <?php if($_user['rukovodioc'] == 'DA' or $_user['role'] == 4 ){ ?>
         <div class="col-sm-2">
             <label> Zaposlenik</label>
             <select class="filter_form_SL form-control" id="korisnici_filter" name="korisnici_filter" current_url="?m=<?= $_GET['m']; ?>&p=<?= $_GET['p']; ?>&pg=1">
@@ -527,8 +527,18 @@ else if (isset($lock_req)){
                     $selected =  "";
                     }
                     }*/
+                    $emp_id = '';
+                    if(strlen($podatakID['employee_no']) == 1){
+                        $emp_id = '00'.$podatakID['employee_no'];
+                    }
+                    elseif (strlen($podatakID['employee_no']) == 2){
+                        $emp_id = '0'.$podatakID['employee_no'];
+                    }
+                    else{
+                        $emp_id = $podatakID['employee_no'];
+                    }
 
-                    echo "<option ".$selected." value=".$podatakID['employee_no'].">".$podatakID['fname'].' '.$podatakID['lname']." - ".$podatakID['employee_no']."</option>";
+                    echo "<option ".$selected." value=".$podatakID['employee_no'].">".$podatakID['fname'].' '.$podatakID['lname']." - ".$emp_id."</option>";
                 }
                 ?>
             </select>
