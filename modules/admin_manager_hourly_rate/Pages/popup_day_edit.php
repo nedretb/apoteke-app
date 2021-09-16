@@ -125,9 +125,14 @@ require_once '../../../configuration.php';
                 $("#hour_pre").on('change', function() {
                     $("#hour_pre_hidden").val($("#hour_pre").val());
                 });
+                $("#hour").on('change', function() {
+                    $("#hour_hidden").val(this.value);
+                });
 
                 $("#status").change(function () {
-                    console.log($('#status').val());
+                    // $("#hour_hidden").val($("#hour").val());
+                    // console.log($("#hour").val());
+                    // console.log($("#hour_hidden").val());
                     if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86){
                         $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
                             '<option value="2">2</option>' +
@@ -147,6 +152,9 @@ require_once '../../../configuration.php';
                             '<option value="5.5">5.5</option>' +
                             '</select>');
                     }
+                    $("#hour").on('change', function() {
+                        $("#hour_hidden").val(this.value);
+                    });
 
                     status = $(this).val();
                     if (status == 5 || (status >= 85 && status <= 90)) {
@@ -170,6 +178,7 @@ require_once '../../../configuration.php';
 
 
                 $("#status_pre").change(function () {
+                    $("#hour_pre_hidden").val($("#hour_pre").val());
                     if($('#status_pre').val() == 88 || $('#status_pre').val() == 138 || $('#status_pre').val() == 86){
                         $('#hour_pre').replaceWith('<select id="hour_pre" name="hour_pre" class="form-control">' +
                             '<option value="2">2</option>' +
@@ -323,6 +332,20 @@ require_once '../../../configuration.php';
                     },
                     focusCleanup: true,
                     submitHandler: function (form) {
+                        var attr = $("#hour").attr('disabled');
+                        if (typeof attr !== 'undefined' && attr !== false){
+
+                        }else{
+                            $("#hour_hidden").attr('disabled', true);
+                        }
+
+                        var attr2 = $("#hour_pre").attr('disabled');
+                        if (typeof attr2 !== 'undefined' && attr2 !== false){
+
+                        }else{
+                            $("#hour_pre_hidden").attr('disabled', true);
+                        }
+                        // console.log($("#hour_hidden").val());
                         $('.dialog-loader').show();
 
 
