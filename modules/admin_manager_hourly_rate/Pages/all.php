@@ -20,6 +20,25 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
     <div class="content clear">
 
         <?php
+        ini_set("xdebug.var_display_max_children", '-1');
+        ini_set("xdebug.var_display_max_data", '-1');
+        ini_set("xdebug.var_display_max_depth", '-1');
+
+        $odsustva = $db->query("SELECT id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] WHERE status_group IN ('B – BOLOVANJA',
+                                            'B – BOLOVANJE - BOLEST',
+                                            'B – BOLOVANJE - CUVANJE TRUDNOCE',
+                                            'B – BOLOVANJE - POVREDA NA RADU',
+                                            'B – BOLOVANJE NJEGA CLANA OBITELJI',
+                                            'B – PORODILJSKO ODSUSTVO',
+                                            'SL- SLUŽBENI PUT',
+                                            'R – DODATNO',
+                                            'PR –  PREKOVREMENI RAD')");
+
+        $odsustvaArray = [];
+        foreach ($odsustva as $o){
+            array_push($odsustvaArray, $o['id']);
+        }
+
         //$_user = Profile::where('employee_no = '.$_user)->first();
 
 //        $data = ($_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($_user);
@@ -756,13 +775,13 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                         echo '' . $day['Description'] . '</b><br/><b>' . $dayname . '</b><br/>' . $status_prekid . $prekovremeno . $reg . '</small>';
                     }
 
-                    if (($day['weekday'] == '6') and ($item['B_1_regions_description'] == 'Kontakt centar' or 1 == 1) and (($day['hour_pre'] != '' and $day['hour_pre'] != '0') or ($day['hour'] != 0 and in_array($day['status'], array(5, 85, 86, 87, 88, 89, 90))) or in_array($day['status'], array(73, 81)))) {
+                    if (($day['weekday'] == '6') and (($day['hour_pre'] != '' and $day['hour_pre'] != '0') or ($day['hour'] != 0 and in_array($day['status'], $odsustvaArray)) or in_array($day['status'], $odsustvaArray))) {
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Subota</b><br/>' . $status_prekid . $prekovremeno . $reg . '</small>';
                     } elseif (($day['weekday'] == '6') and ($item['B_1_regions_description'] == 'Kontakt centar' or 1 == 1) and ($day['hour_pre'] == '')) {
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Subota</b><br/></small>';
                     } elseif (($day['weekday'] == '6') and ($item['B_1_regions_description'] != 'Kontakt centar' or 1 == 1)) {
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Subota</b><br/></small>';
-                    } elseif (($day['weekday'] == '7') and ($item['B_1_regions_description'] == 'Kontakt centar' or 1 == 1) and (($day['hour_pre'] != '' and $day['hour_pre'] != '0') or ($day['hour'] != 0 and in_array($day['status'], array(5, 85, 86, 87, 88, 89, 90))) or in_array($day['status'], array(73, 81)))) {
+                    } elseif (($day['weekday'] == '7') and ($item['B_1_regions_description'] == 'Kontakt centar' or 1 == 1) and (($day['hour_pre'] != '' and $day['hour_pre'] != '0') or ($day['hour'] != 0 and in_array($day['status'], $odsustvaArray)) or in_array($day['status'], $odsustvaArray))) {
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Nedjelja</b><br/>' . $status_prekid . $prekovremeno . $reg . '</small>';
                     } elseif (($day['weekday'] == '7') and ($item['B_1_regions_description'] == 'Kontakt centar' or 1 == 1) and ($day['hour_pre'] == '')) {
                         echo '<small>' . $day['day'] . '.' . $day['month_id'] . '.' . $idy . '<br/><b>Nedjelja</b><br/></small>';

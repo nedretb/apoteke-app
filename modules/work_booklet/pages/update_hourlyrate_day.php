@@ -301,65 +301,65 @@ foreach ($hourlyDayStatus as $singleStatus){
 
 $hourlyDayStatusPre = $db->query("SELECT status_pre, id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where Date between '".$year.'-'.$month."-01' and '".$year.'-'.$month."-".$numberOfDaysMonth."' and status_pre is not null");
 foreach ($hourlyDayStatusPre as $status){
-
+    $updateStatusPre = null;
     //Prekovremeni rad
     if ($singleStatus['status_pre'] == 91){
-        $updateStatus = 2020;
+        $updateStatusPre = 2020;
     }
 
     //Prekovremeni noćni rad
     if ($singleStatus['status_pre'] == 92){
-        $updateStatus = 2021;
+        $updateStatusPre = 2021;
     }
 
     //Prekovremeni rad vikendom
     if ($singleStatus['status_pre'] == 93){
-        $updateStatus = 2024;
+        $updateStatusPre = 2024;
     }
 
     //Prekovremeni noćni rad vikendom
     if ($singleStatus['status_pre'] == 94){
-        $updateStatus = 2025;
+        $updateStatusPre = 2025;
     }
 
     //Prekovremeni rad praznikom
     if ($singleStatus['status_pre'] == 95){
-        $updateStatus = 2022;
+        $updateStatusPre = 2022;
     }
 
     //Redovan noćni rad
     if ($singleStatus['status_pre'] == 85){
-        $updateStatus = 2011;
+        $updateStatusPre = 2011;
     }
 
     //Redovan rad vikendom
     if ($singleStatus['status_pre'] == 86){
-        $updateStatus = 2015;
+        $updateStatusPre = 2015;
     }
 
     //Noćni rad vikendom
     if ($singleStatus['status_pre'] == 87){
-        $updateStatus = 2014;
+        $updateStatusPre = 2014;
     }
 
     //Rad praznikom
     if ($singleStatus['status_pre'] == 88){
-        $updateStatus = 2010;
+        $updateStatusPre = 2010;
     }
 
     //Noćni rad praznikom
     if ($singleStatus['status_pre'] == 89){
-        $updateStatus = 2012;
+        $updateStatusPre = 2012;
     }
 
     //Rad na nedelju
     if ($singleStatus['status_pre'] == 138){
-        $updateStatus = '2013';
+        $updateStatusPre = '2013';
     }
 
     try {
         $sqlStmt = "UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status_pre=? where id=?";
         $prep = $db->prepare($sqlStmt);
-        $prep->execute([$updateStatus, $status['id']]);
+        $prep->execute([$updateStatusPre, $status['id']]);
     }catch (Exception $e){}
 }
