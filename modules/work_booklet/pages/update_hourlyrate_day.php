@@ -4,10 +4,10 @@ $db = new PDO("sqlsrv:Server=192.168.14.13\NAVDEMO;Database=c0_intranet2_mkt;", 
 $year = $_POST['year'];
 $month = $_POST['month'];
 
-//try {
-//    $sqlStmt = $db->prepare ("UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status='1010' WHERE status=5");
-//    $sqlStmt->execute();
-//}catch (Exception $e){}
+try {
+    $sqlStmt = $db->prepare ("UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status='1010' WHERE status=5");
+    $sqlStmt->execute();
+}catch (Exception $e){}
 $numberOfDaysMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
 $hourlyDayStatus = $db->query("SELECT status, id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] WHERE Date between '".$year.'-'.$month."-01' and '".$year.'-'.$month."-".$numberOfDaysMonth."' and status<>5");
 
@@ -303,57 +303,57 @@ $hourlyDayStatusPre = $db->query("SELECT status_pre, id FROM [c0_intranet2_apote
 foreach ($hourlyDayStatusPre as $status){
     $updateStatusPre = null;
     //Prekovremeni rad
-    if ($singleStatus['status_pre'] == 91){
+    if ($status['status_pre'] == 91){
         $updateStatusPre = 2020;
     }
 
     //Prekovremeni noćni rad
-    if ($singleStatus['status_pre'] == 92){
+    if ($status['status_pre'] == 92){
         $updateStatusPre = 2021;
     }
 
     //Prekovremeni rad vikendom
-    if ($singleStatus['status_pre'] == 93){
+    if ($status['status_pre'] == 93){
         $updateStatusPre = 2024;
     }
 
     //Prekovremeni noćni rad vikendom
-    if ($singleStatus['status_pre'] == 94){
+    if ($status['status_pre'] == 94){
         $updateStatusPre = 2025;
     }
 
     //Prekovremeni rad praznikom
-    if ($singleStatus['status_pre'] == 95){
+    if ($status['status_pre'] == 95){
         $updateStatusPre = 2022;
     }
 
     //Redovan noćni rad
-    if ($singleStatus['status_pre'] == 85){
+    if ($status['status_pre'] == 85){
         $updateStatusPre = 2011;
     }
 
     //Redovan rad vikendom
-    if ($singleStatus['status_pre'] == 86){
+    if ($status['status_pre'] == 86){
         $updateStatusPre = 2015;
     }
 
     //Noćni rad vikendom
-    if ($singleStatus['status_pre'] == 87){
+    if ($status['status_pre'] == 87){
         $updateStatusPre = 2014;
     }
 
     //Rad praznikom
-    if ($singleStatus['status_pre'] == 88){
+    if ($status['status_pre'] == 88){
         $updateStatusPre = 2010;
     }
 
     //Noćni rad praznikom
-    if ($singleStatus['status_pre'] == 89){
+    if ($status['status_pre'] == 89){
         $updateStatusPre = 2012;
     }
 
     //Rad na nedelju
-    if ($singleStatus['status_pre'] == 138){
+    if ($status['status_pre'] == 138){
         $updateStatusPre = '2013';
     }
 
