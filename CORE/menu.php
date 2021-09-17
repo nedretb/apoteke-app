@@ -76,11 +76,11 @@ function pageMenu()
                     'name' => ___('Rješenja o godišnjem odmoru'),
                     'role' => array($zahtjevi_go_radnici_role)
                 ),
-                'otkazani_zahtjevi' => array(
-                    'name' => ___('Moji otkazani zahtjevi'),
-                    'role' => array('0', '1', '2', '3', '4', '5'),
-                    'url' => '?m=default&p=odsustva&odobreno_cancel=true&title=profile'
-                ),
+//                'otkazani_zahtjevi' => array(
+//                    'name' => ___('Moji otkazani zahtjevi'),
+//                    'role' => array('0', '1', '2', '3', '4', '5'),
+//                    'url' => '?m=default&p=odsustva&odobreno_cancel=true&title=profile'
+//                ),
                 'training_programs' => array(
                     'name' => ___('Programi obuke'),
                     'icon' => 'ion-university',
