@@ -54,7 +54,7 @@ require_once '../../../configuration.php';
                     <?php } ?>
                 </div>
                 <div class="col-sm-6">
-                    <?php if ($row['review_status'] ==1 and $row['review_status'] == 2){ ?>
+                    <?php if ($row['review_status'] ==1 or $row['review_status'] == 2){ ?>
                     <big <?php echo $css; ?>><?php echo $status; ?></big><br/>
                     <small><?php echo __('Obradio:'); ?></small><br/>
                     <?php echo $parent['fname'] . ' ' . $parent['lname']; ?>
@@ -65,7 +65,7 @@ require_once '../../../configuration.php';
 
             <hr/>
 
-            <?php if ($row['review_status'] ==1 and $row['review_status'] == 2){ ?>
+            <?php if ($row['review_status'] ==1 or $row['review_status'] == 2){ ?>
             <small><?php echo __('Komentar:'); ?></small><br/>
             <div class="comment-single">
                 <?php echo $row['review_comment']; ?>
