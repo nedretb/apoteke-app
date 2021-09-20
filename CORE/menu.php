@@ -72,10 +72,10 @@ function pageMenu()
                     'name' => ___('Moji godišnji odmori'),
                     'role' => array('0', '1', '2', '3', '4', '5')
                 ),
-                'zahtjevi_go_radnici' => array(
-                    'name' => ___('Rješenja o godišnjem odmoru'),
-                    'role' => array($zahtjevi_go_radnici_role)
-                ),
+//                'zahtjevi_go_radnici' => array(
+//                    'name' => ___('Rješenja o godišnjem odmoru'),
+//                    'role' => array($zahtjevi_go_radnici_role)
+//                ),
 //                'otkazani_zahtjevi' => array(
 //                    'name' => ___('Moji otkazani zahtjevi'),
 //                    'role' => array('0', '1', '2', '3', '4', '5'),
@@ -102,13 +102,13 @@ function pageMenu()
                     'role' => array('0', '1', '2', '3', '4', '5', '6', '7'),
                     'subpages' => array()
                 ),
-                'odsustva_radnici' => array(
-                    'name' => ___('Odsustva radnici'),
-                    'icon' => 'ion-card',
-                    'page' => 'odsustva_radnici',
-                    'role' => array('0'),
-                    'subpages' => array()
-                ),
+//                'odsustva_radnici' => array(
+//                    'name' => ___('Odsustva radnici'),
+//                    'icon' => 'ion-card',
+//                    'page' => 'odsustva_radnici',
+//                    'role' => array('0'),
+//                    'subpages' => array()
+//                ),
                 'odsustva_radnici_corrections' => array(
                     'name' => ___('Odsustva - korekcije'),
                     'icon' => 'ion-card',
@@ -444,6 +444,9 @@ function pageMenu()
                     $menu .= '<li id="absence_count8" style="color:white;font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici&neodobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-ios-people"></i> <span style="color:black;margin-right:12%;">Nova odsustva</span><div id="noti_Counter1">&nbsp;</div></a></li>';
 //                    $menu .= '<li id="absence_count9" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&neodobreno=true" style="text-decoration:none;line-height:38px;"><i class="ion-ios-people"></i> <span style="color:black;margin-right:12%;">Nova odsustva korekcije</span><div id="noti_Counter6">&nbsp;</div></a></li>';
                     $menu .= '<li id="absence_count10" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici&zahtjevi=true" style="text-decoration:none;line-height:38px;"><i class="ion-android-cancel"></i> <span style="color:black;margin-right:12%;">Zahtjevi otkazivanje</span><div id="noti_Counter2">&nbsp;</div></a></li>';
+                    $menu .= '<li id="absence_count10" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici" style="text-decoration:none;line-height:38px;"><i class="ion-android-people"></i> <span style="color:black;margin-right:12%;">Svi zahtjevi radnika</span><div id="noti_Counter4">&nbsp;</div></a></li>';
+                    $menu .= '<li id="absence_count10" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=zahtjevi_go_radnici" style="text-decoration:none;line-height:38px;"><i class="ion-android-people"></i> <span style="color:black;margin-right:12%;">Rješenja o godišnjem odmoru</span><div id="noti_Counter3">&nbsp;</div></a></li>';
+
                     //$menu .= '<li id="absence_count11" style="color:white; font-weight: bold;margin-left: 0px;"><a href="?m=default&p=odsustva_radnici_corrections&zahtjevi=true" style="text-decoration:none;color:white;line-height:38px;"><i class="ion-android-cancel"></i> <span style="color:black;margin-right:12%;">Zahtjevi otkazivanje korekcije</span><div id="noti_Counter5">&nbsp;</div></a></li>';
                     //$menu .= '<li id="absence_count9" style="font-weight: bold;margin-left: 0px;"><a href="?m=default&p=otkazani_zahtjevi&admin=true" style="text-decoration:none;line-height:38px;"><i class="ion-android-cancel"></i> <span style="margin-right:12%;">Otkazani zahtjevi radnika</span><div id="noti_Counter5">&nbsp;</div></a></li>';
 
