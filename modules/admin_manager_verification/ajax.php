@@ -770,6 +770,10 @@ if (isset($_POST['request'])) {
             $sheet->setCellValue($columnPrevoz.$row, $prevozData['prevoz']);
             $sheet->setCellValue($columnKupn.$row, $prevozData['nacin_placanja']);
 
+            $sheet->getStyle($columnPrevoz.$row.':'.$columnPrevoz.($row+6))->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('ffffff');
+            $sheet->getStyle($columnSati.$row.':'.$columnSati.($row+6))->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('ffffff');
+            $sheet->getStyle($columnKupn.$row.':'.$columnKupn.($row+6))->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('ffffff');
+
             $sheet->getStyle($columnPrevoz.$row.':'.$columnPrevoz.($row+5))->applyFromArray($styleArrayNoBorders);
             $sheet->getStyle($columnSati.$row.':'.$columnSati.($row+5))->applyFromArray($styleArrayNoBordersButRight);
             $sheet->getStyle($columnKupn.$row.':'.$columnKupn.($row+5))->applyFromArray($styleArrayNoBorders);
