@@ -365,6 +365,10 @@ foreach ($hourlyDayStatusPre as $status){
     if ($status['status_pre'] == 138){
         $updateStatusPre = '2013';
     }
+    //Prekovremeni rad praznikom - radni dan
+    if ($status['status_pre'] == 139){
+        $updateStatusPre = '2023';
+    }
 
     try {
         $sqlStmt = "UPDATE [c0_intranet2_apoteke].[dbo].[hourlyrate_day] SET apoteke_status_pre=? where id=?";
