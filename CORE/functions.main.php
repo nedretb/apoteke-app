@@ -1268,7 +1268,6 @@ function _optionB_1($current, $notadmin = 0){
 
     $opt = '';
 
-
     $data = ($x_user['role'] == 4) ? Sistematizacija::getSys() : Sistematizacija::getSys($x_user);
 
         foreach ($data as $item) {
@@ -6437,10 +6436,10 @@ function _statsDaysFreeReifUsers4($year, $datumOD, $datumDO, $offset, $limit, $e
         $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Otkaži</th>';
     else
         $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Odobreno</th>';
-    if ($_user['role'] == 4)
+//    if ($_user['role'] == 4)
         $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Detalji</th>';
 //    $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Ažuriraj</th>';
-    if ($_user['role'] == 4)
+//    if ($_user['role'] == 4)
 //        $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Ima dokument</th>';
 //    if (checkifAdmin() == true) {
 //        $items .= '<th style="height:20px; background: #c7bebe;color: black;" >Šifra bolesti</th>';
@@ -6616,32 +6615,32 @@ FROM  " . $portal_hourlyrate_day . "  h with(nolock)
             $dis_nad = '';
 
 
-            if ($_user['role'] == 4) {
+//            if ($_user['role'] == 4) {
                 $disejbld = '';
                 if ($odobreno == '1') {
                     $disejbld = "disabled='disabled'";
                 }
                 $naziv_odsustvaOpcija = '<select ' . $disejbld . ' id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" title="' . _nameHRstatus($status1) . '" name="vrsta1" class="rcorners1 tootip"  class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
                     '</select>';
-            } else if ($_user['role'] == 2) {
-                $naziv_odsustvaOpcija = '<select disabled id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" class="rcorners1" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
-                    '</select>';
-            }
+//            } else if ($_user['role'] == 2) {
+//                $naziv_odsustvaOpcija = '<select disabled id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" class="rcorners1" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
+//                    '</select>';
+//            }
 
 
             if ($filter_zahtjevi == true)
                 $optionOdobriOtkazi = ' <td> <select data-otkazivanje="1" data-user-id="' . $value['employee_no'] . '" id="odobreno-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="odobreno" class="rcorners1" class="form-control" style="width:120px;outline:none;">' . _optionOtkazano($odobreno);
             else {
 
-                if ($odobreno == '1' and $_user['role'] == 2)
-                    $dis_nad = 'disabled';
+//                if ($odobreno == '1' and $_user['role'] == 2)
+//                    $dis_nad = 'disabled';
                 $optionOdobriOtkazi = ' <td> <select ' . $dis_nad . ' data-user-id="' . $value['employee_no'] . '" id="odobreno-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="odobreno" class="rcorners1" class="form-control" style="width:100px;outline:none;">' . _optionOdobreno($odobreno);
             }
 
-            if ($_user['role'] == 4)
+//            if ($_user['role'] == 4)
                 $detalji = ' <td> <button type="button" id="detalji-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['godina'] . '-' . $value['ime_prezime'] . '" name="detalji" class="rcorners1" class="form-control" style="width:64px;outline:none;">Detalji</button></td>';
-            else
-                $detalji = '';
+//            else
+//                $detalji = '';
 
 //            $satnice = '<td><a style="width: 141px;" href="' . $_conf['app_location'] . '' . $_conf['app_location_module'] . '/modules/admin_manager_hourly_rate/pages/popup_day_add_apsolute.php?year=' . $value['year_id'] . '&month=' . $value['mjesecOD'] . '" data-widget="ajax" data-id="opt2" data-width="500" class="btn btn-red btn-md">Ažuriraj satnice<i class="ion-ios-plus-empty"></i></a></td>';
             $satnice = '';

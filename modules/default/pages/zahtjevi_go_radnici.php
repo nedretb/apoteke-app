@@ -39,8 +39,16 @@ if (!empty($_POST['pg'])) {
 
 $offset = ($page - 1) * $limit;
 
-$fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq." order by v.employee_no offset ".$offset. " rows fetch next ".$limit." rows only");
-$total = $db->query("select count(*) from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq);
+if($_user['role'] == 4){
+    $fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq." order by v.employee_no offset ".$offset. " rows fetch next ".$limit." rows only");
+    $total = $db->query("select count(*) from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 ".$ime_prezimeq." ". $org_jedq." ".$yearq);
+}
+elseif ($_user['rukovodioc'] == 'DA'){
+    $fgr = $db->query("select * from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on 
+    v.employee_no=b.employee_no where b.odobreno=1 and v.egop_ustrojstvena_jedinica=".$_user['egop_ustrojstvena_jedinica']." ".$ime_prezimeq." ". $org_jedq." ".$yearq." order by v.employee_no offset ".$offset. " rows fetch next ".$limit." rows only");
+    $total = $db->query("select count(*) from [c0_intranet2_apoteke].[dbo].[users] as v join [c0_intranet2_apoteke].[dbo].[rjesenja_go] as b on v.employee_no=b.employee_no where b.odobreno=1 and v.egop_ustrojstvena_jedinica=".$_user['egop_ustrojstvena_jedinica']." ".$ime_prezimeq." ". $org_jedq." ".$yearq);
+}
+
 
 $pg_max = ceil($total->fetch()[0] / $limit);
 if ($pg_max == 0) {

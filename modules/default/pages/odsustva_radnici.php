@@ -331,7 +331,6 @@ if ($total > 0 || $total2 > 0) {
                             </div>
                         <?php endif; ?>
 
-                        <?php if ($_user['role'] == 4){ ?>
                         <div class="col-sm-1" style="max-width: 97px;text-align: center;padding: 0px 3px;">
                             <div style="float:right;">
                                 <input id="filter_neodobreno" type="checkbox" <?php if ($filter_neodobreno) {
@@ -349,7 +348,7 @@ if ($total > 0 || $total2 > 0) {
                         </div>
 
                     </div>
-                    <?php } ?>
+
 
             </div>
             </form>
@@ -606,11 +605,11 @@ if ($total > 0 || $total2 > 0) {
 
         var user_role = '<?php echo $_user['role']; ?>';
         if (user_role == '2')
-            $("select:regex(id, .*odobreno.*) option[value='1']").attr('disabled', 'disabled');
+            // $("select:regex(id, .*odobreno.*) option[value='1']").attr('disabled', 'disabled');
 
         var per_broj = '<?php echo $per_broj; ?>';
-        if (per_broj != '')
-            $("select:regex(id, .*odobreno.*)").attr('disabled', 'disabled');
+        // if (per_broj != '')
+        //     $("select:regex(id, .*odobreno.*)").attr('disabled', 'disabled');
 
         $('select:regex(id, .*odobreno.*)').on('change', function () {
             var that = this;

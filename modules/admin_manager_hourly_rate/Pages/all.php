@@ -21,6 +21,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
 
         <?php
 
+        $orgJeds = _optionB_1($orgJed);
         $odsustva = $db->query("SELECT id FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_status] WHERE status_group IN (
                                             'B – BOLOVANJA',
                                             'B – BOLOVANJE - BOLEST',
@@ -130,7 +131,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                                 <select id="org_jed" name="org_jed" class="rcorners1" style="outline:none;width:100%;"
                                         class="form-control">
                                     <option value=""><?= __('Odaberi...')  ?></option>
-                                    <?php echo _optionB_1($orgJed) ?>
+                                    <?php echo $orgJeds ?>
                                 </select><br/><br/>
 
                                 <label class="lable-admin1"><?php echo __('Ime'); ?></label>
@@ -168,7 +169,7 @@ $orgJed = isset($_POST['org_jed']) ? $_POST['org_jed'] : '';
                                         style="float:right;">
                                     <option value=""><?= __('Odaberi...')  ?></option>
                                     <option>Svi radnici</option>
-                                    <?php echo _optionB_1(isset($_POST['org_jed']) ? $_POST['org_jed'] : ''); ?>
+                                    <?php echo $orgJeds; ?>
                                 </select>
 
                                 <br style="clear:both"/>

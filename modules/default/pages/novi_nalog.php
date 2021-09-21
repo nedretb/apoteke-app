@@ -1284,8 +1284,8 @@ $datum_akontacije = date("d.m.Y", strtotime($dan_data['Date']));
                     <table class="table table-sm table-bordered table-hover mytable" style="display:none;">
                         <thead>
                         <tr>
-                            <th style='text-align:center;'>Akontacija u KM</th>
-                            <th id="colspan" style='text-align:center;' colspan="1">Trajanje službenog puta</th>
+                            <th style='text-align:center;'>Država</th>
+                            <th id="colspan" style='text-align:center;' colspan="1">Akontacija u KM(1 dan)</th>
                         </tr>
 
                         </thead>

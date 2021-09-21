@@ -109,13 +109,13 @@ function pageMenu()
 //                    'role' => array('0'),
 //                    'subpages' => array()
 //                ),
-                'odsustva_radnici_corrections' => array(
-                    'name' => ___('Odsustva - korekcije'),
-                    'icon' => 'ion-card',
-                    'page' => 'odsustva_radnici_corrections',
-                    'role' => array('0, 4'),
-                    'subpages' => array()
-                )
+//                'odsustva_radnici_corrections' => array(
+//                    'name' => ___('Odsustva - korekcije'),
+//                    'icon' => 'ion-card',
+//                    'page' => 'odsustva_radnici_corrections',
+//                    'role' => array('0, 4'),
+//                    'subpages' => array()
+//                )
             ),
             'hidden' => $tab_hidden['default']
         ),
@@ -126,15 +126,15 @@ function pageMenu()
             'page' => 'admin_manager_hourly_rate',
             'role' => $tab_roles['impersonalizacija'],
             'subpages' => array(
-                'admin_hourly_rate' => array(
-                    'name' => ___($tab_name['admin_hourly_rate']),
-                    'icon' => $tab_icon['admin_hourly_rate'],
-                    'page' => 'all',
-                    'role' => $tab_roles['admin_hourly_rate'],
-                    'subpages' => array(),
-                    'hidden' => $tab_hidden['admin_hourly_rate']
-                ),
-
+//                'admin_hourly_rate' => array(
+//                    'name' => ___($tab_name['admin_hourly_rate']),
+//                    'icon' => $tab_icon['admin_hourly_rate'],
+//                    'page' => 'all',
+//                    'role' => $tab_roles['admin_hourly_rate'],
+//                    'subpages' => array(),
+//                    'hidden' => $tab_hidden['admin_hourly_rate']
+//                ),
+//
 //                'admin_hourly_rate_corrections' => array(
 //                    'name' => ___($tab_name['admin_hourly_rate_corrections']),
 //                    'icon' => $tab_icon['admin_hourly_rate_corrections'],
@@ -143,7 +143,7 @@ function pageMenu()
 //                    'subpages' => array(),
 //                    'hidden' => $tab_hidden['admin_hourly_rate_corrections']
 //                ),
-
+//
 //                'admin_manager_hourly_rate' => array(
 //                    'name' => ___($tab_name['admin_manager_hourly_rate']),
 //                    'icon' => $tab_icon['admin_manager_hourly_rate'],
@@ -152,8 +152,8 @@ function pageMenu()
 //                    'subpages' => array(),
 //                    'hidden' => $tab_hidden['admin_manager_hourly_rate']
 //                ),
-
-
+//
+//
 //                'admin_manager_hourly_rate_corrections' => array(
 //                    'name' => ___($tab_name['admin_manager_hourly_rate_corrections']),
 //                    'icon' => $tab_icon['admin_manager_hourly_rate_corrections'],
