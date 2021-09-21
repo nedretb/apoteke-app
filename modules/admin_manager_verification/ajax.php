@@ -740,6 +740,7 @@ if (isset($_POST['request'])) {
         $columnPrevoz = $column;
         $sheet->mergeCells($columnPrevoz.'12:'.$columnPrevoz.'13');
         $sheet->setCellValue($columnPrevoz.'12', 'Prevoz (da/ne)');
+        $sheet->getStyle($columnPrevoz.'12')->getAlignment()->setWrapText(true);
         $sheet->getStyle($columnPrevoz.'12:'.$columnPrevoz.'13')->applyFromArray($styleArrayNameEmpNo);
         $sheet->getStyle($columnPrevoz.'12:'.$columnPrevoz.'13')->getFont()->setBold(true);
 
@@ -747,6 +748,7 @@ if (isset($_POST['request'])) {
         $columnKupn++;
         $sheet->mergeCells($columnKupn.'12:'.$columnKupn.'13');
         $sheet->setCellValue($columnKupn.'12', 'Kupon/Novac');
+        $sheet->getStyle($columnKupn.'12')->getAlignment()->setWrapText(true);
         $sheet->getStyle($columnKupn.'12:'.$columnKupn.'13')->applyFromArray($styleArrayNameEmpNo);
         $sheet->getStyle($columnKupn.'12:'.$columnKupn.'13')->getFont()->setBold(true);
 
@@ -754,6 +756,7 @@ if (isset($_POST['request'])) {
         $columnSati++;
         $sheet->mergeCells($columnSati.'12:'.$columnSati.'13');
         $sheet->setCellValue($columnSati.'12', 'Ukupno sati');
+        $sheet->getStyle($columnSati.'12')->getAlignment()->setWrapText(true);
         $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->applyFromArray($styleArrayNameEmpNo);
         $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->getFont()->setBold(true);
 
