@@ -756,7 +756,7 @@ if (isset($_POST['request'])) {
         $columnSati++;
         $sheet->mergeCells($columnSati.'12:'.$columnSati.'13');
         $sheet->setCellValue($columnSati.'12', 'Ukupno sati');
-        $sheet->getStyle($columnSati.'12')->getAlignment()->setWrapText(true);
+        $sheet->getStyle($columnSati--.'12')->getAlignment()->setWrapText(true);
         $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->applyFromArray($styleArrayNameEmpNo);
         $sheet->getStyle($columnSati.'12:'.$columnSati.'13')->getFont()->setBold(true);
 
