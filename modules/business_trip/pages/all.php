@@ -6,7 +6,7 @@
   $ts=time();$user=$_user['user_id'];
   date_default_timezone_set('Europe/Sarajevo');
 
-  $filtertdate=date('Y')."-".date('M')."-1 00:00:00.000";
+  $filtertdate=date('Y')."-".date('m')."-1 00:00:00.000";
   //var_dump($filtertdate);
   $canSendMail = $db->query("SELECT value
   FROM [c0_intranet2_apoteke].[dbo].[settings]
