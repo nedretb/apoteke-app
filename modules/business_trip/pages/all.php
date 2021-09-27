@@ -16,6 +16,7 @@
 //odbijanje --- prepraviti
 
 if(isset($_POST['razlog'])){
+
   $podaci_mailq = $db->query("
     SELECT *  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] as table1
   INNER JOIN [c0_intranet2_apoteke].[dbo].[sl_put] as table2
@@ -65,8 +66,9 @@ if(isset($_POST['razlog'])){
     if ($one['aa']==0){
         $odbij_req = $db->query("UPDATE [c0_intranet2_apoteke].[dbo].[sl_put] set status_hr = 2 where id =".$_GET['odbij']);
         $odbij_req->execute();
-        $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme) 
-        VALUES (".$_GET['odbij'].", 'odbijanje', $user, $ts)");
+        $insert_log = $db->query("INSERT INTO [c0_intranet2_apoteke].[dbo].[sl_put_logs] (sl_put_request_id, operation, user_id, vrijeme, komentar) 
+        VALUES (".$_GET['odbij'].", 'odbijanje', $user, $ts, '".$_POST['razlog']."')");
+
   
     header("Location: /apoteke-app/?m=business_trip&p=all&pg=".$_GET['pg']); 
     exit();
@@ -784,6 +786,8 @@ foreach($podaci as $podatak){
               <span style="color:#009900;"><i class="ion-android-checkmark-circle"></i> <?php echo __('Na obradi'); ?></span>
             <?php }elseif ($podatak['operation'] == 'odbijanje') { ?>
               <span style="color:#990000;"><i class="ion-android-close"></i> <?php echo __('Poslano na korekciju'); ?></span>
+                <br>
+              <span style="color:#990000;">Komentar: <?php echo $podatak['komentar']; ?></span>
             <?php } ?>
     		
           </div>
