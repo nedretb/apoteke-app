@@ -883,7 +883,7 @@ foreach($podaci as $podatak){
       <label style="padding:20px 0 0 20px">Komentar:</label>
       <form method="post" action="" id="korekcija_form">
       <div class="modal-body">
-        <input type="text" placeholder="Unesite razlog slanja na korekciju" class="form-control" name="razlog">
+        <input type="text" placeholder="Unesite razlog slanja na korekciju" class="form-control" name="razlog" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
