@@ -2806,7 +2806,7 @@ function prebaciDatumBih($datum){
         let dynamic_rows = '';
 
         for(let j=0; j<=column_data.length-1; j++){
-            if(i==0 && j == 0){
+            if((i==0 && j == 0) || (i==0 && j == 1)){
                 dynamic_rows += "<td>Država</td>";
             }else{
                 dynamic_rows += "<td >" +column_data[j] + "</td>";

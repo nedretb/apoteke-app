@@ -417,6 +417,7 @@ function pageMenu()
                 $menu .= '<li style="font-weight: bold;color:white; "' . $sel1 . '><a href="?m=admin_manager_hourly_rate&p=all"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
             elseif ($slug == 'zahtjevi')
                 $menu .= '<li id="requests" style="font-weight: bold;"' . $sel1 . '><a style="color:white;" href="?m=default&p=odsustva&odobreno=true"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
+
             elseif ($slug == 'zahtjevi_radnika') {
                 if ($show_odsustva)
                     $menu .= '<li id="requests_workers" style="font-weight: bold; "' . $sel1 . '><a href="?m=default&p=odsustva_radnici&neodobreno=true"><i class="' . $pages['icon'] . '"></i> <span>' . $pages['name'] . '</span></a>';
@@ -433,6 +434,8 @@ function pageMenu()
                 $menu .= '<li id="absence_count5" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno=rejected" style="text-decoration:none;line-height:38px;"><i class="ion-close-circled"></i> <span style="color:black;margin-right:12%;">Moji odbijeni zahtjevi</span><div id="noti_Counter12">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count6" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moja odobrena otkazivanja</span><div id="noti_Counter13">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count7" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=false" style="text-decoration:none;line-height:38px;"><i class="ion-close-circled"></i> <span style="color:black;margin-right:12%;">Moja neodobrena otkazivanja</span><div id="noti_Counter14">&nbsp;</div></a></li>';
+
+                $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=admin">HR Administratori</a></li>';
                 $menu .= '</ul>';
             } elseif ($slug == 'zahtjevi_radnika') {
                 if ($show_odsustva == true) {
@@ -483,7 +486,6 @@ function pageMenu()
 
                     if ($_user['role'] == 4 and $slug_sub == 'odsustva_radnici_corrections') {
                         global $url;
-                        $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=admin">HR Administratori</a></li>';
                         //$menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=work_booklet&p=all">Postava GO</a></li>';
 //                        $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=sifarniciorg&p=all">Šifarnici</a></li>';
                         // $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="'.$url . '/modules/' . 'default' . '/pages/popup_plan_go.php'.'">Plan GO</a></li>';
