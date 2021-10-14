@@ -452,9 +452,19 @@ foreach ($data as $podatak_ex) {
 
 
     $doc->setActiveSheetIndex(0)->setCellValue('A'.$br.'', $podatak_ex['sl_put_id']);
-    $doc->setActiveSheetIndex(0)->setCellValue('B'.$br.'', $podatak_ex['employee_no']);
+    $emp_id = '';
+    if(strlen($podatak_ex['employee_no']) == 1){
+        $emp_id = ' 00'.$podatak_ex['employee_no'];
+    }
+    elseif (strlen($podatak_ex['employee_no']) == 2){
+        $emp_id = ' 0'.$podatak_ex['employee_no'];
+    }
+    else{
+        $emp_id = ' '.$podatak_ex['employee_no'];
+    }
+    $doc->setActiveSheetIndex(0)->setCellValue('B'.$br.'', $emp_id);
     $doc->setActiveSheetIndex(0)->setCellValue('C'.$br.'', $podatak_ex['lname'].' '.$podatak_ex['fname']);
-    $doc->setActiveSheetIndex(0)->setCellValue('D'.$br.'', $podatak_ex['JMB']);
+    $doc->setActiveSheetIndex(0)->setCellValue('D'.$br.'', ' '.strval($podatak_ex['JMB']));
     $doc->setActiveSheetIndex(0)->setCellValue('E'.$br.'', $statuss);
     $doc->setActiveSheetIndex(0)->setCellValue('F'.$br.'', date("d.m.Y",$podatak_ex['created_at']));
     $doc->setActiveSheetIndex(0)->setCellValue('G'.$br.'', $podatak_ex['svrha']);
@@ -465,13 +475,13 @@ foreach ($data as $podatak_ex) {
     $doc->setActiveSheetIndex(0)->setCellValue('K'.$br.'', $podatak_ex['kraj_vrijeme']);
     $doc->setActiveSheetIndex(0)->setCellValue('L'.$br.'', $podatak_ex['polazna_drzava1']);
     $doc->setActiveSheetIndex(0)->setCellValue('M'.$br.'', $podatak_ex['grad_polaska']);
-    $doc->setActiveSheetIndex(0)->setCellValue('N'.$br.'', $podatak_ex['odredisna_drzava']);
+    $doc->setActiveSheetIndex(0)->setCellValue('N'.$br.'', $podatak_ex['drzava1']);
     $doc->setActiveSheetIndex(0)->setCellValue('O'.$br.'', $podatak_ex['odredisni_grad']);
     $doc->setActiveSheetIndex(0)->setCellValue('P'.$br.'', $podatak_ex['napomena']);
 
     $doc->setActiveSheetIndex(0)->setCellValue('Q'.$br.'', $podatak_ex['iznos_akontacije']);
     $doc->setActiveSheetIndex(0)->setCellValue('R'.$br.'', $podatak_ex['valuta']);
-    $doc->setActiveSheetIndex(0)->setCellValue('S'.$br.'', $podatak_ex['datum_akontacije']);
+    $doc->setActiveSheetIndex(0)->setCellValue('S'.$br.'', date('d.m.Y', strtotime($podatak_ex['datum_akontacije'])));
     $doc->setActiveSheetIndex(0)->setCellValue('T'.$br.'', $podatak_ex['primanje_sredstva']);
     $doc->setActiveSheetIndex(0)->setCellValue('U'.$br.'', $podatak_ex['napomena']);
 
