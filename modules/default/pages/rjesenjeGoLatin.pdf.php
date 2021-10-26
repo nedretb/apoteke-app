@@ -96,7 +96,7 @@ function generatepdf($user_data, $data, $ustrojstvena_jedinica, $additional_days
 <ul>
     <li>zakonski minimum....................................................... 20 radnih dana</li>
     <li>dužina radnog staža.....................................................   '.$additional_days['staz'].'  radnih dana</li>
-    <li>složenost poslova........................................................    '.$additional_days['koef_sl'].'  radnih dana</li>
+    <li>složenost poslova........................................................    '.$additional_days[''].'  radnih dana</li>
     <li>socijalni uslovi..............................................................   '.$additional_days['dijete'].' radnih dana</li>
     <li>rad u dežurnoj apoteci.................................................    '.$additional_days['dezura'].' radnih dana</li>
     <li>status demobiliziranog branioca....................................   '.$additional_days['armija'].' radnih dana</li>

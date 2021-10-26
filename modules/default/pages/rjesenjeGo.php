@@ -22,8 +22,8 @@ foreach ($additional_days as $d){
     }elseif ($d['vacation_code'] == 'ARMIJA' and $d['vacation_code'] == null){
         $dodatni_dani['armija'] = 0;
     }
-    if($d['vacation_code'] == 'KOEF_SL' and $d['vacation_code'] != null){
-        $dodatni_dani['koef_sl'] = $d['no_of_days'];
+    if($d['vacation_code'] == '' and $d['vacation_code'] != null){
+        $dodatni_dani[''] = $d['no_of_days'];
     }elseif($d['vacation_code'] == 'KOEF_SL' and $d['vacation_code'] == null){
         $dodatni_dani['koef_sl'] = 0;
     }

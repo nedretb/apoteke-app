@@ -8,7 +8,7 @@ class SoapEvents{
     }
     public static function getData($uri, $method, $param){
         try{
-            $soapParameters = array('login' => 'VM\epinsatest', 'password' => "Sarajevo101") ;
+            $soapParameters = array('login' => 'PRH_WS', 'password' => "dZQ1jkEe8+VcZ3ll5fPuz2Mm8zrDmJP2KuohrbItOIg=") ;
             self::$_client = new SoapClient($uri, $soapParameters);
 
             return self::$_data = self::$_client->$method($param);
