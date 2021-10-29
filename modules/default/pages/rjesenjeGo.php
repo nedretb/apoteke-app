@@ -8,52 +8,17 @@ $year = $_GET['year'];
 $years_exp_days = 0;
 $dodatni_dani = [];
 
-$additional_days = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] where employee_no=".$employee_no);
+$dodatniDaniStaz      = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] WHERE vacation_code='STAZ' AND employee_no=".$employee_no)->fetch();
+$dodatniDaniArmija    = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] WHERE vacation_code='ARMIJA' AND employee_no=".$employee_no)->fetch();
+$dodatniDaniSlozenost = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] WHERE vacation_code='KOEF_SL' AND employee_no=".$employee_no)->fetch();
+$dodatniDaniDijete    = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] WHERE vacation_code='DIJETE' AND employee_no=".$employee_no)->fetch();
+$dodatniDaniDezura    = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[dodatni_dani_go] WHERE vacation_code='DEZURA' AND employee_no=".$employee_no)->fetch();
 
-foreach ($additional_days as $d){
-
-    if($d['vacation_code'] == 'STAZ' and $d['vacation_code'] != null){
-        $dodatni_dani['staz'] = $d['no_of_days'];
-    }elseif($d['vacation_code'] == 'STAZ' and $d['vacation_code'] == null){
-        $dodatni_dani['staz'] = 0;
-    }
-    if($d['vacation_code'] == 'ARMIJA' and $d['vacation_code'] != null){
-        $dodatni_dani['armija'] = $d['no_of_days'];
-    }elseif ($d['vacation_code'] == 'ARMIJA' and $d['vacation_code'] == null){
-        $dodatni_dani['armija'] = 0;
-    }
-    if($d['vacation_code'] == '' and $d['vacation_code'] != null){
-        $dodatni_dani[''] = $d['no_of_days'];
-    }elseif($d['vacation_code'] == 'KOEF_SL' and $d['vacation_code'] == null){
-        $dodatni_dani['koef_sl'] = 0;
-    }
-    if($d['vacation_code'] == 'DIJETE' and $d['vacation_code'] != null){
-        $dodatni_dani['dijete'] = $d['no_of_days'];
-    }elseif($d['vacation_code'] == 'DIJETE' and $d['vacation_code'] == null){
-        $dodatni_dani['dijete'] = 0;
-    }
-    if($d['vacation_code'] == 'DEZURA' and $d['vacation_code'] != null){
-        $dodatni_dani['dezura'] = $d['no_of_days'];
-    }elseif($d['vacation_code'] == 'DEZURA' and $d['vacation_code'] == null){
-        $dodatni_dani['dezura'] = 0;
-    }
-}
-
-if(!array_key_exists('staz', $dodatni_dani)){
-    $dodatni_dani['staz'] = 0;
-}
-if(!array_key_exists('armija', $dodatni_dani)){
-    $dodatni_dani['armija'] = 0;
-}
-if(!array_key_exists('koef_sl', $dodatni_dani)){
-    $dodatni_dani['koef_sl'] = 0;
-}
-if(!array_key_exists('dijete', $dodatni_dani)){
-    $dodatni_dani['dijete'] = 0;
-}
-if(!array_key_exists('dezura', $dodatni_dani)){
-    $dodatni_dani['dezura'] = 0;
-}
+$dodatni_dani['staz'] = (!empty($dodatniDaniStaz)) ? $dodatniDaniStaz['no_of_days'] : 0;
+$dodatni_dani['armija'] = (!empty($dodatniDaniArmija)) ? $dodatniDaniArmija['no_of_days'] : 0;
+$dodatni_dani['koef_sl'] = (!empty($dodatniDaniSlozenost)) ? $dodatniDaniSlozenost['no_of_days'] : 0;
+$dodatni_dani['dijete'] = (!empty($dodatniDaniDijete)) ? $dodatniDaniDijete['no_of_days'] : 0;
+$dodatni_dani['dezura'] = (!empty($dodatniDaniDezura)) ? $dodatniDaniDezura['no_of_days'] : 0;
 
 $user_data = $db->query("select fname, lname, egop_radno_mjesto, egop_ustrojstvena_jedinica from [c0_intranet2_apoteke].[dbo].[users] where employee_no=".$employee_no)->fetch();
 $ustrojstvena_jedinica = $db->query("select * from [c0_intranet2_apoteke].[dbo].[systematization] where id='".$user_data['egop_ustrojstvena_jedinica']. "'")->fetch();
