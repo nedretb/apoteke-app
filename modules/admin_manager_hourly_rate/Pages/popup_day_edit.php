@@ -71,7 +71,7 @@ require_once '../../../configuration.php';
                         <select style="padding:0px !important; " name="status" id="status" class="form-control"
                                 required>
                             <?php
-                            echo _optionHRstatus($row['status']); ?>
+                            echo _optionHRstatus($row['status'], $row['weekday']); ?>
                         </select>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ require_once '../../../configuration.php';
                     <div class="col-sm-5">
                         <label><?php echo __('Status'); ?></label>
                         <select style="padding:0px !important; " name="status_pre" id="status_pre" class="form-control">
-                            <?php echo _optionHRstatusPre($row['status_pre']); ?>
+                            <?php echo _optionHRstatusPre($row['status_pre'], $row['weekday']); ?>
                         </select>
                     </div>
                 </div>

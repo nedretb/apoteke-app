@@ -3341,7 +3341,7 @@ function _optionCountryWage($current)
 
 
 // Dropdown select for status (hourlyrate)
-function _optionHRstatus($current)
+function _optionHRstatus($current, $weekday)
 {
     global $db, $_conf, $portal_hourlyrate_status;
 
@@ -3349,7 +3349,7 @@ function _optionHRstatus($current)
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='R_REDOVNO' and level >=3 ORDER BY name ASC");
 
-    if ($query->rowCount() < 0) {
+    if ($query->rowCount() < 0 and $weekday == 6 and $weekday==7) {
         $opt .= '<optgroup label="' . __('R_REDOVNO') . '">';
         foreach ($query as $item) {
             if ($current == $item['id']) {
@@ -3679,7 +3679,10 @@ function _optionHRstatus($current)
             } else {
                 $sel = '';
             }
-            if ($item['name'] != 'R_7'){
+            if ($item['name'] != 'R_7' and $item['name'] != '2011'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
+            if($item['name'] == '2011' and $weekday != 6 and $weekday != 7){
                 $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
             }
         }
@@ -4027,7 +4030,7 @@ function _optionHRstatusOdsustva($current)
 
 }
 
-function _optionHRstatusPre($current)
+function _optionHRstatusPre($current, $weekday)
 {
     global $db, $_conf, $portal_hourlyrate_status;
 
@@ -4035,7 +4038,7 @@ function _optionHRstatusPre($current)
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='R – DODATNO' and level >=3 ORDER BY name ASC");
 
-    if ($query->rowCount() < 0) {
+    if ($query->rowCount() < 0 ) {
         $opt .= '<optgroup label="' . __('R – DODATNO') . '">';
         foreach ($query as $item) {
             if ($current == $item['id']) {
@@ -4043,8 +4046,10 @@ function _optionHRstatusPre($current)
             } else {
                 $sel = '';
             }
-
-            if($item['name'] != 'R_7'){
+            if ($item['name'] != 'R_7' and $item['name'] != '2011'){
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+            }
+            if($item['name'] == '2011' and $weekday != 6 and $weekday != 7){
                 $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
             }
         }
