@@ -800,7 +800,7 @@ if (isset($_POST['request'])) {
                 $dayOfWeek = date('l', strtotime('2021-'.$month.'-'.($i+1)));
 
                 if(!in_array($status[$i]['apoteke_status_pre'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
-                    $sheet->setCellValue($column.$row, $status[$i]['apoteke_status_pre']);
+                    $sheet->setCellValue($column.$row, $status[$i]['hour_pre']);
                 }else {
                     $increaseRowPre = 0;
                     switch ($status[$i]['apoteke_status_pre']) {
@@ -832,7 +832,9 @@ if (isset($_POST['request'])) {
                 }
 
                 if(!in_array($status[$i]['apoteke_status'], ['1010', '2011', '2010', '2012', '2013', '2015', '2014'])){
-                    $sheet->setCellValue($column.$row, $status[$i]['apoteke_status']);
+                    if ($dayOfWeek != 'Sunday' and $dayOfWeek != 'Saturday'){
+                        $sheet->setCellValue($column.$row, $status[$i]['apoteke_status']);
+                    }
                 }
                 else{
 
@@ -858,18 +860,6 @@ if (isset($_POST['request'])) {
                             break;
                     }
 
-//                    if($i == 6 and $userEmpNo[$count] == 211){
-//                        var_dump($dayOfWeek);
-//                        var_dump($status[$i]['apoteke_status']);
-//                        if(in_array($status[$i]['apoteke_status'], ['1010, 2011', '2010', '2012', '2013', '2015', '2014'])){
-//                            var_dump('true');
-//                            var_dump('-----------------');
-//                        }
-//                        else{
-//                            var_dump('false');
-//                            var_dump('------------------------');
-//                        }
-//                    }
                     if(($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday') and $increaseRow == 0){
                             $sheet->setCellValue($column.($row + $increaseRow), '');
                     }
@@ -886,21 +876,9 @@ if (isset($_POST['request'])) {
                 for ($j = 0; $j < 7; $j++){
                     if($dayOfWeek == 'Sunday' or $dayOfWeek == 'Saturday'){
                         ($j == 6) ? $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekendLastRow) : $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekend);;
-//                        if($j == 6){
-//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekendLastRow);
-//                        }
-//                        else{
-//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWeekend);
-//                        }
                     }
                     else{
                         ($j == 6) ? $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDaysLastRow) : $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDays);
-//                        if($j == 6){
-//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDaysLastRow);
-//                        }
-//                        else{
-//                            $sheet->getStyle($column.($row + $j))->applyFromArray($styleArrayWorkDays);
-//                        }
                     }
                 }
                 $column++;

@@ -102,6 +102,10 @@ function pageMenu()
                     'role' => array('0', '1', '2', '3', '4', '5', '6', '7'),
                     'subpages' => array()
                 ),
+                'admin' => array(
+                    'name' => ___('HR administratori'),
+                    'role' => array('4')
+                ),
 //                'odsustva_radnici' => array(
 //                    'name' => ___('Odsustva radnici'),
 //                    'icon' => 'ion-card',
@@ -435,7 +439,6 @@ function pageMenu()
                 $menu .= '<li id="absence_count6" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=true" style="text-decoration:none;line-height:38px;"><i class="ion-checkmark-circled"></i> <span style="color:black;margin-right:12%;">Moja odobrena otkazivanja</span><div id="noti_Counter13">&nbsp;</div></a></li>';
                 $menu .= '<li id="absence_count7" style="font-weight: bold;margin-left: 0px; color:white;"><a href="?m=default&p=odsustva&odobreno_cancel=false" style="text-decoration:none;line-height:38px;"><i class="ion-close-circled"></i> <span style="color:black;margin-right:12%;">Moja neodobrena otkazivanja</span><div id="noti_Counter14">&nbsp;</div></a></li>';
 
-                $menu .= '<li style="color:white;width:175px; "' . $sel2 . '><a href="?m=settings&p=admin">HR Administratori</a></li>';
                 $menu .= '</ul>';
             } elseif ($slug == 'zahtjevi_radnika') {
                 if ($show_odsustva == true) {
