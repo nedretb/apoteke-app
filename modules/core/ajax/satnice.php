@@ -268,7 +268,7 @@ if (isset($_POST['request'])) {
                     }
 
                     if ($sum_hour >= 7.5){
-                        return Helper::Message('alert-danger', 'Suma broj sati i broj sati prekovremeno ne može biti veća od 7.5h!');
+                        return Helper::Message('alert-danger', 'Suma radnih sati ne može biti veća od 7.5h!');
                     }
 
                     foreach ($dt_kalendarski_dani as $k => $v) {
