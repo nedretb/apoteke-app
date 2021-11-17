@@ -267,7 +267,7 @@ if (isset($_POST['request'])) {
                         return Helper::Message('alert-danger', 'Ne možete unijeti istu vrstu odsustva!');
                     }
 
-                    if ($sum_hour >= 7.5){
+                    if ($sum_hour > 7.5){
                         return Helper::Message('alert-danger', 'Suma radnih sati ne može biti veća od 7.5h!');
                     }
 

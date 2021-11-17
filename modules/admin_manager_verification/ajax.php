@@ -764,9 +764,28 @@ if (isset($_POST['request'])) {
         $row = 14;
 
         foreach ($data_array as $data){
-            $sumHourRe = $db->query("SELECT sum(hour)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
-            $sumHourPre = $db->query("SELECT sum(hour_pre)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
-            $sumHour = $sumHourRe[0] + $sumHourPre[0];
+            $sumHourTotal = 0;
+            $sumHourRe = $db->query("SELECT status, status_pre, hour, hour_pre, weekday, apoteke_status, apoteke_status_pre  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetchAll();
+            foreach ($sumHourRe as $s){
+                if(($s['weekday'] == '6' or $s['weekday'] == '7') and in_array($s['apoteke_status'], ['2010', '2012', '2013', '2014', '2015']) ){
+                    $sumHourTotal += $s['hour'];
+//                    var_dump($s['status']);
+                }
+                elseif(!in_array($s['weekday'], [6, 7]) and !in_array($s['apoteke_status'], ['2010', '2012', '2013', '2014', '2015'])){
+                    $sumHourTotal += $s['hour'];
+                }
+
+                if(($s['weekday'] == '6' or $s['weekday'] == '7') and in_array($s['apoteke_status_pre'], ['2010', '2012', '2013', '2014', '2015']) ){
+                    $sumHourTotal += $s['hour_pre'];
+                }
+                elseif(!in_array($s['weekday'], [6, 7]) and !in_array($s['apoteke_status_pre'], ['2010', '2012', '2013', '2014', '2015']) ){
+                    $sumHourTotal += $s['hour_pre'];
+                }
+            }
+
+//            $sumHourPre = $db->query("SELECT sum(hour_pre)  FROM [c0_intranet2_apoteke].[dbo].[hourlyrate_day] where employee_no=".$userEmpNo[$count]." and month_id=".$month." and year_id=".$yearId[$count])->fetch();
+            $sumHour = $sumHourTotal;
+
 
             $prevozData = $db->query("SELECT * FROM [c0_intranet2_apoteke].[dbo].[users__poreska_olaksica_i_prevoz] where employee_no=".$userEmpNo[$count])->fetch();
             $sheet->setCellValue($columnSati.$row, $sumHour);
