@@ -116,7 +116,7 @@ Plan korištenja godišnjeg odmora utvrđuje poslodavac, uz prethodnu konsultaci
 </p>
 <br><br>
 
-<p style="font-family: tahomabd;">JU“APOTEKE SARAJEVO“ <br>Zenaida Hasić, mr.ph.<br>Generalni Direktor</p>
+<p style="font-family: tahomabd;">JU“APOTEKE SARAJEVO“ <br>Zenaida Hasić, mr.ph.<br>v.d. Generalni Direktor</p>
 <p style="font-family: tahomabd;">..............................</p>
 
 
