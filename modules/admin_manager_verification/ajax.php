@@ -886,7 +886,7 @@ if (isset($_POST['request'])) {
                         $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
                     }
                     elseif (!in_array($status[$i]['apoteke_status'], ['1010, 2011', '2010', '2012', '2013', '2015', '2014']) and in_array($status[$i]['apoteke_status_pre'], ['2020', '2021', '2024', '2025', '2022', '2023'])){
-                        $sheet->setCellValue($column.($row + $increaseRow), ($status[$i]['hour'] + $status[$i]['hour_pre']));
+                        $sheet->setCellValue($column.($row + $increaseRow), ($status[$i]['hour']));
                     }else{
                         $sheet->setCellValue($column.($row + $increaseRow), $status[$i]['hour']);
                     }
