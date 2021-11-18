@@ -3349,7 +3349,7 @@ function _optionHRstatus($current, $weekday)
 
     $query = $db->query("SELECT * FROM  " . $portal_hourlyrate_status . "  where status_group='R_REDOVNO' and level >=3 ORDER BY name ASC");
 
-    if ($query->rowCount() < 0 and $weekday == 6 and $weekday==7) {
+    if ($query->rowCount() < 0 and $weekday != 6 and $weekday != 7) {
         $opt .= '<optgroup label="' . __('R_REDOVNO') . '">';
         foreach ($query as $item) {
             if ($current == $item['id']) {
@@ -3357,7 +3357,9 @@ function _optionHRstatus($current, $weekday)
             } else {
                 $sel = '';
             }
-            $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+
+                $opt .= '<option value="' . $item['id'] . '" ' . $sel . '>' . $item['name'] . '' . __(' ') . '' . $item['description'] . '</option>';
+
         }
         $opt .= '</optgroup>';
     }
