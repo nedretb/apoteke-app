@@ -15,7 +15,7 @@ $orgJedinice = Sistematizacija::where('id = 2')->get();
             </a>
         </div>
         <div class="inside-link">
-            <a href="#">
+            <a href="?=default&p=profile">
                 <p> <i class="fas fa-chevron-left"></i> <?= ___('Nazad') ?> </p>
             </a>
         </div>

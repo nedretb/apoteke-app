@@ -6627,7 +6627,7 @@ FROM  " . $portal_hourlyrate_day . "  h with(nolock)
                 if ($odobreno == '1') {
                     $disejbld = "disabled='disabled'";
                 }
-                $naziv_odsustvaOpcija = '<select ' . $disejbld . ' id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" title="' . _nameHRstatus($status1) . '" name="vrsta1" class="rcorners1 tootip"  class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
+                $naziv_odsustvaOpcija = '<select ' . $disejbld . ' id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" title="' . _nameHRstatus($status1) . '" name="vrsta1" class="rcorners1 tootip"  class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1, '') .
                     '</select>';
 //            } else if ($_user['role'] == 2) {
 //                $naziv_odsustvaOpcija = '<select disabled id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" class="rcorners1" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
@@ -6995,10 +6995,10 @@ function _statsDaysFreeReifUsers4Corrections($year, $datumOD, $datumDO, $offset,
                 if ($odobreno == '1') {
                     $disejbld = "disabled='disabled'";
                 }
-                $naziv_odsustvaOpcija = '<select ' . $disejbld . ' id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" title="' . _nameHRstatus($status1) . '" class="rcorners1 tootip" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
+                $naziv_odsustvaOpcija = '<select ' . $disejbld . ' id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" title="' . _nameHRstatus($status1) . '" class="rcorners1 tootip" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1, '') .
                     '</select>';
             } else if ($_user['role'] == 2) {
-                $naziv_odsustvaOpcija = '<select disabled id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" class="rcorners1" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1) .
+                $naziv_odsustvaOpcija = '<select disabled id="status-' . $value['danOD'] . '-' . $value['mjesecOD'] . '-' . $value['danDO'] . '-' . $value['mjesecDO'] . '-' . $value['year_id'] . '" name="vrsta1" class="rcorners1" class="form-control" style="width:100%;outline:none;">' . _optionHRstatus($status1, '') .
                     '</select>';
             }
 

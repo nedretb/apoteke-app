@@ -289,7 +289,7 @@ if ($total > 0 || $total2 > 0) {
                             <center>
                                 <select style="padding:0px !important; " name="vrsta" id="vrsta" class="form-control"
                                         onchange="this.form.submit();">
-                                    <?php echo _optionHRstatus($vrsta); ?>
+                                    <?php echo _optionHRstatus($vrsta, ''); ?>
                                 </select>
                             </center>
                         </div>
