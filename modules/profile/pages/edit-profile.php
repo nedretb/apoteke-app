@@ -55,7 +55,7 @@ else{
                 <div class="mp-id-data">
                     <h4><?= $_user['fname'].' '.$_user['lname']; ?></h4>
                     <p> <?= ___('Jedinstveni matični broj') ?> - <?= $_user['JMB'] ?> </p>
-                    <?php if ($_user['djevojacko_prezime'] != null){  ?>
+                    <?php if ($_user['djevojacko_prezime'] != null and strlen($_user['djevojacko_prezime']) > 2){  ?>
                         <p> <?= ___('Djevojačko prezime') ?> - <?= $_user['djevojacko_prezime'] ?> </p>
                     <?php }?>
                 </div>

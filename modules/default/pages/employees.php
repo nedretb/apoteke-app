@@ -26,7 +26,7 @@ if($_user['role'] == 4){
     </div>
     <div class="sh-right">
         <div class="inside-link">
-            <a href="#">
+            <a href="?m=default&p=profile">
                 <p> <i class="fas fa-chevron-left"></i> <?= ___('Nazad') ?> </p>
             </a>
         </div>
