@@ -130,9 +130,6 @@ require_once '../../../configuration.php';
                 });
 
                 $("#status").change(function () {
-                    // $("#hour_hidden").val($("#hour").val());
-                    // console.log($("#hour").val());
-                    // console.log($("#hour_hidden").val());
                     if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86){
                         $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
                             '<option value="2">2</option>' +
@@ -202,8 +199,6 @@ require_once '../../../configuration.php';
                         $('#status_pre').val() == 139){
                         $('#hour_pre').replaceWith('<input type="text" name="hour_pre" id="hour_pre" value="0" class="form-control" min="0" max="24" step="0.5">');
                     }
-                    //<input type="text" name="hour_pre" id="hour_pre" value=""
-                    //                               class="form-control" min="0" max="24" step="0.5">
 
                     $("#hour_pre").on('change', function() {
                         $("#hour_pre_hidden").val($("#hour_pre").val());
@@ -262,10 +257,9 @@ require_once '../../../configuration.php';
 
                     }
                     $('#hour_pre').val(newbr).change();
-                    console.log(newbr);
-                    console.log(broj_sati_pre);
+
                     //status default
-                    if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86 || $('#status').val() == 5){
+                    if($('#status').val() == 88 || $('#status').val() == 138 || $('#status').val() == 86){
                         $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
                             '<option value="0">0</option>' +
                             '<option value="2">2</option>' +
@@ -276,6 +270,17 @@ require_once '../../../configuration.php';
                             '<option value="7.5">7.5</option>' +
                             '<option value="8">8</option>' +
                             '<option value="8.5">8.5</option>' +
+                            '</select>');
+                    }
+                    if ($('#status').val() == 5){
+                        $('#hour').replaceWith('<select id="hour" name="hour" class="form-control">' +
+                            '<option value="0">0</option>' +
+                            '<option value="2">2</option>' +
+                            '<option value="4.5">4.5</option>' +
+                            '<option value="6">6</option>' +
+                            '<option value="6.5">6.5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="7.5">7.5</option>' +
                             '</select>');
                     }
 
@@ -346,7 +351,7 @@ require_once '../../../configuration.php';
                         }else{
                             $("#hour_pre_hidden").attr('disabled', true);
                         }
-                        // console.log($("#hour_hidden").val());
+
                         $('.dialog-loader').show();
 
 
@@ -398,8 +403,6 @@ require_once '../../../configuration.php';
                         $("#hour_hidden").val(hour_sati);
                         $("#hour_pre_hidden").val(hour_sati_pre);
 
-                        // $('#hour').val(br_sati);
-                        // $('#hour_pre').val('0');
                         $("#hour").prop('disabled', true);
                         $("#hour_pre").prop('disabled', true);
                         $('#status_pre').val('');

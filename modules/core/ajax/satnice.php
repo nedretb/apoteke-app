@@ -46,7 +46,7 @@ if (isset($_POST['request'])) {
 
             $check = Day::select('user_id, year_id,month_id,employee_no, [Date]')->where("id='" . $this_id . "'")->get(1);
 
-
+            $dayofweek = date('l', strtotime($check['Date']));
             $getYear = $check['year_id'];
             $getMonth = $check['month_id'];
             $filter_emp = $check['employee_no'];
@@ -58,8 +58,8 @@ if (isset($_POST['request'])) {
             $ToDay = $_POST['dateTo'];
             $getMonth = $_POST['get_month'];
             $getYear = $_POST['get_year'];
+            $dayofweek = 'Monday';
         }
-
 
         $dt_from = DateTime::createFromFormat('d.m.Y', $FromDay);
         $dt_to = DateTime::createFromFormat('d.m.Y', $ToDay);
@@ -267,8 +267,16 @@ if (isset($_POST['request'])) {
                         return Helper::Message('alert-danger', 'Ne možete unijeti istu vrstu odsustva!');
                     }
 
-                    if ($sum_hour > 7.5){
-                        return Helper::Message('alert-danger', 'Suma radnih sati ne može biti veća od 7.5h!');
+                    var_dump($dayofweek);
+                    if ($dayofweek != 'Sunday' and $dayofweek != 'Saturday'){
+                        if ($sum_hour > 7.5){
+                            return Helper::Message('alert-danger', 'Suma radnih sati ne može biti veća od 7.5h!');
+                        }
+                    }
+                    else{
+                        if ($sum_hour > 8.5){
+                            return Helper::Message('alert-danger', 'Suma radnih sati ne može biti veća od 8.5h!');
+                        }
                     }
 
                     foreach ($dt_kalendarski_dani as $k => $v) {
